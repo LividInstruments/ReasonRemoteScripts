@@ -1,0 +1,1755 @@
+Propellerhead Remote Mapping File
+File Format Version	1.0.0
+Control Surface Manufacturer	Livid
+Control Surface Model	code
+Map Version	1.4.4
+
+Scope	Propellerheads	Reason Master Section
+Define Group	Keyboard Shortcut Variations	Main	FXReturn	EQ	Inserts	Levels
+
+Map	Grid 3		Keyboard Shortcut Variations=Main
+Map	Grid 4		Keyboard Shortcut Variations=FXReturn
+Map	Grid 6		Keyboard Shortcut Variations=EQ
+Map	Grid 7		Keyboard Shortcut Variations=Inserts
+Map	Grid 5		Keyboard Shortcut Variations=Levels
+
+Map	Knob 4		Channel 1 Level			Main
+Map	Knob 8		Channel 2 Level			Main
+Map	Knob 12		Channel 3 Level			Main
+Map	Knob 16		Channel 4 Level			Main
+Map	Knob 20		Channel 5 Level			Main
+Map	Knob 24		Channel 6 Level			Main
+Map	Knob 28		Channel 7 Level			Main
+Map	Knob 3		Channel 1 Pan			Main
+Map	Knob 7		Channel 2 Pan			Main
+Map	Knob 11		Channel 3 Pan			Main
+Map	Knob 15		Channel 4 Pan			Main
+Map	Knob 19		Channel 5 Pan			Main
+Map	Knob 23		Channel 6 Pan			Main
+Map	Knob 27		Channel 7 Pan			Main
+Map	Knob 2		Channel 1 Width			Main
+Map	Knob 6		Channel 2 Width			Main
+Map	Knob 10		Channel 3 Width			Main
+Map	Knob 14		Channel 4 Width			Main
+Map	Knob 18		Channel 5 Width			Main
+Map	Knob 22		Channel 6 Width			Main
+Map	Knob 26		Channel 7 Width			Main
+Map	Knob 1		Channel 1 Input Gain			Main
+Map	Knob 5		Channel 2 Input Gain			Main
+Map	Knob 9		Channel 3 Input Gain			Main
+Map	Knob 13		Channel 4 Input Gain			Main
+Map	Knob 17		Channel 5 Input Gain			Main
+Map	Knob 21		Channel 6 Input Gain			Main
+Map	Knob 25		Channel 7 Input Gain			Main
+
+Map	Push 4		Channel 1 Mute			Main
+Map	Push 8		Channel 2 Mute			Main
+Map	Push 12		Channel 3 Mute			Main
+Map	Push 16		Channel 4 Mute			Main
+Map	Push 20		Channel 5 Mute			Main
+Map	Push 24		Channel 6 Mute			Main
+Map	Push 28		Channel 7 Mute			Main
+Map	Push 3		Channel 1 Solo			Main
+Map	Push 7		Channel 2 Solo			Main
+Map	Push 11		Channel 3 Solo			Main
+Map	Push 15		Channel 4 Solo			Main
+Map	Push 19		Channel 5 Solo			Main
+Map	Push 23		Channel 6 Solo			Main
+Map	Push 27		Channel 7 Solo			Main
+Map	Push 2		Channel 1 EQ On			Main
+Map	Push 6		Channel 2 EQ On			Main
+Map	Push 10		Channel 3 EQ On			Main
+Map	Push 14		Channel 4 EQ On			Main
+Map	Push 18		Channel 5 EQ On			Main
+Map	Push 22		Channel 6 EQ On			Main
+Map	Push 26		Channel 7 EQ On			Main
+
+
+Map	Knob 4		Channel 1 FX4 Send Level			FXReturn
+Map	Knob 8		Channel 2 FX4 Send Level			FXReturn
+Map	Knob 12		Channel 3 FX4 Send Level			FXReturn
+Map	Knob 16		Channel 4 FX4 Send Level			FXReturn
+Map	Knob 20		Channel 5 FX4 Send Level			FXReturn
+Map	Knob 24		Channel 6 FX4 Send Level			FXReturn
+Map	Knob 28		Channel 7 FX4 Send Level			FXReturn
+Map	Knob 3		Channel 1 FX3 Send Level			FXReturn
+Map	Knob 7		Channel 2 FX3 Send Level			FXReturn
+Map	Knob 11		Channel 3 FX3 Send Level			FXReturn
+Map	Knob 15		Channel 4 FX3 Send Level			FXReturn
+Map	Knob 19		Channel 5 FX3 Send Level			FXReturn
+Map	Knob 23		Channel 6 FX3 Send Level			FXReturn
+Map	Knob 27		Channel 7 FX3 Send Level			FXReturn
+Map	Knob 2		Channel 1 FX2 Send Level			FXReturn
+Map	Knob 6		Channel 2 FX2 Send Level			FXReturn
+Map	Knob 10		Channel 3 FX2 Send Level			FXReturn
+Map	Knob 14		Channel 4 FX2 Send Level			FXReturn
+Map	Knob 18		Channel 5 FX2 Send Level			FXReturn
+Map	Knob 22		Channel 6 FX2 Send Level			FXReturn
+Map	Knob 26		Channel 7 FX2 Send Level			FXReturn
+Map	Knob 1		Channel 1 FX1 Send Level			FXReturn
+Map	Knob 5		Channel 2 FX1 Send Level			FXReturn
+Map	Knob 9		Channel 3 FX1 Send Level			FXReturn
+Map	Knob 13		Channel 4 FX1 Send Level			FXReturn
+Map	Knob 17		Channel 5 FX1 Send Level			FXReturn
+Map	Knob 21		Channel 6 FX1 Send Level			FXReturn
+Map	Knob 25		Channel 7 FX1 Send Level			FXReturn
+
+Map	Push 4		Channel 1 FX4 Send On			FXReturn
+Map	Push 8		Channel 2 FX4 Send On			FXReturn
+Map	Push 12		Channel 3 FX4 Send On			FXReturn
+Map	Push 16		Channel 4 FX4 Send On			FXReturn
+Map	Push 20		Channel 5 FX4 Send On			FXReturn
+Map	Push 24		Channel 6 FX4 Send On			FXReturn
+Map	Push 28		Channel 7 FX4 Send On			FXReturn
+Map	Push 3		Channel 1 FX3 Send On			FXReturn
+Map	Push 7		Channel 2 FX3 Send On			FXReturn
+Map	Push 11		Channel 3 FX3 Send On			FXReturn
+Map	Push 15		Channel 4 FX3 Send On			FXReturn
+Map	Push 19		Channel 5 FX3 Send On			FXReturn
+Map	Push 23		Channel 6 FX3 Send On			FXReturn
+Map	Push 27		Channel 7 FX3 Send On			FXReturn
+Map	Push 2		Channel 1 FX2 Send On			FXReturn
+Map	Push 6		Channel 2 FX2 Send On			FXReturn
+Map	Push 10		Channel 3 FX2 Send On			FXReturn
+Map	Push 14		Channel 4 FX2 Send On			FXReturn
+Map	Push 18		Channel 5 FX2 Send On			FXReturn
+Map	Push 22		Channel 6 FX2 Send On			FXReturn
+Map	Push 26		Channel 7 FX2 Send On			FXReturn
+Map	Push 1		Channel 1 FX1 Send On			FXReturn
+Map	Push 5		Channel 2 FX1 Send On			FXReturn
+Map	Push 9		Channel 3 FX1 Send On			FXReturn
+Map	Push 13		Channel 4 FX1 Send On			FXReturn
+Map	Push 17		Channel 5 FX1 Send On			FXReturn
+Map	Push 21		Channel 6 FX1 Send On			FXReturn
+Map	Push 25		Channel 7 FX1 Send On			FXReturn
+
+Map	Knob 4		Channel 1 LF Gain			EQ
+Map	Knob 8		Channel 2 LF Gain			EQ
+Map	Knob 12		Channel 3 LF Gain			EQ
+Map	Knob 16		Channel 4 LF Gain			EQ
+Map	Knob 20		Channel 5 LF Gain			EQ
+Map	Knob 24		Channel 6 LF Gain			EQ
+Map	Knob 28		Channel 7 LF Gain			EQ
+Map	Knob 3		Channel 1 LMF Gain			EQ
+Map	Knob 7		Channel 2 LMF Gain			EQ
+Map	Knob 11		Channel 3 LMF Gain			EQ
+Map	Knob 15		Channel 4 LMF Gain			EQ
+Map	Knob 19		Channel 5 LMF Gain			EQ
+Map	Knob 23		Channel 6 LMF Gain			EQ
+Map	Knob 27		Channel 7 LMF Gain			EQ
+Map	Knob 2		Channel 1 HMF Gain			EQ
+Map	Knob 6		Channel 2 HMF Gain			EQ
+Map	Knob 10		Channel 3 HMF Gain			EQ
+Map	Knob 14		Channel 4 HMF Gain			EQ
+Map	Knob 18		Channel 5 HMF Gain			EQ
+Map	Knob 22		Channel 6 HMF Gain			EQ
+Map	Knob 26		Channel 7 HMF Gain			EQ
+Map	Knob 1		Channel 1 HF Gain			EQ
+Map	Knob 5		Channel 2 HF Gain			EQ
+Map	Knob 9		Channel 3 HF Gain			EQ
+Map	Knob 13		Channel 4 HF Gain			EQ
+Map	Knob 17		Channel 5 HF Gain			EQ
+Map	Knob 21		Channel 6 HF Gain			EQ
+Map	Knob 25		Channel 7 HF Gain			EQ
+
+Map	Push 4		Channel 1 LF On			EQ
+Map	Push 8		Channel 2 LF On			EQ
+Map	Push 12		Channel 3 LF On			EQ
+Map	Push 16		Channel 4 LF On			EQ
+Map	Push 20		Channel 5 LF On			EQ
+Map	Push 24		Channel 6 LF On			EQ
+Map	Push 28		Channel 7 LF On			EQ
+Map	Push 3		Channel 1 LMF On			EQ
+Map	Push 7		Channel 2 LMF On			EQ
+Map	Push 11		Channel 3 LMF On			EQ
+Map	Push 15		Channel 4 LMF On			EQ
+Map	Push 19		Channel 5 LMF On			EQ
+Map	Push 23		Channel 6 LMF On			EQ
+Map	Push 27		Channel 7 LMF On			EQ
+Map	Push 2		Channel 1 HMF On			EQ
+Map	Push 6		Channel 2 HMF On			EQ
+Map	Push 10		Channel 3 HMF On			EQ
+Map	Push 14		Channel 4 HMF On			EQ
+Map	Push 18		Channel 5 HMF On			EQ
+Map	Push 22		Channel 6 HMF On			EQ
+Map	Push 26		Channel 7 HMF On			EQ
+Map	Push 1		Channel 1 HF On			EQ
+Map	Push 5		Channel 2 HF On			EQ
+Map	Push 9		Channel 3 HF On			EQ
+Map	Push 13		Channel 4 HF On			EQ
+Map	Push 17		Channel 5 HF On			EQ
+Map	Push 21		Channel 6 HF On			EQ
+Map	Push 25		Channel 7 HF On			EQ
+
+Map	Knob 4		Channel 1 Rotary 4			Inserts
+Map	Knob 8		Channel 2 Rotary 4			Inserts
+Map	Knob 12		Channel 3 Rotary 4			Inserts
+Map	Knob 16		Channel 4 Rotary 4			Inserts
+Map	Knob 20		Channel 5 Rotary 4			Inserts
+Map	Knob 24		Channel 6 Rotary 4			Inserts
+Map	Knob 28		Channel 7 Rotary 4			Inserts
+Map	Knob 3		Channel 1 Rotary 3			Inserts
+Map	Knob 7		Channel 2 Rotary 3			Inserts
+Map	Knob 11		Channel 3 Rotary 3			Inserts
+Map	Knob 15		Channel 4 Rotary 3			Inserts
+Map	Knob 19		Channel 5 Rotary 3			Inserts
+Map	Knob 23		Channel 6 Rotary 3			Inserts
+Map	Knob 27		Channel 7 Rotary 3			Inserts
+Map	Knob 2		Channel 1 Rotary 2			Inserts
+Map	Knob 6		Channel 2 Rotary 2			Inserts
+Map	Knob 10		Channel 3 Rotary 2			Inserts
+Map	Knob 14		Channel 4 Rotary 2			Inserts
+Map	Knob 18		Channel 5 Rotary 2			Inserts
+Map	Knob 22		Channel 6 Rotary 2			Inserts
+Map	Knob 26		Channel 7 Rotary 2			Inserts
+Map	Knob 1		Channel 1 Rotary 1			Inserts
+Map	Knob 5		Channel 2 Rotary 1			Inserts
+Map	Knob 9		Channel 3 Rotary 1			Inserts
+Map	Knob 13		Channel 4 Rotary 1			Inserts
+Map	Knob 17		Channel 5 Rotary 1			Inserts
+Map	Knob 21		Channel 6 Rotary 1			Inserts
+Map	Knob 25		Channel 7 Rotary 1			Inserts
+
+Map	Push 4		Channel 1 Button 4			Inserts
+Map	Push 8		Channel 2 Button 4			Inserts
+Map	Push 12		Channel 3 Button 4			Inserts
+Map	Push 16		Channel 4 Button 4			Inserts
+Map	Push 20		Channel 5 Button 4			Inserts
+Map	Push 24		Channel 6 Button 4			Inserts
+Map	Push 28		Channel 7 Button 4			Inserts
+Map	Push 3		Channel 1 Button 3			Inserts
+Map	Push 7		Channel 2 Button 3			Inserts
+Map	Push 11		Channel 3 Button 3			Inserts
+Map	Push 15		Channel 4 Button 3			Inserts
+Map	Push 19		Channel 5 Button 3			Inserts
+Map	Push 23		Channel 6 Button 3			Inserts
+Map	Push 27		Channel 7 Button 3			Inserts
+Map	Push 2		Channel 1 Button 2			Inserts
+Map	Push 6		Channel 2 Button 2			Inserts
+Map	Push 10		Channel 3 Button 2			Inserts
+Map	Push 14		Channel 4 Button 2			Inserts
+Map	Push 18		Channel 5 Button 2			Inserts
+Map	Push 22		Channel 6 Button 2			Inserts
+Map	Push 26		Channel 7 Button 2			Inserts
+Map	Push 1		Channel 1 Button 1			Inserts
+Map	Push 5		Channel 2 Button 1			Inserts
+Map	Push 9		Channel 3 Button 1			Inserts
+Map	Push 13		Channel 4 Button 1			Inserts
+Map	Push 17		Channel 5 Button 1			Inserts
+Map	Push 21		Channel 6 Button 1			Inserts
+Map	Push 25		Channel 7 Button 1			Inserts
+
+Map	Knob 4		Channel 1 VU Meter			Levels
+Map	Knob 8		Channel 2 VU Meter			Levels
+Map	Knob 12		Channel 3 VU Meter			Levels
+Map	Knob 16		Channel 4 VU Meter			Levels
+Map	Knob 20		Channel 5 VU Meter			Levels
+Map	Knob 24		Channel 6 VU Meter			Levels
+Map	Knob 28		Channel 7 VU Meter			Levels
+Map	Knob 3		Channel 1 Pan			Levels
+Map	Knob 7		Channel 2 Pan			Levels
+Map	Knob 11		Channel 3 Pan			Levels
+Map	Knob 15		Channel 4 Pan			Levels
+Map	Knob 19		Channel 5 Pan			Levels
+Map	Knob 23		Channel 6 Pan			Levels
+Map	Knob 27		Channel 7 Pan			Levels
+Map	Knob 2		Channel 1 Width			Levels
+Map	Knob 6		Channel 2 Width			Levels
+Map	Knob 10		Channel 3 Width			Levels
+Map	Knob 14		Channel 4 Width			Levels
+Map	Knob 18		Channel 5 Width			Levels
+Map	Knob 22		Channel 6 Width			Levels
+Map	Knob 26		Channel 7 Width			Levels
+Map	Knob 1		Channel 1 Input Gain			Levels
+Map	Knob 5		Channel 2 Input Gain			Levels
+Map	Knob 9		Channel 3 Input Gain			Levels
+Map	Knob 13		Channel 4 Input Gain			Levels
+Map	Knob 17		Channel 5 Input Gain			Levels
+Map	Knob 21		Channel 6 Input Gain			Levels
+Map	Knob 25		Channel 7 Input Gain			Levels
+Map	Knob 32		Audio Peak VU Meter			Levels
+
+Map	Push 4		Channel 1 Mute			Levels
+Map	Push 8		Channel 2 Mute			Levels
+Map	Push 12		Channel 3 Mute			Levels
+Map	Push 16		Channel 4 Mute			Levels
+Map	Push 20		Channel 5 Mute			Levels
+Map	Push 24		Channel 6 Mute			Levels
+Map	Push 28		Channel 7 Mute			Levels
+Map	Push 3		Channel 1 Solo			Levels
+Map	Push 7		Channel 2 Solo			Levels
+Map	Push 11		Channel 3 Solo			Levels
+Map	Push 15		Channel 4 Solo			Levels
+Map	Push 19		Channel 5 Solo			Levels
+Map	Push 23		Channel 6 Solo			Levels
+Map	Push 27		Channel 7 Solo			Levels
+Map	Push 2		Channel 1 EQ On			Levels
+Map	Push 6		Channel 2 EQ On			Levels
+Map	Push 10		Channel 3 EQ On			Levels
+Map	Push 14		Channel 4 EQ On			Levels
+Map	Push 18		Channel 5 EQ On			Levels
+Map	Push 22		Channel 6 EQ On			Levels
+Map	Push 26		Channel 7 EQ On			Levels
+
+Scope	Propellerheads	Record Document			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Grid 1		Target Previous Track
+Map	Grid 2		Target Next Track
+Map	Grid 9		Rewind
+Map	Grid 10		Fast Forward
+Map	Grid 11		Stop
+Map	Grid 12		Play
+Map	Grid 13		Record
+Map	Push 29		Click On/Off
+Map	Knob 29		Click Level
+Map	Push 30		Loop On/Off
+
+
+Scope	Propellerheads	Reason Document			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Grid 1		Target Previous Track
+Map	Grid 2		Target Next Track
+//Map	Grid 8		
+Map	Grid 9		Rewind
+Map	Grid 10		Fast Forward
+Map	Grid 11		Stop
+Map	Grid 12		Play
+Map	Grid 13		Record
+Map	Push 29		Click On/Off
+Map	Knob 29		Click Level
+Map	Push 30		Loop On/Off
+//eos
+Scope	Propellerheads	Mixer 14:2
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Define Group	Keyboard Shortcut Variations	Chan 1-7	Chan 8-14	Aux 1-7	Aux 8-14	Vol 1-7
+
+Map	Grid 3		Keyboard Shortcut Variations=Chan 1-7
+Map	Grid 4		Keyboard Shortcut Variations=Chan 8-14
+Map	Grid 6		Keyboard Shortcut Variations=Aux 1-7
+Map	Grid 7		Keyboard Shortcut Variations=Aux 8-14
+//Map	Grid 5		Keyboard Shortcut Variations=Vol 1-7
+//Map	Grid 8		Keyboard Shortcut Variations=Vol 8-14
+
+Map	Knob 4		Channel 1 Level			Chan 1-7
+Map	Knob 8		Channel 2 Level			Chan 1-7
+Map	Knob 12		Channel 3 Level			Chan 1-7
+Map	Knob 16		Channel 4 Level			Chan 1-7
+Map	Knob 20		Channel 5 Level			Chan 1-7
+Map	Knob 24		Channel 6 Level			Chan 1-7
+Map	Knob 28		Channel 7 Level			Chan 1-7
+Map	Knob 3		Channel 1 Pan			Chan 1-7
+Map	Knob 7		Channel 2 Pan			Chan 1-7
+Map	Knob 11		Channel 3 Pan			Chan 1-7
+Map	Knob 15		Channel 4 Pan			Chan 1-7
+Map	Knob 19		Channel 5 Pan			Chan 1-7
+Map	Knob 23		Channel 6 Pan			Chan 1-7
+Map	Knob 27		Channel 7 Pan			Chan 1-7
+Map	Knob 2		Channel 1 Bass Amount			Chan 1-7
+Map	Knob 6		Channel 2 Bass Amount			Chan 1-7
+Map	Knob 10		Channel 3 Bass Amount			Chan 1-7
+Map	Knob 14		Channel 4 Bass Amount			Chan 1-7
+Map	Knob 18		Channel 5 Bass Amount			Chan 1-7
+Map	Knob 22		Channel 6 Bass Amount			Chan 1-7
+Map	Knob 26		Channel 7 Bass Amount			Chan 1-7
+Map	Knob 1		Channel 1 Treble Amount			Chan 1-7
+Map	Knob 5		Channel 2 Treble Amount			Chan 1-7
+Map	Knob 9		Channel 3 Treble Amount			Chan 1-7
+Map	Knob 13		Channel 4 Treble Amount			Chan 1-7
+Map	Knob 17		Channel 5 Treble Amount			Chan 1-7
+Map	Knob 21		Channel 6 Treble Amount			Chan 1-7
+Map	Knob 25		Channel 7 Treble Amount			Chan 1-7
+
+Map	Push 4		Channel 1 Mute			Chan 1-7
+Map	Push 8		Channel 2 Mute			Chan 1-7
+Map	Push 12		Channel 3 Mute			Chan 1-7
+Map	Push 16		Channel 4 Mute			Chan 1-7
+Map	Push 20		Channel 5 Mute			Chan 1-7
+Map	Push 24		Channel 6 Mute			Chan 1-7
+Map	Push 28		Channel 7 Mute			Chan 1-7
+Map	Push 3		Channel 1 Solo			Chan 1-7
+Map	Push 7		Channel 2 Solo			Chan 1-7
+Map	Push 11		Channel 3 Solo			Chan 1-7
+Map	Push 15		Channel 4 Solo			Chan 1-7
+Map	Push 19		Channel 5 Solo			Chan 1-7
+Map	Push 23		Channel 6 Solo			Chan 1-7
+Map	Push 27		Channel 7 Solo			Chan 1-7
+Map	Push 2		Channel 1 EQ On/Off			Chan 1-7
+Map	Push 6		Channel 2 EQ On/Off			Chan 1-7
+Map	Push 10		Channel 3 EQ On/Off			Chan 1-7
+Map	Push 14		Channel 4 EQ On/Off			Chan 1-7
+Map	Push 18		Channel 5 EQ On/Off			Chan 1-7
+Map	Push 22		Channel 6 EQ On/Off			Chan 1-7
+Map	Push 26		Channel 7 EQ On/Off			Chan 1-7
+
+Map	Knob 4		Channel 1 Peak Meter			Vol 1-7
+Map	Knob 8		Channel 2 Peak Meter			Vol 1-7
+Map	Knob 12		Channel 3 Peak Meter			Vol 1-7
+Map	Knob 16		Channel 4 Peak Meter			Vol 1-7
+Map	Knob 20		Channel 5 Peak Meter			Vol 1-7
+Map	Knob 24		Channel 6 Peak Meter			Vol 1-7
+Map	Knob 28		Channel 7 Peak Meter			Vol 1-7
+Map	Knob 3		Channel 1 Pan			Vol 1-7
+Map	Knob 7		Channel 2 Pan			Vol 1-7
+Map	Knob 11		Channel 3 Pan			Vol 1-7
+Map	Knob 15		Channel 4 Pan			Vol 1-7
+Map	Knob 19		Channel 5 Pan			Vol 1-7
+Map	Knob 23		Channel 6 Pan			Vol 1-7
+Map	Knob 27		Channel 7 Pan			Vol 1-7
+Map	Knob 2		Channel 1 Bass Amount			Vol 1-7
+Map	Knob 6		Channel 2 Bass Amount			Vol 1-7
+Map	Knob 10		Channel 3 Bass Amount			Vol 1-7
+Map	Knob 14		Channel 4 Bass Amount			Vol 1-7
+Map	Knob 18		Channel 5 Bass Amount			Vol 1-7
+Map	Knob 22		Channel 6 Bass Amount			Vol 1-7
+Map	Knob 26		Channel 7 Bass Amount			Vol 1-7
+Map	Knob 1		Channel 1 Treble Amount			Vol 1-7
+Map	Knob 5		Channel 2 Treble Amount			Vol 1-7
+Map	Knob 9		Channel 3 Treble Amount			Vol 1-7
+Map	Knob 13		Channel 4 Treble Amount			Vol 1-7
+Map	Knob 17		Channel 5 Treble Amount			Vol 1-7
+Map	Knob 21		Channel 6 Treble Amount			Vol 1-7
+Map	Knob 25		Channel 7 Treble Amount			Vol 1-7
+
+Map	Push 4		Channel 1 Mute			Vol 1-7
+Map	Push 8		Channel 2 Mute			Vol 1-7
+Map	Push 12		Channel 3 Mute			Vol 1-7
+Map	Push 16		Channel 4 Mute			Vol 1-7
+Map	Push 20		Channel 5 Mute			Vol 1-7
+Map	Push 24		Channel 6 Mute			Vol 1-7
+Map	Push 28		Channel 7 Mute			Vol 1-7
+Map	Push 3		Channel 1 Solo			Vol 1-7
+Map	Push 7		Channel 2 Solo			Vol 1-7
+Map	Push 11		Channel 3 Solo			Vol 1-7
+Map	Push 15		Channel 4 Solo			Vol 1-7
+Map	Push 19		Channel 5 Solo			Vol 1-7
+Map	Push 23		Channel 6 Solo			Vol 1-7
+Map	Push 27		Channel 7 Solo			Vol 1-7
+Map	Push 2		Channel 1 EQ On/Off			Vol 1-7
+Map	Push 6		Channel 2 EQ On/Off			Vol 1-7
+Map	Push 10		Channel 3 EQ On/Off			Vol 1-7
+Map	Push 14		Channel 4 EQ On/Off			Vol 1-7
+Map	Push 18		Channel 5 EQ On/Off			Vol 1-7
+Map	Push 22		Channel 6 EQ On/Off			Vol 1-7
+Map	Push 26		Channel 7 EQ On/Off			Vol 1-7
+
+Map	Knob 4		Channel 1 Aux 1 Send			Aux 1-7
+Map	Knob 8		Channel 2 Aux 1 Send			Aux 1-7
+Map	Knob 12		Channel 3 Aux 1 Send			Aux 1-7
+Map	Knob 16		Channel 4 Aux 1 Send			Aux 1-7
+Map	Knob 20		Channel 5 Aux 1 Send			Aux 1-7
+Map	Knob 24		Channel 6 Aux 1 Send			Aux 1-7
+Map	Knob 28		Channel 7 Aux 1 Send			Aux 1-7
+Map	Knob 3		Channel 1 Aux 2 Send			Aux 1-7
+Map	Knob 7		Channel 2 Aux 2 Send			Aux 1-7
+Map	Knob 11		Channel 3 Aux 2 Send			Aux 1-7
+Map	Knob 15		Channel 4 Aux 2 Send			Aux 1-7
+Map	Knob 19		Channel 5 Aux 2 Send			Aux 1-7
+Map	Knob 23		Channel 6 Aux 2 Send			Aux 1-7
+Map	Knob 27		Channel 7 Aux 2 Send			Aux 1-7
+Map	Knob 2		Channel 1 Aux 3 Send			Aux 1-7
+Map	Knob 6		Channel 2 Aux 3 Send			Aux 1-7
+Map	Knob 10		Channel 3 Aux 3 Send			Aux 1-7
+Map	Knob 14		Channel 4 Aux 3 Send			Aux 1-7
+Map	Knob 18		Channel 5 Aux 3 Send			Aux 1-7
+Map	Knob 22		Channel 6 Aux 3 Send			Aux 1-7
+Map	Knob 26		Channel 7 Aux 3 Send			Aux 1-7
+Map	Knob 1		Channel 1 Aux 4 Send			Aux 1-7
+Map	Knob 5		Channel 2 Aux 4 Send			Aux 1-7
+Map	Knob 9		Channel 3 Aux 4 Send			Aux 1-7
+Map	Knob 13		Channel 4 Aux 4 Send			Aux 1-7
+Map	Knob 17		Channel 5 Aux 4 Send			Aux 1-7
+Map	Knob 21		Channel 6 Aux 4 Send			Aux 1-7
+Map	Knob 25		Channel 7 Aux 4 Send			Aux 1-7
+
+Map	Push 4		Channel 1 Aux 4 Pre Fader On/Off			Aux 1-7
+Map	Push 8		Channel 2 Aux 4 Pre Fader On/Off			Aux 1-7
+Map	Push 12		Channel 3 Aux 4 Pre Fader On/Off			Aux 1-7
+Map	Push 16		Channel 4 Aux 4 Pre Fader On/Off			Aux 1-7
+Map	Push 20		Channel 5 Aux 4 Pre Fader On/Off			Aux 1-7
+Map	Push 24		Channel 6 Aux 4 Pre Fader On/Off			Aux 1-7
+Map	Push 28		Channel 7 Aux 4 Pre Fader On/Off			Aux 1-7
+
+Map	Knob 4		Channel 8 Level			Chan 8-14
+Map	Knob 8		Channel 9 Level			Chan 8-14
+Map	Knob 12		Channel 10 Level			Chan 8-14
+Map	Knob 16		Channel 11 Level			Chan 8-14
+Map	Knob 20		Channel 12 Level			Chan 8-14
+Map	Knob 24		Channel 13 Level			Chan 8-14
+Map	Knob 28		Channel 14 Level			Chan 8-14
+Map	Knob 3		Channel 8 Pan			Chan 8-14
+Map	Knob 7		Channel 9 Pan			Chan 8-14
+Map	Knob 11		Channel 10 Pan			Chan 8-14
+Map	Knob 15		Channel 11 Pan			Chan 8-14
+Map	Knob 19		Channel 12 Pan			Chan 8-14
+Map	Knob 23		Channel 13 Pan			Chan 8-14
+Map	Knob 27		Channel 14 Pan			Chan 8-14
+Map	Knob 2		Channel 8 Bass Amount			Chan 8-14
+Map	Knob 6		Channel 9 Bass Amount			Chan 8-14
+Map	Knob 10		Channel 10 Bass Amount			Chan 8-14
+Map	Knob 14		Channel 11 Bass Amount			Chan 8-14
+Map	Knob 18		Channel 12 Bass Amount			Chan 8-14
+Map	Knob 22		Channel 13 Bass Amount			Chan 8-14
+Map	Knob 26		Channel 14 Bass Amount			Chan 8-14
+Map	Knob 1		Channel 8 Treble Amount			Chan 8-14
+Map	Knob 5		Channel 9 Treble Amount			Chan 8-14
+Map	Knob 9		Channel 10 Treble Amount			Chan 8-14
+Map	Knob 13		Channel 11 Treble Amount			Chan 8-14
+Map	Knob 17		Channel 12 Treble Amount			Chan 8-14
+Map	Knob 21		Channel 13 Treble Amount			Chan 8-14
+Map	Knob 25		Channel 14 Treble Amount			Chan 8-14
+
+Map	Push 4		Channel 8 Mute			Chan 8-14
+Map	Push 8		Channel 9 Mute			Chan 8-14
+Map	Push 12		Channel 10 Mute			Chan 8-14
+Map	Push 16		Channel 11 Mute			Chan 8-14
+Map	Push 20		Channel 12 Mute			Chan 8-14
+Map	Push 24		Channel 13 Mute			Chan 8-14
+Map	Push 28		Channel 14 Mute			Chan 8-14
+Map	Push 3		Channel 8 Solo			Chan 8-14
+Map	Push 7		Channel 9 Solo			Chan 8-14
+Map	Push 11		Channel 10 Solo			Chan 8-14
+Map	Push 15		Channel 11 Solo			Chan 8-14
+Map	Push 19		Channel 12 Solo			Chan 8-14
+Map	Push 23		Channel 13 Solo			Chan 8-14
+Map	Push 27		Channel 14 Solo			Chan 8-14
+Map	Push 2		Channel 8 EQ On/Off			Chan 8-14
+Map	Push 6		Channel 9 EQ On/Off			Chan 8-14
+Map	Push 10		Channel 10 EQ On/Off			Chan 8-14
+Map	Push 14		Channel 11 EQ On/Off			Chan 8-14
+Map	Push 18		Channel 12 EQ On/Off			Chan 8-14
+Map	Push 22		Channel 13 EQ On/Off			Chan 8-14
+Map	Push 26		Channel 14 EQ On/Off			Chan 8-14
+
+
+Map	Knob 4		Channel 8 Aux 1 Send			Aux 8-14
+Map	Knob 8		Channel 9 Aux 1 Send			Aux 8-14
+Map	Knob 12		Channel 10 Aux 1 Send			Aux 8-14
+Map	Knob 16		Channel 11 Aux 1 Send			Aux 8-14
+Map	Knob 20		Channel 12 Aux 1 Send			Aux 8-14
+Map	Knob 24		Channel 13 Aux 1 Send			Aux 8-14
+Map	Knob 28		Channel 14 Aux 1 Send			Aux 8-14
+Map	Knob 3		Channel 8 Aux 2 Send			Aux 8-14
+Map	Knob 7		Channel 9 Aux 2 Send			Aux 8-14
+Map	Knob 11		Channel 10 Aux 2 Send			Aux 8-14
+Map	Knob 15		Channel 11 Aux 2 Send			Aux 8-14
+Map	Knob 19		Channel 12 Aux 2 Send			Aux 8-14
+Map	Knob 23		Channel 13 Aux 2 Send			Aux 8-14
+Map	Knob 27		Channel 14 Aux 2 Send			Aux 8-14
+Map	Knob 2		Channel 8 Aux 3 Send			Aux 8-14
+Map	Knob 6		Channel 9 Aux 3 Send			Aux 8-14
+Map	Knob 10		Channel 10 Aux 3 Send			Aux 8-14
+Map	Knob 14		Channel 11 Aux 3 Send			Aux 8-14
+Map	Knob 18		Channel 12 Aux 3 Send			Aux 8-14
+Map	Knob 22		Channel 13 Aux 3 Send			Aux 8-14
+Map	Knob 26		Channel 14 Aux 3 Send			Aux 8-14
+Map	Knob 1		Channel 8 Aux 4 Send			Aux 8-14
+Map	Knob 5		Channel 9 Aux 4 Send			Aux 8-14
+Map	Knob 9		Channel 10 Aux 4 Send			Aux 8-14
+Map	Knob 13		Channel 11 Aux 4 Send			Aux 8-14
+Map	Knob 17		Channel 12 Aux 4 Send			Aux 8-14
+Map	Knob 21		Channel 13 Aux 4 Send			Aux 8-14
+Map	Knob 25		Channel 14 Aux 4 Send			Aux 8-14
+
+
+Map	Push 4		Channel 8 Aux 4 Pre Fader On/Off			Aux 8-14
+Map	Push 8		Channel 9 Aux 4 Pre Fader On/Off			Aux 8-14
+Map	Push 12		Channel 10 Aux 4 Pre Fader On/Off			Aux 8-14
+Map	Push 16		Channel 11 Aux 4 Pre Fader On/Off			Aux 8-14
+Map	Push 20		Channel 12 Aux 4 Pre Fader On/Off			Aux 8-14
+Map	Push 24		Channel 13 Aux 4 Pre Fader On/Off			Aux 8-14
+Map	Push 28		Channel 14 Aux 4 Pre Fader On/Off			Aux 8-14
+//eos
+
+Scope	Propellerheads	Line Mixer 6:2
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 32		Master Level
+Map	Knob 31		Aux Return Level
+Map	Push 31		Aux Pre/Post
+
+Map	Knob 4		Channel 1 Level
+Map	Knob 8		Channel 2 Level
+Map	Knob 12		Channel 3 Level
+Map	Knob 16		Channel 4 Level
+Map	Knob 20		Channel 5 Level
+Map	Knob 24		Channel 6 Level
+Map	Knob 3		Channel 1 Pan
+Map	Knob 7		Channel 2 Pan
+Map	Knob 11		Channel 3 Pan
+Map	Knob 15		Channel 4 Pan
+Map	Knob 19		Channel 5 Pan
+Map	Knob 23		Channel 6 Pan
+Map	Knob 2		Channel 1 Aux Send
+Map	Knob 6		Channel 2 Aux Send
+Map	Knob 10		Channel 3 Aux Send
+Map	Knob 14		Channel 4 Aux Send
+Map	Knob 18		Channel 5 Aux Send
+Map	Knob 22		Channel 6 Aux Send
+Map	Push 4		Channel 1 Mute
+Map	Push 8		Channel 2 Mute
+Map	Push 12		Channel 3 Mute
+Map	Push 16		Channel 4 Mute
+Map	Push 20		Channel 5 Mute
+Map	Push 24		Channel 6 Mute
+Map	Push 3		Channel 1 Solo
+Map	Push 7		Channel 2 Solo
+Map	Push 11		Channel 3 Solo
+Map	Push 15		Channel 4 Solo
+Map	Push 19		Channel 5 Solo
+Map	Push 23		Channel 6 Solo
+Map	Knob 1		Channel 1 Peak Meter
+Map	Knob 5		Channel 2 Peak Meter
+Map	Knob 9		Channel 3 Peak Meter
+Map	Knob 13		Channel 4 Peak Meter
+Map	Knob 17		Channel 5 Peak Meter
+Map	Knob 21		Channel 6 Peak Meter
+//Map	Knob 25		Master Left Peak Meter
+Map	Knob 29		Master Right Peak Meter
+//eos
+
+Scope	Propellerheads	SubTractor Analog Synthesizer
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Define Group	Keyboard Shortcut Variations	Filter & LFO	Env	Osc
+
+Map	Knob 4		Filter Freq			Filter & LFO
+Map	Knob 8		Filter Res			Filter & LFO
+Map	Knob 12		Filter Env Amount			Filter & LFO
+Map	Knob 16		Filter2 Freq			Filter & LFO
+Map	Knob 20		Filter2 Res			Filter & LFO
+Map	Knob 24		LFO1 Rate			Filter & LFO
+Map	Knob 28		LFO1 Amount			Filter & LFO
+Map	Knob 32		Master Level			Filter & LFO
+
+Map	Knob 3		Amp Env Attack			Env
+Map	Knob 7		Amp Env Decay			Env
+Map	Knob 11		Amp Env Sustain			Env
+Map	Knob 15		Amp Env Release			Env
+Map	Knob 19		Filter Env Attack			Env
+Map	Knob 23		Filter Env Decay			Env
+Map	Knob 27		Filter Env Sustain			Env
+Map	Knob 31		Filter Env Release			Env
+
+Map	Knob 2		Osc1 Phase Diff
+Map	Knob 6		Osc1 Wave
+Map	Knob 10		Osc1 Octave
+Map	Knob 14		Osc2 Phase Diff
+Map	Knob 18		Osc2 Wave
+Map	Knob 22		Osc2 Octave
+Map	Knob 26		FM Amount
+Map	Knob 30		Osc Mix
+//eos
+
+Scope	Propellerheads	NN19 Digital Sampler
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 3		 Filter Freq			
+Map	Knob 7		 Filter Res			
+Map	Knob 11		 Filter Mode			
+Map	Knob 31		 Filter Env Amount			
+Map	Knob 15		 Filter Env Attack			
+Map	Knob 19		 Filter Env Decay			
+Map	Knob 23		 Filter Env Sustain			
+Map	Knob 27		 Filter Env Release			
+
+Map	Knob 4		Amp Env Attack			
+Map	Knob 8		Amp Env Decay			
+Map	Knob 12		Amp Env Sustain			
+Map	Knob 16		Amp Env Release			
+Map	Knob 20		Osc Octave			
+Map	Knob 24		Sample Start			
+Map	Knob 28		Portamento			
+Map	Knob 32		Master Level
+//eos			
+
+Scope	Propellerheads	Line 6 Guitar Amp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Define Group	Keyboard Shortcut Variations	Main	Levels
+
+Map	Grid 3		Keyboard Shortcut Variations=Main
+Map	Grid 5		Keyboard Shortcut Variations=Levels
+Map	Grid 6		Select Previous Amp Model
+Map	Grid 7		Select Next Amp Model
+
+Map	Knob 8		Drive
+Map	Knob 12		Bass
+Map	Knob 16		Middle
+Map	Knob 20		Treble
+Map	Knob 24		Presence
+Map 	Knob 32		Volume
+Map	Knob 3		Volume Pedal
+Map	Knob 4		Wah Pedal
+Map	Push 4		Wah Pedal On
+//eos
+
+Scope	Propellerheads	Line 6 Bass Amp
+Map	Grid 3		Select Previous Amp Model
+Map	Grid 4		Select Next Amp Model
+Map	Grid 6		Select Previous Patch
+Map	Grid 7		Select Next Patch
+Map	Knob 32		Volume
+
+Map	Knob 8		Drive
+Map	Knob 12		Bass
+Map	Knob 16		Lo Mid
+Map	Knob 20		Hi Mid
+Map	Knob 24		Treble
+Map	Knob 4		Comp Threshold
+Map	Push 4		Compressor On
+//eos
+
+Scope	Propellerheads	ID8 Instrument Device
+Map	Grid 3		Sound A
+Map	Grid 4		Sound B
+Map	Grid 6		Sound C
+Map	Grid 7		Sound D
+
+Map	Knob 3		Parameter 1
+Map	Knob 4		Parameter 2
+Map	Knob 32		Volume
+Map	Push 32		Preset
+
+
+//eos
+Scope	Propellerheads	NN-XT Advanced Sampler
+Map	Grid 6		Select Previous Patch
+Map	Grid 7		Select Next Patch
+
+Map	Knob 4		Filter Freq
+Map	Knob 8		Filter Res
+Map	Knob 12		Amp Env Attack
+Map	Knob 16		Amp Env Decay
+Map	Knob 20		Amp Env Release
+Map	Knob 24		Mod Env Decay
+Map	Knob 1		Mod Wheel
+Map	Knob 5		External Controller
+Map	Push 5		External Controller Source
+Map	Knob 32		Master Volume
+Map	Grid 8		High Quality Interpolation
+//eos
+
+Scope	Propellerheads	Dr.REX Loop Player
+Define Group	Keyboard Shortcut Variations	Filter & Osc	Env
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 4		Filter Freq			
+Map	Knob 8		Filter Res			
+Map	Knob 12		Filter Env Amount			
+Map	Knob 16		Transpose			
+Map	Knob 20		Osc Env Amount			
+Map	Knob 24		LFO1 Rate			
+Map	Knob 28		LFO1 Amount			
+Map	Knob 32		Master Level			
+
+
+Map	Knob 3		Filter Env Attack			
+Map	Knob 7		Filter Env Decay			
+Map	Knob 11		Filter Env Sustain			
+Map	Knob 15		Filter Env Release		
+Map	Knob 19		Amp Env Attack			
+Map	Knob 23		Amp Env Decay			
+Map	Knob 27		Amp Env Sustain			
+Map	Knob 31		Amp Env Release			
+//eos
+
+Scope	Propellerheads	Redrum Drum Computer			
+Define Group	Keyboard Shortcut Variations	Pitch	Length	Pan		
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Grid 5		Run
+Map	Grid 3		Pattern Select in Bank
+Map	Grid 4		Bank Select
+
+Map	Grid 6		Channel 1 Play
+Map	Grid 7		Channel 2 Play
+
+
+Map	Knob 4		Drum 1 Level
+Map	Knob 8		Drum 2 Level
+Map	Knob 12		Drum 3 Level
+Map	Knob 16		Drum 4 Level
+Map	Knob 20		Drum 5 Level
+Map	Knob 24		Drum 6 Level
+Map	Knob 28		Drum 7 Level
+Map	Knob 32		Drum 8 Level
+
+Map	Push 4		Drum 1 Mute
+Map	Push 8		Drum 2 Mute
+Map	Push 12		Drum 3 Mute
+Map	Push 16		Drum 4 Mute
+Map	Push 20		Drum 5 Mute
+Map	Push 24		Drum 6 Mute
+Map	Push 28		Drum 7 Mute
+Map	Push 32		Drum 8 Mute
+
+Map	Knob 3		Drum 1 Pan
+Map	Knob 7		Drum 2 Pan
+Map	Knob 11		Drum 3 Pan
+Map	Knob 15		Drum 4 Pan
+Map	Knob 19		Drum 5 Pan
+Map	Knob 23		Drum 6 Pan
+Map	Knob 27		Drum 7 Pan
+Map	Knob 31		Drum 8 Pan
+
+Map	Push 3		Drum 1 Solo
+Map	Push 7		Drum 2 Solo
+Map	Push 11		Drum 3 Solo
+Map	Push 15		Drum 4 Solo
+Map	Push 19		Drum 5 Solo
+Map	Push 23		Drum 6 Solo
+Map	Push 27		Drum 7 Solo
+Map	Push 31		Drum 8 Solo
+
+Map	Knob 1		Drum 1 Pitch
+Map	Knob 5		Drum 2 Pitch
+Map	Knob 9		Drum 3 Pitch
+Map	Knob 13		Drum 4 Pitch
+Map	Knob 17		Drum 5 Pitch
+Map	Knob 21		Drum 6 Pitch
+Map	Knob 25		Drum 7 Pitch
+Map	Knob 29		Drum 8 Pitch
+
+Map	Knob 2		Drum 1 Length
+Map	Knob 6		Drum 2 Length
+Map	Knob 10		Drum 3 Length
+Map	Knob 14		Drum 4 Length
+Map	Knob 18		Drum 5 Length
+Map	Knob 22		Drum 6 Length
+Map	Knob 26		Drum 7 Length
+Map	Knob 30		Drum 8 Length
+
+
+//eos
+
+Scope	Propellerheads	BV512 Digital Vocoder			
+Define Group	Keyboard Shortcut Variations	Band 1-8	Band 9-16	Band 17-24	Band 25-32
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Grid 5		Keyboard Shortcut Variations=Band 1-8
+Map	Grid 6		Keyboard Shortcut Variations=Band 9-16
+Map	Grid 7		Keyboard Shortcut Variations=Band 17-24
+Map	Grid 8		Keyboard Shortcut Variations=Band 25-32
+
+Map	Knob 3		Band Count
+Map	Knob 7		Attack
+Map	Knob 11		Decay
+Map	Knob 15		Shift
+Map	Knob 19		HF Emphasis
+Map	Knob 31		Dry/Wet
+
+Map	Grid 3		Hold
+Map	Grid 4		Vocoder/Equalizer
+
+Map	Knob 4		Band Level 1			Band 1-8
+Map	Knob 8		Band Level 2			Band 1-8
+Map	Knob 12		Band Level 3			Band 1-8
+Map	Knob 16		Band Level 4			Band 1-8
+Map	Knob 20		Band Level 5			Band 1-8
+Map	Knob 24		Band Level 6			Band 1-8
+Map	Knob 28		Band Level 7			Band 1-8
+Map	Knob 32		Band Level 8			Band 1-8
+
+Map	Knob 4		Band Level 9			Band 9-16
+Map	Knob 8		Band Level 10			Band 9-16
+Map	Knob 12		Band Level 11			Band 9-16
+Map	Knob 16		Band Level 12			Band 9-16
+Map	Knob 20		Band Level 13			Band 9-16
+Map	Knob 24		Band Level 14			Band 9-16
+Map	Knob 28		Band Level 15			Band 9-16
+Map	Knob 32		Band Level 16			Band 9-16
+
+Map	Knob 4		Band Level 17			Band 17-24
+Map	Knob 8		Band Level 18			Band 17-24
+Map	Knob 12		Band Level 19			Band 17-24
+Map	Knob 16		Band Level 20			Band 17-24
+Map	Knob 20		Band Level 21			Band 17-24
+Map	Knob 24		Band Level 22			Band 17-24
+Map	Knob 28		Band Level 23			Band 17-24
+Map	Knob 32		Band Level 24			Band 17-24
+
+Map	Knob 4		Band Level 25			Band 25-32
+Map	Knob 8		Band Level 26			Band 25-32
+Map	Knob 12		Band Level 27			Band 25-32
+Map	Knob 16		Band Level 28			Band 25-32
+Map	Knob 20		Band Level 29			Band 25-32
+Map	Knob 24		Band Level 30			Band 25-32
+Map	Knob 28		Band Level 31			Band 25-32
+Map	Knob 32		Band Level 32			Band 25-32
+
+
+Scope	Propellerheads	MClass Equalizer			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 4		Low Shelf Frequency			
+Map	Knob 3		Low Shelf Gain			
+Map	Knob 2		Low Shelf Q			
+Map	Knob 8		Parametric 1 Frequency			
+Map	Knob 7		Parametric 1 Gain			
+Map	Knob 6		Parametric 1 Q			
+
+Map	Knob 12		Parametric 2 Frequency			
+Map	Knob 11		Parametric 2 Gain			
+Map	Knob 10		Parametric 2 Q			
+Map	Knob 16		Hi Shelf Frequency			
+Map	Knob 15		Hi Shelf Gain			
+Map	Knob 14		Hi Shelf Q			
+
+Map	Push 3		Low Cut Enable
+Map	Push 4		Low Shelf Enable
+Map	Push 8		Parametric 1 Enable
+Map	Push 12		Parametric 2 Enable
+Map	Push 16		Hi Shelf Enable
+
+
+Scope	Propellerheads	MClass Stereo Imager			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 4		Low Width		
+Map	Knob 8		X-Over Frequency		
+Map	Knob 12		High Width		
+Map	Push 4		Solo Mode		
+
+
+Scope	Propellerheads	MClass Compressor			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 4		Input Gain		
+Map	Knob 8		Threshold		
+Map	Knob 12		Ratio		
+Map	Knob 16		Attack		
+Map	Knob 20		Release		
+Map	Knob 32		Output Gain		
+
+Map	Push 4		Soft Knee		
+Map	Push 8		Sidechain Solo		
+Map	Push 12		Adapt		
+
+
+Scope	Propellerheads	MClass Maximizer			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 4		Input Gain		
+Map	Knob 8		Attack Speed		
+Map	Knob 12		Release Speed		
+Map	Knob 16		Output Gain		
+Map	Knob 20		Soft Clip Amount		
+
+Map	Grid 6		Limiter Enable		
+Map	Grid 7		Look Ahead Enable		
+Map	Grid 8		Soft Clip Enable		
+
+
+Scope	Propellerheads	RV7000 Advanced Reverb
+Map	Grid 6		Select Previous Patch
+Map	Grid 7		Select Next Patch
+
+Map	Knob 32		Dry/Wet
+Map	Knob 4		Decay
+Map	Knob 8		HF Damp
+Map	Knob 12		Hi EQ
+Map	Grid 3		EQ On/Off
+Map	Grid 4		Gate On/Off
+Map	Grid 5		Edit Mode
+Map	Knob 13		Soft Knob 1
+Map	Knob 14		Soft Knob 2
+Map	Knob 15		Soft Knob 3
+Map	Knob 16		Soft Knob 4
+Map	Knob 17		Soft Knob 5
+Map	Knob 18		Soft Knob 6
+Map	Knob 19		Soft Knob 7
+Map	Knob 20		Soft Knob 8
+//eos
+
+Scope	Propellerheads	Scream 4 Distortion
+Map	Grid 6		Select Previous Patch
+Map	Grid 7		Select Next Patch
+
+Map	Knob 4		Damage Control
+Map	Push 4		Damage On/Off
+Map	Grid 4		Damage Type
+Map	Knob 8		Parameter 1
+Map	Knob 12		Parameter 2
+Map	Grid 3		Cut On/Off
+Map	Knob 3		Cut Lo
+Map	Knob 7		Cut Mid
+Map	Knob 11		Cut Hi
+Map	Push 16		Body On/Off
+Map	Knob 16		Body Resonance
+Map	Knob 20		Body Scale
+Map	Knob 24		Body Auto
+Map	Knob 32		Master Level
+Map	Push 28		Body Type
+//eos
+
+Scope	Propellerheads	RV-7 Digital Reverb
+Map	Grid 6		Algorithm
+
+Map	Knob 32		Dry/Wet
+Map	Knob 4		Size
+Map	Knob 8		Decay
+Map	Knob 12		Damping
+//eos
+
+Scope	Propellerheads	DDL-1 Digital Delay Line
+Map	Grid 6		Unit
+Map	Grid 7		Step Length
+Map	Knob 4		Feedback
+Map	Knob 8		Pan
+Map	Knob 12		DelayTime (steps)
+Map	Knob 16		DelayTime (ms) 
+Map	Knob 32		Dry/Wet Balance
+//eos
+
+Scope	Propellerheads	D-11 Foldback Distortion
+Map	Knob 8		Foldback
+Map	Knob 4		Amount
+//eos
+
+Scope	Propellerheads	ECF-42 Envelope Controlled Filter
+Map	Grid 6		Mode
+Map	Knob 4		Frequency
+Map	Knob 8		Resonance
+Map	Knob 12		Env Amount
+Map	Knob 16		Velocity
+Map	Knob 20		Attack
+Map	Knob 24		Decay
+Map	Knob 28		Sustain
+Map	Knob 32		Release
+//eos
+
+Scope	Propellerheads	CF-101 Chorus/Flanger
+Map	Grid 6		LFO Sync Enable
+Map	Grid 7		Send/Insert Mode
+Map	Knob 4		Delay
+Map	Knob 8		Feedback
+Map	Knob 12		Rate
+Map	Knob 16		Modulation Amount
+//eos
+
+Scope	Propellerheads	PH-90 Phaser
+Map	Grid 6		LFO Sync Enable
+Map	Knob 4		Frequency
+Map	Knob 8		Split
+Map	Knob 12		Width
+Map	Knob 16		Rate
+Map	Knob 20		Frequency Modulation
+Map	Knob 24		Feedback
+//eos
+
+Scope	Propellerheads	UN-16 Unison
+Map	Grid 6		Voice Count
+Map	Knob 4		Detune
+Map	Knob 8		Dry/Wet
+//eos
+Scope	Propellerheads	COMP-01 Compressor/Limiter
+Map	Knob 4		Ratio
+Map	Knob 8		Threshold
+Map	Knob 12		Attack 
+Map	Knob 16		Release
+Map	Knob 32		Gain
+//eos
+Scope	Propellerheads	PEQ-2 Two Band Parametric EQ
+Map	Grid 6		Filter B On/Off
+Map	Knob 4		Filter A Freq
+Map	Knob 8		Filter A Q
+Map	Knob 12		Filter A Gain
+Map	Knob 16		Filter B Freq 
+Map	Knob 20		Filter B Q
+Map	Knob 24		Filter B Gain
+//eos
+
+Scope	Propellerheads	Matrix Pattern Sequencer
+Map	Grid 3		Bank A
+Map	Grid 4		Bank B
+Map	Grid 6		Bank C
+Map	Grid 7		Bank D
+
+Map	Push 4		Run
+Map	Push 8		Pattern Select in Bank
+Map	Push 12		Bank Select
+Map	Push 16		Pattern Enable
+//eos
+Scope	Propellerheads	Combinator
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Knob 12		Rotary 1
+Map	Knob 16		Rotary 2
+Map	Knob 20		Rotary 3
+Map	Knob 24		Rotary 4
+Map	Push 12		Button 1
+Map	Push 16		Button 2
+Map	Push 20		Button 3
+Map	Push 24		Button 4
+
+Map	Grid 6		Select Previous Patch
+Map	Grid 7		Select Next Patch
+Map	Push 32		Bypass All FX
+//eos
+
+Scope	Propellerheads	The Echo
+
+Map	Knob 3		Delay Time
+Map	Push 3		Keep Pitch
+Map	Knob 7		Right Ch Time Offset
+Map	Push 7		Sync
+Map	Knob 11		Feedback
+Map	Knob 15		Right Ch Feedback Offset
+Map	Knob 19		Drive Amount
+Map	Push 19		Drive Type
+Map	Knob 23		Envelope
+Map	Knob 27		Wobble
+Map	Knob 31		Dry/Wet Balance
+
+Map	Knob 4		Ping-Pong Pan
+Map	Push 4		Ping-Pong Mode
+Map	Knob 8		Diffuse Spread
+Map	Push 8		Diffuse On
+Map	Knob 12		Diffuse Amount
+Map	Knob 16		Filter Frequency
+Map	Push 16		Filter On
+Map	Knob 20		Filter Resonance 
+Map	Knob 24		LFO Rate
+Map	Knob 28		LFO Amount
+Map	Knob 32		Ducking
+
+Map	Push 1		Trig
+Map	Knob 1		Input Mode
+Map	Knob 5		Roll Enabled
+//eos
+
+Scope	Propellerheads	Alligator
+Define Group	Keyboard Shortcut Variations	Page 1	Page 2	Page 3
+Map	Grid 3		Keyboard Shortcut Variations=Page 1
+Map	Grid 4		Keyboard Shortcut Variations=Page 2
+Map	Grid 6		Keyboard Shortcut Variations=Page 3
+
+Map	Push 1		Pattern Enable			Page 1
+Map	Knob 2		Pattern			Page 1
+Map	Push 2		Shuffle			Page 1
+Map	Knob 3		Resolution			Page 1
+Map	Knob 4		Shift			Page 1
+Map	Push 6		Gate 1 Trig			Page 1
+Map	Push 7		Gate 2 Trig			Page 1
+Map	Push 8		Gate 3 Trig			Page 1
+Map	Push 10		High Pass Filter On			Page 1
+Map	Knob 10		High Pass LFO Amount			Page 1
+Map	Push 11		Band Pass Filter On			Page 1
+Map	Knob 11		Band Pass LFO Amount			Page 1
+Map	Push 12		Low Pass Filter On			Page 1
+Map	Knob 12		Low Pass LFO Amount			Page 1
+Map	Knob 14		High Pass Frequency			Page 1
+Map	Knob 15		Band Pass Frequency			Page 1
+Map	Knob 16		Low Pass Frequency			Page 1
+Map	Knob 18		High Pass Resonance			Page 1
+Map	Knob 19		Band Pass Resonance			Page 1
+Map	Knob 20		Low Pass Resonance			Page 1
+Map	Knob 22		High Pass Env Amount			Page 1
+Map	Knob 23		Band Pass Env Amount			Page 1
+Map	Knob 24		Low Pass Env Amount			Page 1
+
+Map	Knob 1		High Pass Drive Amount			Page 2
+Map	Knob 2		Band Pass Drive Amount			Page 2
+Map	Knob 3		Low Pass Drive Amount			Page 2
+Map	Knob 5		High Pass Phaser Amount			Page 2
+Map	Knob 6		Band Pass Phaser Amount			Page 2
+Map	Knob 7		Low Pass Phaser Amount			Page 2
+Map	Knob 9		High Pass Delay Amount			Page 2
+Map	Knob 10		Band Pass Delay Amount			Page 2
+Map	Knob 11		Low Pass Delay Amount			Page 2
+Map	Knob 13		High Pass Pan			Page 2
+Map	Knob 14		Band Pass Pan			Page 2
+Map	Knob 15		Low Pass Pan			Page 2
+Map	Knob 17		High Pass Volume			Page 2
+Map	Knob 18		Band Pass Volume			Page 2
+Map	Knob 19		Low Pass Volume			Page 2
+Map	Knob 30		Master Volume			Page 2
+Map	Knob 24		Ducking			Page 2
+Map	Knob 28		Dry Pan			Page 2
+Map	Knob 32		Dry Volume			Page 2
+
+Map	Knob 3		Amp Env Attack			Page 3
+Map	Knob 4		Delay Time			Page 3
+Map	Push 4		DelaySync			Page 3
+Map	Knob 7		Amp Env Decay			Page 3
+Map	Knob 8		Delay Feedback			Page 3
+Map	Knob 11		Amp Env Release			Page 3
+Map	Knob 12		Delay Pan			Page 3
+Map	Knob 15		LFO Waveform			Page 3
+Map	Knob 16		Phaser Rate			Page 3
+Map	Knob 19		LFO Freq			Page 3
+Map	Push 19		LFOSync			Page 3
+Map	Knob 20		Phaser Feedback			Page 3
+Map	Knob 23		Filter Env Attack			Page 3
+Map	Knob 27		Filter Env Decay			Page 3
+Map	Knob 31		Filter Env Release			Page 3
+//eos
+
+Scope	Propellerheads	Pulveriser
+Map	Knob 3		Squash
+Map	Knob 7		Dirt
+//Map	Knob 11		Filter Mode
+Map	Knob 13		Tremor to Frequency
+Map	Knob 14		Follower to Rate
+Map	Knob 15		Follower to Frequency
+Map	Knob 19		Tremor Rate
+Map	Push 19		Sync
+Map	Knob 23		Tremor Lag
+Map	Push 23		Tremor Spread
+Map	Knob 18		Tremor Waveform
+Map	Knob 27		Tremor to Volume
+Map	Knob 31		Volume
+
+Map	Knob 4		Release
+Map	Push 4		Routing
+Map	Knob 8		Tone
+Map	Knob 12		Filter Frequency
+Map	Knob 16		Peak
+Map	Knob 20		Follower Threshold
+Map	Knob 24		Follower Attack
+Map	Knob 28		Follower Release
+Map	Knob 32		Blend
+
+//eos
+
+Scope	Propellerheads	Kong Drum Designer
+Define Group	Keyboard Shortcut Variations	Main	Page 1	Page 2	Page 3	Page 4
+Map	Grid 3		Keyboard Shortcut Variations=Page 1
+Map	Grid 4		Keyboard Shortcut Variations=Page 2
+Map	Grid 6		Keyboard Shortcut Variations=Page 3
+Map	Grid 7		Keyboard Shortcut Variations=Page 4
+
+Map	Grid 5		Keyboard Shortcut Variations=Main
+
+//Map	Knob 1		Pitch Bend			Main
+Map	Knob 1		Mod Wheel			Main
+Map	Knob 4		Master FX P1			Main
+Map	Knob 8		Master FX P2			Main
+Map	Knob 12		Bus FX P1			Main
+Map	Knob 16		Bus FX P2			Main
+Map	Knob 29		Note On Indicator			Main
+Map	Knob 31		Sample Loading Progress			Main
+Map	Knob 32		Master Level			Main
+
+
+Map	Knob 17		Drum 6 Pitch Offset			Page 1
+Map	Knob 21		Drum 6 Decay Offset			Page 1
+Map	Knob 25		Drum 6 Tone			Page 1
+Map	Knob 29		Drum 6 Pan			Page 1
+Map	Knob 18		Drum 6 Bus FX Send			Page 1
+Map	Knob 22		Drum 6 Aux 1 Send			Page 1
+Map	Knob 26		Drum 6 Aux 2 Send			Page 1
+Map	Knob 30		Drum 6 Level			Page 1
+Map	Push 17		Pad 6 Mute			Page 1
+Map	Push 21		Pad 6 Solo			Page 1
+Map	Push 22		Drum 6 FX1 On			Page 1
+Map	Push 26		Drum 6 FX2 On			Page 1
+Map	Push 30		Drum 6 DM On			Page 1
+
+Map	Knob 1		Drum 5 Pitch Offset			Page 1
+Map	Knob 5		Drum 5 Decay Offset			Page 1
+Map	Knob 9		Drum 5 Tone			Page 1
+Map	Knob 13		Drum 5 Pan			Page 1
+Map	Knob 2		Drum 5 Bus FX Send			Page 1
+Map	Knob 6		Drum 5 Aux 1 Send			Page 1
+Map	Knob 10		Drum 5 Aux 2 Send			Page 1
+Map	Knob 14		Drum 5 Level			Page 1
+Map	Push 1		Pad 5 Mute			Page 1
+Map	Push 5		Pad 5 Solo			Page 1
+Map	Push 6		Drum 5 FX1 On			Page 1
+Map	Push 10		Drum 5 FX2 On			Page 1
+Map	Push 14		Drum 5 DM On			Page 1
+
+Map	Knob 19		Drum 2 Pitch Offset			Page 1
+Map	Knob 23		Drum 2 Decay Offset			Page 1
+Map	Knob 27		Drum 2 Tone			Page 1
+Map	Knob 31		Drum 2 Pan			Page 1
+Map	Knob 20		Drum 2 Bus FX Send			Page 1
+Map	Knob 24		Drum 2 Aux 1 Send			Page 1
+Map	Knob 28		Drum 2 Aux 2 Send			Page 1
+Map	Knob 32		Drum 2 Level			Page 1
+Map	Push 19		Pad 2 Mute			Page 1
+Map	Push 23		Pad 2 Solo			Page 1
+Map	Push 20		Drum 2 FX1 On			Page 1
+Map	Push 24		Drum 2 FX2 On			Page 1
+Map	Push 28		Drum 2 DM On			Page 1
+
+Map	Knob 3		Drum 1 Pitch Offset			Page 1
+Map	Knob 7		Drum 1 Decay Offset			Page 1
+Map	Knob 11		Drum 1 Tone			Page 1
+Map	Knob 15		Drum 1 Pan			Page 1
+Map	Knob 4		Drum 1 Bus FX Send			Page 1
+Map	Knob 8		Drum 1 Aux 1 Send			Page 1
+Map	Knob 12		Drum 1 Aux 2 Send			Page 1
+Map	Knob 16		Drum 1 Level			Page 1
+Map	Push 3		Pad 1 Mute			Page 1
+Map	Push 7		Pad 1 Solo			Page 1
+Map	Push 8		Drum 1 FX1 On			Page 1
+Map	Push 12		Drum 1 FX2 On			Page 1
+Map	Push 16		Drum 1 DM On			Page 1
+
+Map	Knob 17		Drum 8 Pitch Offset			Page 2
+Map	Knob 21		Drum 8 Decay Offset			Page 2
+Map	Knob 25		Drum 8 Tone			Page 2
+Map	Knob 29		Drum 8 Pan			Page 2
+Map	Knob 18		Drum 8 Bus FX Send			Page 2
+Map	Knob 22		Drum 8 Aux 1 Send			Page 2
+Map	Knob 26		Drum 8 Aux 2 Send			Page 2
+Map	Knob 30		Drum 8 Level			Page 2
+Map	Push 17		Pad 8 Mute			Page 2
+Map	Push 21		Pad 8 Solo			Page 2
+Map	Push 22		Drum 8 FX1 On			Page 2
+Map	Push 26		Drum 8 FX2 On			Page 2
+Map	Push 30		Drum 8 DM On			Page 2
+
+Map	Knob 1		Drum 7 Pitch Offset			Page 2
+Map	Knob 5		Drum 7 Decay Offset			Page 2
+Map	Knob 9		Drum 7 Tone			Page 2
+Map	Knob 13		Drum 7 Pan			Page 2
+Map	Knob 2		Drum 7 Bus FX Send			Page 2
+Map	Knob 6		Drum 7 Aux 1 Send			Page 2
+Map	Knob 10		Drum 7 Aux 2 Send			Page 2
+Map	Knob 14		Drum 7 Level			Page 2
+Map	Push 1		Pad 7 Mute			Page 2
+Map	Push 5		Pad 7 Solo			Page 2
+Map	Push 6		Drum 7 FX1 On			Page 2
+Map	Push 10		Drum 7 FX2 On			Page 2
+Map	Push 14		Drum 7 DM On			Page 2
+
+Map	Knob 19		Drum 4 Pitch Offset			Page 2
+Map	Knob 23		Drum 4 Decay Offset			Page 2
+Map	Knob 27		Drum 4 Tone			Page 2
+Map	Knob 31		Drum 4 Pan			Page 2
+Map	Knob 20		Drum 4 Bus FX Send			Page 2
+Map	Knob 24		Drum 4 Aux 1 Send			Page 2
+Map	Knob 28		Drum 4 Aux 2 Send			Page 2
+Map	Knob 32		Drum 4 Level			Page 2
+Map	Push 19		Pad 4 Mute			Page 2
+Map	Push 23		Pad 4 Solo			Page 2
+Map	Push 20		Drum 4 FX1 On			Page 2
+Map	Push 24		Drum 4 FX2 On			Page 2
+Map	Push 28		Drum 4 DM On			Page 2
+
+Map	Knob 3		Drum 3 Pitch Offset			Page 2
+Map	Knob 7		Drum 3 Decay Offset			Page 2
+Map	Knob 11		Drum 3 Tone			Page 2
+Map	Knob 15		Drum 3 Pan			Page 2
+Map	Knob 4		Drum 3 Bus FX Send			Page 2
+Map	Knob 8		Drum 3 Aux 1 Send			Page 2
+Map	Knob 12		Drum 3 Aux 2 Send			Page 2
+Map	Knob 16		Drum 3 Level			Page 2
+Map	Push 3		Pad 3 Mute			Page 2
+Map	Push 7		Pad 3 Solo			Page 2
+Map	Push 8		Drum 3 FX1 On			Page 2
+Map	Push 12		Drum 3 FX2 On			Page 2
+Map	Push 16		Drum 3 DM On			Page 2
+
+
+Map	Knob 17		Drum 14 Pitch Offset			Page 3
+Map	Knob 21		Drum 14 Decay Offset			Page 3
+Map	Knob 25		Drum 14 Tone			Page 3
+Map	Knob 29		Drum 14 Pan			Page 3
+Map	Knob 18		Drum 14 Bus FX Send			Page 3
+Map	Knob 22		Drum 14 Aux 1 Send			Page 3
+Map	Knob 26		Drum 14 Aux 2 Send			Page 3
+Map	Knob 30		Drum 14 Level			Page 3
+Map	Push 17		Pad 14 Mute			Page 3
+Map	Push 21		Pad 14 Solo			Page 3
+Map	Push 22		Drum 14 FX1 On			Page 3
+Map	Push 26		Drum 14 FX2 On			Page 3
+Map	Push 30		Drum 14 DM On			Page 3
+
+Map	Knob 1		Drum 13 Pitch Offset			Page 3
+Map	Knob 5		Drum 13 Decay Offset			Page 3
+Map	Knob 9		Drum 13 Tone			Page 3
+Map	Knob 13		Drum 13 Pan			Page 3
+Map	Knob 2		Drum 13 Bus FX Send			Page 3
+Map	Knob 6		Drum 13 Aux 1 Send			Page 3
+Map	Knob 10		Drum 13 Aux 2 Send			Page 3
+Map	Knob 14		Drum 13 Level			Page 3
+Map	Push 1		Pad 13 Mute			Page 3
+Map	Push 5		Pad 13 Solo			Page 3
+Map	Push 6		Drum 13 FX1 On			Page 3
+Map	Push 10		Drum 13 FX2 On			Page 3
+Map	Push 14		Drum 13 DM On			Page 3
+
+Map	Knob 19		Drum 10 Pitch Offset			Page 3
+Map	Knob 23		Drum 10 Decay Offset			Page 3
+Map	Knob 27		Drum 10 Tone			Page 3
+Map	Knob 31		Drum 10 Pan			Page 3
+Map	Knob 20		Drum 10 Bus FX Send			Page 3
+Map	Knob 24		Drum 10 Aux 1 Send			Page 3
+Map	Knob 28		Drum 10 Aux 2 Send			Page 3
+Map	Knob 32		Drum 10 Level			Page 3
+Map	Push 19		Pad 10 Mute			Page 3
+Map	Push 23		Pad 10 Solo			Page 3
+Map	Push 20		Drum 10 FX1 On			Page 3
+Map	Push 24		Drum 10 FX2 On			Page 3
+Map	Push 28		Drum 10 DM On			Page 3
+
+Map	Knob 3		Drum 9 Pitch Offset			Page 3
+Map	Knob 7		Drum 9 Decay Offset			Page 3
+Map	Knob 11		Drum 9 Tone			Page 3
+Map	Knob 15		Drum 9 Pan			Page 3
+Map	Knob 4		Drum 9 Bus FX Send			Page 3
+Map	Knob 8		Drum 9 Aux 1 Send			Page 3
+Map	Knob 12		Drum 9 Aux 2 Send			Page 3
+Map	Knob 16		Drum 9 Level			Page 3
+Map	Push 3		Pad 9 Mute			Page 3
+Map	Push 7		Pad 9 Solo			Page 3
+Map	Push 8		Drum 9 FX1 On			Page 3
+Map	Push 12		Drum 9 FX2 On			Page 3
+Map	Push 16		Drum 9 DM On			Page 3
+
+Map	Knob 17		Drum 16 Pitch Offset			Page 4
+Map	Knob 21		Drum 16 Decay Offset			Page 4
+Map	Knob 25		Drum 16 Tone			Page 4
+Map	Knob 29		Drum 16 Pan			Page 4
+Map	Knob 18		Drum 16 Bus FX Send			Page 4
+Map	Knob 22		Drum 16 Aux 1 Send			Page 4
+Map	Knob 26		Drum 16 Aux 2 Send			Page 4
+Map	Knob 30		Drum 16 Level			Page 4
+Map	Push 17		Pad 16 Mute			Page 4
+Map	Push 21		Pad 16 Solo			Page 4
+Map	Push 22		Drum 16 FX1 On			Page 4
+Map	Push 26		Drum 16 FX2 On			Page 4
+Map	Push 30		Drum 16 DM On			Page 4
+
+Map	Knob 1		Drum 15 Pitch Offset			Page 4
+Map	Knob 5		Drum 15 Decay Offset			Page 4
+Map	Knob 9		Drum 15 Tone			Page 4
+Map	Knob 13		Drum 15 Pan			Page 4
+Map	Knob 2		Drum 15 Bus FX Send			Page 4
+Map	Knob 6		Drum 15 Aux 1 Send			Page 4
+Map	Knob 10		Drum 15 Aux 2 Send			Page 4
+Map	Knob 14		Drum 15 Level			Page 4
+Map	Push 1		Pad 15 Mute			Page 4
+Map	Push 5		Pad 15 Solo			Page 4
+Map	Push 6		Drum 15 FX1 On			Page 4
+Map	Push 10		Drum 15 FX2 On			Page 4
+Map	Push 14		Drum 15 DM On			Page 4
+
+Map	Knob 19		Drum 12 Pitch Offset			Page 4
+Map	Knob 23		Drum 12 Decay Offset			Page 4
+Map	Knob 27		Drum 12 Tone			Page 4
+Map	Knob 31		Drum 12 Pan			Page 4
+Map	Knob 20		Drum 12 Bus FX Send			Page 4
+Map	Knob 24		Drum 12 Aux 1 Send			Page 4
+Map	Knob 28		Drum 12 Aux 2 Send			Page 4
+Map	Knob 32		Drum 12 Level			Page 4
+Map	Push 19		Pad 12 Mute			Page 4
+Map	Push 23		Pad 12 Solo			Page 4
+Map	Push 20		Drum 12 FX1 On			Page 4
+Map	Push 24		Drum 12 FX2 On			Page 4
+Map	Push 28		Drum 12 DM On			Page 4
+
+Map	Knob 3		Drum 11 Pitch Offset			Page 4
+Map	Knob 7		Drum 11 Decay Offset			Page 4
+Map	Knob 11		Drum 11 Tone			Page 4
+Map	Knob 15		Drum 11 Pan			Page 4
+Map	Knob 4		Drum 11 Bus FX Send			Page 4
+Map	Knob 8		Drum 11 Aux 1 Send			Page 4
+Map	Knob 12		Drum 11 Aux 2 Send			Page 4
+Map	Knob 16		Drum 11 Level			Page 4
+Map	Push 3		Pad 11 Mute			Page 4
+Map	Push 7		Pad 11 Solo			Page 4
+Map	Push 8		Drum 11 FX1 On			Page 4
+Map	Push 12		Drum 11 FX2 On			Page 4
+Map	Push 16		Drum 11 DM On			Page 4
+//eos
+
+Scope	Propellerheads	Neptune Pitch Adjuster
+//Map	Knob 3		Pitch Bend Range
+Map	Knob 4		Pitch Bend
+Map	Knob 7		Vibrato Rate
+Map	Knob 8		Mod Wheel
+Map	Push 9		Low Freq Input
+Map	Push 10		Wide Vibrato
+Map	Push 11		Live Mode
+Map	Push 12		Midi Destination
+Map	Knob 15		Scale Memory
+Map	Knob 19		Catch Zone
+Map	Knob 20		Correction Speed
+Map	Push 23		Transpose On/Off
+Map	Knob 24		Preserve Expression
+Map	Knob 25		Semitones
+Map	Knob 26		Cent
+Map	Push 28		Pitch Adjust On/Off
+Map	Knob 28		Pitched Signal Level
+Map	Push 31		Formant On/Off
+Map	Knob 31		Formant Shift
+Map	Knob 32		Voice Synth Level
+//eos
+
+
+Scope	Propellerheads	Malstrom Graintable Synthesizer
+
+Define Group	Keyboard Shortcut Variations	Page 1	Page 2	Page 3	Page 4
+Map	Grid 3		Keyboard Shortcut Variations=Page 1
+Map	Grid 4		Keyboard Shortcut Variations=Page 2
+Map	Grid 6		Keyboard Shortcut Variations=Page 3
+Map	Grid 7		Keyboard Shortcut Variations=Page 4
+
+Map	Knob 1		Polyphony			Page 1
+Map	Knob 2		Portamento			Page 1
+Map	Knob 3		Pitch Bend Range			Page 1
+//Map	Knob 4		Pitch Bend			Page 1
+Map	Push 5		Legato On/Off			Page 1
+Map	Knob 8		Mod Wheel			Page 1
+Map	Knob 9		Velocity to Level A			Page 1
+Map	Knob 10		Velocity to Attack			Page 1
+Map	Knob 11		Mod Wheel to Index			Page 1
+Map	Knob 12		Mod Wheel to Shift			Page 1
+Map	Knob 13		Velocity to Level B			Page 1
+Map	Knob 14		Velocity to Shift			Page 1
+Map	Knob 16		Mod Wheel to Filter			Page 1
+Map	Knob 17		Velocity to Filter Env			Page 1
+Map	Knob 18		Velocity to Modulator			Page 1
+Map	Knob 20		Mod Wheel to Modulator			Page 1
+Map	Knob 30		Shaper Amount			Page 1
+Map	Push 30		Shaper On/Off			Page 1
+Map	Knob 31		Spread Amount			Page 1
+Map	Knob 32		Master Level			Page 1
+
+Map	Push 1		Modulator A On/Off			Page 2
+Map	Knob 1		Modulator A Rate			Page 2
+Map	Knob 5		Modulator A to Pitch			Page 2
+Map	Knob 9		Modulator A to Index			Page 2
+Map	Push 9		Modulator A One Shot			Page 2
+Map	Knob 13		Modulator A to Shift			Page 2
+Map	Push 13		Modulator A Sync			Page 2
+Map	Push 17		Modulator A Target			Page 2
+Map	Knob 21		Modulator A Curve			Page 2
+Map	Push 2		Modulator B On/Off			Page 2
+Map	Knob 2		Modulator B Rate			Page 2
+Map	Knob 6		Modulator B To Motion			Page 2
+Map	Knob 10		Modulator B To Level			Page 2
+Map	Push 10		Modulator B One Shot			Page 2
+Map	Knob 14		Modulator B to Filter			Page 2
+Map	Push 14		Modulator B Sync			Page 2
+Map	Push 22		Modulator B Target			Page 2
+Map	Knob 18		Modulator B To Modulator A			Page 2
+Map	Knob 30		Shaper Amount			Page 2
+Map	Push 30		Shaper On/Off			Page 2
+Map	Knob 31		Spread Amount			Page 2
+Map	Knob 32		Master Level			Page 2
+
+Map	Knob 1		Filter Env Attack			Page 3
+Map	Knob 5		Filter Env Decay			Page 3
+Map	Knob 9		Filter Env Sustain			Page 3
+Map	Knob 13		Filter Env Release			Page 3
+Map	Knob 17		Filter Env Amount			Page 3
+Map	Push 17		Filter Env Invert			Page 3
+Map	Push 2		Filter A On/Off			Page 3
+Map	Knob 2		Filter A Resonance			Page 3
+Map	Push 6		Filter A Mode			Page 3
+Map	Knob 6		Filter A Freq			Page 3
+Map	Push 10		Filter A Env			Page 3
+Map	Push 14		Filter A KBD Track			Page 3
+Map	Push 3		Filter B On/Off			Page 3
+Map	Knob 3		Filter B Resonance			Page 3
+Map	Push 7		Filter B Mode			Page 3
+Map	Knob 7		Filter B Freq			Page 3
+Map	Push 11		Filter B Env			Page 3
+Map	Push 15		Filter B KBD Track			Page 3
+Map	Knob 30		Shaper Amount			Page 3
+Map	Push 30		Shaper On/Off			Page 3
+Map	Knob 31		Spread Amount			Page 3
+Map	Knob 32		Master Level			Page 3
+
+
+Map	Push 1		Oscillator A On/Off			Page 4
+Map	Knob 1		Oscillator A Motion			Page 4
+Map	Knob 5		Oscillator A Index			Page 4
+Map	Knob 9		Oscillator A Attack			Page 4
+Map	Knob 13		Oscillator A Decay			Page 4
+Map	Knob 17		Oscillator A Sustain			Page 4
+Map	Knob 21		Oscillator A Release			Page 4
+Map	Knob 2		Oscillator A Shift			Page 4
+Map	Knob 6		Oscillator A Octave			Page 4
+Map	Knob 10		Oscillator A Semi			Page 4
+Map	Knob 14		Oscillator A Cent			Page 4
+Map	Knob 18		Oscillator A Gain			Page 4
+Map	Push 18		Route Oscillator A to Shaper			Page 4
+Map	Push 21		Route Oscillator A to Filter B			Page 4
+Map	Push 3		Oscillator B On/Off			Page 4
+Map	Knob 3		Oscillator B Motion			Page 4
+Map	Knob 7		Oscillator B Index			Page 4
+Map	Knob 11		Oscillator B Attack			Page 4
+Map	Knob 15		Oscillator B Decay			Page 4
+Map	Knob 19		Oscillator B Sustain			Page 4
+Map	Knob 23		Oscillator B Release			Page 4
+Map	Knob 4		Oscillator B Shift			Page 4
+Map	Knob 8		Oscillator B Octave			Page 4
+Map	Knob 12		Oscillator B Semi			Page 4
+Map	Knob 16		Oscillator B Cent			Page 4
+Map	Knob 20		Oscillator B Gain			Page 4
+Map	Push 20		Route Oscillator B to Filter B			Page 4
+Map	Knob 30		Shaper Amount			Page 4
+Map	Push 30		Shaper On/Off			Page 4
+Map	Knob 31		Spread Amount			Page 4
+Map	Knob 32		Master Level			Page 4
+//eos
+
+Scope	Propellerheads	Thor Polysonic Synthesizer
+Define Group	Keyboard Shortcut Variations	Main	Osc	Filter	Mod	Seq
+//      Control Surface Item    Key     Remotable Item  Scale   Mode
+
+Map	Grid 3		Keyboard Shortcut Variations=Main
+Map	Grid 4		Keyboard Shortcut Variations=OSC
+Map	Grid 6		Keyboard Shortcut Variations=Filter
+Map	Grid 7		Keyboard Shortcut Variations=Mod
+
+Map	Grid 5		Keyboard Shortcut Variations=Seq
+
+
+// Map	Knob 4		Pitch Bend			Main
+Map	Knob 8		Mod Wheel			Main
+Map	Knob 11		Polyphony			Main
+Map	Knob 12		Release Polyphony			Main
+Map	Push 12		Key Mode			Main
+Map	Knob 15		Portamento			Main
+Map	Knob 16		Portamento Mode			Main
+Map	Push 19		Note Trigger Midi			Main
+Map	Push 20		Note Trigger Step Seq			Main
+Map	Push 24		Button 1 MIDI Key On			Main
+Map	Knob 23		Rotary 1			Main
+Map	Knob 27		Rotary 2			Main
+//Map	Push 28         Button 2 MIDI Key On			Main
+//Map   Knob 31         Note On Indicator			Main
+Map	Knob 32		Master Level			Main
+
+Map	Knob 1		Osc 1 AM from Osc 2			Osc
+Map	Knob 5		Osc 1 Kbd			Osc
+Map	Knob 9		Osc 1 Oct			Osc
+Map	Knob 13		Osc 1 Semi			Osc
+Map	Knob 17		Osc 1 Tune			Osc
+Map	Knob 21		Osc 1 Param B			Osc
+Map	Knob 25		Osc 1 Param C			Osc
+Map	Knob 29		Osc 1 Mod			Osc
+Map	Knob 2		Osc 2 Sync BW			Osc
+Map	Knob 6		Osc 2 Kbd			Osc
+Map	Knob 10		Osc 2 Oct			Osc
+Map	Knob 14		Osc 2 Semi			Osc
+Map	Knob 18		Osc 2 Tune			Osc
+Map	Knob 22		Osc 2 Param B			Osc
+Map	Knob 26		Osc 2 Param C			Osc
+Map	Knob 30		Osc 2 Mod			Osc
+Map	Knob 3		Osc 3 Sync BW			Osc
+Map	Knob 7		Osc 3 Kbd			Osc
+Map	Knob 11		Osc 3 Oct			Osc
+Map	Knob 15		Osc 3 Semi			Osc
+Map	Knob 19		Osc 3 Tune			Osc
+Map	Knob 23		Osc 3 Param B			Osc
+Map	Knob 27		Osc 3 Param C			Osc
+Map	Knob 31		Osc 3 Mod			Osc
+
+Map	Knob 1		Filter 1 Drive			Filter
+Map	Push 1		Filter 1 Env Invert			Filter
+Map	Knob 5		Filter 1 Env Amount			Filter
+Map	Knob 9		Filter 1 Freq			Filter
+Map	Knob 13		Filter 1 Velocity			Filter
+Map	Knob 17		Filter 1 Res			Filter
+Map	Knob 21		Filter 1 Kbd			Filter
+Map	Knob 25		Filter 1 Param X			Filter
+Map	Knob 29		Filter 1 Param Y			Filter
+
+Map	Knob 2		Osc 1 and 2 Balance			Filter
+Map	Knob 6		Osc 1 and 2 Level			Filter
+Map	Knob 10		Osc 3 Level			Filter
+Map	Push 14		Shaper On			Filter
+Map	Knob 14		Shaper Type			Filter
+Map	Knob 18		Shaper Drive			Filter
+Map	Knob 22		Amplifier Velocity			Filter
+Map	Knob 26		Amplifier Gain			Filter
+Map	Knob 30		Amplifier Pan			Filter
+
+Map	Knob 3		Filter 3 Drive			Filter
+Map	Push 3		Filter 3 Global Env Invert			Filter
+Map	Knob 7		Filter 3 GLobal Env Amount			Filter
+Map	Knob 11		Filter 3 Freq			Filter
+Map	Knob 15		Filter 3 Velocity			Filter
+Map	Knob 19		Filter 3 Res			Filter
+Map	Knob 23		Filter 3 Kbd			Filter
+Map	Knob 27		Filter 3 Param X			Filter
+Map	Knob 31		Filter 3 Param Y			Filter
+
+Map	Knob 1		LFO 1 Rate			Mod
+Map	Push 1		LFO 1 Key Sync			Mod
+Map	Knob 5		LFO 1 Delay			Mod
+//Map	Push 5		LFO 1 Tempo Sync		Mod
+Map	Knob 9		LFO 1 KbdFollow			Mod
+Map	Knob 13		LFO 1 Waveform			Mod
+//Map	Knob 17		Mod 1 Res			Mod
+//Map	Knob 21		Mod 1 Kbd			Mod
+//Map	Knob 25		Mod 1 Param X			Mod
+//Map	Knob 29		Mod 1 Param Y			Mod
+
+Map	Knob 2		Filter Env Attack			Mod
+Map	Push 2		Filter Env Gate Trig On			Mod
+Map	Knob 6		Filter Env Decay			Mod
+Map	Knob 10		Filter Env Sustain			Mod
+Map	Knob 14		Filter Env Release			Mod
+
+//Map	Knob 3		Mod 3 Drive			Mod
+Map	Push 3		Mod Env Gate Trig On			Mod
+Map	Push 7		Mod Env Tempo Sync			Mod
+Map	Push 11		Mod Env Loop			Mod
+Map	Knob 3		Mod Env Delay			Mod
+Map	Knob 7		Mod Env Attack			Mod
+Map	Knob 11		Mod Env Decay			Mod
+Map	Knob 15		Mod Env Release			Mod
+
+Map	Push 4		Amp Env Gate Trig On			Mod
+Map	Knob 4		Amp Env Attack			Mod
+Map	Knob 8		Amp Env Decay			Mod
+Map	Knob 12		Amp Env Sustain			Mod
+Map	Knob 16		Amp Env Release			Mod
+//eos
+
+Scope	Propellerheads	RPG-8 Monophonic Arpeggiator
+
+Map	Grid 3		Pattern Enable
+Map	Grid 4		Shuffle
+Map	Grid 5		Arpeggiator Enable
+
+Map	Push 1		Pattern Step 1
+Map	Push 5		Pattern Step 2
+Map	Push 9		Pattern Step 3
+Map	Push 13		Pattern Step 4
+Map	Push 17		Pattern Step 5
+Map	Push 21		Pattern Step 6
+Map	Push 25		Pattern Step 7
+Map	Push 29		Pattern Step 8
+
+Map	Push 2		Pattern Step 9
+Map	Push 6		Pattern Step 10
+Map	Push 10		Pattern Step 11
+Map	Push 14		Pattern Step 12
+Map	Push 18		Pattern Step 13
+Map	Push 22		Pattern Step 14
+Map	Push 26		Pattern Step 15
+Map	Push 30		Pattern Step 16
+
+Map	Push 3		Octave 1
+Map	Push 7		Octave 2
+Map	Push 11		Octave 3
+Map	Push 15		Octave 4
+Map	Push 19		Insert 4-2
+Map	Push 23		Insert 3-1
+Map	Push 27		Insert High
+Map	Push 31		Insert Low
+Map	Push 32		Insert Off
+
+Map	Knob 4		Velocity/Manual
+Map	Push 4		Hold
+Map	Knob 8		Octave Shift
+Map	Knob 12		Mode
+Map	Knob 16		Rate
+Map	Push 16		Sync
+Map	Knob 20		Gate Length
+Map	Push 20		Single Note Repeat
+Map	Knob 24		Pattern Step Count
+//eos
+
+//eod

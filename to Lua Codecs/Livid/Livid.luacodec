@@ -1,0 +1,62 @@
+version={0,0,2}
+function remote_supported_control_surfaces()
+	local surfaces =
+		{
+		
+			{ manufacturer="Livid", model="Ohm64",
+				source="Livid.lua", picture="Ohm64.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"} },
+				has_keyboard=true,
+				setup_warning_text="The Ohm64 will be set to factory default settings. Any unsaved edits you have made to the Ohm64's mapping.  Do you want to continue?"
+			},
+			{ manufacturer="Livid", model="block",
+				source="Livid.lua", picture="block.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"} },
+				has_keyboard=true,
+				setup_warning_text="The block will be set to factory default settings. Any unsaved edits you have made to the block's mapping.  Do you want to continue?"
+			},
+			{ manufacturer = "Livid", model ="code",
+
+								source = "code.lua", picture = "code.png",
+
+								in_ports={ {description="In Port"} },
+
+								out_ports={ {description="Out Port"} },
+
+								setup_warning_text="The code will be set to factory default settings. Any unsaved edits you have made to the Code's mapping.  Do you want to continue?"
+
+						},
+			{ manufacturer = "Livid", model ="OhmRGB",
+
+								source = "OhmRGB.lua", picture = "OhmRGB.png",
+
+								in_ports={ {description="In Port"} },
+
+								out_ports={ {description="Out Port"} },
+
+	
+				has_keyboard=true,							setup_warning_text="The OhmRGB will be set to factory default settings. Any unsaved edits you have made to the OhmRGB's mapping.  Do you want to continue?"
+
+						}
+
+,			
+			{ manufacturer = "Livid", model ="Base",
+
+								source = "Base.lua", picture = "Base.png",
+
+								in_ports={ {description="In Port"} },
+
+								out_ports={ {description="Out Port"} },
+
+		
+				has_keyboard=true,						setup_warning_text="The Base will be set to factory default settings. Any unsaved edits you have made to the Base's mapping.  Do you want to continue?"
+
+						}
+
+		
+
+				}
+	return surfaces
+end
