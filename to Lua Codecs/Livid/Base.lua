@@ -281,12 +281,15 @@ scale_int = 0;
 g_delivered_scale=0 --for change filter
 drum_mode = 0;
 g_delivered_shift=0 --for change filter
+tranup_btn = 0 --transpose up button state up or down
+trandn_btn = 0 --transpose down button state up or down
 init=1
 
 function remote_process_midi(event)
 	ret=remote.match_midi("<100x>? yy zz",event) --find a note on or off
 	if(ret~=nil) then
 		remote.trace("\nIN"..ret.x.." "..ret.y.." "..ret.z)
+		tran_btn = ret.z
 		--fbtn note ons are velocity 64
 		scale_up=remote.match_midi("9? 15 40",event) --find F4
 		scale_dn=remote.match_midi("9? 16 40",event) --find F5
@@ -400,12 +403,12 @@ function remote_deliver_midi()
 		end
 		init=0
 	end
-	if (g_delivered_shift~=shift or g_delivered_transpose~=transpose) then
+	if (g_delivered_shift~=shift or g_delivered_transpose~=transpose)  then
 		local shcolors = {"00","7F"}
 		shevent = remote.make_midi("90 19 "..shcolors[shift+1])
-		if shift==1 then
+		if shift==1 or tran_btn>0 then
 			--show transpose in 7seg
-			local xpose = string.format("%02i",transpose)
+			local xpose = string.format("%02i",math.abs(transpose) )
 			local c_one = string.format("%02x", string.sub(xpose,1,1) )
 			local c_two = string.format("%02x", string.sub(xpose,2,2) )
 			ltevent=remote.make_midi("b0 22 "..c_one)
@@ -415,7 +418,6 @@ function remote_deliver_midi()
 		else
 			--return to scale
 			local scale_abrv = scaleabrvs[scalename]
-			remote.trace("return? "..scale_abrv)
 			local c_one = string.sub(scale_abrv,1,1)
 			local c_two = string.sub(scale_abrv,2,2)
 			ltevent=remote.make_midi("b0 22 "..sevseg[c_one])
@@ -428,7 +430,7 @@ function remote_deliver_midi()
 		g_delivered_shift=shift
 	end
 	--if scale changes, we update the LCD
-	if (g_delivered_scale~=scale_int or g_delivered_transpose~=transpose) then
+	if ( (g_delivered_scale~=scale_int or g_delivered_transpose~=transpose) and shift~=1 and tran_btn==0) then
 		remote.trace("update scale "..scale_int)
 		local scale_abrv = scaleabrvs[scalename]
 		local c_one = string.sub(scale_abrv,1,1)
@@ -531,18 +533,10 @@ end
 
 function remote_prepare_for_use()
 	local retEvents={
-		--reset to defaults:
 		remote.make_midi("F0 00 01 61 0C 06 F7"),
-		--send 'all local ctl off' on the settings ch (ch 16)  dec: 191,122,64 
+		--send all local off on settings ch 16  191,122,64 
 		remote.make_midi("bF 7A 40"),
-		--set drum pads to high sens
-		remote.make_midi("F0 00 01 61 0C 29 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 F7")
 	}
-	init=1 --flag is used to indicate that we should send initial LED states. We can't do that here, because Reason sends some other stuff that defeats those!
+	init=1
 	return retEvents
-end
-
-function remote_release_from_use()
-	--reset to defaults:
-	return remote.make_midi("F0 00 01 61 0C 06 F7"),
 end
