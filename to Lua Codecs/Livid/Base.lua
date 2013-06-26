@@ -71,6 +71,7 @@ function remote_init(manufacturer, model)
 	if model=="Base" then
 		local items={
 			{name="Keyboard",input="keyboard"},
+			{name="_Scale", output="text"},
 			{name="Slider 1", input="value", min=0, max=127, output="value"},
 			{name="Slider 2", input="value", min=0, max=127, output="value"},
 			{name="Slider 3", input="value", min=0, max=127, output="value"},
@@ -271,6 +272,8 @@ function remote_init(manufacturer, model)
 	end
 end
 
+g_last_input_time=0
+g_last_input_item=nil
 g_delivered_transpose=0 --for change filter
 transpose = 0
 shift = 0
@@ -284,6 +287,15 @@ g_delivered_shift=0 --for change filter
 tranup_btn = 0 --transpose up button state up or down
 trandn_btn = 0 --transpose down button state up or down
 init=1
+prev_scale = 0
+prev_transp = 0
+scale_from_parse=false
+
+g_is_lcd_enabled=false
+--g_lcd_state=string.format("%-16.16s","L C D")
+g_lcd_state="LCD"
+--g_delivered_lcd_state=string.format("%-16.16s","#")
+g_delivered_lcd_state="#"
 
 function remote_process_midi(event)
 	ret=remote.match_midi("<100x>? yy zz",event) --find a note on or off
@@ -307,21 +319,27 @@ function remote_process_midi(event)
 		end
 		if(tran_up) then
 			transpose=transpose+(1-shift)+(shift*12)
+			prev_transp=transpose
 		end
 		if(tran_dn) then
 			transpose=transpose-(1-shift)-(shift*12)
+			prev_transp=transpose
 		end
 		if(scale_up) then
 			scale_int = modulo(scale_int+1,8)
 			scalename = scalenames[1+scale_int]
-			remote.trace("scale up "..scalename)
 			scale=scales[scalename]
+			prev_scale = scale_int
+			scale_from_parse=false
+			--remote.trace("scale up "..scalename)
 		end
 		if(scale_dn) then
 			scale_int = modulo(scale_int-1,8) --only use the first 8 scales
 			scalename = scalenames[1+scale_int]
-			remote.trace("scale dn "..scalename)
 			scale=scales[scalename]
+			prev_scale = scale_int
+			scale_from_parse=false
+			--remote.trace("scale dn "..scalename)
 		end
 		if(drum_tog) then
 			drum_mode = 1-drum_mode
@@ -379,6 +397,7 @@ function remote_deliver_midi()
 			remote.make_midi("90 20 20"),
 			remote.make_midi("90 21 40"),
 			--top rt runner leds for variations w,w,w
+			remote.make_midi("90 48 02"),
 			remote.make_midi("90 49 02"),
 			remote.make_midi("90 4A 02"),
 			remote.make_midi("90 4B 02"),
@@ -406,24 +425,26 @@ function remote_deliver_midi()
 	if (g_delivered_shift~=shift or g_delivered_transpose~=transpose)  then
 		local shcolors = {"00","7F"}
 		shevent = remote.make_midi("90 19 "..shcolors[shift+1])
-		if shift==1 or tran_btn>0 then
-			--show transpose in 7seg
-			local xpose = string.format("%02i",math.abs(transpose) )
-			local c_one = string.format("%02x", string.sub(xpose,1,1) )
-			local c_two = string.format("%02x", string.sub(xpose,2,2) )
-			ltevent=remote.make_midi("b0 22 "..c_one)
-			table.insert(ret_events,ltevent)
-			rtevent=remote.make_midi("b0 23 "..c_two)
-			table.insert(ret_events,rtevent)
-		else
-			--return to scale
-			local scale_abrv = scaleabrvs[scalename]
-			local c_one = string.sub(scale_abrv,1,1)
-			local c_two = string.sub(scale_abrv,2,2)
-			ltevent=remote.make_midi("b0 22 "..sevseg[c_one])
-			table.insert(ret_events,ltevent)
-			rtevent=remote.make_midi("b0 23 "..sevseg[c_two])
-			table.insert(ret_events,rtevent)
+		if(tran_btn~=nil) then
+			if shift==1 or tran_btn>0 then
+				--show transpose in 7seg
+				local xpose = string.format("%02i",math.abs(transpose) )
+				local c_one = string.format("%02x", string.sub(xpose,1,1) )
+				local c_two = string.format("%02x", string.sub(xpose,2,2) )
+				ltevent=remote.make_midi("b0 22 "..c_one)
+				table.insert(ret_events,ltevent)
+				rtevent=remote.make_midi("b0 23 "..c_two)
+				table.insert(ret_events,rtevent)
+			else
+				--return to scale
+				local scale_abrv = scaleabrvs[scalename]
+				local c_one = string.sub(scale_abrv,1,1)
+				local c_two = string.sub(scale_abrv,2,2)
+				ltevent=remote.make_midi("b0 22 "..sevseg[c_one])
+				table.insert(ret_events,ltevent)
+				rtevent=remote.make_midi("b0 23 "..sevseg[c_two])
+				table.insert(ret_events,rtevent)
+			end
 		end
 		
 		table.insert(ret_events,shevent)
@@ -440,8 +461,9 @@ function remote_deliver_midi()
 		rtevent=remote.make_midi("b0 23 "..sevseg[c_two])
 		table.insert(ret_events,rtevent)
 		g_delivered_scale=scale_int
-		-- and color the pads 
-		remote.trace(scalename)
+		--remote.trace(scalename)
+		
+		-- color the pads 
 		if(scalename~='DrumPad') then
 			for i=1,32,1 do
 				local padid = i-1
@@ -482,6 +504,7 @@ function remote_deliver_midi()
 			end
 		end
 	end
+	
 	if g_delivered_transpose~=transpose then
 		local color_len=table.getn(colors)
 		local color_ind=1 + (modulo( math.floor(math.abs(transpose)/12),color_len) ) --change color every octave
@@ -505,7 +528,137 @@ function remote_deliver_midi()
 		table.insert(ret_events,remote.make_midi("b0  7b 00")) --all notes off
 		g_delivered_transpose=transpose
 	end
+	
+	--lcd event
+	local new_text=g_lcd_state
+	if g_delivered_lcd_state~=new_text then
+		--assert(string.len(new_text)==16,string.len(new_text))
+		local use_prev_scale = false
+		local lcd_text=string.format("%-16.16s",new_text)
+		assert(string.len(lcd_text)==16,string.len(lcd_text))
+		local lcd_event=make_lcd_midi_message(lcd_text)
+		table.insert(ret_events,lcd_event)
+		g_delivered_lcd_state=new_text
+
+		--if the new_text has the word KONG in it, and we aren't currently on drum scale, we change over to drum scale
+		local findkong=string.find(new_text,"KONG") or string.find(new_text,"Kong") or string.find(new_text,"kong")
+		if(findkong~=nil and scale_int~=7) then
+			if scale_from_parse==false then
+				prev_scale = scale_int
+			end
+			set_scale(7)
+			--local kong_event=make_lcd_midi_message("KONG FOUND")
+			--table.insert(ret_events,kong_event)
+		else
+			use_prev_scale=true
+			--set_scale(prev_scale)
+			--local notkong_event=make_lcd_midi_message("NO KONG")
+			--table.insert(ret_events,notkong_event)
+		end
+		
+		--see if there's a scale in the track text
+		--new_text = "ID8 scale=4"
+		local result = ""
+		--local scaleint_event=make_lcd_midi_message("TX "..new_text)
+		--table.insert(ret_events,scaleint_event)
+		scsearch = string.find(new_text, 'scale')
+		eqsearch = string.find(new_text, '=%d') --look for an index
+		if(scsearch) then
+			if(eqsearch==nil) then --if we didn't find a number, search for a word after =
+				eqsearch = string.find(new_text, '=%w')			--from the first char after =...
+				spsearch = string.find(new_text, '%s',eqsearch) --...to the next space is a 'word'
+				remote.trace("\nchar "..scsearch.."  "..eqsearch.."  "..spsearch)
+				result = string.sub(new_text,eqsearch+1,spsearch)
+				local sindex=0;
+				for i,v in pairs(scalenames) do  --find the index that the scalename is at
+					if v == result then
+						sindex=i-1
+						break
+					end
+				end
+				set_scale(sindex)
+				--local scalename_event=make_lcd_midi_message("NAME SCALE")
+				--table.insert(ret_events,scalename_event)
+			else 					--otherwise it's an index
+				remote.trace("\nnum "..scsearch.."  "..eqsearch)
+				result = string.sub(new_text,eqsearch+1,eqsearch+2)
+				set_scale(result)
+				--local scaleint_event=make_lcd_midi_message("INT SCALE")
+				--table.insert(ret_events,scaleint_event)
+			end
+			remote.trace("\nresult "..result)
+			use_prev_scale=false
+			scale_from_parse=true
+		else
+			remote.trace("\nno scale in track")
+			scale_from_parse=false
+		end
+		
+		---If it's not a Kong track and there's no scale in the Track name, set to prev_scale
+		if use_prev_scale then
+			set_scale(prev_scale)
+			local prev_event=make_lcd_midi_message("PREV SCALE "..prev_scale.." "..g_delivered_scale)
+			table.insert(ret_events,prev_event)
+		end
+		
+		--see if there's a transpose in the track text
+		local transp = ""
+		tsearch = string.find(new_text, 'trans')
+		eqtsearch = string.find(new_text, '=%d',tsearch) --look for a value
+		if(tsearch and eqtsearch) then
+			prev_transp = transpose
+			remote.trace("\nnum "..transpose)
+			transp = string.sub(new_text,eqtsearch+1,eqtsearch+2)
+			transpose=tonumber(transp)
+			--local transp_event=make_lcd_midi_message("TRANSPOSE "..transpose)
+			--table.insert(ret_events,transp_event)
+		else
+			transpose = prev_transp
+			remote.trace("\nreset transp")
+			--local notransp_event=make_lcd_midi_message("NOTRANSPOSE"..transpose)
+			--table.insert(ret_events,notransp_event)
+		end
+		remote.trace("\ntransp "..transp.." orig "..transpose.."\n")
+	end
 	return ret_events
+end
+
+function remote_on_auto_input(item_index)
+	g_last_input_time=remote.get_time_ms()
+	g_last_input_item=item_index
+	remote.trace("\nauto in "..item_index )
+end
+
+function remote_set_state(changed_items)
+	if(g_last_input_item~=nil) then
+		if remote.is_item_enabled(g_last_input_item) then
+			local feedback_text=remote.get_item_name_and_value(g_last_input_item)
+			if string.len(feedback_text)>0 then
+				g_feedback_enabled=true
+				--g_lcd_state=string.format("%-16.16s",feedback_text)
+				g_lcd_state=feedback_text
+			end
+		end
+	end
+end
+
+function make_lcd_midi_message(text)
+	local event=remote.make_midi("f0 00 01 61 00") --header for Livid LCD, product ID 0
+	start=6
+	stop=6+string.len(text)-1
+	for i=start,stop do
+		sourcePos=i-start+1
+		event[i] = string.byte(text,sourcePos)
+	end
+	event[stop+1] = 247         -- hex f7
+	return event
+end
+
+function set_scale(index)	
+	--scale_int = index
+	scale_int = index
+	scalename = scalenames[1+scale_int]
+	scale=scales[scalename]
 end
 
 function exists(f, l) -- find element v of l satisfying f(v)
@@ -517,6 +670,7 @@ function exists(f, l) -- find element v of l satisfying f(v)
   return nil
 end
 
+--for some reason I need to define a modulo function. just using the % operator was throwing errors :(
 function modulo(a,b)
 	local mo=a-math.floor(a/b)*b
 	return mo
@@ -532,8 +686,9 @@ function remote_probe(manufacturer,model)
 end
 
 function remote_prepare_for_use()
+	g_delivered_lcd_state=string.format("%-16.16s","Livid Base")
 	local retEvents={
-		remote.make_midi("F0 00 01 61 0C 06 F7"),
+		remote.make_midi("F0 00 01 61 0C 06 F7"), --0Ch = (12), product ID for Base
 		--send all local off on settings ch 16  191,122,64 
 		remote.make_midi("bF 7A 40"),
 	}
