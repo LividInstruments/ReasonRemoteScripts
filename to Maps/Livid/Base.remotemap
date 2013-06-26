@@ -4,9 +4,11 @@ Control Surface Manufacturer	Livid
 Control Surface Model	Base
 Map Version	1.0.1
 
-Scope	Propellerheads	Master Keyboard			
+
+Scope	Propellerheads	Master Keyboard
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Keyboard		Keyboard		
+Map	Keyboard		Keyboard
+
 
 Scope	Propellerheads	Reason Document
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -28,16 +30,18 @@ Map	Fbtn 1		Target Previous Track
 Map	Fbtn 2		Target Next Track
 Map	Fbtn 3		Undo
 
+
 Scope	Propellerheads	Combinator
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Rotary 1		
-Map	Slider 2		Rotary 2		
-Map	Slider 3		Rotary 3		
-Map	Slider 4		Rotary 4		
-Map	Slider 5		Button 1		
-Map	Slider 6		Button 2		
-Map	Slider 7		Button 3		
-Map	Slider 8		Button 4		
+Map	Slider 1		Rotary 1
+Map	Slider 2		Rotary 2
+Map	Slider 3		Rotary 3
+Map	Slider 4		Rotary 4
+Map	Slider 5		Button 1
+Map	Slider 6		Button 2
+Map	Slider 7		Button 3
+Map	Slider 8		Button 4
+
 
 Scope	Propellerheads	Mixer 14:2
 Define Group	Keyboard Shortcut Variations	Level 1-7	Level 8-14	Send 1 1-7	Send 1 8-14	Pan 1-7	Pan 8-14
@@ -99,6 +103,7 @@ Map	Slider 5		Channel 12 Pan			Pan 8-14
 Map	Slider 6		Channel 13 Pan			Pan 8-14
 Map	Slider 7		Channel 14 Pan			Pan 8-14
 
+
 Scope	Propellerheads	Line Mixer 6:2
 Define Group	Keyboard Shortcut Variations	Levels	Pans	Sends	Mutes
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -108,8 +113,8 @@ Map	Tbtn 6		Keyboard Shortcut Variations=Sends
 Map	Tbtn 7		Keyboard Shortcut Variations=Pans
 Map	Tbtn 8		Keyboard Shortcut Variations=Mutes
 
-Map	Slider 7		Aux Return Level		
-Map	Slider 8		Master Level		
+Map	Slider 7		Aux Return Level
+Map	Slider 8		Master Level
 
 Map	Slider 1		Channel 1 Level			Levels
 Map	Slider 2		Channel 2 Level			Levels
@@ -148,7 +153,7 @@ Map	Slider 3		Sound A
 Map	Slider 4		Sound B
 Map	Slider 5		Sound C
 Map	Slider 6		Sound D
-//Map	Slider 7		
+//Map	Slider 7
 Map	Slider 8		Volume
 
 
@@ -242,6 +247,7 @@ Map	Slider 5		Bus FX P1			Main
 Map	Slider 6		Bus FX P2			Main
 Map	Slider 7		Level Bus FX to Master FX			Main
 Map	Slider 8		Master Level			Main
+
 
 Scope	Propellerheads	Thor Polysonic Synthesizer
 Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc	FX
@@ -378,6 +384,7 @@ Map	Slider 6		Oscillator B Sustain			Osc B
 Map	Slider 7		Oscillator B Release			Osc B
 Map	Slider 8		Oscillator B Gain			Osc B
 
+
 Scope	Propellerheads	NN19 Digital Sampler
 Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -421,14 +428,15 @@ Scope	Propellerheads	NN-XT Advanced Sampler
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 9		Mod Wheel
-Map	Slider 1		Filter Freq		
-Map	Slider 2		Filter Res		
-Map	Slider 3		Amp Env Attack		
-Map	Slider 4		Amp Env Decay		
-Map	Slider 5		Amp Env Release		
-Map	Slider 6		Mod Env Decay		
-Map	Slider 7		External Controller		
-Map	Slider 8		Master Volume		
+Map	Slider 1		Filter Freq
+Map	Slider 2		Filter Res
+Map	Slider 3		Amp Env Attack
+Map	Slider 4		Amp Env Decay
+Map	Slider 5		Amp Env Release
+Map	Slider 6		Mod Env Decay
+Map	Slider 7		External Controller
+Map	Slider 8		Master Volume
+
 
 Scope	Propellerheads	Dr.REX Loop Player
 Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc
@@ -543,49 +551,57 @@ Map	Slider 6		Hi Shelf Q			Param 2+Hi
 
 Scope	Propellerheads	MClass Stereo Imager
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Low Width		
-Map	Slider 2		X-Over Frequency		
-Map	Slider 3		High Width		
+Map	Slider 1		Low Width
+Map	Slider 2		X-Over Frequency
+Map	Slider 3		High Width
+
 
 Scope	Propellerheads	MClass Compressor
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Input Gain		
-Map	Slider 2		Threshold		
-Map	Slider 3		Ratio		
-Map	Slider 4		Attack		
-Map	Slider 5		Release		
-Map	Slider 6		Output Gain		
-Map	Slider 7		Sidechain Active		
-Map	Slider 8		Sidechain Solo		
+Map	Slider 1		Input Gain
+Map	Slider 2		Threshold
+Map	Slider 3		Ratio
+Map	Slider 4		Attack
+Map	Slider 5		Release
+Map	Slider 6		Output Gain
+Map	Slider 7		Sidechain Active
+Map	Slider 8		Sidechain Solo
 
 
 Scope	Propellerheads	MClass Maximizer
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Input Gain		
-Map	Slider 2		Attack Speed		
-Map	Slider 3		Release Speed		
-Map	Slider 4		Look Ahead Enable		
-Map	Slider 5		Soft Clip Enable		
-Map	Slider 6		Soft Clip Amount		
-Map	Slider 7		Enabled		
-Map	Slider 8		Output Gain		
+Map	Slider 1		Input Gain
+Map	Slider 2		Attack Speed
+Map	Slider 3		Release Speed
+Map	Slider 4		Look Ahead Enable
+Map	Slider 5		Soft Clip Enable
+Map	Slider 6		Soft Clip Amount
+Map	Slider 7		Enabled
+Map	Slider 8		Output Gain
+
 
 Scope	Propellerheads	RV7000 Advanced Reverb
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Decay		
-Map	Slider 2		HF Damp		
-Map	Slider 3		Hi EQ		
-Map	Slider 4		EQ On/Off		
-Map	Slider 5		Gate On/Off		
-Map	Slider 6		Edit Mode		
-Map	Slider 7		Enabled		
-Map	Slider 8		Dry/Wet		
+Map	Slider 1		Decay
+Map	Slider 2		HF Damp
+Map	Slider 3		Hi EQ
+Map	Slider 4		EQ On/Off
+Map	Slider 5		Gate On/Off
+Map	Slider 6		Edit Mode
+Map	Slider 7		Enabled
+Map	Slider 8		Dry/Wet
+
 
 Scope	Propellerheads	Scream 4 Distortion
 Define Group	Keyboard Shortcut Variations	Damage & Cut	Body
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
-Map	Slider 8		Master Level		
+Map	Tbtn 5		Keyboard Shortcut Variations=Damage & Cut
+Map	Tbtn 6		Keyboard Shortcut Variations=Body
+//Map	Tbtn 7		Keyboard Shortcut Variations=
+//Map	Tbtn 8		Keyboard Shortcut Variations=
+
+Map	Slider 8		Master Level
 
 Map	Slider 1		Damage Control			Damage & Cut
 Map	Slider 2		Damage Type			Damage & Cut
@@ -603,9 +619,15 @@ Map	Slider 5		Cut On/Off			Body
 Map	Slider 6		Body On/Off			Body
 Map	Slider 7		Enabled			Body
 
+
 Scope	Propellerheads	BV512 Digital Vocoder
-Define Group	Keyboard Shortcut Variations	Basic	Band 1-8	Band 9-16	Band 17-24
+Define Group	Keyboard Shortcut Variations	Basic	Band 1-8	Band 9-16	Band 17-24	Band 25-32
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Tbtn 5		Keyboard Shortcut Variations=Basic
+Map	Tbtn 6		Keyboard Shortcut Variations=Band 1-8
+Map	Tbtn 7		Keyboard Shortcut Variations=Band 9-16
+Map	Tbtn 8		Keyboard Shortcut Variations=Band 17-24
 
 Map	Slider 1		Band Count			Basic
 Map	Slider 2		Vocoder/Equalizer			Basic
@@ -643,91 +665,274 @@ Map	Slider 6		Band Level 22			Band 17-24
 Map	Slider 7		Band Level 23			Band 17-24
 Map	Slider 8		Band Level 24			Band 17-24
 
-//Map	Slider 1		Band Level 25			Band 25-32
-//Map	Slider 2		Band Level 26			Band 25-32
-//Map	Slider 3		Band Level 27			Band 25-32
-//Map	Slider 4		Band Level 28			Band 25-32
-//Map	Slider 5		Band Level 29			Band 25-32
-//Map	Slider 6		Band Level 30			Band 25-32
-//Map	Slider 7		Band Level 31			Band 25-32
-//Map	Slider 8		Band Level 32			Band 25-32
+Map	Slider 1		Band Level 25			Band 25-32
+Map	Slider 2		Band Level 26			Band 25-32
+Map	Slider 3		Band Level 27			Band 25-32
+Map	Slider 4		Band Level 28			Band 25-32
+Map	Slider 5		Band Level 29			Band 25-32
+Map	Slider 6		Band Level 30			Band 25-32
+Map	Slider 7		Band Level 31			Band 25-32
+Map	Slider 8		Band Level 32			Band 25-32
+
+
+Scope	Propellerheads	Line 6 Guitar Amp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Slider 1		Wah Pedal
+Map	Slider 2		Volume Pedal
+Map	Slider 3		Drive
+Map	Slider 4		Bass
+Map	Slider 5		Middle
+Map	Slider 6		Treble
+Map	Slider 7		Presence
+Map	Slider 8		Volume
+
+
+Scope	Propellerheads	Line 6 Bass Amp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Slider 1		Threshold
+Map	Slider 2		Drive
+Map	Slider 3		Bass
+Map	Slider 4		Middle
+Map	Slider 5		Treble
+Map	Slider 6		Presence
+Map	Slider 8		Volume
+
+
+Scope	Propellerheads	Neptune Pitch Adjuster
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Slider 9		Mod Wheel
+
+Map	Slider 1		Pitch Adjust Amount
+Map	Slider 2		Correction Speed
+Map	Slider 3		Preserve Expression
+Map	Slider 4		Semitones
+Map	Slider 5		Cent
+Map	Slider 6		Formant Shift
+Map	Slider 7		Pitched Signal Level
+Map	Slider 8		Voice Synth Level
+
+
+Scope	Propellerheads	Pulveriser
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Define Group	Keyboard Shortcut Variations	Basic	Follower	Tremor
+
+Map	Tbtn 5		Keyboard Shortcut Variations=Basic
+Map	Tbtn 6		Keyboard Shortcut Variations=Follower
+Map	Tbtn 7		Keyboard Shortcut Variations=Tremor
+//Map	Tbtn 8		Keyboard Shortcut Variations=
+
+Map	Slider 7		Volume
+Map	Slider 8		Blend
+
+Map	Slider 1		Squash			Basic
+Map	Slider 2		Dirt			Basic
+Map	Slider 3		Tone			Basic
+Map	Slider 4		Filter Mode			Basic
+Map	Slider 5		Filter Frequency			Basic
+Map	Slider 6		Peak			Basic
+
+Map	Slider 1		Follower to Rate			Follower
+Map	Slider 2		Follower to Frequency			Follower
+Map	Slider 3		Follower Trig			Follower
+Map	Slider 4		Follower Threshold			Follower
+Map	Slider 5		Follower Attack			Follower
+Map	Slider 6		Follower Release			Follower
+
+Map	Slider 1		Tremor to Frequency			Tremor
+Map	Slider 2		Tremor to Volume			Tremor
+Map	Slider 3		Tremor Rate			Tremor
+Map	Slider 4		Tremor Waveform			Tremor
+Map	Slider 5		Tremor Spread			Tremor
+Map	Slider 6		Tremor Lag			Tremor
+
+
+Scope	Propellerheads	The Echo
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Define Group	Keyboard Shortcut Variations	Delay	FilterMod
+
+Map	Tbtn 5		Keyboard Shortcut Variations=Delay
+Map	Tbtn 6		Keyboard Shortcut Variations=FilterMod
+//Map	Tbtn 7		Keyboard Shortcut Variations=
+//Map	Tbtn 8		Keyboard Shortcut Variations=
+
+Map	Slider 1		Delay Time			Delay
+Map	Slider 2		Right Ch Time Offset			Delay
+Map	Slider 3		Ping-Pong Pan			Delay
+Map	Slider 4		Feedback			Delay
+Map	Slider 5		Right Ch Feedback Offset			Delay
+Map	Slider 6		Drive Amount			Delay
+Map	Slider 7		Drive Type			Delay
+Map	Slider 8		Dry/Wet Balance			Delay
+
+Map	Slider 1		Envelope			FilterMod
+Map	Slider 2		Wobble			FilterMod
+Map	Slider 3		Diffuse Spread			FilterMod
+Map	Slider 4		Diffuse Amount			FilterMod
+Map	Slider 5		Filter Frequency			FilterMod
+Map	Slider 6		Filter Resonance			FilterMod
+Map	Slider 7		LFO Rate			FilterMod
+Map	Slider 8		LFO Amount			FilterMod
+
+Map	Fader 9		Ducking
+
+
+Scope	Propellerheads	Alligator
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Define Group	Keyboard Shortcut Variations	MainFX	High	Band	Low	Dry
+
+Map	Tbtn 5		Keyboard Shortcut Variations=MainFX
+Map	Tbtn 6		Keyboard Shortcut Variations=High
+Map	Tbtn 7		Keyboard Shortcut Variations=Band
+Map	Tbtn 8		Keyboard Shortcut Variations=Low
+
+Map	Slider 1		Resolution			MainFX
+Map	Slider 2		LFO Freq			MainFX
+Map	Slider 3		LFO Waveform			MainFX
+Map	Slider 4		Delay Time			MainFX
+Map	Slider 5		Delay Feedback			MainFX
+Map	Slider 6		Delay Pan			MainFX
+Map	Slider 7		Phaser Rate			MainFX
+Map	Slider 8		Phaser Feedback			MainFX
+Map	Slider 9		Master Volume			MainFX
+
+Map	Slider 1		High Pass LFO Amount			High
+Map	Slider 2		High Pass Frequency			High
+Map	Slider 3		High Pass Resonance			High
+Map	Slider 4		High Pass Env Amount			High
+Map	Slider 5		High Pass Drive Amount			High
+Map	Slider 6		High Pass Phaser Amount			High
+Map	Slider 7		High Pass Delay Amount			High
+Map	Slider 8		High Pass Pan			High
+Map	Slider 9		High Pass Volume			High
+
+Map	Slider 1		Band Pass LFO Amount			Band
+Map	Slider 2		Band Pass Frequency			Band
+Map	Slider 3		Band Pass Resonance			Band
+Map	Slider 4		Band Pass Env Amount			Band
+Map	Slider 5		Band Pass Drive Amount			Band
+Map	Slider 6		Band Pass Phaser Amount			Band
+Map	Slider 7		Band Pass Delay Amount			Band
+Map	Slider 8		Band Pass Pan			Band
+Map	Slider 9		Band Pass Volume			Band
+
+Map	Slider 1		Low Pass LFO Amount			Low
+Map	Slider 2		Low Pass Frequency			Low
+Map	Slider 3		Low Pass Resonance			Low
+Map	Slider 4		Low Pass Env Amount			Low
+Map	Slider 5		Low Pass Drive Amount			Low
+Map	Slider 6		Low Pass Phaser Amount			Low
+Map	Slider 7		Low Pass Delay Amount			Low
+Map	Slider 8		Low Pass Pan			Low
+Map	Slider 9		Low Pass Volume			Low
+
+Map	Slider 1		Dry Volume			Dry
+Map	Slider 2		Dry Pan			Dry
+Map	Slider 3		Amp Env Attack			Dry
+Map	Slider 4		Amp Env Decay			Dry
+Map	Slider 5		Amp Env Release			Dry
+Map	Slider 6		Amp Env Attack			Dry
+Map	Slider 7		Amp Env Decay			Dry
+Map	Slider 8		Amp Env Release			Dry
+Map	Slider 9		Master Volume			Dry
 
 
 Scope	Propellerheads	RV-7 Digital Reverb
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Algorithm		
-Map	Slider 2		Size		
-Map	Slider 3		Decay		
-Map	Slider 4		Damping		
-Map	Slider 8		Dry/Wet		
+Map	Slider 1		Algorithm
+Map	Slider 2		Size
+Map	Slider 3		Decay
+Map	Slider 4		Damping
+Map	Slider 8		Dry/Wet
+
 
 Scope	Propellerheads	DDL-1 Digital Delay Line
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		DelayTime (steps)		
-Map	Slider 2		DelayTime (ms)		
-Map	Slider 3		Unit		
-Map	Slider 4		Step Length		
-Map	Slider 5		Feedback		
-Map	Slider 6		Pan		
-Map	Slider 8		Dry/Wet Balance		
+Map	Slider 1		DelayTime (steps)
+Map	Slider 2		DelayTime (ms)
+Map	Slider 3		Unit
+Map	Slider 4		Step Length
+Map	Slider 5		Feedback
+Map	Slider 6		Pan
+Map	Slider 8		Dry/Wet Balance
+
 
 Scope	Propellerheads	D-11 Foldback Distortion
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Amount		
-Map	Slider 2		Foldback		
+Map	Slider 1		Amount
+Map	Slider 2		Foldback
+
 
 Scope	Propellerheads	ECF-42 Envelope Controlled Filter
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Frequency		
-Map	Slider 2		Resonance		
-Map	Slider 3		Env Amount		
-Map	Slider 4		Velocity		
-Map	Slider 5		Attack		
-Map	Slider 6		Decay		
-Map	Slider 7		Sustain		
-Map	Slider 8		Release		
+Map	Slider 1		Frequency
+Map	Slider 2		Resonance
+Map	Slider 3		Env Amount
+Map	Slider 4		Velocity
+Map	Slider 5		Attack
+Map	Slider 6		Decay
+Map	Slider 7		Sustain
+Map	Slider 8		Release
+
 
 Scope	Propellerheads	CF-101 Chorus/Flanger
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Delay		
-Map	Slider 2		Feedback		
-Map	Slider 3		Rate		
-Map	Slider 4		Modulation Amount		
-Map	Slider 5		LFO Sync Enable		
-Map	Slider 6		Send/Insert Mode		
+Map	Slider 1		Delay
+Map	Slider 2		Feedback
+Map	Slider 3		Rate
+Map	Slider 4		Modulation Amount
+Map	Slider 5		LFO Sync Enable
+Map	Slider 6		Send/Insert Mode
 
 
 Scope	Propellerheads	PH-90 Phaser
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Frequency		
-Map	Slider 2		Split		
-Map	Slider 3		Width		
-Map	Slider 4		Rate		
-Map	Slider 5		Frequency Modulation		
-Map	Slider 6		Feedback		
-Map	Slider 7		LFO Sync Enable		
+Map	Slider 1		Frequency
+Map	Slider 2		Split
+Map	Slider 3		Width
+Map	Slider 4		Rate
+Map	Slider 5		Frequency Modulation
+Map	Slider 6		Feedback
+Map	Slider 7		LFO Sync Enable
+
 
 Scope	Propellerheads	UN-16 Unison
 Define Group	Keyboard Shortcut Variations	Env	FilterMod
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Detune		
-Map	Slider 2		Voice Count		
-Map	Slider 8		Dry/Wet		
+Map	Slider 1		Detune
+Map	Slider 2		Voice Count
+Map	Slider 8		Dry/Wet
 
 
 Scope	Propellerheads	COMP-01 Compressor/Limiter
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Ratio		
-Map	Slider 2		Threshold		
-Map	Slider 3		Attack		
-Map	Slider 4		Release		
+Map	Slider 1		Ratio
+Map	Slider 2		Threshold
+Map	Slider 3		Attack
+Map	Slider 4		Release
+
 
 Scope	Propellerheads	PEQ-2 Two Band Parametric EQ
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Filter A Freq		
-Map	Slider 2		Filter A Q		
-Map	Slider 3		Filter A Gain		
-Map	Slider 4		Filter B On/Off		
-Map	Slider 5		Filter B Freq		
-Map	Slider 6		Filter B Q		
-Map	Slider 7		Filter B Gain		
+Map	Slider 1		Filter A Freq
+Map	Slider 2		Filter A Q
+Map	Slider 3		Filter A Gain
+Map	Slider 4		Filter B On/Off
+Map	Slider 5		Filter B Freq
+Map	Slider 6		Filter B Q
+Map	Slider 7		Filter B Gain
+
+
+Scope	Propellerheads	RPG-8 Monophonic Arpeggiator
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Slider 9		Mod Wheel
+Map	Slider 1		Velocity/Manual
+Map	Slider 2		Octave Shift
+Map	Slider 3		Mode
+Map	Slider 4		Octave
+Map	Slider 5		Insert
+Map	Slider 6		Rate
+Map	Slider 7		Gate Length
+Map	Slider 8		Shuffle
