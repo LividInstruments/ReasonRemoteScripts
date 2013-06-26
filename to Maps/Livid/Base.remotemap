@@ -147,6 +147,9 @@ Map	Slider 6		Channel 6 Mute			Mutes
 
 Scope	Propellerheads	ID8 Instrument Device
 //Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc	FX
+
+Map	Slider 9		Mod Wheel
+
 Map	Slider 1		Parameter 1
 Map	Slider 2		Parameter 2
 Map	Slider 3		Sound A
@@ -293,8 +296,8 @@ Map	Slider 3		Delay Dry Wet			FX
 Map	Slider 4		Chorus Feedback			FX
 Map	Slider 5		Chorus Dry Wet			FX
 Map	Slider 6		Filter 3 Drive			FX
-Map	Slider 7		Filter 1 Freq			FX
-Map	Slider 8		Filter 1 Res			FX
+Map	Slider 7		Filter 3 Freq			FX
+Map	Slider 8		Filter 3 Res			FX
 
 
 Scope	Propellerheads	SubTractor Analog Synthesizer
@@ -776,7 +779,7 @@ Map	Slider 6		Filter Resonance			FilterMod
 Map	Slider 7		LFO Rate			FilterMod
 Map	Slider 8		LFO Amount			FilterMod
 
-Map	Fader 9		Ducking
+Map	Slider 9		Ducking
 
 
 Scope	Propellerheads	Alligator
@@ -789,8 +792,8 @@ Map	Tbtn 7		Keyboard Shortcut Variations=Band
 Map	Tbtn 8		Keyboard Shortcut Variations=Low
 
 Map	Slider 1		Resolution			MainFX
-Map	Slider 2		LFO Freq			MainFX
-Map	Slider 3		LFO Waveform			MainFX
+Map	Slider 2		LFO Waveform			MainFX
+Map	Slider 3		LFO Freq			MainFX
 Map	Slider 4		Delay Time			MainFX
 Map	Slider 5		Delay Feedback			MainFX
 Map	Slider 6		Delay Pan			MainFX
@@ -833,9 +836,9 @@ Map	Slider 2		Dry Pan			Dry
 Map	Slider 3		Amp Env Attack			Dry
 Map	Slider 4		Amp Env Decay			Dry
 Map	Slider 5		Amp Env Release			Dry
-Map	Slider 6		Amp Env Attack			Dry
-Map	Slider 7		Amp Env Decay			Dry
-Map	Slider 8		Amp Env Release			Dry
+Map	Slider 6		Filter Env Attack			Dry
+Map	Slider 7		Filter Env Decay			Dry
+Map	Slider 8		Filter Env Release			Dry
 Map	Slider 9		Master Volume			Dry
 
 

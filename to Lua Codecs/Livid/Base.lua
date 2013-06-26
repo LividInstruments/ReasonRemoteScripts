@@ -529,96 +529,99 @@ function remote_deliver_midi()
 		g_delivered_transpose=transpose
 	end
 	
-	--lcd event
+	--lcd event and text parsing for scale detect
 	local new_text=g_lcd_state
 	if g_delivered_lcd_state~=new_text then
-		--assert(string.len(new_text)==16,string.len(new_text))
 		local use_prev_scale = false
 		local lcd_text=string.format("%-16.16s",new_text)
 		assert(string.len(lcd_text)==16,string.len(lcd_text))
 		local lcd_event=make_lcd_midi_message(lcd_text)
-		table.insert(ret_events,lcd_event)
+		--table.insert(ret_events,lcd_event)
 		g_delivered_lcd_state=new_text
-
-		--if the new_text has the word KONG in it, and we aren't currently on drum scale, we change over to drum scale
-		local findkong=string.find(new_text,"KONG") or string.find(new_text,"Kong") or string.find(new_text,"kong")
-		if(findkong~=nil and scale_int~=7) then
-			if scale_from_parse==false then
-				prev_scale = scale_int
-			end
-			set_scale(7)
-			--local kong_event=make_lcd_midi_message("KONG FOUND")
-			--table.insert(ret_events,kong_event)
-		else
-			use_prev_scale=true
-			--set_scale(prev_scale)
-			--local notkong_event=make_lcd_midi_message("NO KONG")
-			--table.insert(ret_events,notkong_event)
-		end
 		
-		--see if there's a scale in the track text
-		--new_text = "ID8 scale=4"
-		local result = ""
-		--local scaleint_event=make_lcd_midi_message("TX "..new_text)
-		--table.insert(ret_events,scaleint_event)
-		scsearch = string.find(new_text, 'scale')
-		eqsearch = string.find(new_text, '=%d') --look for an index
-		if(scsearch) then
-			if(eqsearch==nil) then --if we didn't find a number, search for a word after =
-				eqsearch = string.find(new_text, '=%w')			--from the first char after =...
-				spsearch = string.find(new_text, '%s',eqsearch) --...to the next space is a 'word'
-				remote.trace("\nchar "..scsearch.."  "..eqsearch.."  "..spsearch)
-				result = string.sub(new_text,eqsearch+1,spsearch)
-				local sindex=0;
-				for i,v in pairs(scalenames) do  --find the index that the scalename is at
-					if v == result then
-						sindex=i-1
-						break
-					end
+		--parse the text to see if there's any scale or transpose info
+		local is_track_text = string.find(new_text,"Track") == 1 --The word "track" is the first word
+		if(is_track_text) then
+			--if the new_text has the word KONG in it, and we aren't currently on drum scale, we change over to drum scale
+			local findkong=string.find(new_text,"KONG") or string.find(new_text,"Kong") or string.find(new_text,"kong")
+			if(findkong~=nil and scale_int~=7) then
+				if scale_from_parse==false then
+					prev_scale = scale_int
 				end
-				set_scale(sindex)
-				--local scalename_event=make_lcd_midi_message("NAME SCALE")
-				--table.insert(ret_events,scalename_event)
-			else 					--otherwise it's an index
-				remote.trace("\nnum "..scsearch.."  "..eqsearch)
-				result = string.sub(new_text,eqsearch+1,eqsearch+2)
-				set_scale(result)
-				--local scaleint_event=make_lcd_midi_message("INT SCALE")
-				--table.insert(ret_events,scaleint_event)
+				set_scale(7)
+				--local kong_event=make_lcd_midi_message("KONG FOUND")
+				--table.insert(ret_events,kong_event)
+			else
+				use_prev_scale=true
+				--set_scale(prev_scale)
+				--local notkong_event=make_lcd_midi_message("NO KONG")
+				--table.insert(ret_events,notkong_event)
 			end
-			remote.trace("\nresult "..result)
-			use_prev_scale=false
-			scale_from_parse=true
-		else
-			remote.trace("\nno scale in track")
-			scale_from_parse=false
-		end
 		
-		---If it's not a Kong track and there's no scale in the Track name, set to prev_scale
-		if use_prev_scale then
-			set_scale(prev_scale)
-			local prev_event=make_lcd_midi_message("PREV SCALE "..prev_scale.." "..g_delivered_scale)
-			table.insert(ret_events,prev_event)
-		end
+			--see if there's a scale in the track text
+			local result = ""
+			--local scaleint_event=make_lcd_midi_message("TX "..new_text)
+			--table.insert(ret_events,scaleint_event)
+			scsearch = string.find(new_text, 'scale')
+			eqsearch = string.find(new_text, '=%d') --look for an index
+			if(scsearch) then
+				if(eqsearch==nil) then --if we didn't find a number, search for a word after =
+					eqsearch = string.find(new_text, '=%w')			--from the first char after =...
+					spsearch = string.find(new_text, '%s',eqsearch) --...to the next space is a 'word'
+					remote.trace("\nchar "..scsearch.."  "..eqsearch.."  "..spsearch)
+					result = string.sub(new_text,eqsearch+1,spsearch)
+					local sindex=0;
+					for i,v in pairs(scalenames) do  --find the index that the scalename is at
+						if v == result then
+							sindex=i-1
+							break
+						end
+					end
+					set_scale(sindex)
+					--local scalename_event=make_lcd_midi_message("NAME SCALE")
+					--table.insert(ret_events,scalename_event)
+				else 					--otherwise it's an index
+					remote.trace("\nnum "..scsearch.."  "..eqsearch)
+					result = string.sub(new_text,eqsearch+1,eqsearch+2)
+					set_scale(result)
+					--local scaleint_event=make_lcd_midi_message("INT SCALE")
+					--table.insert(ret_events,scaleint_event)
+				end
+				remote.trace("\nresult "..result)
+				use_prev_scale=false
+				scale_from_parse=true
+			else
+				remote.trace("\nno scale in track")
+				scale_from_parse=false
+			end
 		
-		--see if there's a transpose in the track text
-		local transp = ""
-		tsearch = string.find(new_text, 'trans')
-		eqtsearch = string.find(new_text, '=%d',tsearch) --look for a value
-		if(tsearch and eqtsearch) then
-			prev_transp = transpose
-			remote.trace("\nnum "..transpose)
-			transp = string.sub(new_text,eqtsearch+1,eqtsearch+2)
-			transpose=tonumber(transp)
-			--local transp_event=make_lcd_midi_message("TRANSPOSE "..transpose)
-			--table.insert(ret_events,transp_event)
-		else
-			transpose = prev_transp
-			remote.trace("\nreset transp")
-			--local notransp_event=make_lcd_midi_message("NOTRANSPOSE"..transpose)
-			--table.insert(ret_events,notransp_event)
+			---If it's not a Kong track and there's no scale in the Track name, set to prev_scale
+			if use_prev_scale then
+				set_scale(prev_scale)
+				--local prev_event=make_lcd_midi_message("PREV SCALE "..prev_scale.." "..g_delivered_scale)
+				--table.insert(ret_events,prev_event)
+			end
+		
+			--see if there's a transpose in the track text
+			local transp = ""
+			tsearch = string.find(new_text, 'trans')
+			eqtsearch = string.find(new_text, '=%d',tsearch) --look for a value
+			if(tsearch and eqtsearch) then
+				prev_transp = transpose
+				remote.trace("\nnum "..transpose)
+				transp = string.sub(new_text,eqtsearch+1,eqtsearch+2)
+				transpose=tonumber(transp)
+				--local transp_event=make_lcd_midi_message("TRANSPOSE "..transpose)
+				--table.insert(ret_events,transp_event)
+			else
+				transpose = prev_transp
+				remote.trace("\nreset transp")
+				--local notransp_event=make_lcd_midi_message("NOTRANSPOSE"..transpose)
+				--table.insert(ret_events,notransp_event)
+			end
+			remote.trace("\ntransp "..transp.." orig "..transpose.."\n")
 		end
-		remote.trace("\ntransp "..transp.." orig "..transpose.."\n")
+		--done looking at "Track" labels
 	end
 	return ret_events
 end
