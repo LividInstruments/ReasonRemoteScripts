@@ -6,11 +6,13 @@ Map Version	1.0.1
 
 
 Scope	Propellerheads	Master Keyboard
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Keyboard		Keyboard
 
 
 Scope	Propellerheads	Reason Document
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 //Map	Tbtn		Redo
 //Map	Tbtn		Left Loop
@@ -29,9 +31,16 @@ Map	Tbtn 4		Record
 Map	Fbtn 1		Target Previous Track
 Map	Fbtn 2		Target Next Track
 Map	Fbtn 3		Undo
+//uncomment for documentation generation:
+//Map	Fbtn 4		Scale Up
+//Map	Fbtn 5		Scale Down
+//Map	Fbtn 6		Transpose Up
+//Map	Fbtn 7		Transpose Dn
+//Map	Fbtn 8		Octave Shift
 
 
 Scope	Propellerheads	Combinator
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Rotary 1
 Map	Slider 2		Rotary 2
@@ -428,6 +437,7 @@ Map	Slider 8		Master Level			Osc
 
 
 Scope	Propellerheads	NN-XT Advanced Sampler
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 9		Mod Wheel
@@ -553,6 +563,7 @@ Map	Slider 6		Hi Shelf Q			Param 2+Hi
 
 
 Scope	Propellerheads	MClass Stereo Imager
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Low Width
 Map	Slider 2		X-Over Frequency
@@ -560,6 +571,7 @@ Map	Slider 3		High Width
 
 
 Scope	Propellerheads	MClass Compressor
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Input Gain
 Map	Slider 2		Threshold
@@ -572,6 +584,7 @@ Map	Slider 8		Sidechain Solo
 
 
 Scope	Propellerheads	MClass Maximizer
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Input Gain
 Map	Slider 2		Attack Speed
@@ -584,6 +597,7 @@ Map	Slider 8		Output Gain
 
 
 Scope	Propellerheads	RV7000 Advanced Reverb
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Decay
 Map	Slider 2		HF Damp
@@ -679,6 +693,7 @@ Map	Slider 8		Band Level 32			Band 25-32
 
 
 Scope	Propellerheads	Line 6 Guitar Amp
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 1		Wah Pedal
@@ -692,6 +707,7 @@ Map	Slider 8		Volume
 
 
 Scope	Propellerheads	Line 6 Bass Amp
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 1		Threshold
@@ -704,6 +720,7 @@ Map	Slider 8		Volume
 
 
 Scope	Propellerheads	Neptune Pitch Adjuster
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 9		Mod Wheel
@@ -843,6 +860,7 @@ Map	Slider 9		Master Volume			Dry
 
 
 Scope	Propellerheads	RV-7 Digital Reverb
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Algorithm
 Map	Slider 2		Size
@@ -852,6 +870,7 @@ Map	Slider 8		Dry/Wet
 
 
 Scope	Propellerheads	DDL-1 Digital Delay Line
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		DelayTime (steps)
 Map	Slider 2		DelayTime (ms)
@@ -863,12 +882,14 @@ Map	Slider 8		Dry/Wet Balance
 
 
 Scope	Propellerheads	D-11 Foldback Distortion
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Amount
 Map	Slider 2		Foldback
 
 
 Scope	Propellerheads	ECF-42 Envelope Controlled Filter
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Frequency
 Map	Slider 2		Resonance
@@ -881,6 +902,7 @@ Map	Slider 8		Release
 
 
 Scope	Propellerheads	CF-101 Chorus/Flanger
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Delay
 Map	Slider 2		Feedback
@@ -891,6 +913,7 @@ Map	Slider 6		Send/Insert Mode
 
 
 Scope	Propellerheads	PH-90 Phaser
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Frequency
 Map	Slider 2		Split
@@ -902,7 +925,7 @@ Map	Slider 7		LFO Sync Enable
 
 
 Scope	Propellerheads	UN-16 Unison
-Define Group	Keyboard Shortcut Variations	Env	FilterMod
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Detune
 Map	Slider 2		Voice Count
@@ -910,6 +933,7 @@ Map	Slider 8		Dry/Wet
 
 
 Scope	Propellerheads	COMP-01 Compressor/Limiter
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Ratio
 Map	Slider 2		Threshold
@@ -918,6 +942,7 @@ Map	Slider 4		Release
 
 
 Scope	Propellerheads	PEQ-2 Two Band Parametric EQ
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Filter A Freq
 Map	Slider 2		Filter A Q
@@ -929,6 +954,7 @@ Map	Slider 7		Filter B Gain
 
 
 Scope	Propellerheads	RPG-8 Monophonic Arpeggiator
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 9		Mod Wheel
 Map	Slider 1		Velocity/Manual
@@ -945,6 +971,9 @@ Map	Slider 8		Shuffle
 
 
 Scope	LAB ONE Recordings	co.uk.labonerecordings.ReQ131
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
 Map	Slider 1		Enabled
 Map	Slider 2		Gain
 Map	Slider 3		Wet/Dry
@@ -956,6 +985,8 @@ Map	Slider 8		Hear EQ
 
 
 Scope	Audio Damage, Inc.	com.audiodamage.roughrider
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Enabled
 Map	Slider 2		Ratio
 Map	Slider 3		Attack
@@ -1038,6 +1069,8 @@ Scope	Black and Orange	com.blackandorange.TrafficControl
 
 
 Scope	Blamsoft, Inc.	com.blamsoft.Distributor
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 9		Mod Wheel
 Map	Slider 1		Octave
@@ -1049,6 +1082,8 @@ Map	Slider 6		Start Position
 
 
 Scope	Blamsoft, Inc.	com.blamsoft.Resampler
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 1		Downsample Algorithm
 Map	Slider 2		Downsample Vol Env Amt
@@ -1098,6 +1133,8 @@ Map	Slider 8		Osc 3 Wave			Osc
 
 
 Scope	Cakewalk	com.cakewalk.RE2A
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Compress/Limit
 Map	Slider 2		OutputGain
 Map	Slider 3		PeakReduction
@@ -1173,6 +1210,8 @@ Map	Slider 8		Note 2 Out 9			Note2
 
 
 Scope	DLD Technology	com.dldtechnology.dr4
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1		Pattern 1
 Map	Slider 2		Offset 1
 Map	Slider 3		Pattern 2
@@ -1185,6 +1224,8 @@ Map	Slider 9		Swing
 
 
 Scope	Peff	com.peff.Buffre
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 9		Mod Wheel
 
@@ -1198,6 +1239,8 @@ Map	Slider 7		Gate Length
 Map	Slider 8		Volume
 
 Scope	Peff	com.peff.Directre
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Slider 1		Gain 1
 Map	Slider 2		Gain 2
@@ -1208,5 +1251,3 @@ Map	Slider 6		Gain 6
 Map	Slider 7		Gain 7
 Map	Slider 8		Gain 8
 Map	Slider 9		Input Gain
-
-
