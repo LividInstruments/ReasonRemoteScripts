@@ -39,6 +39,53 @@ Map	Fbtn 3		Undo
 //Map	Fbtn 8		Octave Shift
 
 
+Scope	Propellerheads	Reason Master Section
+Define Group	Keyboard Shortcut Variations	Volume	Pan	Send 1	Send 2
+
+Map	Tbtn 5		Keyboard Shortcut Variations=Volume
+Map	Tbtn 6		Keyboard Shortcut Variations=Pan
+Map	Tbtn 7		Previous 8 Remote Base Channel
+Map	Tbtn 8		Next 8 Remote Base Channel
+
+Map	Slider 9		Master Level
+
+Map	Slider 1		Channel 1 Level			Volume
+Map	Slider 2		Channel 2 Level			Volume
+Map	Slider 3		Channel 3 Level			Volume
+Map	Slider 4		Channel 4 Level			Volume
+Map	Slider 5		Channel 5 Level			Volume
+Map	Slider 6		Channel 6 Level			Volume
+Map	Slider 7		Channel 7 Level			Volume
+Map	Slider 8		Channel 8 Level			Volume
+
+Map	Slider 1		Channel 1 Pan			Pan
+Map	Slider 2		Channel 2 Pan			Pan
+Map	Slider 3		Channel 3 Pan			Pan
+Map	Slider 4		Channel 4 Pan			Pan
+Map	Slider 5		Channel 5 Pan			Pan
+Map	Slider 6		Channel 6 Pan			Pan
+Map	Slider 7		Channel 7 Pan			Pan
+Map	Slider 8		Channel 8 Pan			Pan
+
+Map	Slider 1		Channel 1 FX1 Send Level			Send 1
+Map	Slider 2		Channel 2 FX1 Send Level			Send 1
+Map	Slider 3		Channel 3 FX1 Send Level			Send 1
+Map	Slider 4		Channel 4 FX1 Send Level			Send 1
+Map	Slider 5		Channel 5 FX1 Send Level			Send 1
+Map	Slider 6		Channel 6 FX1 Send Level			Send 1
+Map	Slider 7		Channel 7 FX1 Send Level			Send 1
+Map	Slider 8		Channel 8 FX1 Send Level			Send 1
+
+Map	Slider 1		Channel 1 FX2 Send Level			Send 2
+Map	Slider 2		Channel 2 FX2 Send Level			Send 2
+Map	Slider 3		Channel 3 FX2 Send Level			Send 2
+Map	Slider 4		Channel 4 FX2 Send Level			Send 2
+Map	Slider 5		Channel 5 FX2 Send Level			Send 2
+Map	Slider 6		Channel 6 FX2 Send Level			Send 2
+Map	Slider 7		Channel 7 FX2 Send Level			Send 2
+Map	Slider 8		Channel 8 FX2 Send Level			Send 2
+
+
 Scope	Propellerheads	Combinator
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -177,7 +224,7 @@ Map	Tbtn 6		Keyboard Shortcut Variations=D3&4
 Map	Tbtn 7		Keyboard Shortcut Variations=D5&6
 Map	Tbtn 8		Keyboard Shortcut Variations=D7&8
 
-Map	_Scale		"Drums"
+Map	_Scope		"KONG"
 
 Map	Slider 1		Drum 1 Tone			D1&2
 Map	Slider 2		Drum 1 Decay Offset			D1&2
@@ -264,8 +311,6 @@ Map	Slider 8		Master Level			Main
 Scope	Propellerheads	Thor Polysonic Synthesizer
 Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc	FX
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	_Scale		"Keys"
 
 Map	Tbtn 5		Keyboard Shortcut Variations=FilterMod
 Map	Tbtn 6		Keyboard Shortcut Variations=Env
