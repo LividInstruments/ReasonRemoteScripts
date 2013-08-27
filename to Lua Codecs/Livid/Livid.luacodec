@@ -1,4 +1,4 @@
-version={0,0,2}
+version={0,0,3}
 function remote_supported_control_surfaces()
 	local surfaces =
 		{
@@ -54,6 +54,19 @@ function remote_supported_control_surfaces()
 				has_keyboard=true,						setup_warning_text="The Base will be set to factory default settings. Any unsaved edits you have made to the Base's mapping.  Do you want to continue?"
 
 						}
+
+,			
+			{ manufacturer = "Livid", model ="Alias8",
+
+								source = "Alias8.lua", picture = "Alias8.png",
+
+								in_ports={ {description="In Port"} },
+
+								out_ports={ {description="Out Port"} },
+
+						setup_warning_text="The Alias8 will be set to factory default settings. Any unsaved edits you have made to the Alias8's mapping.  Do you want to continue?"
+
+			}
 
 		
 
