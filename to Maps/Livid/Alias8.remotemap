@@ -28,8 +28,8 @@ Map	Grid 2		Stop
 Map	Grid 3		Goto Left Locator
 Map	Grid 4		Record
 
-//Map	Fbtn 1		Target Previous Track
-//Map	Fbtn 2		Target Next Track
+Map	Encoder		Target Track (Delta)
+
 //Map	Fbtn 3		Undo
 //uncomment for documentation generation:
 //Map	Fbtn 4		Scale Up
@@ -57,6 +57,23 @@ Map	Slider 5		Channel 5 Level			Volume
 Map	Slider 6		Channel 6 Level			Volume
 Map	Slider 7		Channel 7 Level			Volume
 Map	Slider 8		Channel 8 Level			Volume
+Map	Grid 1		Channel 1 Mute			Volume
+Map	Grid 2		Channel 2 Mute			Volume
+Map	Grid 3		Channel 3 Mute			Volume
+Map	Grid 4		Channel 4 Mute			Volume
+Map	Grid 5		Channel 5 Mute			Volume
+Map	Grid 6		Channel 6 Mute			Volume
+Map	Grid 7		Channel 7 Mute			Volume
+Map	Grid 8		Channel 8 Mute			Volume
+
+Map	Grid 9		Channel 1 Solo			Volume
+Map	Grid 10		Channel 2 Solo			Volume
+Map	Grid 11		Channel 3 Solo			Volume
+Map	Grid 12		Channel 4 Solo			Volume
+Map	Grid 13		Channel 5 Solo			Volume
+Map	Grid 14		Channel 6 Solo			Volume
+Map	Grid 15		Channel 7 Solo			Volume
+Map	Grid 16		Channel 8 Solo			Volume
 
 Map	Slider 1		Channel 1 Pan			Pan
 Map	Slider 2		Channel 2 Pan			Pan
@@ -1301,6 +1318,8 @@ Map	Slider 9		Input Gain
 Scope	Peff	com.peff.Alias8cv
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
+Map	_Scope		"Alias8cv"
+
 Map	Slider 9		Master Fader
 Map	Slider 1		Fader 1
 Map	Slider 2		Fader 2
@@ -1335,11 +1354,11 @@ Map	Grid 5		Toggle 5
 Map	Grid 6		Toggle 6
 Map	Grid 7		Toggle 7
 Map	Grid 8		Toggle 8
-Map	Grid 9		Momentary 1
-Map	Grid 10		Momentary 2
-Map	Grid 11		Momentary 3
-Map	Grid 12		Momentary 4
-Map	Grid 13		Momentary 5
-Map	Grid 14		Momentary 6
-Map	Grid 15		Momentary 7
-Map	Grid 16		Momentary 8
+Map	Momentary 9		Momentary 1
+Map	Momentary 10		Momentary 2
+Map	Momentary 11		Momentary 3
+Map	Momentary 12		Momentary 4
+Map	Momentary 13		Momentary 5
+Map	Momentary 14		Momentary 6
+Map	Momentary 15		Momentary 7
+Map	Momentary 16		Momentary 8
