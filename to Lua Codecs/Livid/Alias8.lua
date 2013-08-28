@@ -3,62 +3,30 @@ function remote_init(manufacturer, model)
 		local items={
 			{name="Keyboard",input="keyboard"},
 			{name="_Scope", output="text"},
-			{name="Knob 1", input="value", min=0, max=127, output="value"},
-			{name="Knob 2", input="value", min=0, max=127, output="value"},
-			{name="Knob 3", input="value", min=0, max=127, output="value"},
-			{name="Knob 4", input="value", min=0, max=127, output="value"},
-			{name="Knob 5", input="value", min=0, max=127, output="value"},
-			{name="Knob 6", input="value", min=0, max=127, output="value"},
-			{name="Knob 7", input="value", min=0, max=127, output="value"},
-			{name="Knob 8", input="value", min=0, max=127, output="value"},
-			{name="Knob 9", input="value", min=0, max=127, output="value"},
-			{name="Knob 10", input="value", min=0, max=127, output="value"},
-			{name="Knob 11", input="value", min=0, max=127, output="value"},
-			{name="Knob 12", input="value", min=0, max=127, output="value"},
-			{name="Knob 13", input="value", min=0, max=127, output="value"},
-			{name="Knob 14", input="value", min=0, max=127, output="value"},
-			{name="Knob 15", input="value", min=0, max=127, output="value"},
-			{name="Knob 16", input="value", min=0, max=127, output="value"},
-			{name="Slider 1", input="value", min=0, max=127, output="value"},
-			{name="Slider 2", input="value", min=0, max=127, output="value"},
-			{name="Slider 3", input="value", min=0, max=127, output="value"},
-			{name="Slider 4", input="value", min=0, max=127, output="value"},
-			{name="Slider 5", input="value", min=0, max=127, output="value"},
-			{name="Slider 6", input="value", min=0, max=127, output="value"},
-			{name="Slider 7", input="value", min=0, max=127, output="value"},
-			{name="Slider 8", input="value", min=0, max=127, output="value"},
-			{name="Slider 9", input="value", min=0, max=127, output="value"},
 			{name="Encoder", input="delta"},
-			{name="Grid 1", input="button", min=0, max=127, output="value"},
-			{name="Grid 2", input="button", min=0, max=127, output="value"},
-			{name="Grid 3", input="button", min=0, max=127, output="value"},
-			{name="Grid 4", input="button", min=0, max=127, output="value"},
-			{name="Grid 5", input="button", min=0, max=127, output="value"},
-			{name="Grid 6", input="button", min=0, max=127, output="value"},
-			{name="Grid 7", input="button", min=0, max=127, output="value"},
-			{name="Grid 8", input="button", min=0, max=127, output="value"},
-			{name="Grid 9", input="button", min=0, max=127, output="value"},
-			{name="Grid 10", input="button", min=0, max=127, output="value"},
-			{name="Grid 11", input="button", min=0, max=127, output="value"},
-			{name="Grid 12", input="button", min=0, max=127, output="value"},
-			{name="Grid 13", input="button", min=0, max=127, output="value"},
-			{name="Grid 14", input="button", min=0, max=127, output="value"},
-			{name="Grid 15", input="button", min=0, max=127, output="value"},
-			{name="Grid 16", input="button", min=0, max=127, output="value"},
-			{name="Momentary 9", input="button", min=0, max=127, output="value"},
-			{name="Momentary 10", input="button", min=0, max=127, output="value"},
-			{name="Momentary 11", input="button", min=0, max=127, output="value"},
-			{name="Momentary 12", input="button", min=0, max=127, output="value"},
-			{name="Momentary 13", input="button", min=0, max=127, output="value"},
-			{name="Momentary 14", input="button", min=0, max=127, output="value"},
-			{name="Momentary 15", input="button", min=0, max=127, output="value"},
-			{name="Momentary 16", input="button", min=0, max=127, output="value"},
-			}
+		}
+		for i=1,16 do
+			local newknob = {name="Knob "..i, input="value", min=0,max=127,output="value"}
+			table.insert(items,newknob)
+		end
+		for i=1,16 do
+			local newgrid = {name="Grid "..i, input="button", min=0, max=127, output="value"}
+			table.insert(items,newgrid)
+		end
+		for i=1,9 do
+			local newslider = {name="Slider "..i, input="value", min=0,max=127,output="value"}
+			table.insert(items,newslider)
+		end
+		for i=9,16 do
+			local newmom = {name="Momentary "..i, input="button", min=0, max=127, output="value"}
+			table.insert(items,newmom)
+		end
 		remote.define_items(items)
 	end
 	if model=="Alias8" then
 		local inputs={
-			{pattern="b0 00 xx", name="Knob 1"},
+			{pattern="b? 2A <???y>?", name="Encoder", value="(1-2*y)"},
+			--[[{pattern="b0 01 xx", name="Knob 1"},
 			{pattern="b0 02 xx", name="Knob 2"},
 			{pattern="b0 03 xx", name="Knob 3"},
 			{pattern="b0 04 xx", name="Knob 4"},
@@ -83,7 +51,6 @@ function remote_init(manufacturer, model)
 			{pattern="b0 17 xx", name="Slider 7"},
 			{pattern="b0 18 xx", name="Slider 8"},
 			{pattern="b0 19 xx", name="Slider 9"},
-			{pattern="b? 2A <???y>?", name="Encoder", value="(1-2*y)"},
 			{pattern="<100x>? 00 <z000>0", name="Grid 1"},
 			{pattern="<100x>? 00 <z000>0", name="Grid 2"},
 			{pattern="<100x>? 02 <z000>0", name="Grid 3"},
@@ -107,13 +74,51 @@ function remote_init(manufacturer, model)
 			{pattern="b0 55 <???y>?", name="Momentary 13", value="1"}, 
 			{pattern="b0 56 <???y>?", name="Momentary 14", value="1"},
 			{pattern="b0 57 <???y>?", name="Momentary 15", value="1"},
-			{pattern="b0 58 <???y>?", name="Momentary 16", value="1"}
+			{pattern="b0 58 <???y>?", name="Momentary 16", value="1"}]]--
 		}
+		for i=1,16 do
+			local hex = string.format("%x",i)
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local newknob = {pattern="b0 "..hex.." xx", name="Knob "..i}
+			table.insert(inputs,newknob)
+		end
+		for i=1,9 do
+			local ccnum = i+16 --midi for sliders starts at cc# 17
+			local hex = string.format("%x",ccnum)
+			if string.len(hex)==1 then
+				hex = "0"..hex
+			end
+			local newslider = {pattern="b0 "..hex.." xx", name="Slider "..i}
+			table.insert(inputs,newslider)
+		end
+		for i=1,16 do
+			local ntnum = i-1
+			local hex = string.format("%x",ntnum)
+			if string.len(hex)==1 then
+				hex = "0"..hex
+			end
+			local newbtn = {pattern="<100x>? "..hex.." <z000>0", name="Grid "..i}
+			table.insert(inputs,newbtn)
+		end
+		for i=1,8 do
+			local ccnum = i+80 --momentary buttons start at cc 81, a fairly arbitrary choice.
+			local hex = string.format("%x",ccnum)
+			if string.len(hex)==1 then
+				hex = "0"..hex
+			end
+			local bindex = i+8
+			local newmom = {pattern="b0 "..hex.." <???y>?", name="Momentary "..bindex, value="1"}
+			table.insert(inputs,newmom)
+		end
+		
+		--[[]]--
 		remote.define_auto_inputs(inputs)
 	end
 	if model=="Alias8" then
 		local outputs={
-			{pattern="b0 00 xx", name="Knob 1"},
+			--[[{pattern="b0 00 xx", name="Knob 1"},
 			{pattern="b0 02 xx", name="Knob 2"},
 			{pattern="b0 03 xx", name="Knob 3"},
 			{pattern="b0 04 xx", name="Knob 4"},
@@ -156,15 +161,65 @@ function remote_init(manufacturer, model)
 			{pattern="90 0d <0x00>0", name="Grid 14"}, --yellow
 			{pattern="90 0e <0x00>0", name="Grid 15"}, --yellow
 			{pattern="90 0f <0x00>0", name="Grid 16"}, --yellow
-			{pattern="b0 08 <0x00>0", name="Momentary 9"}, --yellow
-			{pattern="b0 09 <0x00>0", name="Momentary 10"}, --yellow
-			{pattern="b0 0a <0x00>0", name="Momentary 11"}, --yellow
-			{pattern="b0 0b <0x00>0", name="Momentary 12"}, --yellow
-			{pattern="b0 0c <0x00>0", name="Momentary 13"}, --yellow
-			{pattern="b0 0d <0x00>0", name="Momentary 14"}, --yellow
-			{pattern="b0 0e <0x00>0", name="Momentary 15"}, --yellow
-			{pattern="b0 0f <0x00>0", name="Momentary 16"} --yellow
+			{pattern="b0 51 <0x00>0", name="Momentary 9"}, --yellow
+			{pattern="b0 52 <0x00>0", name="Momentary 10"}, --yellow
+			{pattern="b0 53 <0x00>0", name="Momentary 11"}, --yellow
+			{pattern="b0 54 <0x00>0", name="Momentary 12"}, --yellow
+			{pattern="b0 55 <0x00>0", name="Momentary 13"}, --yellow
+			{pattern="b0 56 <0x00>0", name="Momentary 14"}, --yellow
+			{pattern="b0 57 <0x00>0", name="Momentary 15"}, --yellow
+			{pattern="b0 58 <0x00>0", name="Momentary 16"} --yellow]]--
 		}
+		--the 16 knobs
+		for i=1,16 do
+			local hex = string.format("%x",i)
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local newknob = {pattern="b0 "..hex.." xx", name="Knob "..i}
+			table.insert(outputs,newknob)
+		end
+		--the 9 sliders
+		for i=1,9 do
+			local ccnum = i+16
+			local hex = string.format("%x",ccnum)
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local newslider = {pattern="b0 "..hex.." xx", name="Slider "..i}
+			table.insert(outputs,newslider)
+		end
+		--Top row of green Grid buttons
+		for i=1,8 do
+			ntnum = i-1
+			local hex = string.format("%x",ntnum) --minus 1 since button notes start at 0
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local newbtn = {pattern="90 "..hex.." xx", name="Grid "..i, x="127*value"} --green
+			table.insert(outputs,newbtn)
+		end
+		--Bottom row of Yellow Grid buttons
+		for i=9,16 do
+			ntnum = i-1
+			local hex = string.format("%x",ntnum)
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local newbtn = {pattern="90 "..hex.." <0x00>0", name="Grid "..i} --yellow
+			table.insert(outputs,newbtn)
+		end
+		--Momentary buttons as cc's for Alias8cv Rack Extension
+		for i=1,8 do
+			local ccnum = i+80
+			local hex = string.format("%x",ccnum)
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local bindex = i+8
+			local newmom = {pattern="90 "..hex.." <0x00>0", name="Momentary "..bindex} --yellow
+			table.insert(outputs,newmom)
+		end
 		remote.define_auto_outputs(outputs)
 	end
 end
@@ -181,7 +236,7 @@ end
 function remote_prepare_for_use() 
 	return {
 			remote.make_midi("F0 00 00 61 0b 06 F7"), --factory reset sysex
-			remote.make_midi("F0 00 61 0b 11 02 00 F7"), --set encoder to relative
+			remote.make_midi("f0 00 01 61 0b 11 02 00 f7"), --set encoder to relative
 			--remote.make_midi("F0 00 00 61 0B 0B 00 00 00 00 02 00 03 00 04 00 05 00 06 00 07 00 51 00 52 00 53 00 54 00 55 00 56 00 57 00 58 00 F7") --set bottom buttons to ccs
 		}
 end
@@ -214,7 +269,7 @@ end
 sysex_aliascv_btns = "F0 00 01 61 0B 0B 00 00 00 00 02 00 03 00 04 00 05 00 06 00 07 00 51 01 52 01 53 01 54 01 55 01 56 01 57 01 58 01 F7"
 sysex_aliascv_ccleds = "f0 00 01 61 0b 24 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 08 0c 09 0d 0a 0e 0b 0f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f f7"
 sysex_aliascv_ntleds = "f0 00 01 61 0b 23 00 04 01 05 02 06 03 07 7f 7f 7f 7f 7f 7f 7f 7f 10 11 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f f7"
-sysex_def_btns = "F0 00 01 61 0B 0B 00 00 00 00 02 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0a 00 0b 00 0c 00 0d 00 0e 00 0f 00 F7"
+sysex_def_btns = "F0 00 01 61 0B 0B 00 00 01 00 02 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0a 00 0b 00 0c 00 0d 00 0e 00 0f 00 F7"
 sysex_def_ccleds = "f0 00 01 61 0b 24 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f f7"
 sysex_def_ntleds = "f0 00 01 61 0b 23 00 04 01 05 02 06 03 07 08 0c 09 0d 0a 0e 0b 0f 10 11 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f f7"
 function remote_deliver_midi()
