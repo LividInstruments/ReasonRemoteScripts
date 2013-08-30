@@ -40,14 +40,19 @@ Map	Encoder		Target Track (Delta)
 
 
 Scope	Propellerheads	Reason Master Section
-Define Group	Keyboard Shortcut Variations	Volume	Pan	Send 1	Send 2
+//Define Group	Keyboard Shortcut Variations
 
-Map	Grid 5		Keyboard Shortcut Variations=Volume
-Map	Grid 6		Keyboard Shortcut Variations=Pan
-Map	Grid 7		Previous 8 Remote Base Channel
-Map	Grid 8		Next 8 Remote Base Channel
 
 Map	Slider 9		Master Level
+
+Map	Knob 1		Channel 1 Pan			Pan
+Map	Knob 2		Channel 2 Pan			Pan
+Map	Knob 3		Channel 3 Pan			Pan
+Map	Knob 4		Channel 4 Pan			Pan
+Map	Knob 5		Channel 5 Pan			Pan
+Map	Knob 6		Channel 6 Pan			Pan
+Map	Knob 7		Channel 7 Pan			Pan
+Map	Knob 8		Channel 8 Pan			Pan
 
 Map	Slider 1		Channel 1 Level			Volume
 Map	Slider 2		Channel 2 Level			Volume
@@ -57,6 +62,7 @@ Map	Slider 5		Channel 5 Level			Volume
 Map	Slider 6		Channel 6 Level			Volume
 Map	Slider 7		Channel 7 Level			Volume
 Map	Slider 8		Channel 8 Level			Volume
+
 Map	Grid 1		Channel 1 Mute			Volume
 Map	Grid 2		Channel 2 Mute			Volume
 Map	Grid 3		Channel 3 Mute			Volume
@@ -75,32 +81,6 @@ Map	Grid 14		Channel 6 Solo			Volume
 Map	Grid 15		Channel 7 Solo			Volume
 Map	Grid 16		Channel 8 Solo			Volume
 
-Map	Slider 1		Channel 1 Pan			Pan
-Map	Slider 2		Channel 2 Pan			Pan
-Map	Slider 3		Channel 3 Pan			Pan
-Map	Slider 4		Channel 4 Pan			Pan
-Map	Slider 5		Channel 5 Pan			Pan
-Map	Slider 6		Channel 6 Pan			Pan
-Map	Slider 7		Channel 7 Pan			Pan
-Map	Slider 8		Channel 8 Pan			Pan
-
-Map	Slider 1		Channel 1 FX1 Send Level			Send 1
-Map	Slider 2		Channel 2 FX1 Send Level			Send 1
-Map	Slider 3		Channel 3 FX1 Send Level			Send 1
-Map	Slider 4		Channel 4 FX1 Send Level			Send 1
-Map	Slider 5		Channel 5 FX1 Send Level			Send 1
-Map	Slider 6		Channel 6 FX1 Send Level			Send 1
-Map	Slider 7		Channel 7 FX1 Send Level			Send 1
-Map	Slider 8		Channel 8 FX1 Send Level			Send 1
-
-Map	Slider 1		Channel 1 FX2 Send Level			Send 2
-Map	Slider 2		Channel 2 FX2 Send Level			Send 2
-Map	Slider 3		Channel 3 FX2 Send Level			Send 2
-Map	Slider 4		Channel 4 FX2 Send Level			Send 2
-Map	Slider 5		Channel 5 FX2 Send Level			Send 2
-Map	Slider 6		Channel 6 FX2 Send Level			Send 2
-Map	Slider 7		Channel 7 FX2 Send Level			Send 2
-Map	Slider 8		Channel 8 FX2 Send Level			Send 2
 
 
 Scope	Propellerheads	Combinator
