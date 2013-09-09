@@ -23,10 +23,10 @@ Scope	Propellerheads	Reason Document
 //Map	Grid 3		Rewind
 //Map	Grid 4		Fast Forward
 
-Map	Grid 1		Play
-Map	Grid 2		Stop
-Map	Grid 3		Goto Left Locator
-Map	Grid 4		Record
+//Map	Grid 1		Play
+//Map	Grid 2		Stop
+//Map	Grid 3		Goto Left Locator
+//Map	Grid 4		Record
 
 Map	Encoder		Target Track (Delta)
 
