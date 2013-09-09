@@ -297,7 +297,7 @@ g_lcd_state="LCD"
 --g_delivered_lcd_state=string.format("%-16.16s","#")
 g_delivered_lcd_state="#"
 
-g_scale_item_index=2
+g_scale_item_index=2 -- "_Scope" is item 2 in the table
 
 function remote_process_midi(event)
 	ret=remote.match_midi("<100x>? yy zz",event) --find a note on or off
@@ -384,6 +384,7 @@ function remote_deliver_midi()
 	local rtevent={}
 	local shevent={}
 	local iskong=false
+	local do_update_pads = 0
 	--initialize colors:
 	if init==1 then
 		local firstcolors={
@@ -455,7 +456,6 @@ function remote_deliver_midi()
 	end
 	--if scale changes, we update the LCD
 	if ( (g_delivered_scale~=scale_int or g_delivered_transpose~=transpose) and shift~=1 and tran_btn==0) then
-		remote.trace("update scale "..scale_int)
 		local scale_abrv = scaleabrvs[scalename]
 		local c_one = string.sub(scale_abrv,1,1)
 		local c_two = string.sub(scale_abrv,2,2)
@@ -464,48 +464,8 @@ function remote_deliver_midi()
 		rtevent=remote.make_midi("b0 23 "..sevseg[c_two])
 		table.insert(ret_events,rtevent)
 		g_delivered_scale=scale_int
-		--remote.trace(scalename)
-		
-		-- color the pads 
-		if(scalename~='DrumPad') then
-			for i=1,32,1 do
-				local padid = i-1
-				local scale_len = table.getn(scale)
-				local oct = math.floor(padid/scale_len)
-				local addnote = scale[1+modulo(i-1,scale_len)]
-				local outnote=root+transpose+(12*oct)+addnote --note that gets played by synth
-				local outnorm=modulo(outnote,12) --normalized to 0-11 range
-				local padnum=string.format("%x",i+35) --note# that the controller led responds to
-				local keycolors = {"02","40","20"} --white,yellow,blue
-				local whites = {2, 4, 5, 7, 9, 11}
-				--remote.trace("\n i: "..i.." padid: "..padid.." outnorm "..outnorm.." outnote "..outnote.." xpose "..transpose.." addnote "..addnote)
-				--if outnorm is 0 , make it yellow. if it's a white key, make it white, else blue
-				if outnorm==0 then
-					padevent[i]=remote.make_midi("90 "..padnum.." "..keycolors[2])
-					table.insert(ret_events,padevent[i])
-				elseif exists(outnorm, whites) then
-					padevent[i]=remote.make_midi("90 "..padnum.." "..keycolors[1])
-					table.insert(ret_events,padevent[i])
-				else
-					padevent[i]=remote.make_midi("90 "..padnum.." "..keycolors[3])
-					table.insert(ret_events,padevent[i])
-				end
-			end
-		else
-			--do drumpad color scheme
-			for i=0,31,1 do
-				local padnum=string.format("%x",i+36) --note# that the controller led responds to
-				local right = modulo(math.floor(i/4),2)
-				--remote.trace("\nside "..right.." div "..math.floor(i/4).." i "..i)
-				if(right==1) then
-					padevent[i]=remote.make_midi("90 "..padnum.." 20")
-					table.insert(ret_events,padevent[i])
-				else
-					padevent[i]=remote.make_midi("90 "..padnum.." 40")
-					table.insert(ret_events,padevent[i])
-				end
-			end
-		end
+		do_update_pads = 1
+		remote.trace(scalename)
 	end
 	--if transpose changes, we transpose
 	if g_delivered_transpose~=transpose then
@@ -530,6 +490,7 @@ function remote_deliver_midi()
 		end
 		table.insert(ret_events,remote.make_midi("b0  7b 00")) --all notes off
 		g_delivered_transpose=transpose
+		do_update_pads = 1
 	end
 	
 	--lcd event and text parsing for scale detect
@@ -629,13 +590,55 @@ function remote_deliver_midi()
 		--done looking at "Track" labels
 	end
 	
+	-- color the pads if scale or transpose changed
+	if(do_update_pads==1) then
+		if(scalename~='DrumPad') then
+			for i=1,32,1 do
+				local padid = i-1
+				local scale_len = table.getn(scale)
+				local oct = math.floor(padid/scale_len)
+				local addnote = scale[1+modulo(i-1,scale_len)]
+				local outnote=root+transpose+(12*oct)+addnote --note that gets played by synth
+				local outnorm=modulo(outnote,12) --normalized to 0-11 range
+				local padnum=string.format("%x",i+35) --note# that the controller led responds to
+				local keycolors = {"02","40","20"} --white,yellow,blue
+				local whites = {2, 4, 5, 7, 9, 11}
+				--remote.trace("\n i: "..i.." padid: "..padid.." outnorm "..outnorm.." outnote "..outnote.." xpose "..transpose.." addnote "..addnote)
+				--if outnorm is 0 , make it yellow. if it's a white key, make it white, else blue
+				if outnorm==0 then
+					padevent[i]=remote.make_midi("90 "..padnum.." "..keycolors[2])
+					table.insert(ret_events,padevent[i])
+				elseif exists(outnorm, whites) then
+					padevent[i]=remote.make_midi("90 "..padnum.." "..keycolors[1])
+					table.insert(ret_events,padevent[i])
+				else
+					padevent[i]=remote.make_midi("90 "..padnum.." "..keycolors[3])
+					table.insert(ret_events,padevent[i])
+				end
+			end
+		else
+			--do drumpad color scheme
+			for i=0,31,1 do
+				local padnum=string.format("%x",i+36) --note# that the controller led responds to
+				local right = modulo(math.floor(i/4),2)
+				--remote.trace("\nside "..right.." div "..math.floor(i/4).." i "..i)
+				if(right==1) then
+					padevent[i]=remote.make_midi("90 "..padnum.." 20")
+					table.insert(ret_events,padevent[i])
+				else
+					padevent[i]=remote.make_midi("90 "..padnum.." 40")
+					table.insert(ret_events,padevent[i])
+				end
+			end
+		end
+	end
 	return ret_events
 end
 
 function remote_on_auto_input(item_index)
 	g_last_input_time=remote.get_time_ms()
 	g_last_input_item=item_index
-	remote.trace("\nauto in "..item_index)
+	--remote.trace("\nauto in "..item_index)
 end
 
 --we'll fetch the 
