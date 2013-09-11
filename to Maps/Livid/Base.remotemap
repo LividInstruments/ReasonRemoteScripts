@@ -59,6 +59,7 @@ Map	Slider 5		Channel 5 Level			Volume
 Map	Slider 6		Channel 6 Level			Volume
 Map	Slider 7		Channel 7 Level			Volume
 Map	Slider 8		Channel 8 Level			Volume
+Map	_Var		"Volume"			Volume
 
 Map	Slider 1		Channel 1 Pan			Pan
 Map	Slider 2		Channel 2 Pan			Pan
@@ -68,6 +69,7 @@ Map	Slider 5		Channel 5 Pan			Pan
 Map	Slider 6		Channel 6 Pan			Pan
 Map	Slider 7		Channel 7 Pan			Pan
 Map	Slider 8		Channel 8 Pan			Pan
+Map	_Var		"Pan"			Pan
 
 Map	Slider 1		Channel 1 FX1 Send Level			Send 1
 Map	Slider 2		Channel 2 FX1 Send Level			Send 1
@@ -77,6 +79,7 @@ Map	Slider 5		Channel 5 FX1 Send Level			Send 1
 Map	Slider 6		Channel 6 FX1 Send Level			Send 1
 Map	Slider 7		Channel 7 FX1 Send Level			Send 1
 Map	Slider 8		Channel 8 FX1 Send Level			Send 1
+Map	_Var		"Send 1"			Send 1
 
 Map	Slider 1		Channel 1 FX2 Send Level			Send 2
 Map	Slider 2		Channel 2 FX2 Send Level			Send 2
@@ -86,6 +89,7 @@ Map	Slider 5		Channel 5 FX2 Send Level			Send 2
 Map	Slider 6		Channel 6 FX2 Send Level			Send 2
 Map	Slider 7		Channel 7 FX2 Send Level			Send 2
 Map	Slider 8		Channel 8 FX2 Send Level			Send 2
+Map	_Var		"Send 2"			Send 2
 
 
 Scope	Propellerheads	Combinator
@@ -119,6 +123,7 @@ Map	Slider 5		Channel 5 Level			Level 1-7
 Map	Slider 6		Channel 6 Level			Level 1-7
 Map	Slider 7		Channel 7 Level			Level 1-7
 Map	Slider 8		Master Level
+Map	_Var		"Level 1-7"			Level 1-7
 
 Map	Slider 1		Channel 8 Level			Level 8-14
 Map	Slider 2		Channel 9 Level			Level 8-14
@@ -127,6 +132,7 @@ Map	Slider 4		Channel 11 Level			Level 8-14
 Map	Slider 5		Channel 12 Level			Level 8-14
 Map	Slider 6		Channel 13 Level			Level 8-14
 Map	Slider 7		Channel 14 Level			Level 8-14
+Map	_Var		"Level 8-14"			Level 8-14
 
 Map	Slider 1		Channel 1 Aux 1 Send			Send 1 1-7
 Map	Slider 2		Channel 2 Aux 1 Send			Send 1 1-7
@@ -136,6 +142,7 @@ Map	Slider 5		Channel 5 Aux 1 Send			Send 1 1-7
 Map	Slider 6		Channel 6 Aux 1 Send			Send 1 1-7
 Map	Slider 7		Channel 7 Aux 1 Send			Send 1 1-7
 Map	Slider 8		Aux 1 Return Level			Send 1 1-7
+Map	_Var		"Send 1, 1-7"			Send 1 1-7
 
 Map	Slider 1		Channel 8 Aux 1 Send			Send 1 8-14
 Map	Slider 2		Channel 9 Aux 1 Send			Send 1 8-14
@@ -145,6 +152,7 @@ Map	Slider 5		Channel 12 Aux 1 Send			Send 1 8-14
 Map	Slider 6		Channel 13 Aux 1 Send			Send 1 8-14
 Map	Slider 7		Channel 14 Aux 1 Send			Send 1 8-14
 Map	Slider 8		Aux 1 Return Level			Send 1 8-14
+Map	_Var		"Send 1, 8-14"			Send 1 8-14
 
 Map	Slider 1		Channel 1 Pan			Pan 1-7
 Map	Slider 2		Channel 2 Pan			Pan 1-7
@@ -153,6 +161,7 @@ Map	Slider 4		Channel 4 Pan			Pan 1-7
 Map	Slider 5		Channel 5 Pan			Pan 1-7
 Map	Slider 6		Channel 6 Pan			Pan 1-7
 Map	Slider 7		Channel 7 Pan			Pan 1-7
+Map	_Var		"Pan 1-7"			Pan 1-7
 
 Map	Slider 1		Channel 8 Pan			Pan 8-14
 Map	Slider 2		Channel 9 Pan			Pan 8-14
@@ -161,6 +170,7 @@ Map	Slider 4		Channel 11 Pan			Pan 8-14
 Map	Slider 5		Channel 12 Pan			Pan 8-14
 Map	Slider 6		Channel 13 Pan			Pan 8-14
 Map	Slider 7		Channel 14 Pan			Pan 8-14
+Map	_Var		"Pan 8-14"			Pan 8-14
 
 
 Scope	Propellerheads	Line Mixer 6:2
@@ -181,6 +191,7 @@ Map	Slider 3		Channel 3 Level			Levels
 Map	Slider 4		Channel 4 Level			Levels
 Map	Slider 5		Channel 5 Level			Levels
 Map	Slider 6		Channel 6 Level			Levels
+Map	_Var		"Levels"			Levels
 
 Map	Slider 1		Channel 1 Pan			Pans
 Map	Slider 2		Channel 2 Pan			Pans
@@ -188,6 +199,7 @@ Map	Slider 3		Channel 3 Pan			Pans
 Map	Slider 4		Channel 4 Pan			Pans
 Map	Slider 5		Channel 5 Pan			Pans
 Map	Slider 6		Channel 6 Pan			Pans
+Map	_Var		"Pans"			Pans
 
 Map	Slider 1		Channel 1 Aux Send			Sends
 Map	Slider 2		Channel 2 Aux Send			Sends
@@ -195,6 +207,7 @@ Map	Slider 3		Channel 3 Aux Send			Sends
 Map	Slider 4		Channel 4 Aux Send			Sends
 Map	Slider 5		Channel 5 Aux Send			Sends
 Map	Slider 6		Channel 6 Aux Send			Sends
+Map	_Var		"Sends"			Sends
 
 Map	Slider 1		Channel 1 Mute			Mutes
 Map	Slider 2		Channel 2 Mute			Mutes
@@ -202,6 +215,7 @@ Map	Slider 3		Channel 3 Mute			Mutes
 Map	Slider 4		Channel 4 Mute			Mutes
 Map	Slider 5		Channel 5 Mute			Mutes
 Map	Slider 6		Channel 6 Mute			Mutes
+Map	_Var		"Mutes"			Mutes
 
 
 Scope	Propellerheads	ID8 Instrument Device
@@ -238,6 +252,7 @@ Map	Slider 5		Drum 2 Tone			D1&2
 Map	Slider 6		Drum 2 Decay Offset			D1&2
 Map	Slider 7		Drum 2 Bus FX Send			D1&2
 Map	Slider 8		Drum 2 Pitch Offset			D1&2
+Map	_Var		"Drums 1&2"			D1&2
 
 Map	Slider 1		Drum 3 Tone			D3&4
 Map	Slider 2		Drum 3 Decay Offset			D3&4
@@ -247,6 +262,7 @@ Map	Slider 5		Drum 4 Tone			D3&4
 Map	Slider 6		Drum 4 Decay Offset			D3&4
 Map	Slider 7		Drum 4 Bus FX Send			D3&4
 Map	Slider 8		Drum 4 Pitch Offset			D3&4
+Map	_Var		"Drums 3&4"			D3&4
 
 Map	Slider 1		Drum 5 Tone			D5&6
 Map	Slider 2		Drum 5 Decay Offset			D5&6
@@ -256,6 +272,7 @@ Map	Slider 5		Drum 6 Tone			D5&6
 Map	Slider 6		Drum 6 Decay Offset			D5&6
 Map	Slider 7		Drum 6 Bus FX Send			D5&6
 Map	Slider 8		Drum 6 Pitch Offset			D5&6
+Map	_Var		"Drums 5&6"			D5&6
 
 Map	Slider 1		Drum 7 Tone			D7&8
 Map	Slider 2		Drum 7 Decay Offset			D7&8
@@ -265,6 +282,7 @@ Map	Slider 5		Drum 8 Tone			D7&8
 Map	Slider 6		Drum 8 Decay Offset			D7&8
 Map	Slider 7		Drum 8 Bus FX Send			D7&8
 Map	Slider 8		Drum 8 Pitch Offset			D7&8
+Map	_Var		"Drums 7&8"			D7&8
 
 Map	Slider 1		Drum 9 Tone			D9&10
 Map	Slider 2		Drum 9 Decay Offset			D9&10
@@ -274,6 +292,7 @@ Map	Slider 5		Drum 10 Tone			D9&10
 Map	Slider 6		Drum 10 Decay Offset			D9&10
 Map	Slider 7		Drum 10 Bus FX Send			D9&10
 Map	Slider 8		Drum 10 Pitch Offset			D9&10
+Map	_Var		"Drums 9&10"			D9&10
 
 Map	Slider 1		Drum 11 Tone			D11&12
 Map	Slider 2		Drum 11 Decay Offset			D11&12
@@ -283,6 +302,7 @@ Map	Slider 5		Drum 12 Tone			D11&12
 Map	Slider 6		Drum 12 Decay Offset			D11&12
 Map	Slider 7		Drum 12 Bus FX Send			D11&12
 Map	Slider 8		Drum 12 Pitch Offset			D11&12
+Map	_Var		"Drums 11&12"			D11&12
 
 Map	Slider 1		Drum 13 Tone			D13&14
 Map	Slider 2		Drum 13 Decay Offset			D13&14
@@ -292,6 +312,7 @@ Map	Slider 5		Drum 14 Tone			D13&14
 Map	Slider 6		Drum 14 Decay Offset			D13&14
 Map	Slider 7		Drum 14 Bus FX Send			D13&14
 Map	Slider 8		Drum 14 Pitch Offset			D13&14
+Map	_Var		"Drums 13&14"			D13&14
 
 Map	Slider 1		Drum 15 Tone			D15&16
 Map	Slider 2		Drum 15 Decay Offset			D15&16
@@ -301,6 +322,7 @@ Map	Slider 5		Drum 16 Tone			D15&16
 Map	Slider 6		Drum 16 Decay Offset			D15&16
 Map	Slider 7		Drum 16 Bus FX Send			D15&16
 Map	Slider 8		Drum 16 Pitch Offset			D15&16
+Map	_Var		"Drums 15&16"			D15&16
 
 Map	Slider 1		Master FX On			Main
 Map	Slider 2		Master FX P1			Main
@@ -310,6 +332,7 @@ Map	Slider 5		Bus FX P1			Main
 Map	Slider 6		Bus FX P2			Main
 Map	Slider 7		Level Bus FX to Master FX			Main
 Map	Slider 8		Master Level			Main
+Map	_Var		"Main"			Main
 
 
 Scope	Propellerheads	Thor Polysonic Synthesizer
@@ -329,6 +352,7 @@ Map	Slider 5		Filter 2 Res			FilterMod
 Map	Slider 6		Filter 2 Type			FilterMod
 Map	Slider 7		LFO 1 Rate			FilterMod
 Map	Slider 8		LFO 1 Waveform			FilterMod
+Map	_Var		"Filter Mod"			FilterMod
 
 Map	Slider 1		Amp Env Attack			Env
 Map	Slider 2		Amp Env Decay			Env
@@ -338,6 +362,7 @@ Map	Slider 5		Filter Env Attack			Env
 Map	Slider 6		Filter Env Decay			Env
 Map	Slider 7		Filter Env Sustain			Env
 Map	Slider 8		Filter Env Release			Env
+Map	_Var		"Envelopes"			Env
 
 Map	Slider 1		Osc 1 Type			Osc
 Map	Slider 2		Osc 1 Oct			Osc
@@ -347,6 +372,7 @@ Map	Slider 5		Osc 2 Type			Osc
 Map	Slider 6		Osc 2 Oct			Osc
 Map	Slider 7		Osc 2 Semi			Osc
 Map	Slider 8		Osc 2 Mod			Osc
+Map	_Var		"Oscillators"			Osc
 
 Map	Slider 1		Delay Time			FX
 Map	Slider 2		Delay Feedback			FX
@@ -356,6 +382,7 @@ Map	Slider 5		Chorus Dry Wet			FX
 Map	Slider 6		Filter 3 Drive			FX
 Map	Slider 7		Filter 3 Freq			FX
 Map	Slider 8		Filter 3 Res			FX
+Map	_Var		"Effects"			FX
 
 
 Scope	Propellerheads	SubTractor Analog Synthesizer
@@ -374,10 +401,10 @@ Map	Slider 2		Filter Res			FilterMod
 Map	Slider 3		Filter2 Freq			FilterMod
 Map	Slider 4		Filter2 Res			FilterMod
 Map	Slider 5		Filter Env Amount			FilterMod
-
 Map	Slider 6		LFO1 Rate			FilterMod
 Map	Slider 7		LFO1 Amount			FilterMod
 Map	Slider 8		LFO1 Wave			FilterMod
+Map	_Var		"Filter Mod"			FilterMod
 
 Map	Slider 1		Amp Env Attack			Env
 Map	Slider 2		Amp Env Decay			Env
@@ -387,6 +414,7 @@ Map	Slider 5		Filter Env Attack			Env
 Map	Slider 6		Filter Env Decay			Env
 Map	Slider 7		Filter Env Sustain			Env
 Map	Slider 8		Filter Env Release			Env
+Map	_Var		"Envelopes"			Env
 
 Map	Slider 1		Osc1 Wave			Osc
 Map	Slider 2		Osc1 Octave			Osc
@@ -396,6 +424,7 @@ Map	Slider 5		Osc2 Octave			Osc
 Map	Slider 6		Osc2 Phase Diff			Osc
 Map	Slider 7		FM Amount			Osc
 Map	Slider 8		Osc Mix			Osc
+Map	_Var		"Oscillators"			Osc
 
 
 Scope	Propellerheads	Malstrom Graintable Synthesizer
@@ -417,6 +446,7 @@ Map	Slider 5		Filter Env Amount			FilterMod
 Map	Slider 6		Modulator A Rate			FilterMod
 Map	Slider 7		Modulator A To Pitch			FilterMod
 Map	Slider 8		Modulator A To Shift			FilterMod
+Map	_Var		"Filter Mod"			FilterMod
 
 Map	Slider 1		Oscillator A Attack			Env
 Map	Slider 2		Oscillator A Decay			Env
@@ -426,6 +456,7 @@ Map	Slider 5		Filter Env Attack			Env
 Map	Slider 6		Filter Env Decay			Env
 Map	Slider 7		Filter Env Sustain			Env
 Map	Slider 8		Filter Env Release			Env
+Map	_Var		"Envelopes"			Env
 
 Map	Slider 1		Oscillator A Motion			Osc A
 Map	Slider 2		Oscillator A Index			Osc A
@@ -435,6 +466,7 @@ Map	Slider 5		Oscillator A Decay			Osc A
 Map	Slider 6		Oscillator A Sustain			Osc A
 Map	Slider 7		Oscillator A Release			Osc A
 Map	Slider 8		Oscillator A Gain			Osc A
+Map	_Var		"Oscillator A"			Osc A
 
 Map	Slider 1		Oscillator B Motion			Osc B
 Map	Slider 2		Oscillator B Index			Osc B
@@ -444,6 +476,7 @@ Map	Slider 5		Oscillator B Decay			Osc B
 Map	Slider 6		Oscillator B Sustain			Osc B
 Map	Slider 7		Oscillator B Release			Osc B
 Map	Slider 8		Oscillator B Gain			Osc B
+Map	_Var		"Oscillator B"			Osc B
 
 
 Scope	Propellerheads	NN19 Digital Sampler
@@ -465,6 +498,7 @@ Map	Slider 5		LFO Rate			FilterMod
 Map	Slider 6		LFO Amount			FilterMod
 Map	Slider 7		LFO Wave			FilterMod
 Map	Slider 8		LFO Dest			FilterMod
+Map	_Var		"Filter Mod"			FilterMod
 
 Map	Slider 1		Amp Env Attack			Env
 Map	Slider 2		Amp Env Decay			Env
@@ -474,6 +508,7 @@ Map	Slider 5		Filter Env Attack			Env
 Map	Slider 6		Filter Env Decay			Env
 Map	Slider 7		Filter Env Sustain			Env
 Map	Slider 8		Filter Env Release			Env
+Map	_Var		"Envelopes"			Env
 
 Map	Slider 1		Sample Start			Osc
 Map	Slider 2		Osc Octave				Osc
@@ -483,6 +518,7 @@ Map	Slider 5		Osc Fine Tune			Osc
 Map	Slider 6		Filter Env Amount			Osc
 Map	Slider 7		Portamento			Osc
 Map	Slider 8		Master Level			Osc
+Map	_Var		"Oscillator"			Osc
 
 
 Scope	Propellerheads	NN-XT Advanced Sampler
@@ -519,6 +555,7 @@ Map	Slider 5		LFO1 Rate			FilterMod
 Map	Slider 6		LFO1 Amount			FilterMod
 Map	Slider 7		LFO1 Wave			FilterMod
 Map	Slider 8		LFO1 Dest			FilterMod
+Map	_Var		"Filter Mod"			FilterMod
 
 Map	Slider 1		Filter Env Attack			Env
 Map	Slider 2		Filter Env Decay			Env
@@ -528,6 +565,7 @@ Map	Slider 5		Amp Env Attack			Env
 Map	Slider 6		Amp Env Decay			Env
 Map	Slider 7		Amp Env Sustain			Env
 Map	Slider 8		Amp Env Release			Env
+Map	_Var		"Envelopes"			Env
 
 Map	Slider 1		Transpose			Osc
 Map	Slider 2		Osc Octave			Osc
@@ -537,7 +575,7 @@ Map	Slider 5		Amp Vel Amount			Osc
 Map	Slider 6		Filter Env Vel Amount			Osc
 Map	Slider 7		Filter Decay Vel Amount			Osc
 Map	Slider 8		Selected Loop Slot			Osc
-
+Map	_Var		"Oscillator"			Osc
 
 Scope	Propellerheads	Redrum Drum Computer
 Define Group	Keyboard Shortcut Variations	Level	Pan	Pitch	Pattern
@@ -558,6 +596,7 @@ Map	Slider 5		Drum 5 Level			Level
 Map	Slider 6		Drum 6 Level			Level
 Map	Slider 7		Drum 7 Level			Level
 Map	Slider 8		Drum 8 Level			Level
+Map	_Var		"Level"			Level
 
 Map	Slider 1		Drum 1 Pan			Pan
 Map	Slider 2		Drum 2 Pan			Pan
@@ -567,6 +606,7 @@ Map	Slider 5		Drum 5 Pan			Pan
 Map	Slider 6		Drum 6 Pan			Pan
 Map	Slider 7		Drum 7 Pan			Pan
 Map	Slider 8		Drum 8 Pan			Pan
+Map	_Var		"Pan"			Pan
 
 Map	Slider 1		Drum 1 Pitch			Pitch
 Map	Slider 2		Drum 2 Pitch			Pitch
@@ -576,6 +616,7 @@ Map	Slider 5		Drum 5 Pitch			Pitch
 Map	Slider 6		Drum 6 Pitch			Pitch
 Map	Slider 7		Drum 7 Pitch			Pitch
 Map	Slider 8		Drum 8 Pitch			Pitch
+Map	_Var		"Pitch"			Pitch
 
 Map	Slider 1		Pattern 1			Pattern
 Map	Slider 2		Pattern 2			Pattern
@@ -585,7 +626,7 @@ Map	Slider 5		Pattern 5			Pattern
 Map	Slider 6		Pattern 6			Pattern
 Map	Slider 7		Pattern 7			Pattern
 Map	Slider 8		Pattern 8			Pattern
-
+Map	_Var		"Pattern"			Pattern
 
 Scope	Propellerheads	MClass Equalizer
 Define Group	Keyboard Shortcut Variations	Low+Param 1	Param 2+Hi
@@ -602,6 +643,7 @@ Map	Slider 3		Low Shelf Q			Low+Param 1
 Map	Slider 4		Parametric 1 Frequency			Low+Param 1
 Map	Slider 5		Parametric 1 Gain			Low+Param 1
 Map	Slider 6		Parametric 1 Q			Low+Param 1
+Map	_Var		"Low Shelf & Parametric 1"			Low+Param 1
 
 Map	Slider 1		Parametric 2 Frequency			Param 2+Hi
 Map	Slider 2		Parametric 2 Gain			Param 2+Hi
@@ -609,6 +651,7 @@ Map	Slider 3		Parametric 2 Q			Param 2+Hi
 Map	Slider 4		Hi Shelf Frequency			Param 2+Hi
 Map	Slider 5		Hi Shelf Gain			Param 2+Hi
 Map	Slider 6		Hi Shelf Q			Param 2+Hi
+Map	_Var		"Parametric 2 and Hi Shelf"			Param 2+Hi
 
 
 Scope	Propellerheads	MClass Stereo Imager
@@ -682,6 +725,7 @@ Map	Slider 4		Parameter 2			Damage & Cut
 Map	Slider 5		Cut Lo			Damage & Cut
 Map	Slider 6		Cut Mid			Damage & Cut
 Map	Slider 7		Cut Hi			Damage & Cut
+Map	_Var		"Damage & Cut"			Damage & Cut
 
 Map	Slider 1		Body Resonance			Body
 Map	Slider 2		Body Scale			Body
@@ -690,25 +734,27 @@ Map	Slider 4		Body Type			Body
 Map	Slider 5		Cut On/Off			Body
 Map	Slider 6		Body On/Off			Body
 Map	Slider 7		Enabled			Body
+Map	_Var		"Body"			Body
 
 
 Scope	Propellerheads	BV512 Digital Vocoder
-Define Group	Keyboard Shortcut Variations	Basic	Band 1-8	Band 9-16	Band 17-24	Band 25-32
+Define Group	Keyboard Shortcut Variations	Main	Band 1-8	Band 9-16	Band 17-24	Band 25-32
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"BV512 Vocoder"
-Map	Tbtn 5		Keyboard Shortcut Variations=Basic
+Map	Tbtn 5		Keyboard Shortcut Variations=Main
 Map	Tbtn 6		Keyboard Shortcut Variations=Band 1-8
 Map	Tbtn 7		Keyboard Shortcut Variations=Band 9-16
 Map	Tbtn 8		Keyboard Shortcut Variations=Band 17-24
 
-Map	Slider 1		Band Count			Basic
-Map	Slider 2		Vocoder/Equalizer			Basic
-Map	Slider 3		Hold			Basic
-Map	Slider 4		Attack			Basic
-Map	Slider 5		Decay			Basic
-Map	Slider 6		Shift			Basic
-Map	Slider 7		HF Emphasis			Basic
-Map	Slider 8		Dry/Wet			Basic
+Map	Slider 1		Band Count			Main
+Map	Slider 2		Vocoder/Equalizer			Main
+Map	Slider 3		Hold			Main
+Map	Slider 4		Attack			Main
+Map	Slider 5		Decay			Main
+Map	Slider 6		Shift			Main
+Map	Slider 7		HF Emphasis			Main
+Map	Slider 8		Dry/Wet			Main
+Map	_Var		"Main"			Main
 
 Map	Slider 1		Band Level 1			Band 1-8
 Map	Slider 2		Band Level 2			Band 1-8
@@ -718,6 +764,7 @@ Map	Slider 5		Band Level 5			Band 1-8
 Map	Slider 6		Band Level 6			Band 1-8
 Map	Slider 7		Band Level 7			Band 1-8
 Map	Slider 8		Band Level 8			Band 1-8
+Map	_Var		"Bands 1-8"			Band 1-8
 
 Map	Slider 1		Band Level 9			Band 9-16
 Map	Slider 2		Band Level 10			Band 9-16
@@ -727,6 +774,7 @@ Map	Slider 5		Band Level 13			Band 9-16
 Map	Slider 6		Band Level 14			Band 9-16
 Map	Slider 7		Band Level 15			Band 9-16
 Map	Slider 8		Band Level 16			Band 9-16
+Map	_Var		"Bands 9-16"			Band 9-16
 
 Map	Slider 1		Band Level 17			Band 17-24
 Map	Slider 2		Band Level 18			Band 17-24
@@ -736,6 +784,7 @@ Map	Slider 5		Band Level 21			Band 17-24
 Map	Slider 6		Band Level 22			Band 17-24
 Map	Slider 7		Band Level 23			Band 17-24
 Map	Slider 8		Band Level 24			Band 17-24
+Map	_Var		"Bands 17-24"			Band 17-24
 
 Map	Slider 1		Band Level 25			Band 25-32
 Map	Slider 2		Band Level 26			Band 25-32
@@ -745,6 +794,7 @@ Map	Slider 5		Band Level 29			Band 25-32
 Map	Slider 6		Band Level 30			Band 25-32
 Map	Slider 7		Band Level 31			Band 25-32
 Map	Slider 8		Band Level 32			Band 25-32
+Map	_Var		"Bands 25-32"			Band 25-32
 
 
 Scope	Propellerheads	Line 6 Guitar Amp
@@ -793,10 +843,10 @@ Map	Slider 8		Voice Synth Level
 
 Scope	Propellerheads	Pulveriser
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Define Group	Keyboard Shortcut Variations	Basic	Follower	Tremor
+Define Group	Keyboard Shortcut Variations	Main	Follower	Tremor
 Map	_Scope		"Pulveriser"
 
-Map	Tbtn 5		Keyboard Shortcut Variations=Basic
+Map	Tbtn 5		Keyboard Shortcut Variations=Main
 Map	Tbtn 6		Keyboard Shortcut Variations=Follower
 Map	Tbtn 7		Keyboard Shortcut Variations=Tremor
 //Map	Tbtn 8		Keyboard Shortcut Variations=
@@ -804,12 +854,13 @@ Map	Tbtn 7		Keyboard Shortcut Variations=Tremor
 Map	Slider 7		Volume
 Map	Slider 8		Blend
 
-Map	Slider 1		Squash			Basic
-Map	Slider 2		Dirt			Basic
-Map	Slider 3		Tone			Basic
-Map	Slider 4		Filter Mode			Basic
-Map	Slider 5		Filter Frequency			Basic
-Map	Slider 6		Peak			Basic
+Map	Slider 1		Squash			Main
+Map	Slider 2		Dirt			Main
+Map	Slider 3		Tone			Main
+Map	Slider 4		Filter Mode			Main
+Map	Slider 5		Filter Frequency			Main
+Map	Slider 6		Peak			Main
+Map	_Var		"Main"			Main
 
 Map	Slider 1		Follower to Rate			Follower
 Map	Slider 2		Follower to Frequency			Follower
@@ -817,6 +868,7 @@ Map	Slider 3		Follower Trig			Follower
 Map	Slider 4		Follower Threshold			Follower
 Map	Slider 5		Follower Attack			Follower
 Map	Slider 6		Follower Release			Follower
+Map	_Var		"Follower"			Follower
 
 Map	Slider 1		Tremor to Frequency			Tremor
 Map	Slider 2		Tremor to Volume			Tremor
@@ -824,6 +876,7 @@ Map	Slider 3		Tremor Rate			Tremor
 Map	Slider 4		Tremor Waveform			Tremor
 Map	Slider 5		Tremor Spread			Tremor
 Map	Slider 6		Tremor Lag			Tremor
+Map	_Var		"Tremor"			Tremor
 
 
 Scope	Propellerheads	The Echo
@@ -843,6 +896,7 @@ Map	Slider 5		Right Ch Feedback Offset			Delay
 Map	Slider 6		Drive Amount			Delay
 Map	Slider 7		Drive Type			Delay
 Map	Slider 8		Dry/Wet Balance			Delay
+Map	_Var		"Delay"			Delay
 
 Map	Slider 1		Envelope			FilterMod
 Map	Slider 2		Wobble			FilterMod
@@ -852,6 +906,7 @@ Map	Slider 5		Filter Frequency			FilterMod
 Map	Slider 6		Filter Resonance			FilterMod
 Map	Slider 7		LFO Rate			FilterMod
 Map	Slider 8		LFO Amount			FilterMod
+Map	_Var		"FilterMod"			FilterMod
 
 Map	Slider 9		Ducking
 
@@ -874,6 +929,7 @@ Map	Slider 6		Delay Pan			MainFX
 Map	Slider 7		Phaser Rate			MainFX
 Map	Slider 8		Phaser Feedback			MainFX
 Map	Slider 9		Master Volume			MainFX
+Map	_Var		"MainFX"			MainFX
 
 Map	Slider 1		High Pass LFO Amount			High
 Map	Slider 2		High Pass Frequency			High
@@ -884,6 +940,7 @@ Map	Slider 6		High Pass Phaser Amount			High
 Map	Slider 7		High Pass Delay Amount			High
 Map	Slider 8		High Pass Pan			High
 Map	Slider 9		High Pass Volume			High
+Map	_Var		"High"			High
 
 Map	Slider 1		Band Pass LFO Amount			Band
 Map	Slider 2		Band Pass Frequency			Band
@@ -894,6 +951,7 @@ Map	Slider 6		Band Pass Phaser Amount			Band
 Map	Slider 7		Band Pass Delay Amount			Band
 Map	Slider 8		Band Pass Pan			Band
 Map	Slider 9		Band Pass Volume			Band
+Map	_Var		"Band"			Band
 
 Map	Slider 1		Low Pass LFO Amount			Low
 Map	Slider 2		Low Pass Frequency			Low
@@ -904,6 +962,7 @@ Map	Slider 6		Low Pass Phaser Amount			Low
 Map	Slider 7		Low Pass Delay Amount			Low
 Map	Slider 8		Low Pass Pan			Low
 Map	Slider 9		Low Pass Volume			Low
+Map	_Var		"Low"			Low
 
 Map	Slider 1		Dry Volume			Dry
 Map	Slider 2		Dry Pan			Dry
@@ -914,6 +973,7 @@ Map	Slider 6		Filter Env Attack			Dry
 Map	Slider 7		Filter Env Decay			Dry
 Map	Slider 8		Filter Env Release			Dry
 Map	Slider 9		Master Volume			Dry
+Map	_Var		"Dry"			Dry
 
 
 Scope	Propellerheads	RV-7 Digital Reverb
@@ -1081,6 +1141,7 @@ Map	Slider 5		note5_ChordSelect			Chord
 Map	Slider 6		note6_ChordSelect			Chord
 Map	Slider 7		note7_ChordSelect			Chord
 Map	Slider 8		note8_ChordSelect			Chord
+Map	_Var		"Chord"			Chord
 
 Map	Slider 1		rateFree			Arp1
 Map	Slider 2		rateSynced			Arp1
@@ -1090,6 +1151,7 @@ Map	Slider 5		maxChordSize			Arp1
 Map	Slider 6		extendDownNotes			Arp1
 Map	Slider 7		extendUpNotes			Arp1
 Map	Slider 8		gateLength			Arp1
+Map	_Var		"Arp1"			Arp1
 
 Map	Slider 1		Velocity			Arp2
 Map	Slider 2		velocityVariationMin			Arp2
@@ -1099,6 +1161,7 @@ Map	Slider 5		arpPlayDirection			Arp2
 Map	Slider 6		arpPlayCount			Arp2
 Map	Slider 7		repeatNoteFrequency			Arp2
 Map	Slider 8		repeatNoteVelocity			Arp2
+Map	_Var		"Arp2"			Arp2
 
 
 Scope	Black and Orange	com.blackandorange.ReVolt
@@ -1112,6 +1175,7 @@ Map	Slider 5		conformToRange			Var1
 Map	Slider 6		maxoutput			Var1
 Map	Slider 7		maxoutputUni			Var1
 Map	Slider 8		addamount			Var1
+Map	_Var		"Var1"			Var1
 
 Map	Slider 1		relativeaddmode			Var2
 Map	Slider 2		polaritymode			Var2
@@ -1121,6 +1185,7 @@ Map	Slider 5		staticoutput			Var2
 Map	Slider 6		staticoutputenabled			Var2
 Map	Slider 7		splitAOffStaticValue			Var2
 Map	Slider 8		splitAOnMode			Var2
+Map	_Var		"Var2"			Var2
 
 
 Scope	Black and Orange	com.blackandorange.TrafficControl
@@ -1181,6 +1246,7 @@ Map	Slider 5		Mod Wheel Source			FilterMod
 Map	Slider 6		Mod Wheel Amount			FilterMod
 Map	Slider 7		On Source			FilterMod
 Map	Slider 8		On Amount			FilterMod
+Map	_Var		"Filter Mod"			FilterMod
 
 Map	Slider 1		Vol Attack			Env
 Map	Slider 2		Vol Decay			Env
@@ -1190,6 +1256,7 @@ Map	Slider 5		Filter Attack			Env
 Map	Slider 6		Filter Decay			Env
 Map	Slider 7		Filter Sustain			Env
 Map	Slider 8		Filter Release			Env
+Map	_Var		"Envelopes"			Env
 
 Map	Slider 1		Osc 1 Octave			Osc
 Map	Slider 2		Osc 1 Wave			Osc
@@ -1199,6 +1266,7 @@ Map	Slider 5		Osc 2 Wave			Osc
 Map	Slider 6		Osc 3 Frequency			Osc
 Map	Slider 7		Osc 3 Octave			Osc
 Map	Slider 8		Osc 3 Wave			Osc
+Map	_Var		"Osciallators"			Osc
 
 
 Scope	Cakewalk	com.cakewalk.RE2A
@@ -1226,6 +1294,7 @@ Map	Slider 3		Delay Sync			Delay
 Map	Slider 4		Combined Volume			Delay
 Map	Slider 5		Delay Volume Direct			Delay
 Map	Slider 6		Delay Pan Direct			Delay
+Map	_Var		"Delay"			Delay
 
 Map	Slider 1		Delay Volume 2			DelayVol
 Map	Slider 2		Delay Volume 3			DelayVol
@@ -1235,6 +1304,7 @@ Map	Slider 5		Delay Volume 6			DelayVol
 Map	Slider 6		Delay Volume 7			DelayVol
 Map	Slider 7		Delay Volume 8			DelayVol
 Map	Slider 8		Delay Volume 9			DelayVol
+Map	_Var		"Delay Volume"			DelayVol
 
 Map	Slider 1		Delay Pan 2			DelayPan
 Map	Slider 2		Delay Pan 3			DelayPan
@@ -1244,6 +1314,7 @@ Map	Slider 5		Delay Pan 6			DelayPan
 Map	Slider 6		Delay Pan 7			DelayPan
 Map	Slider 7		Delay Pan 8			DelayPan
 Map	Slider 8		Delay Pan 9			DelayPan
+Map	_Var		"Delay Pan"			DelayPan
 
 
 Scope	Deadman Audio Devices	com.deadmanaudiodevices.getlayedvoltage
@@ -1260,6 +1331,7 @@ Map	Slider 3		Delay Sync			Delay
 Map	Slider 4		Octave Correction			Delay
 Map	Slider 5		Note 1 Out Direct			Delay
 Map	Slider 6		Note 2 Out Direct			Delay
+Map	_Var		"Delay"			Delay
 
 Map	Slider 1		Note 1 Out 2			Note1
 Map	Slider 2		Note 1 Out 3			Note1
@@ -1269,6 +1341,7 @@ Map	Slider 5		Note 1 Out 6			Note1
 Map	Slider 6		Note 1 Out 7			Note1
 Map	Slider 7		Note 1 Out 8			Note1
 Map	Slider 8		Note 1 Out 9			Note1
+Map	_Var		"Note 1"			Note1
 
 Map	Slider 1		Note 2 Out 2			Note2
 Map	Slider 2		Note 2 Out 3			Note2
@@ -1278,6 +1351,7 @@ Map	Slider 5		Note 2 Out 6			Note2
 Map	Slider 6		Note 2 Out 7			Note2
 Map	Slider 7		Note 2 Out 8			Note2
 Map	Slider 8		Note 2 Out 9			Note2
+Map	_Var		"Note 2"			Note2
 
 
 Scope	DLD Technology	com.dldtechnology.dr4
