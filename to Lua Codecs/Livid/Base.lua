@@ -391,6 +391,8 @@ function remote_deliver_midi(maxbytes,port)
 		local rtevent={}
 		local shevent={}
 		local iskong = false
+		local isvarchange = false
+		local istracktext = false
 		local do_update_pads = 0
 		--initialize colors:
 		if init==1 then
@@ -510,23 +512,23 @@ function remote_deliver_midi(maxbytes,port)
 			do_update_pads = 1
 		end
 	
-		
 		--if vartext from _Var item has changed	
-		--if g_vartext_prev~=g_vartext then
+		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
-			local var_event = make_lcd_midi_message("/Base/Variation/lcd_name "..vartext)
+			local var_event = make_lcd_midi_message("/Base/Var/lcd_name "..vartext)
 			table.insert(lcd_events,var_event)
 			g_vartext_prev = g_vartext
-		--end
+			isvarchange = true
+		end
 			
 		--lcd event and text parsing for scale detection from text in track name
 		local new_text = g_lcd_state
 		if g_delivered_lcd_state~=new_text then
 			g_delivered_lcd_state = new_text
 			local use_prev_scale = false
-			local is_track_text = string.find(new_text,"Track") == 1 --The word "track" is the first word
-			if(is_track_text==false) then
+			istracktext = string.find(new_text,"Track") == 1 --The word "track" is the first word
+			if(istracktext==false) then
 				--we'll make the parameter/value/unit list into two arrays for our LCD, then send a long string to LCD
 				local textarray = {}
 				local wordcount = 1
@@ -547,32 +549,8 @@ function remote_deliver_midi(maxbytes,port)
 
 			end
 			
-			
 			--parse the text to see if there's any scale or transpose info
-			if(is_track_text) then
-				--refresh LCD with all the parameters and values for the sliders when a new track is selected
-				for i = 3,11 do
-					local thetext = remote.get_item_name_and_value(i)
-					local textarray = {}
-					local wordcount = 1
-					--make a table of words so we can break the track name_and_value into "name" and "value"
-					for i in string.gmatch(thetext, "%S+") do
-						textarray[wordcount] = i
-						wordcount = wordcount+1
-					end
-				
-					path = "/Base/Slider_"..(i-sli_start).."/lcd_name " -- "-3" because the sliders start at index 3 in table items, but we start our Slider names at 0.
-					param_text = table.concat( table_slice(textarray,1,-3)," " )--from first element to 3rd to last element (everything but last 2 elements)
-					value_text = table.concat( table_slice(textarray,-2)," " )--last 2 elements
-					p_text = string.format(param_text) --/Alias8/Fader_0/lcd_name 
-					plcd_event = make_lcd_midi_message(path..p_text)
-					v_text = string.format(value_text)
-					path = "/Base/Slider_"..(i-sli_start).."/lcd_value "
-					vlcd_event = make_lcd_midi_message(path..v_text)
-					table.insert(lcd_events,plcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
-					table.insert(lcd_events,vlcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 		
-				end
-			
+			if istracktext==true then			
 				--if scopetext from _Scope item has changed	
 				if g_scopetext_prev~=g_scopetext then
 					--Let the LCD know what the device is
@@ -656,6 +634,32 @@ function remote_deliver_midi(maxbytes,port)
 			--done looking at "Track" labels
 		end
 	
+	
+		if istracktext==true or isvarchange==true then
+		--refresh LCD with all the parameters and values for the sliders when a new track is selected
+			for i = 3,11 do
+				local thetext = remote.get_item_name_and_value(i)
+				local textarray = {}
+				local wordcount = 1
+				--make a table of words so we can break the track name_and_value into "name" and "value"
+				for i in string.gmatch(thetext, "%S+") do
+					textarray[wordcount] = i
+					wordcount = wordcount+1
+				end
+			
+				path = "/Base/Slider_"..(i-sli_start).."/lcd_name " -- "-3" because the sliders start at index 3 in table items, but we start our Slider names at 0.
+				param_text = table.concat( table_slice(textarray,1,-3)," " )--from first element to 3rd to last element (everything but last 2 elements)
+				value_text = table.concat( table_slice(textarray,-2)," " )--last 2 elements
+				p_text = string.format(param_text) --/Alias8/Fader_0/lcd_name 
+				plcd_event = make_lcd_midi_message(path..p_text)
+				v_text = string.format(value_text)
+				path = "/Base/Slider_"..(i-sli_start).."/lcd_value "
+				vlcd_event = make_lcd_midi_message(path..v_text)
+				table.insert(lcd_events,plcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
+				table.insert(lcd_events,vlcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 		
+			end
+		end
+	
 		-- color the pads if scale or transpose changed
 		if(do_update_pads==1) then
 			if(scalename~='DrumPad') then
@@ -718,7 +722,6 @@ g_scopetext_prev = "none"
 g_vartext = "none"
 g_vartext_prev = "none"
 g_lcd_index = -1
-test = 0
 function remote_set_state(changed_items)
 	--look for the _Scope constant. Kong reports "KONG". Could use for a variety of things
 	if remote.is_item_enabled(g_scope_item_index) then
@@ -731,7 +734,6 @@ function remote_set_state(changed_items)
 	if remote.is_item_enabled(g_var_item_index) then
 		local var_text = remote.get_item_text_value(g_var_item_index)
 		g_vartext = var_text
-		test = 1
 	else
 		g_vartext = ""
 	end
