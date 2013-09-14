@@ -66,8 +66,8 @@ sevseg[8]='08'
 sevseg[9]='09'
 sevseg['-']='2A'
 sevseg['_']='27'
-sli_start=3
-sli_last=11
+sli_start=4
+sli_end=12
 		
 function remote_init(manufacturer, model)
 	if model=="Base" then
@@ -290,9 +290,10 @@ drum_mode = 0;
 g_delivered_shift=0 --for change filter
 tranup_btn = 0 --transpose up button state up or down
 trandn_btn = 0 --transpose down button state up or down
+transpose_changed = false
 init=1
-prev_scale = 0
-prev_transp = 0
+global_scale = 0
+global_transp = 0
 scale_from_parse = false
 
 g_is_lcd_enabled = false
@@ -300,16 +301,15 @@ g_is_lcd_enabled = false
 g_lcd_state = "LCD"
 --g_delivered_lcd_state = string.format("%-16.16s","#")
 g_delivered_lcd_state = "#"
-
+g_delivered_note = 0
 g_scope_item_index = 2 -- "_Scope" is item 2 in the table
 g_var_item_index = 3 -- "_Var" is item 3 in the table
 
 function remote_process_midi(event)
 	ret = remote.match_midi("<100x>? yy zz",event) --find a note on or off
 	if(ret~=nil) then
-		remote.trace("\nIN"..ret.x.." "..ret.y.." "..ret.z)
 		tran_btn = ret.z
-		--fbtn note ons are velocity 64
+		--fbtn note ons are velocity 64----------
 		scale_up = remote.match_midi("9? 15 40",event) --find F4
 		scale_dn = remote.match_midi("9? 16 40",event) --find F5
 		tran_up = remote.match_midi("9? 17 40",event) --find F6
@@ -326,17 +326,19 @@ function remote_process_midi(event)
 		end
 		if(tran_up) then
 			transpose = transpose+(1-shift)+(shift*12)
-			prev_transp = transpose
+			global_transp = transpose
+			transpose_changed = true
 		end
 		if(tran_dn) then
 			transpose = transpose-(1-shift)-(shift*12)
-			prev_transp = transpose
+			global_transp = transpose
+			transpose_changed = true
 		end
 		if(scale_up) then
 			scale_int = modulo(scale_int+1,8)
 			scalename = scalenames[1+scale_int]
 			scale = scales[scalename]
-			prev_scale = scale_int
+			global_scale = scale_int
 			scale_from_parse = false
 			--remote.trace("scale up "..scalename)
 		end
@@ -344,7 +346,7 @@ function remote_process_midi(event)
 			scale_int = modulo(scale_int-1,8) --only use the first 8 scales
 			scalename = scalenames[1+scale_int]
 			scale = scales[scalename]
-			prev_scale = scale_int
+			global_scale = scale_int
 			scale_from_parse = false
 			--remote.trace("scale dn "..scalename)
 		end
@@ -356,19 +358,22 @@ function remote_process_midi(event)
 		--end
 		--now handle the pads
 		if ret.y>35 and ret.y<68 then
+			---if the pads have transposed, then we need to turn off the last note----------------------
+			if(transpose_changed == true) then
+				local prev_off={ time_stamp = event.time_stamp, item=1, value = ret.x, note = g_delivered_note,velocity = 0 }
+				remote.handle_input(prev_off)
+				transpose_changed = false
+			end
 			local padid = ret.y-36
 			local scale_len = table.getn(scale)
-			--remote.trace("padid "..padid)
-			--remote.trace(" len "..scale_len)
-			--modulo is weird in lua, so we write a custom fcn
-			local ind = 1+modulo(padid,scale_len)
+			local ind = 1+modulo(padid,scale_len)  --modulo using the operator % gave me trouble in reason, so I wrote a custom fcn
 			local oct = math.floor(padid/scale_len)
 			local addnote = scale[ind]
 			local noteout = root+transpose+(12*oct)+addnote
 			if (noteout<127 or noteout>0) then
 				local msg={ time_stamp = event.time_stamp, item=1, value = ret.x, note = noteout,velocity = ret.z }
 				remote.handle_input(msg)
-				remote.trace("\nnoteout "..noteout.." "..ret.x.." "..ret.z);
+				g_delivered_note = noteout
 				return true
 				end
 			else
@@ -436,7 +441,7 @@ function remote_deliver_midi(maxbytes,port)
 			init=0
 		end
 	
-		--if we have pressed shift or there's a change in transpose, we need to show that in the seven seg display on Base:
+		--if we have pressed shift or there's a change in transpose, we need to show that in the seven seg display on Base:----------------------------------------
 		if (g_delivered_shift~=shift or g_delivered_transpose~=transpose)  then
 			local shcolors = {"00","7F"}
 			shevent = remote.make_midi("90 19 "..shcolors[shift+1])
@@ -470,7 +475,7 @@ function remote_deliver_midi(maxbytes,port)
 			g_delivered_shift = shift
 		end
 	
-		--if scale changes, we update the LCD
+		--if scale changes, we update the LCD--------------------------------------------------------------------------------
 		if ( (g_delivered_scale~=scale_int or g_delivered_transpose~=transpose) and shift~=1 and tran_btn==0) then
 			local scale_abrv = scaleabrvs[scalename]
 			local c_one = string.sub(scale_abrv,1,1)
@@ -483,10 +488,10 @@ function remote_deliver_midi(maxbytes,port)
 			local scalename_event = make_lcd_midi_message("/Base/Scale/lcd_name "..scalename)
 			table.insert(lcd_events,scalename_event)		
 			do_update_pads = 1
-			remote.trace(scalename)
+			--remote.trace(scalename)
 		end
 	
-		--if transpose changes, we transpose
+		--if transpose changes, we transpose--------------------------------------------------------------------------------
 		if g_delivered_transpose~=transpose then
 			local color_len = table.getn(colors)
 			local color_ind=1 + (modulo( math.floor(math.abs(transpose)/12),color_len) ) --change color every octave
@@ -507,12 +512,11 @@ function remote_deliver_midi(maxbytes,port)
 				dnevent = remote.make_midi("90 18 00")
 				table.insert(base_events,dnevent)
 			end	
-			table.insert(base_events,remote.make_midi("b0  7b 00")) --all notes off
 			g_delivered_transpose = transpose
 			do_update_pads = 1
 		end
 	
-		--if vartext from _Var item has changed	
+		--if vartext from _Var item in remotemap has changed	-----------------
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
@@ -522,34 +526,20 @@ function remote_deliver_midi(maxbytes,port)
 			isvarchange = true
 		end
 			
-		--lcd event and text parsing for scale detection from text in track name
+		--lcd event and text parsing for scale detection from text in track name----------------------------------------
 		local new_text = g_lcd_state
 		if g_delivered_lcd_state~=new_text then
 			g_delivered_lcd_state = new_text
-			local use_prev_scale = false
+			local use_global_scale = false
 			istracktext = string.find(new_text,"Track") == 1 --The word "track" is the first word
 			if(istracktext==false) then
-				--we'll make the parameter/value/unit list into two arrays for our LCD, then send a long string to LCD
-				local textarray = {}
-				local wordcount = 1
-				for i in string.gmatch(new_text, "%S+") do
-					textarray[wordcount] = i
-					wordcount = wordcount+1
+				if(g_lcd_index>=sli_start and g_lcd_index<=sli_end) then --if it's a Slider
+					--we'll make the parameter/value/unit list into two arrays for our LCD, then send a long string to LCD
+					update_slider(g_lcd_index)	
 				end
-				local path = "/Base/Slider_"..(g_lcd_index-sli_start).."/lcd_name " -- "-sli_start" because the sliders start at index 3 in table items, but we start our Slider names at 0.
-				local param_text = table.concat( table_slice(textarray,1,-3)," " )--from first element to 3rd to last element (everything but last 2 elements)
-				local value_text = table.concat( table_slice(textarray,-2)," " )--last 2 elements
-				local p_text = string.format(param_text) --/Alias8/Fader_0/lcd_name 
-				local plcd_event = make_lcd_midi_message(path..p_text)
-				local v_text = string.format(value_text)
-				path = "/Base/Slider_"..(g_lcd_index-sli_start).."/lcd_value "
-				local vlcd_event = make_lcd_midi_message(path..v_text)
-				table.insert(lcd_events,plcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
-				table.insert(lcd_events,vlcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 
-
 			end
 			
-			--parse the text to see if there's any scale or transpose info
+			--parse the text to see if there's any scale or transpose info----------------------------------------
 			if istracktext==true then			
 				--if scopetext from _Scope item has changed	
 				if g_scopetext_prev~=g_scopetext then
@@ -559,17 +549,17 @@ function remote_deliver_midi(maxbytes,port)
 					--if we've landed on a Kong, _Scope reports "KONG" and we change to drum scale
 					if(g_scopetext=="KONG" and scale_int~=7) then
 						if scale_from_parse==false then
-							prev_scale = scale_int
+							global_scale = scale_int
 						end
 						set_scale(7)
 						iskong = true
 					else
-						use_prev_scale = true
+						use_global_scale = true
 					end
 					g_scopetext_prev = g_scopetext
 				end
 			
-				--send LCD the Track name text
+				--send LCD the Track name text----------------------------------------------------------------
 				local track_event = make_lcd_midi_message("/Base/Track/lcd_name "..new_text)
 				table.insert(lcd_events,track_event)
 				--see if there's a scale in the track text
@@ -589,78 +579,65 @@ function remote_deliver_midi(maxbytes,port)
 							end
 						end
 						set_scale(sindex)
-						--local scalename_event = make_lcd_midi_message("SC "..result.." # "..sindex)
+						--local scalename_event = make_lcd_midi_message("SCALEFROMTEXTSCALEFROMTEXTSCALEFROMTEXTSCALEFROMTEXTSCALEFROMTEXTSCALEFROMTEXT "..result.." # "..sindex)
 						--table.insert(lcd_events,scalename_event)
 					else --otherwise it's an index
 						result = string.sub(new_text,eqsearch+1,eqsearch+2)
 						set_scale(result)
-						--local scaleint_event = make_lcd_midi_message("INT SCALE")
+						--local scaleint_event = make_lcd_midi_message("SCALEFROMINTSCALEFROMINTSCALEFROMINTSCALEFROMINTSCALEFROMINTSCALEFROMINTSCALEFROMINTSCALEFROMINTSCALEFROMINT "..result.." # "..sindex)
 						--table.insert(lcd_events,scaleint_event)
 					end
-					use_prev_scale = false
+					use_global_scale = false
 					scale_from_parse = true
 				else
 					scale_from_parse = false
-					use_prev_scale = true
+					use_global_scale = true
 				end
-				--send LCD to scale name
+				--send scale name to LCD----------------------------------------
 				local scalename_event = make_lcd_midi_message("/Base/Scale/lcd_name "..scalename)
 				table.insert(lcd_events,scalename_event)
 		
-				---If it's not a Kong, and there's no scale in the Track name, set to prev_scale
-				if use_prev_scale and iskong==false then
-					set_scale(prev_scale)
-					--local prev_event = make_lcd_midi_message("PREV SCALE "..prev_scale.." "..g_delivered_scale)
-					table.insert(lcd_events,prev_event)
+				---If it's not a Kong, and there's no scale in the Track name, set to global_scale
+				if use_global_scale and iskong==false then
+					set_scale(global_scale)
+					--local prev_event = make_lcd_midi_message("PREV SCALE "..global_scale.." "..g_delivered_scale)
+					--table.insert(lcd_events,prev_event)
 				end
-		
-				--see if there's a transpose in the track text
+
+				--see if there's a transpose in the track text----------------------------------------
 				local transp = ""
-				tsearch = string.find(new_text, 'trans') or string.find(new_text, 'transpose') or string.find(new_text, 'tpose')
+				tsearch = string.find(new_text, 'trans') or string.find(new_text, 'transpose')
 				eqtsearch = string.find(new_text, '=%d',tsearch) --look for a value
 				if(tsearch and eqtsearch) then
-					prev_transp = transpose
-					transp = string.sub(new_text,eqtsearch+1,eqtsearch+2)
-					transpose = tonumber(transp)
+					--global_transp = transpose
+					trans_parsed = tonumber( string.sub(new_text,eqtsearch+1,eqtsearch+2) )
+					if(transpose~=trans_parsed) then
+						transpose = trans_parsed
+						transpose_changed = true
+					end
 				else
-					transpose = prev_transp
-					--local notransp_event = make_lcd_midi_message("NOTRANSPOSE"..transpose)
-					--table.insert(lcd_events,notransp_event)
+					if(transpose~=global_transp) then
+						transpose = global_transp
+						transpose_changed = true
+					end
 				end
 				--send LCD transpose value
-				local transpose_event = make_lcd_midi_message("/Base/Transpose/lcd_name "..transpose)
-				table.insert(lcd_events,transpose_event)
+				if(transpose_changed) then
+					local transpose_event = make_lcd_midi_message("/Base/Transpose/lcd_name "..transpose)
+					table.insert(lcd_events,transpose_event)
+				end
 			end
-			--done looking at "Track" labels
+			--done looking at "Track" labels------------------------------------------------------
 		end
-	
 	
 		if istracktext==true or isvarchange==true then
-		--refresh LCD with all the parameters and values for the sliders when a new track is selected
-			for i = 3,11 do
-				local thetext = remote.get_item_name_and_value(i)
-				local textarray = {}
-				local wordcount = 1
-				--make a table of words so we can break the track name_and_value into "name" and "value"
-				for i in string.gmatch(thetext, "%S+") do
-					textarray[wordcount] = i
-					wordcount = wordcount+1
-				end
-			
-				path = "/Base/Slider_"..(i-sli_start).."/lcd_name " -- "-3" because the sliders start at index 3 in table items, but we start our Slider names at 0.
-				param_text = table.concat( table_slice(textarray,1,-3)," " )--from first element to 3rd to last element (everything but last 2 elements)
-				value_text = table.concat( table_slice(textarray,-2)," " )--last 2 elements
-				p_text = string.format(param_text) --/Alias8/Fader_0/lcd_name 
-				plcd_event = make_lcd_midi_message(path..p_text)
-				v_text = string.format(value_text)
-				path = "/Base/Slider_"..(i-sli_start).."/lcd_value "
-				vlcd_event = make_lcd_midi_message(path..v_text)
-				table.insert(lcd_events,plcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
-				table.insert(lcd_events,vlcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 		
+		--refresh LCD with all the parameters and values for the sliders when a new track is selected----------------------------------------
+			for i = sli_start,sli_end do
+				update_slider(i)
 			end
 		end
 	
-		-- color the pads if scale or transpose changed
+		-- color the pads if scale or transpose changed----------------------------------------
 		if(do_update_pads==1) then
 			if(scalename~='DrumPad') then
 				for i=1,32,1 do
@@ -716,7 +693,7 @@ function remote_on_auto_input(item_index)
 	g_last_input_item = item_index
 end
 
---we'll fetch the items that have changed in Remote
+--we'll fetch the items that have changed in Remote----------------------------------------
 g_scopetext = "none"
 g_scopetext_prev = "none"
 g_vartext = "none"
@@ -751,7 +728,7 @@ function remote_set_state(changed_items)
 	end
 end
 
---make a message to send to livid LCD
+--make a message to send to livid LCD----------------------------------------
 function make_lcd_midi_message(text)
 	local event = remote.make_midi("f0 00 01 61 00") --header for Livid LCD, product ID 0
 	start=6
@@ -765,7 +742,6 @@ function make_lcd_midi_message(text)
 end
 
 function set_scale(index)	
-	--scale_int = index
 	scale_int = index
 	scalename = scalenames[1+scale_int]
 	scale = scales[scalename]
@@ -780,7 +756,7 @@ function exists(f, l) -- find element v of l satisfying f(v)
   return nil
 end
 
---for some reason I need to define a modulo function. just using the % operator was throwing errors :(
+--for some Reason (pun intended) I need to define a modulo function. just using the % operator was throwing errors :(
 function modulo(a,b)
 	local mo = a-math.floor(a/b)*b
 	return mo
@@ -795,7 +771,7 @@ function remote_probe(manufacturer,model)
 	end
 end
 
---make a subtable of a table:
+--UTILITY: make a subtable of a table:
 function table_slice (values,i1,i2)
 	local res = {}
 	local n = #values
@@ -831,4 +807,43 @@ function remote_prepare_for_use()
 	}
 	init=1
 	return retEvents
+end
+
+--UTILITY: this function is called when we need to update a slider LCD
+function update_slider(item)
+	local thetext = remote.get_item_name_and_value(item)
+	local textarray = {}
+	local p_path = ""
+	local v_path = ""
+	local p_text = ""
+	local v_text = ""
+	--local tlcd_event = make_lcd_midi_message("item "..item.." text "..thetext.." len "..#thetext )
+	--table.insert(lcd_events,tlcd_event)
+	if(#thetext>0) then
+		--strip any percent symbols
+		local pctsearch = string.find(thetext, '%%')
+		if(pctsearch~=nil) then
+			thetext = string.sub(thetext,1,pctsearch-1).." pct"
+		end
+		local wordcount = 1
+		--make a table of words so we can break the track name_and_value into "name" and "value"
+		for j in string.gmatch(thetext, "%S+") do
+			textarray[wordcount] = j
+			wordcount = wordcount+1
+		end
+		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
+		p_path = "/Base/Slider_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
+		v_path = "/Base/Slider_"..(item-sli_start).."/lcd_value "
+		if(wordcount>2) then
+			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
+			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
+		else
+			p_text = string.format(textarray[1]) --1st element, like "Mode"
+			v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
+		end
+		local p_lcd_event = make_lcd_midi_message(p_path..p_text)
+		local v_lcd_event = make_lcd_midi_message(v_path..v_text)
+		table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
+		table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 	
+	end
 end

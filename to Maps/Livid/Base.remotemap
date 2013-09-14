@@ -104,7 +104,7 @@ Map	Slider 5		Button 1
 Map	Slider 6		Button 2
 Map	Slider 7		Button 3
 Map	Slider 8		Button 4
-
+Map	Slider 9		Mod Wheel
 
 Scope	Propellerheads	Mixer 14:2
 Define Group	Keyboard Shortcut Variations	Level 1-7	Level 8-14	Send 1 1-7	Send 1 8-14	Pan 1-7	Pan 8-14
@@ -243,6 +243,7 @@ Map	Tbtn 7		Keyboard Shortcut Variations=D5&6
 Map	Tbtn 8		Keyboard Shortcut Variations=D7&8
 
 Map	_Scope		"KONG"
+Map	Slider 9		Mod Wheel
 
 Map	Slider 1		Drum 1 Tone			D1&2
 Map	Slider 2		Drum 1 Decay Offset			D1&2
