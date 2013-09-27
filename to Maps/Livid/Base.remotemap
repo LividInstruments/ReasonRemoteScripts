@@ -1398,3 +1398,55 @@ Map	Slider 6		Gain 6
 Map	Slider 7		Gain 7
 Map	Slider 8		Gain 8
 Map	Slider 9		Input Gain
+
+
+Scope	Peff	com.peff.Alias8cv
+Define Group	Keyboard Shortcut Variations	Sliders	KnobsA	KnobsB	Toggles
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	_Scope		"Alias8cv"
+Map	Tbtn 5		Keyboard Shortcut Variations=Sliders
+Map	Tbtn 6		Keyboard Shortcut Variations=KnobsA
+Map	Tbtn 7		Keyboard Shortcut Variations=KnobsB
+Map	Tbtn 8		Keyboard Shortcut Variations=Toggles
+
+Map	Slider 9		Master Fader
+Map	Slider 1		Fader 1			Sliders
+Map	Slider 2		Fader 2			Sliders
+Map	Slider 3		Fader 3			Sliders
+Map	Slider 4		Fader 4			Sliders
+Map	Slider 5		Fader 5			Sliders
+Map	Slider 6		Fader 6			Sliders
+Map	Slider 7		Fader 7			Sliders
+Map	Slider 8		Fader 8			Sliders
+Map	_Var		"Sliders"			Sliders
+
+Map	Slider 1		Knob A1			KnobsA
+Map	Slider 2		Knob A2			KnobsA
+Map	Slider 3		Knob A3			KnobsA
+Map	Slider 4		Knob A4			KnobsA
+Map	Slider 5		Knob A5			KnobsA
+Map	Slider 6		Knob A6			KnobsA
+Map	Slider 7		Knob A7			KnobsA
+Map	Slider 8		Knob A8			KnobsA
+Map	_Var		"Knobs A"			KnobsA
+
+Map	Slider 1		Knob B1			KnobsB
+Map	Slider 2		Knob B2			KnobsB
+Map	Slider 3		Knob B3			KnobsB
+Map	Slider 4		Knob B4			KnobsB
+Map	Slider 5		Knob B5			KnobsB
+Map	Slider 6		Knob B6			KnobsB
+Map	Slider 7		Knob B7			KnobsB
+Map	Slider 8		Knob B8			KnobsB
+Map	_Var		"Knobs B"			KnobsB
+
+Map	Slider 1		Toggle 1			Toggles
+Map	Slider 2		Toggle 2			Toggles
+Map	Slider 3 		Toggle 3			Toggles
+Map	Slider 4		Toggle 4			Toggles
+Map	Slider 5		Toggle 5			Toggles
+Map	Slider 6		Toggle 6			Toggles
+Map	Slider 7		Toggle 7			Toggles
+Map	Slider 8		Toggle 8			Toggles
+Map	_Var		"Toggles"			Toggles
