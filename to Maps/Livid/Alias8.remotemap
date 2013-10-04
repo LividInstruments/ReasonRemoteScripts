@@ -4,12 +4,10 @@ Control Surface Manufacturer	Livid
 Control Surface Model	Alias8
 Map Version	1.0.0
 
-
 Scope	Propellerheads	Master Keyboard
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Keyboard		Keyboard
-
 
 Scope	Propellerheads	Reason Document
 //Define Group	Keyboard Shortcut Variations
@@ -20,16 +18,13 @@ Scope	Propellerheads	Reason Document
 //Map	Grid		Goto Left Locator
 //Map	Grid		Goto Right Locator
 //Map	Grid		Overdub/Replace
-//Map	Grid 3		Rewind
-//Map	Grid 4		Fast Forward
-
-//Map	Grid 1		Play
-//Map	Grid 2		Stop
-//Map	Grid 3		Goto Left Locator
-//Map	Grid 4		Record
-
+//Map	Grid 3_1		Rewind
+//Map	Grid 4_1		Fast Forward
+//Map	Grid 1_1		Play
+//Map	Grid 2_1		Stop
+//Map	Grid 3_1		Goto Left Locator
+//Map	Grid 4_1		Record
 Map	Encoder		Target Track (Delta)
-
 //Map	Fbtn 3		Undo
 //uncomment for documentation generation:
 //Map	Fbtn 4		Scale Up
@@ -38,1064 +33,1592 @@ Map	Encoder		Target Track (Delta)
 //Map	Fbtn 7		Transpose Dn
 //Map	Fbtn 8		Octave Shift
 
-
 Scope	Propellerheads	Reason Master Section
 //Define Group	Keyboard Shortcut Variations
-
-
-Map	Slider 9		Master Level
-
-Map	Knob 1		Channel 1 Pan			Pan
-Map	Knob 2		Channel 2 Pan			Pan
-Map	Knob 3		Channel 3 Pan			Pan
-Map	Knob 4		Channel 4 Pan			Pan
-Map	Knob 5		Channel 5 Pan			Pan
-Map	Knob 6		Channel 6 Pan			Pan
-Map	Knob 7		Channel 7 Pan			Pan
-Map	Knob 8		Channel 8 Pan			Pan
-
-Map	Slider 1		Channel 1 Level			Volume
-Map	Slider 2		Channel 2 Level			Volume
-Map	Slider 3		Channel 3 Level			Volume
-Map	Slider 4		Channel 4 Level			Volume
-Map	Slider 5		Channel 5 Level			Volume
-Map	Slider 6		Channel 6 Level			Volume
-Map	Slider 7		Channel 7 Level			Volume
-Map	Slider 8		Channel 8 Level			Volume
-
-Map	Grid 1		Channel 1 Mute			Volume
-Map	Grid 2		Channel 2 Mute			Volume
-Map	Grid 3		Channel 3 Mute			Volume
-Map	Grid 4		Channel 4 Mute			Volume
-Map	Grid 5		Channel 5 Mute			Volume
-Map	Grid 6		Channel 6 Mute			Volume
-Map	Grid 7		Channel 7 Mute			Volume
-Map	Grid 8		Channel 8 Mute			Volume
-
-Map	Grid 9		Channel 1 Solo			Volume
-Map	Grid 10		Channel 2 Solo			Volume
-Map	Grid 11		Channel 3 Solo			Volume
-Map	Grid 12		Channel 4 Solo			Volume
-Map	Grid 13		Channel 5 Solo			Volume
-Map	Grid 14		Channel 6 Solo			Volume
-Map	Grid 15		Channel 7 Solo			Volume
-Map	Grid 16		Channel 8 Solo			Volume
-
-
+Map	Slider 9_1		Master Level
+Map	Knob 1_1		Channel 1 Width
+Map	Knob 2_1		Channel 2 Width
+Map	Knob 3_1		Channel 3 Width
+Map	Knob 4_1		Channel 4 Width
+Map	Knob 5_1		Channel 5 Width
+Map	Knob 6_1		Channel 6 Width
+Map	Knob 7_1		Channel 7 Width
+Map	Knob 8_1		Channel 8 Width
+Map	Knob 9_1		Channel 1 Pan
+Map	Knob 10_1		Channel 2 Pan
+Map	Knob 11_1		Channel 3 Pan
+Map	Knob 12_1		Channel 4 Pan
+Map	Knob 13_1		Channel 5 Pan
+Map	Knob 14_1		Channel 6 Pan
+Map	Knob 15_1		Channel 7 Pan
+Map	Knob 16_1		Channel 8 Pan
+Map	Slider 1_1		Channel 1 Level
+Map	Slider 2_1		Channel 2 Level
+Map	Slider 3_1		Channel 3 Level
+Map	Slider 4_1		Channel 4 Level
+Map	Slider 5_1		Channel 5 Level
+Map	Slider 6_1		Channel 6 Level
+Map	Slider 7_1		Channel 7 Level
+Map	Slider 8_1		Channel 8 Level
+Map	Grid 1_1		Channel 1 Mute
+Map	Grid 2_1		Channel 2 Mute
+Map	Grid 3_1		Channel 3 Mute
+Map	Grid 4_1		Channel 4 Mute
+Map	Grid 5_1		Channel 5 Mute
+Map	Grid 6_1		Channel 6 Mute
+Map	Grid 7_1		Channel 7 Mute
+Map	Grid 8_1		Channel 8 Mute
+Map	Grid 9_1		Channel 1 Solo
+Map	Grid 10_1		Channel 2 Solo
+Map	Grid 11_1		Channel 3 Solo
+Map	Grid 12_1		Channel 4 Solo
+Map	Grid 13_1		Channel 5 Solo
+Map	Grid 14_1		Channel 6 Solo
+Map	Grid 15_1		Channel 7 Solo
+Map	Grid 16_1		Channel 8 Solo
+Map	Knob 1_2		Channel 9 Width
+Map	Knob 2_2		Channel 10 Width
+Map	Knob 3_2		Channel 11 Width
+Map	Knob 4_2		Channel 12 Width
+Map	Knob 5_2		Channel 13 Width
+Map	Knob 6_2		Channel 14 Width
+Map	Knob 7_2		Channel 15 Width
+Map	Knob 8_2		Channel 16 Width
+Map	Knob 9_2		Channel 9 Pan
+Map	Knob 10_2		Channel 10 Pan
+Map	Knob 11_2		Channel 11 Pan
+Map	Knob 12_2		Channel 12 Pan
+Map	Knob 13_2		Channel 13 Pan
+Map	Knob 14_2		Channel 14 Pan
+Map	Knob 15_2		Channel 15 Pan
+Map	Knob 16_2		Channel 16 Pan
+Map	Slider 1_2		Channel 9 Level
+Map	Slider 2_2		Channel 10 Level
+Map	Slider 3_2		Channel 11 Level
+Map	Slider 4_2		Channel 12 Level
+Map	Slider 5_2		Channel 13 Level
+Map	Slider 6_2		Channel 14 Level
+Map	Slider 7_2		Channel 15 Level
+Map	Slider 8_2		Channel 16 Level
+Map	Grid 1_2		Channel 9 Mute
+Map	Grid 2_2		Channel 10 Mute
+Map	Grid 3_2		Channel 11 Mute
+Map	Grid 4_2		Channel 12 Mute
+Map	Grid 5_2		Channel 13 Mute
+Map	Grid 6_2		Channel 14 Mute
+Map	Grid 7_2		Channel 15 Mute
+Map	Grid 8_2		Channel 16 Mute
+Map	Grid 9_2		Channel 9 Solo
+Map	Grid 10_2		Channel 10 Solo
+Map	Grid 11_2		Channel 11 Solo
+Map	Grid 12_2		Channel 12 Solo
+Map	Grid 13_2		Channel 13 Solo
+Map	Grid 14_2		Channel 14 Solo
+Map	Grid 15_2		Channel 15 Solo
+Map	Grid 16_2		Channel 16 Solo
+Map	Knob 1_3		Channel 17 Width
+Map	Knob 2_3		Channel 18 Width
+Map	Knob 3_3		Channel 19 Width
+Map	Knob 4_3		Channel 20 Width
+Map	Knob 5_3		Channel 21 Width
+Map	Knob 6_3		Channel 22 Width
+Map	Knob 7_3		Channel 23 Width
+Map	Knob 8_3		Channel 24 Width
+Map	Knob 9_3		Channel 17 Pan
+Map	Knob 10_3		Channel 18 Pan
+Map	Knob 11_3		Channel 19 Pan
+Map	Knob 12_3		Channel 20 Pan
+Map	Knob 13_3		Channel 21 Pan
+Map	Knob 14_3		Channel 22 Pan
+Map	Knob 15_3		Channel 23 Pan
+Map	Knob 16_3		Channel 24 Pan
+Map	Slider 1_3		Channel 17 Level
+Map	Slider 2_3		Channel 18 Level
+Map	Slider 3_3		Channel 19 Level
+Map	Slider 4_3		Channel 20 Level
+Map	Slider 5_3		Channel 21 Level
+Map	Slider 6_3		Channel 22 Level
+Map	Slider 7_3		Channel 23 Level
+Map	Slider 8_3		Channel 24 Level
+Map	Grid 1_3		Channel 17 Mute
+Map	Grid 2_3		Channel 18 Mute
+Map	Grid 3_3		Channel 19 Mute
+Map	Grid 4_3		Channel 20 Mute
+Map	Grid 5_3		Channel 21 Mute
+Map	Grid 6_3		Channel 22 Mute
+Map	Grid 7_3		Channel 23 Mute
+Map	Grid 8_3		Channel 24 Mute
+Map	Grid 9_3		Channel 17 Solo
+Map	Grid 10_3		Channel 18 Solo
+Map	Grid 11_3		Channel 19 Solo
+Map	Grid 12_3		Channel 20 Solo
+Map	Grid 13_3		Channel 21 Solo
+Map	Grid 14_3		Channel 22 Solo
+Map	Grid 15_3		Channel 23 Solo
+Map	Grid 16_3		Channel 24 Solo
+Map	Knob 1_4		Channel 25 Width
+Map	Knob 2_4		Channel 26 Width
+Map	Knob 3_4		Channel 27 Width
+Map	Knob 4_4		Channel 28 Width
+Map	Knob 5_4		Channel 29 Width
+Map	Knob 6_4		Channel 30 Width
+Map	Knob 7_4		Channel 31 Width
+Map	Knob 8_4		Channel 32 Width
+Map	Knob 9_4		Channel 25 Pan
+Map	Knob 10_4		Channel 26 Pan
+Map	Knob 11_4		Channel 27 Pan
+Map	Knob 12_4		Channel 28 Pan
+Map	Knob 13_4		Channel 29 Pan
+Map	Knob 14_4		Channel 30 Pan
+Map	Knob 15_4		Channel 31 Pan
+Map	Knob 16_4		Channel 32 Pan
+Map	Slider 1_4		Channel 25 Level
+Map	Slider 2_4		Channel 26 Level
+Map	Slider 3_4		Channel 27 Level
+Map	Slider 4_4		Channel 28 Level
+Map	Slider 5_4		Channel 29 Level
+Map	Slider 6_4		Channel 30 Level
+Map	Slider 7_4		Channel 31 Level
+Map	Slider 8_4		Channel 32 Level
+Map	Grid 1_4		Channel 25 Mute
+Map	Grid 2_4		Channel 26 Mute
+Map	Grid 3_4		Channel 27 Mute
+Map	Grid 4_4		Channel 28 Mute
+Map	Grid 5_4		Channel 29 Mute
+Map	Grid 6_4		Channel 30 Mute
+Map	Grid 7_4		Channel 31 Mute
+Map	Grid 8_4		Channel 32 Mute
+Map	Grid 9_4		Channel 25 Solo
+Map	Grid 10_4		Channel 26 Solo
+Map	Grid 11_4		Channel 27 Solo
+Map	Grid 12_4		Channel 28 Solo
+Map	Grid 13_4		Channel 29 Solo
+Map	Grid 14_4		Channel 30 Solo
+Map	Grid 15_4		Channel 31 Solo
+Map	Grid 16_4		Channel 32 Solo
+Map	Knob 1_5		Channel 33 Width
+Map	Knob 2_5		Channel 34 Width
+Map	Knob 3_5		Channel 35 Width
+Map	Knob 4_5		Channel 36 Width
+Map	Knob 5_5		Channel 37 Width
+Map	Knob 6_5		Channel 38 Width
+Map	Knob 7_5		Channel 39 Width
+Map	Knob 8_5		Channel 40 Width
+Map	Knob 9_5		Channel 33 Pan
+Map	Knob 10_5		Channel 34 Pan
+Map	Knob 11_5		Channel 35 Pan
+Map	Knob 12_5		Channel 36 Pan
+Map	Knob 13_5		Channel 37 Pan
+Map	Knob 14_5		Channel 38 Pan
+Map	Knob 15_5		Channel 39 Pan
+Map	Knob 16_5		Channel 40 Pan
+Map	Slider 1_5		Channel 33 Level
+Map	Slider 2_5		Channel 34 Level
+Map	Slider 3_5		Channel 35 Level
+Map	Slider 4_5		Channel 36 Level
+Map	Slider 5_5		Channel 37 Level
+Map	Slider 6_5		Channel 38 Level
+Map	Slider 7_5		Channel 39 Level
+Map	Slider 8_5		Channel 40 Level
+Map	Grid 1_5		Channel 33 Mute
+Map	Grid 2_5		Channel 34 Mute
+Map	Grid 3_5		Channel 35 Mute
+Map	Grid 4_5		Channel 36 Mute
+Map	Grid 5_5		Channel 37 Mute
+Map	Grid 6_5		Channel 38 Mute
+Map	Grid 7_5		Channel 39 Mute
+Map	Grid 8_5		Channel 40 Mute
+Map	Grid 9_5		Channel 33 Solo
+Map	Grid 10_5		Channel 34 Solo
+Map	Grid 11_5		Channel 35 Solo
+Map	Grid 12_5		Channel 36 Solo
+Map	Grid 13_5		Channel 37 Solo
+Map	Grid 14_5		Channel 38 Solo
+Map	Grid 15_5		Channel 39 Solo
+Map	Grid 16_5		Channel 40 Solo
+Map	Knob 1_6		Channel 41 Width
+Map	Knob 2_6		Channel 42 Width
+Map	Knob 3_6		Channel 43 Width
+Map	Knob 4_6		Channel 44 Width
+Map	Knob 5_6		Channel 45 Width
+Map	Knob 6_6		Channel 46 Width
+Map	Knob 7_6		Channel 47 Width
+Map	Knob 8_6		Channel 48 Width
+Map	Knob 9_6		Channel 41 Pan
+Map	Knob 10_6		Channel 42 Pan
+Map	Knob 11_6		Channel 43 Pan
+Map	Knob 12_6		Channel 44 Pan
+Map	Knob 13_6		Channel 45 Pan
+Map	Knob 14_6		Channel 46 Pan
+Map	Knob 15_6		Channel 47 Pan
+Map	Knob 16_6		Channel 48 Pan
+Map	Slider 1_6		Channel 41 Level
+Map	Slider 2_6		Channel 42 Level
+Map	Slider 3_6		Channel 43 Level
+Map	Slider 4_6		Channel 44 Level
+Map	Slider 5_6		Channel 45 Level
+Map	Slider 6_6		Channel 46 Level
+Map	Slider 7_6		Channel 47 Level
+Map	Slider 8_6		Channel 48 Level
+Map	Grid 1_6		Channel 41 Mute
+Map	Grid 2_6		Channel 42 Mute
+Map	Grid 3_6		Channel 43 Mute
+Map	Grid 4_6		Channel 44 Mute
+Map	Grid 5_6		Channel 45 Mute
+Map	Grid 6_6		Channel 46 Mute
+Map	Grid 7_6		Channel 47 Mute
+Map	Grid 8_6		Channel 48 Mute
+Map	Grid 9_6		Channel 41 Solo
+Map	Grid 10_6		Channel 42 Solo
+Map	Grid 11_6		Channel 43 Solo
+Map	Grid 12_6		Channel 44 Solo
+Map	Grid 13_6		Channel 45 Solo
+Map	Grid 14_6		Channel 46 Solo
+Map	Grid 15_6		Channel 47 Solo
+Map	Grid 16_6		Channel 48 Solo
+Map	Knob 1_7		Channel 49 Width
+Map	Knob 2_7		Channel 50 Width
+Map	Knob 3_7		Channel 51 Width
+Map	Knob 4_7		Channel 52 Width
+Map	Knob 5_7		Channel 53 Width
+Map	Knob 6_7		Channel 54 Width
+Map	Knob 7_7		Channel 55 Width
+Map	Knob 8_7		Channel 56 Width
+Map	Knob 9_7		Channel 49 Pan
+Map	Knob 10_7		Channel 50 Pan
+Map	Knob 11_7		Channel 51 Pan
+Map	Knob 12_7		Channel 52 Pan
+Map	Knob 13_7		Channel 53 Pan
+Map	Knob 14_7		Channel 54 Pan
+Map	Knob 15_7		Channel 55 Pan
+Map	Knob 16_7		Channel 56 Pan
+Map	Slider 1_7		Channel 49 Level
+Map	Slider 2_7		Channel 50 Level
+Map	Slider 3_7		Channel 51 Level
+Map	Slider 4_7		Channel 52 Level
+Map	Slider 5_7		Channel 53 Level
+Map	Slider 6_7		Channel 54 Level
+Map	Slider 7_7		Channel 55 Level
+Map	Slider 8_7		Channel 56 Level
+Map	Grid 1_7		Channel 49 Mute
+Map	Grid 2_7		Channel 50 Mute
+Map	Grid 3_7		Channel 51 Mute
+Map	Grid 4_7		Channel 52 Mute
+Map	Grid 5_7		Channel 53 Mute
+Map	Grid 6_7		Channel 54 Mute
+Map	Grid 7_7		Channel 55 Mute
+Map	Grid 8_7		Channel 56 Mute
+Map	Grid 9_7		Channel 49 Solo
+Map	Grid 10_7		Channel 50 Solo
+Map	Grid 11_7		Channel 51 Solo
+Map	Grid 12_7		Channel 52 Solo
+Map	Grid 13_7		Channel 53 Solo
+Map	Grid 14_7		Channel 54 Solo
+Map	Grid 15_7		Channel 55 Solo
+Map	Grid 16_7		Channel 56 Solo
+Map	Knob 1_8		Channel 57 Width
+Map	Knob 2_8		Channel 58 Width
+Map	Knob 3_8		Channel 59 Width
+Map	Knob 4_8		Channel 60 Width
+Map	Knob 5_8		Channel 61 Width
+Map	Knob 6_8		Channel 62 Width
+Map	Knob 7_8		Channel 63 Width
+Map	Knob 8_8		Channel 64 Width
+Map	Knob 9_8		Channel 57 Pan
+Map	Knob 10_8		Channel 58 Pan
+Map	Knob 11_8		Channel 59 Pan
+Map	Knob 12_8		Channel 60 Pan
+Map	Knob 13_8		Channel 61 Pan
+Map	Knob 14_8		Channel 62 Pan
+Map	Knob 15_8		Channel 63 Pan
+Map	Knob 16_8		Channel 64 Pan
+Map	Slider 1_8		Channel 57 Level
+Map	Slider 2_8		Channel 58 Level
+Map	Slider 3_8		Channel 59 Level
+Map	Slider 4_8		Channel 60 Level
+Map	Slider 5_8		Channel 61 Level
+Map	Slider 6_8		Channel 62 Level
+Map	Slider 7_8		Channel 63 Level
+Map	Slider 8_8		Channel 64 Level
+Map	Grid 1_8		Channel 57 Mute
+Map	Grid 2_8		Channel 58 Mute
+Map	Grid 3_8		Channel 59 Mute
+Map	Grid 4_8		Channel 60 Mute
+Map	Grid 5_8		Channel 61 Mute
+Map	Grid 6_8		Channel 62 Mute
+Map	Grid 7_8		Channel 63 Mute
+Map	Grid 8_8		Channel 64 Mute
+Map	Grid 9_8		Channel 57 Solo
+Map	Grid 10_8		Channel 58 Solo
+Map	Grid 11_8		Channel 59 Solo
+Map	Grid 12_8		Channel 60 Solo
+Map	Grid 13_8		Channel 61 Solo
+Map	Grid 14_8		Channel 62 Solo
+Map	Grid 15_8		Channel 63 Solo
+Map	Grid 16_8		Channel 64 Solo
+Map	Knob 1_9		Channel 1 FX1 Send Level
+Map	Knob 2_9		Channel 2 FX1 Send Level
+Map	Knob 3_9		Channel 3 FX1 Send Level
+Map	Knob 4_9		Channel 4 FX1 Send Level
+Map	Knob 5_9		Channel 5 FX1 Send Level
+Map	Knob 6_9		Channel 6 FX1 Send Level
+Map	Knob 7_9		Channel 7 FX1 Send Level
+Map	Knob 8_9		Channel 8 FX1 Send Level
+Map	Knob 9_9		Channel 1 FX2 Send Level
+Map	Knob 10_9		Channel 2 FX2 Send Level
+Map	Knob 11_9		Channel 3 FX2 Send Level
+Map	Knob 12_9		Channel 4 FX2 Send Level
+Map	Knob 13_9		Channel 5 FX2 Send Level
+Map	Knob 14_9		Channel 6 FX2 Send Level
+Map	Knob 15_9		Channel 7 FX2 Send Level
+Map	Knob 16_9		Channel 8 FX2 Send Level
+Map	Slider 1_9		Channel 1 Rotary 1
+Map	Slider 2_9		Channel 2 Rotary 1
+Map	Slider 3_9		Channel 3 Rotary 1
+Map	Slider 4_9		Channel 4 Rotary 1
+Map	Slider 5_9		Channel 5 Rotary 1
+Map	Slider 6_9		Channel 6 Rotary 1
+Map	Slider 7_9		Channel 7 Rotary 1
+Map	Slider 8_9		Channel 8 Rotary 1
+Map	Grid 1_9		Channel 1 FX1 Send On
+Map	Grid 2_9		Channel 2 FX1 Send On
+Map	Grid 3_9		Channel 3 FX1 Send On
+Map	Grid 4_9		Channel 4 FX1 Send On
+Map	Grid 5_9		Channel 5 FX1 Send On
+Map	Grid 6_9		Channel 6 FX1 Send On
+Map	Grid 7_9		Channel 7 FX1 Send On
+Map	Grid 8_9		Channel 8 FX1 Send On
+Map	Grid 9_9		Channel 1 FX2 Send On
+Map	Grid 10_9		Channel 2 FX2 Send On
+Map	Grid 11_9		Channel 3 FX2 Send On
+Map	Grid 12_9		Channel 4 FX2 Send On
+Map	Grid 13_9		Channel 5 FX2 Send On
+Map	Grid 14_9		Channel 6 FX2 Send On
+Map	Grid 15_9		Channel 7 FX2 Send On
+Map	Grid 16_9		Channel 8 FX2 Send On
+Map	Knob 1_10		Channel 9 FX1 Send Level
+Map	Knob 2_10		Channel 10 FX1 Send Level
+Map	Knob 3_10		Channel 11 FX1 Send Level
+Map	Knob 4_10		Channel 12 FX1 Send Level
+Map	Knob 5_10		Channel 13 FX1 Send Level
+Map	Knob 6_10		Channel 14 FX1 Send Level
+Map	Knob 7_10		Channel 15 FX1 Send Level
+Map	Knob 8_10		Channel 16 FX1 Send Level
+Map	Knob 9_10		Channel 9 FX2 Send Level
+Map	Knob 10_10		Channel 10 FX2 Send Level
+Map	Knob 11_10		Channel 11 FX2 Send Level
+Map	Knob 12_10		Channel 12 FX2 Send Level
+Map	Knob 13_10		Channel 13 FX2 Send Level
+Map	Knob 14_10		Channel 14 FX2 Send Level
+Map	Knob 15_10		Channel 15 FX2 Send Level
+Map	Knob 16_10		Channel 16 FX2 Send Level
+Map	Slider 1_10		Channel 9 Rotary 1
+Map	Slider 2_10		Channel 10 Rotary 1
+Map	Slider 3_10		Channel 11 Rotary 1
+Map	Slider 4_10		Channel 12 Rotary 1
+Map	Slider 5_10		Channel 13 Rotary 1
+Map	Slider 6_10		Channel 14 Rotary 1
+Map	Slider 7_10		Channel 15 Rotary 1
+Map	Slider 8_10		Channel 16 Rotary 1
+Map	Grid 1_10		Channel 9 FX1 Send On
+Map	Grid 2_10		Channel 10 FX1 Send On
+Map	Grid 3_10		Channel 11 FX1 Send On
+Map	Grid 4_10		Channel 12 FX1 Send On
+Map	Grid 5_10		Channel 13 FX1 Send On
+Map	Grid 6_10		Channel 14 FX1 Send On
+Map	Grid 7_10		Channel 15 FX1 Send On
+Map	Grid 8_10		Channel 16 FX1 Send On
+Map	Grid 9_10		Channel 9 FX2 Send On
+Map	Grid 10_10		Channel 10 FX2 Send On
+Map	Grid 11_10		Channel 11 FX2 Send On
+Map	Grid 12_10		Channel 12 FX2 Send On
+Map	Grid 13_10		Channel 13 FX2 Send On
+Map	Grid 14_10		Channel 14 FX2 Send On
+Map	Grid 15_10		Channel 15 FX2 Send On
+Map	Grid 16_10		Channel 16 FX2 Send On
+Map	Knob 1_11		Channel 17 FX1 Send Level
+Map	Knob 2_11		Channel 18 FX1 Send Level
+Map	Knob 3_11		Channel 19 FX1 Send Level
+Map	Knob 4_11		Channel 20 FX1 Send Level
+Map	Knob 5_11		Channel 21 FX1 Send Level
+Map	Knob 6_11		Channel 22 FX1 Send Level
+Map	Knob 7_11		Channel 23 FX1 Send Level
+Map	Knob 8_11		Channel 24 FX1 Send Level
+Map	Knob 9_11		Channel 17 FX2 Send Level
+Map	Knob 10_11		Channel 18 FX2 Send Level
+Map	Knob 11_11		Channel 19 FX2 Send Level
+Map	Knob 12_11		Channel 20 FX2 Send Level
+Map	Knob 13_11		Channel 21 FX2 Send Level
+Map	Knob 14_11		Channel 22 FX2 Send Level
+Map	Knob 15_11		Channel 23 FX2 Send Level
+Map	Knob 16_11		Channel 24 FX2 Send Level
+Map	Slider 1_11		Channel 17 Rotary 1
+Map	Slider 2_11		Channel 18 Rotary 1
+Map	Slider 3_11		Channel 19 Rotary 1
+Map	Slider 4_11		Channel 20 Rotary 1
+Map	Slider 5_11		Channel 21 Rotary 1
+Map	Slider 6_11		Channel 22 Rotary 1
+Map	Slider 7_11		Channel 23 Rotary 1
+Map	Slider 8_11		Channel 24 Rotary 1
+Map	Grid 1_11		Channel 17 FX1 Send On
+Map	Grid 2_11		Channel 18 FX1 Send On
+Map	Grid 3_11		Channel 19 FX1 Send On
+Map	Grid 4_11		Channel 20 FX1 Send On
+Map	Grid 5_11		Channel 21 FX1 Send On
+Map	Grid 6_11		Channel 22 FX1 Send On
+Map	Grid 7_11		Channel 23 FX1 Send On
+Map	Grid 8_11		Channel 24 FX1 Send On
+Map	Grid 9_11		Channel 17 FX2 Send On
+Map	Grid 10_11		Channel 18 FX2 Send On
+Map	Grid 11_11		Channel 19 FX2 Send On
+Map	Grid 12_11		Channel 20 FX2 Send On
+Map	Grid 13_11		Channel 21 FX2 Send On
+Map	Grid 14_11		Channel 22 FX2 Send On
+Map	Grid 15_11		Channel 23 FX2 Send On
+Map	Grid 16_11		Channel 24 FX2 Send On
+Map	Knob 1_12		Channel 25 FX1 Send Level
+Map	Knob 2_12		Channel 26 FX1 Send Level
+Map	Knob 3_12		Channel 27 FX1 Send Level
+Map	Knob 4_12		Channel 28 FX1 Send Level
+Map	Knob 5_12		Channel 29 FX1 Send Level
+Map	Knob 6_12		Channel 30 FX1 Send Level
+Map	Knob 7_12		Channel 31 FX1 Send Level
+Map	Knob 8_12		Channel 32 FX1 Send Level
+Map	Knob 9_12		Channel 25 FX2 Send Level
+Map	Knob 10_12		Channel 26 FX2 Send Level
+Map	Knob 11_12		Channel 27 FX2 Send Level
+Map	Knob 12_12		Channel 28 FX2 Send Level
+Map	Knob 13_12		Channel 29 FX2 Send Level
+Map	Knob 14_12		Channel 30 FX2 Send Level
+Map	Knob 15_12		Channel 31 FX2 Send Level
+Map	Knob 16_12		Channel 32 FX2 Send Level
+Map	Slider 1_12		Channel 25 Rotary 1
+Map	Slider 2_12		Channel 26 Rotary 1
+Map	Slider 3_12		Channel 27 Rotary 1
+Map	Slider 4_12		Channel 28 Rotary 1
+Map	Slider 5_12		Channel 29 Rotary 1
+Map	Slider 6_12		Channel 30 Rotary 1
+Map	Slider 7_12		Channel 31 Rotary 1
+Map	Slider 8_12		Channel 32 Rotary 1
+Map	Grid 1_12		Channel 25 FX1 Send On
+Map	Grid 2_12		Channel 26 FX1 Send On
+Map	Grid 3_12		Channel 27 FX1 Send On
+Map	Grid 4_12		Channel 28 FX1 Send On
+Map	Grid 5_12		Channel 29 FX1 Send On
+Map	Grid 6_12		Channel 30 FX1 Send On
+Map	Grid 7_12		Channel 31 FX1 Send On
+Map	Grid 8_12		Channel 32 FX1 Send On
+Map	Grid 9_12		Channel 25 FX2 Send On
+Map	Grid 10_12		Channel 26 FX2 Send On
+Map	Grid 11_12		Channel 27 FX2 Send On
+Map	Grid 12_12		Channel 28 FX2 Send On
+Map	Grid 13_12		Channel 29 FX2 Send On
+Map	Grid 14_12		Channel 30 FX2 Send On
+Map	Grid 15_12		Channel 31 FX2 Send On
+Map	Grid 16_12		Channel 32 FX2 Send On
+Map	Knob 1_13		Channel 33 FX1 Send Level
+Map	Knob 2_13		Channel 34 FX1 Send Level
+Map	Knob 3_13		Channel 35 FX1 Send Level
+Map	Knob 4_13		Channel 36 FX1 Send Level
+Map	Knob 5_13		Channel 37 FX1 Send Level
+Map	Knob 6_13		Channel 38 FX1 Send Level
+Map	Knob 7_13		Channel 39 FX1 Send Level
+Map	Knob 8_13		Channel 40 FX1 Send Level
+Map	Knob 9_13		Channel 33 FX2 Send Level
+Map	Knob 10_13		Channel 34 FX2 Send Level
+Map	Knob 11_13		Channel 35 FX2 Send Level
+Map	Knob 12_13		Channel 36 FX2 Send Level
+Map	Knob 13_13		Channel 37 FX2 Send Level
+Map	Knob 14_13		Channel 38 FX2 Send Level
+Map	Knob 15_13		Channel 39 FX2 Send Level
+Map	Knob 16_13		Channel 40 FX2 Send Level
+Map	Slider 1_13		Channel 33 Rotary 1
+Map	Slider 2_13		Channel 34 Rotary 1
+Map	Slider 3_13		Channel 35 Rotary 1
+Map	Slider 4_13		Channel 36 Rotary 1
+Map	Slider 5_13		Channel 37 Rotary 1
+Map	Slider 6_13		Channel 38 Rotary 1
+Map	Slider 7_13		Channel 39 Rotary 1
+Map	Slider 8_13		Channel 40 Rotary 1
+Map	Grid 1_13		Channel 33 FX1 Send On
+Map	Grid 2_13		Channel 34 FX1 Send On
+Map	Grid 3_13		Channel 35 FX1 Send On
+Map	Grid 4_13		Channel 36 FX1 Send On
+Map	Grid 5_13		Channel 37 FX1 Send On
+Map	Grid 6_13		Channel 38 FX1 Send On
+Map	Grid 7_13		Channel 39 FX1 Send On
+Map	Grid 8_13		Channel 40 FX1 Send On
+Map	Grid 9_13		Channel 33 FX2 Send On
+Map	Grid 10_13		Channel 34 FX2 Send On
+Map	Grid 11_13		Channel 35 FX2 Send On
+Map	Grid 12_13		Channel 36 FX2 Send On
+Map	Grid 13_13		Channel 37 FX2 Send On
+Map	Grid 14_13		Channel 38 FX2 Send On
+Map	Grid 15_13		Channel 39 FX2 Send On
+Map	Grid 16_13		Channel 40 FX2 Send On
+Map	Knob 1_14		Channel 41 FX1 Send Level
+Map	Knob 2_14		Channel 42 FX1 Send Level
+Map	Knob 3_14		Channel 43 FX1 Send Level
+Map	Knob 4_14		Channel 44 FX1 Send Level
+Map	Knob 5_14		Channel 45 FX1 Send Level
+Map	Knob 6_14		Channel 46 FX1 Send Level
+Map	Knob 7_14		Channel 47 FX1 Send Level
+Map	Knob 8_14		Channel 48 FX1 Send Level
+Map	Knob 9_14		Channel 41 FX2 Send Level
+Map	Knob 10_14		Channel 42 FX2 Send Level
+Map	Knob 11_14		Channel 43 FX2 Send Level
+Map	Knob 12_14		Channel 44 FX2 Send Level
+Map	Knob 13_14		Channel 45 FX2 Send Level
+Map	Knob 14_14		Channel 46 FX2 Send Level
+Map	Knob 15_14		Channel 47 FX2 Send Level
+Map	Knob 16_14		Channel 48 FX2 Send Level
+Map	Slider 1_14		Channel 41 Rotary 1
+Map	Slider 2_14		Channel 42 Rotary 1
+Map	Slider 3_14		Channel 43 Rotary 1
+Map	Slider 4_14		Channel 44 Rotary 1
+Map	Slider 5_14		Channel 45 Rotary 1
+Map	Slider 6_14		Channel 46 Rotary 1
+Map	Slider 7_14		Channel 47 Rotary 1
+Map	Slider 8_14		Channel 48 Rotary 1
+Map	Grid 1_14		Channel 41 FX1 Send On
+Map	Grid 2_14		Channel 42 FX1 Send On
+Map	Grid 3_14		Channel 43 FX1 Send On
+Map	Grid 4_14		Channel 44 FX1 Send On
+Map	Grid 5_14		Channel 45 FX1 Send On
+Map	Grid 6_14		Channel 46 FX1 Send On
+Map	Grid 7_14		Channel 47 FX1 Send On
+Map	Grid 8_14		Channel 48 FX1 Send On
+Map	Grid 9_14		Channel 41 FX2 Send On
+Map	Grid 10_14		Channel 42 FX2 Send On
+Map	Grid 11_14		Channel 43 FX2 Send On
+Map	Grid 12_14		Channel 44 FX2 Send On
+Map	Grid 13_14		Channel 45 FX2 Send On
+Map	Grid 14_14		Channel 46 FX2 Send On
+Map	Grid 15_14		Channel 47 FX2 Send On
+Map	Grid 16_14		Channel 48 FX2 Send On
+Map	Knob 1_15		Channel 49 FX1 Send Level
+Map	Knob 2_15		Channel 50 FX1 Send Level
+Map	Knob 3_15		Channel 51 FX1 Send Level
+Map	Knob 4_15		Channel 52 FX1 Send Level
+Map	Knob 5_15		Channel 53 FX1 Send Level
+Map	Knob 6_15		Channel 54 FX1 Send Level
+Map	Knob 7_15		Channel 55 FX1 Send Level
+Map	Knob 8_15		Channel 56 FX1 Send Level
+Map	Knob 9_15		Channel 49 FX2 Send Level
+Map	Knob 10_15		Channel 50 FX2 Send Level
+Map	Knob 11_15		Channel 51 FX2 Send Level
+Map	Knob 12_15		Channel 52 FX2 Send Level
+Map	Knob 13_15		Channel 53 FX2 Send Level
+Map	Knob 14_15		Channel 54 FX2 Send Level
+Map	Knob 15_15		Channel 55 FX2 Send Level
+Map	Knob 16_15		Channel 56 FX2 Send Level
+Map	Slider 1_15		Channel 49 Rotary 1
+Map	Slider 2_15		Channel 50 Rotary 1
+Map	Slider 3_15		Channel 51 Rotary 1
+Map	Slider 4_15		Channel 52 Rotary 1
+Map	Slider 5_15		Channel 53 Rotary 1
+Map	Slider 6_15		Channel 54 Rotary 1
+Map	Slider 7_15		Channel 55 Rotary 1
+Map	Slider 8_15		Channel 56 Rotary 1
+Map	Grid 1_15		Channel 49 FX1 Send On
+Map	Grid 2_15		Channel 50 FX1 Send On
+Map	Grid 3_15		Channel 51 FX1 Send On
+Map	Grid 4_15		Channel 52 FX1 Send On
+Map	Grid 5_15		Channel 53 FX1 Send On
+Map	Grid 6_15		Channel 54 FX1 Send On
+Map	Grid 7_15		Channel 55 FX1 Send On
+Map	Grid 8_15		Channel 56 FX1 Send On
+Map	Grid 9_15		Channel 49 FX2 Send On
+Map	Grid 10_15		Channel 50 FX2 Send On
+Map	Grid 11_15		Channel 51 FX2 Send On
+Map	Grid 12_15		Channel 52 FX2 Send On
+Map	Grid 13_15		Channel 53 FX2 Send On
+Map	Grid 14_15		Channel 54 FX2 Send On
+Map	Grid 15_15		Channel 55 FX2 Send On
+Map	Grid 16_15		Channel 56 FX2 Send On
+Map	Knob 1_16		Channel 57 FX1 Send Level
+Map	Knob 2_16		Channel 58 FX1 Send Level
+Map	Knob 3_16		Channel 59 FX1 Send Level
+Map	Knob 4_16		Channel 60 FX1 Send Level
+Map	Knob 5_16		Channel 61 FX1 Send Level
+Map	Knob 6_16		Channel 62 FX1 Send Level
+Map	Knob 7_16		Channel 63 FX1 Send Level
+Map	Knob 8_16		Channel 64 FX1 Send Level
+Map	Knob 9_16		Channel 57 FX2 Send Level
+Map	Knob 10_16		Channel 58 FX2 Send Level
+Map	Knob 11_16		Channel 59 FX2 Send Level
+Map	Knob 12_16		Channel 60 FX2 Send Level
+Map	Knob 13_16		Channel 61 FX2 Send Level
+Map	Knob 14_16		Channel 62 FX2 Send Level
+Map	Knob 15_16		Channel 63 FX2 Send Level
+Map	Knob 16_16		Channel 64 FX2 Send Level
+Map	Slider 1_16		Channel 57 Rotary 1
+Map	Slider 2_16		Channel 58 Rotary 1
+Map	Slider 3_16		Channel 59 Rotary 1
+Map	Slider 4_16		Channel 60 Rotary 1
+Map	Slider 5_16		Channel 61 Rotary 1
+Map	Slider 6_16		Channel 62 Rotary 1
+Map	Slider 7_16		Channel 63 Rotary 1
+Map	Slider 8_16		Channel 64 Rotary 1
+Map	Grid 1_16		Channel 57 FX1 Send On
+Map	Grid 2_16		Channel 58 FX1 Send On
+Map	Grid 3_16		Channel 59 FX1 Send On
+Map	Grid 4_16		Channel 60 FX1 Send On
+Map	Grid 5_16		Channel 61 FX1 Send On
+Map	Grid 6_16		Channel 62 FX1 Send On
+Map	Grid 7_16		Channel 63 FX1 Send On
+Map	Grid 8_16		Channel 64 FX1 Send On
+Map	Grid 9_16		Channel 57 FX2 Send On
+Map	Grid 10_16		Channel 58 FX2 Send On
+Map	Grid 11_16		Channel 59 FX2 Send On
+Map	Grid 12_16		Channel 60 FX2 Send On
+Map	Grid 13_16		Channel 61 FX2 Send On
+Map	Grid 14_16		Channel 62 FX2 Send On
+Map	Grid 15_16		Channel 63 FX2 Send On
+Map	Grid 16_16		Channel 64 FX2 Send On
 
 Scope	Propellerheads	Combinator
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Rotary 1
-Map	Slider 2		Rotary 2
-Map	Slider 3		Rotary 3
-Map	Slider 4		Rotary 4
-Map	Slider 5		Button 1
-Map	Slider 6		Button 2
-Map	Slider 7		Button 3
-Map	Slider 8		Button 4
-
+Map	Slider 1_1		Rotary 1
+Map	Slider 2_1		Rotary 2
+Map	Slider 3_1		Rotary 3
+Map	Slider 4_1		Rotary 4
+Map	Grid 1_1		Button 1
+Map	Grid 2_1		Button 2
+Map	Grid 3_1		Button 3
+Map	Grid 4_1		Button 4
 
 Scope	Propellerheads	Mixer 14:2
-Define Group	Keyboard Shortcut Variations	Level 1-7	Level 8-14	Send 1 1-7	Send 1 8-14	Pan 1-7	Pan 8-14
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=Level 1-7
-Map	Grid 6		Keyboard Shortcut Variations=Level 8-14
-Map	Grid 7		Keyboard Shortcut Variations=Send 1 1-7
-Map	Grid 8		Keyboard Shortcut Variations=Send 1 8-14
-
-Map	Slider 1		Channel 1 Level			Level 1-7
-Map	Slider 2		Channel 2 Level			Level 1-7
-Map	Slider 3		Channel 3 Level			Level 1-7
-Map	Slider 4		Channel 4 Level			Level 1-7
-Map	Slider 5		Channel 5 Level			Level 1-7
-Map	Slider 6		Channel 6 Level			Level 1-7
-Map	Slider 7		Channel 7 Level			Level 1-7
-Map	Slider 8		Master Level
-
-Map	Slider 1		Channel 8 Level			Level 8-14
-Map	Slider 2		Channel 9 Level			Level 8-14
-Map	Slider 3		Channel 10 Level			Level 8-14
-Map	Slider 4		Channel 11 Level			Level 8-14
-Map	Slider 5		Channel 12 Level			Level 8-14
-Map	Slider 6		Channel 13 Level			Level 8-14
-Map	Slider 7		Channel 14 Level			Level 8-14
-
-Map	Slider 1		Channel 1 Aux 1 Send			Send 1 1-7
-Map	Slider 2		Channel 2 Aux 1 Send			Send 1 1-7
-Map	Slider 3		Channel 3 Aux 1 Send			Send 1 1-7
-Map	Slider 4		Channel 4 Aux 1 Send			Send 1 1-7
-Map	Slider 5		Channel 5 Aux 1 Send			Send 1 1-7
-Map	Slider 6		Channel 6 Aux 1 Send			Send 1 1-7
-Map	Slider 7		Channel 7 Aux 1 Send			Send 1 1-7
-Map	Slider 8		Aux 1 Return Level			Send 1 1-7
-
-Map	Slider 1		Channel 8 Aux 1 Send			Send 1 8-14
-Map	Slider 2		Channel 9 Aux 1 Send			Send 1 8-14
-Map	Slider 3		Channel 10 Aux 1 Send			Send 1 8-14
-Map	Slider 4		Channel 11 Aux 1 Send			Send 1 8-14
-Map	Slider 5		Channel 12 Aux 1 Send			Send 1 8-14
-Map	Slider 6		Channel 13 Aux 1 Send			Send 1 8-14
-Map	Slider 7		Channel 14 Aux 1 Send			Send 1 8-14
-Map	Slider 8		Aux 1 Return Level			Send 1 8-14
-
-Map	Slider 1		Channel 1 Pan			Pan 1-7
-Map	Slider 2		Channel 2 Pan			Pan 1-7
-Map	Slider 3		Channel 3 Pan			Pan 1-7
-Map	Slider 4		Channel 4 Pan			Pan 1-7
-Map	Slider 5		Channel 5 Pan			Pan 1-7
-Map	Slider 6		Channel 6 Pan			Pan 1-7
-Map	Slider 7		Channel 7 Pan			Pan 1-7
-
-Map	Slider 1		Channel 8 Pan			Pan 8-14
-Map	Slider 2		Channel 9 Pan			Pan 8-14
-Map	Slider 3		Channel 10 Pan			Pan 8-14
-Map	Slider 4		Channel 11 Pan			Pan 8-14
-Map	Slider 5		Channel 12 Pan			Pan 8-14
-Map	Slider 6		Channel 13 Pan			Pan 8-14
-Map	Slider 7		Channel 14 Pan			Pan 8-14
-
+Map	Slider 9_1		Master Level
+Map	Slider 1_1		Channel 1 Level
+Map	Slider 2_1		Channel 2 Level
+Map	Slider 3_1		Channel 3 Level
+Map	Slider 4_1		Channel 4 Level
+Map	Slider 5_1		Channel 5 Level
+Map	Slider 6_1		Channel 6 Level
+Map	Slider 7_1		Channel 7 Level
+Map	Slider 8_1		Channel 8 Level
+Map	Knob 1_1		Channel 1 Aux 1 Send
+Map	Knob 2_1		Channel 2 Aux 1 Send
+Map	Knob 3_1		Channel 3 Aux 1 Send
+Map	Knob 4_1		Channel 4 Aux 1 Send
+Map	Knob 5_1		Channel 5 Aux 1 Send
+Map	Knob 6_1		Channel 6 Aux 1 Send
+Map	Knob 7_1		Channel 7 Aux 1 Send
+Map	Knob 8_1		Channel 8 Aux 1 Send
+Map	Knob 9_1		Channel 1 Pan
+Map	Knob 10_1		Channel 2 Pan
+Map	Knob 11_1		Channel 3 Pan
+Map	Knob 12_1		Channel 4 Pan
+Map	Knob 13_1		Channel 5 Pan
+Map	Knob 14_1		Channel 6 Pan
+Map	Knob 15_1		Channel 7 Pan
+Map	Knob 16_1		Channel 8 Pan
+Map	Grid 1_1		Channel 1 Mute
+Map	Grid 2_1		Channel 2 Mute
+Map	Grid 3_1		Channel 3 Mute
+Map	Grid 4_1		Channel 4 Mute
+Map	Grid 5_1		Channel 5 Mute
+Map	Grid 6_1		Channel 6 Mute
+Map	Grid 7_1		Channel 7 Mute
+Map	Grid 8_1		Channel 8 Mute
+Map	Grid 9_1		Channel 1 Solo
+Map	Grid 10_1		Channel 2 Solo
+Map	Grid 11_1		Channel 3 Solo
+Map	Grid 12_1		Channel 4 Solo
+Map	Grid 13_1		Channel 5 Solo
+Map	Grid 14_1		Channel 6 Solo
+Map	Grid 15_1		Channel 7 Solo
+Map	Grid 16_1		Channel 8 Solo
 
 Scope	Propellerheads	Line Mixer 6:2
-Define Group	Keyboard Shortcut Variations	Levels	Pans	Sends	Mutes
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=Levels
-Map	Grid 6		Keyboard Shortcut Variations=Sends
-Map	Grid 7		Keyboard Shortcut Variations=Pans
-Map	Grid 8		Keyboard Shortcut Variations=Mutes
-
-Map	Slider 7		Aux Return Level
-Map	Slider 8		Master Level
-
-Map	Slider 1		Channel 1 Level			Levels
-Map	Slider 2		Channel 2 Level			Levels
-Map	Slider 3		Channel 3 Level			Levels
-Map	Slider 4		Channel 4 Level			Levels
-Map	Slider 5		Channel 5 Level			Levels
-Map	Slider 6		Channel 6 Level			Levels
-
-Map	Slider 1		Channel 1 Pan			Pans
-Map	Slider 2		Channel 2 Pan			Pans
-Map	Slider 3		Channel 3 Pan			Pans
-Map	Slider 4		Channel 4 Pan			Pans
-Map	Slider 5		Channel 5 Pan			Pans
-Map	Slider 6		Channel 6 Pan			Pans
-
-Map	Slider 1		Channel 1 Aux Send			Sends
-Map	Slider 2		Channel 2 Aux Send			Sends
-Map	Slider 3		Channel 3 Aux Send			Sends
-Map	Slider 4		Channel 4 Aux Send			Sends
-Map	Slider 5		Channel 5 Aux Send			Sends
-Map	Slider 6		Channel 6 Aux Send			Sends
-
-Map	Slider 1		Channel 1 Mute			Mutes
-Map	Slider 2		Channel 2 Mute			Mutes
-Map	Slider 3		Channel 3 Mute			Mutes
-Map	Slider 4		Channel 4 Mute			Mutes
-Map	Slider 5		Channel 5 Mute			Mutes
-Map	Slider 6		Channel 6 Mute			Mutes
-
+Map	Slider 8_1		Aux Return Level
+Map	Slider 9_1		Master Level
+Map	Slider 1_1		Channel 1 Level
+Map	Slider 2_1		Channel 2 Level
+Map	Slider 3_1		Channel 3 Level
+Map	Slider 4_1		Channel 4 Level
+Map	Slider 5_1		Channel 5 Level
+Map	Slider 6_1		Channel 6 Level
+Map	Knob 9_1		Channel 1 Pan
+Map	Knob 10_1		Channel 2 Pan
+Map	Knob 11_1		Channel 3 Pan
+Map	Knob 12_1		Channel 4 Pan
+Map	Knob 13_1		Channel 5 Pan
+Map	Knob 14_1		Channel 6 Pan
+Map	Knob 1_1		Channel 1 Aux Send
+Map	Knob 2_1		Channel 2 Aux Send
+Map	Knob 3_1		Channel 3 Aux Send
+Map	Knob 4_1		Channel 4 Aux Send
+Map	Knob 5_1		Channel 5 Aux Send
+Map	Knob 6_1		Channel 6 Aux Send
+Map	Grid 1_1		Channel 1 Mute
+Map	Grid 2_1		Channel 2 Mute
+Map	Grid 3_1		Channel 3 Mute
+Map	Grid 4_1		Channel 4 Mute
+Map	Grid 5_1		Channel 5 Mute
+Map	Grid 6_1		Channel 6 Mute
+Map	Grid 9_1		Channel 1 Solo
+Map	Grid 10_1		Channel 2 Solo
+Map	Grid 11_1		Channel 3 Solo
+Map	Grid 12_1		Channel 4 Solo
+Map	Grid 13_1		Channel 5 Solo
+Map	Grid 14_1		Channel 6 Solo
 
 Scope	Propellerheads	ID8 Instrument Device
-//Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc	FX
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Parameter 1
-Map	Slider 2		Parameter 2
-Map	Slider 3		Sound A
-Map	Slider 4		Sound B
-Map	Slider 5		Sound C
-Map	Slider 6		Sound D
+//Define Group	Keyboard Shortcut Variations
+Map	Slider 9_1		Mod Wheel
+Map	Slider 1_1		Parameter 1
+Map	Slider 2_1		Parameter 2
+Map	Slider 3_1		Sound A
+Map	Slider 4_1		Sound B
+Map	Slider 5_1		Sound C
+Map	Slider 6_1		Sound D
 //Map	Slider 7
-Map	Slider 8		Volume
-
+Map	Slider 8_1		Volume
 
 Scope	Propellerheads	Kong Drum Designer
-Define Group	Keyboard Shortcut Variations	D1&2	D3&4	D5&6	D7&8	D9&10	D11&12	D13&14	D15&16	Main
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Grid 5		Keyboard Shortcut Variations=D1&2
-Map	Grid 6		Keyboard Shortcut Variations=D3&4
-Map	Grid 7		Keyboard Shortcut Variations=D5&6
-Map	Grid 8		Keyboard Shortcut Variations=D7&8
-
-//Map	_Scope		"KONG"
-
-Map	Slider 1		Drum 1 Tone			D1&2
-Map	Slider 2		Drum 1 Decay Offset			D1&2
-Map	Slider 3		Drum 1 Bus FX Send			D1&2
-Map	Slider 4		Drum 1 Pitch Offset			D1&2
-Map	Slider 5		Drum 2 Tone			D1&2
-Map	Slider 6		Drum 2 Decay Offset			D1&2
-Map	Slider 7		Drum 2 Bus FX Send			D1&2
-Map	Slider 8		Drum 2 Pitch Offset			D1&2
-
-Map	Slider 1		Drum 3 Tone			D3&4
-Map	Slider 2		Drum 3 Decay Offset			D3&4
-Map	Slider 3		Drum 3 Bus FX Send			D3&4
-Map	Slider 4		Drum 3 Pitch Offset			D3&4
-Map	Slider 5		Drum 4 Tone			D3&4
-Map	Slider 6		Drum 4 Decay Offset			D3&4
-Map	Slider 7		Drum 4 Bus FX Send			D3&4
-Map	Slider 8		Drum 4 Pitch Offset			D3&4
-
-Map	Slider 1		Drum 5 Tone			D5&6
-Map	Slider 2		Drum 5 Decay Offset			D5&6
-Map	Slider 3		Drum 5 Bus FX Send			D5&6
-Map	Slider 4		Drum 5 Pitch Offset			D5&6
-Map	Slider 5		Drum 6 Tone			D5&6
-Map	Slider 6		Drum 6 Decay Offset			D5&6
-Map	Slider 7		Drum 6 Bus FX Send			D5&6
-Map	Slider 8		Drum 6 Pitch Offset			D5&6
-
-Map	Slider 1		Drum 7 Tone			D7&8
-Map	Slider 2		Drum 7 Decay Offset			D7&8
-Map	Slider 3		Drum 7 Bus FX Send			D7&8
-Map	Slider 4		Drum 7 Pitch Offset			D7&8
-Map	Slider 5		Drum 8 Tone			D7&8
-Map	Slider 6		Drum 8 Decay Offset			D7&8
-Map	Slider 7		Drum 8 Bus FX Send			D7&8
-Map	Slider 8		Drum 8 Pitch Offset			D7&8
-
-Map	Slider 1		Drum 9 Tone			D9&10
-Map	Slider 2		Drum 9 Decay Offset			D9&10
-Map	Slider 3		Drum 9 Bus FX Send			D9&10
-Map	Slider 4		Drum 9 Pitch Offset			D9&10
-Map	Slider 5		Drum 10 Tone			D9&10
-Map	Slider 6		Drum 10 Decay Offset			D9&10
-Map	Slider 7		Drum 10 Bus FX Send			D9&10
-Map	Slider 8		Drum 10 Pitch Offset			D9&10
-
-Map	Slider 1		Drum 11 Tone			D11&12
-Map	Slider 2		Drum 11 Decay Offset			D11&12
-Map	Slider 3		Drum 11 Bus FX Send			D11&12
-Map	Slider 4		Drum 11 Pitch Offset			D11&12
-Map	Slider 5		Drum 12 Tone			D11&12
-Map	Slider 6		Drum 12 Decay Offset			D11&12
-Map	Slider 7		Drum 12 Bus FX Send			D11&12
-Map	Slider 8		Drum 12 Pitch Offset			D11&12
-
-Map	Slider 1		Drum 13 Tone			D13&14
-Map	Slider 2		Drum 13 Decay Offset			D13&14
-Map	Slider 3		Drum 13 Bus FX Send			D13&14
-Map	Slider 4		Drum 13 Pitch Offset			D13&14
-Map	Slider 5		Drum 14 Tone			D13&14
-Map	Slider 6		Drum 14 Decay Offset			D13&14
-Map	Slider 7		Drum 14 Bus FX Send			D13&14
-Map	Slider 8		Drum 14 Pitch Offset			D13&14
-
-Map	Slider 1		Drum 15 Tone			D15&16
-Map	Slider 2		Drum 15 Decay Offset			D15&16
-Map	Slider 3		Drum 15 Bus FX Send			D15&16
-Map	Slider 4		Drum 15 Pitch Offset			D15&16
-Map	Slider 5		Drum 16 Tone			D15&16
-Map	Slider 6		Drum 16 Decay Offset			D15&16
-Map	Slider 7		Drum 16 Bus FX Send			D15&16
-Map	Slider 8		Drum 16 Pitch Offset			D15&16
-
-Map	Slider 1		Master FX On			Main
-Map	Slider 2		Master FX P1			Main
-Map	Slider 3		Master FX P2			Main
-Map	Slider 4		Bus FX On			Main
-Map	Slider 5		Bus FX P1			Main
-Map	Slider 6		Bus FX P2			Main
-Map	Slider 7		Level Bus FX to Master FX			Main
-Map	Slider 8		Master Level			Main
-
+Map	_Scope		"KONG"
+//Map	Slider 9_1		Master Level
+//Map	Slider 1_1		Master FX P1
+//Map	Slider 2_1		Master FX P2
+//Map	Slider 3_1		Bus FX P1
+//Map	Slider 4_1		Bus FX P2
+//Map	Slider 5_1		Level Bus FX to Master FX
+//Map	Grid 1_1		Master FX On
+//Map	Grid 2_1		Bus FX On
+//Map	Grid 3_1		Set all Mutes and Solos to Off
+Map	Knob 1_1		Drum 1 Level
+Map	Knob 2_1		Drum 1 Pan
+Map	Knob 3_1		Drum 1 Tone
+Map	Knob 4_1		Drum 1 Bus FX Send
+Map	Knob 9_1		Drum 1 Pitch Offset
+Map	Knob 10_1		Drum 1 DM Pitch
+Map	Knob 11_1		Drum 1 DM Decay
+Map	Knob 12_1		Drum 1 DM Variable
+Map	Slider 1_1		Drum 1 FX1 P1
+Map	Slider 2_1		Drum 1 FX1 P2
+Map	Slider 3_1		Drum 1 FX2 P1
+Map	Slider 4_1		Drum 1 FX2 P2
+Map	Grid 1_1		Drum 1 DM On
+Map	Grid 2_1		Drum 1 FX1 On
+Map	Grid 3_1		Drum 1 FX2 On
+Map	Knob 5_1		Drum 2 Level
+Map	Knob 6_1		Drum 2 Pan
+Map	Knob 7_1		Drum 2 Tone
+Map	Knob 8_1		Drum 2 Bus FX Send
+Map	Knob 13_1		Drum 2 Pitch Offset
+Map	Knob 14_1		Drum 2 DM Pitch
+Map	Knob 15_1		Drum 2 DM Decay
+Map	Knob 16_1		Drum 2 DM Variable
+Map	Slider 5_1		Drum 2 FX1 P1
+Map	Slider 6_1		Drum 2 FX1 P2
+Map	Slider 7_1		Drum 2 FX2 P1
+Map	Slider 8_1		Drum 2 FX2 P2
+Map	Grid 5_1		Drum 2 DM On
+Map	Grid 6_1		Drum 2 FX1 On
+Map	Grid 7_1		Drum 2 FX2 On
+//need to add Drums 3-16 in variations
 
 Scope	Propellerheads	Thor Polysonic Synthesizer
-Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc	FX
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=FilterMod
-Map	Grid 6		Keyboard Shortcut Variations=Env
-Map	Grid 7		Keyboard Shortcut Variations=Osc
-Map	Grid 8		Keyboard Shortcut Variations=FX
-
-Map	Slider 1		Filter 1 Freq			FilterMod
-Map	Slider 2		Filter 1 Res			FilterMod
-Map	Slider 3		Filter 1 Type			FilterMod
-Map	Slider 4		Filter 2 Freq			FilterMod
-Map	Slider 5		Filter 2 Res			FilterMod
-Map	Slider 6		Filter 2 Type			FilterMod
-Map	Slider 7		LFO 1 Rate			FilterMod
-Map	Slider 8		LFO 1 Waveform			FilterMod
-
-Map	Slider 1		Amp Env Attack			Env
-Map	Slider 2		Amp Env Decay			Env
-Map	Slider 3		Amp Env Sustain			Env
-Map	Slider 4		Amp Env Release			Env
-Map	Slider 5		Filter Env Attack			Env
-Map	Slider 6		Filter Env Decay			Env
-Map	Slider 7		Filter Env Sustain			Env
-Map	Slider 8		Filter Env Release			Env
-
-Map	Slider 1		Osc 1 Type			Osc
-Map	Slider 2		Osc 1 Oct			Osc
-Map	Slider 3		Osc 1 Semi			Osc
-Map	Slider 4		Osc 1 Mod			Osc
-Map	Slider 5		Osc 2 Type			Osc
-Map	Slider 6		Osc 2 Oct			Osc
-Map	Slider 7		Osc 2 Semi			Osc
-Map	Slider 8		Osc 2 Mod			Osc
-
-Map	Slider 1		Delay Time			FX
-Map	Slider 2		Delay Feedback			FX
-Map	Slider 3		Delay Dry Wet			FX
-Map	Slider 4		Chorus Feedback			FX
-Map	Slider 5		Chorus Dry Wet			FX
-Map	Slider 6		Filter 3 Drive			FX
-Map	Slider 7		Filter 3 Freq			FX
-Map	Slider 8		Filter 3 Res			FX
-
+Map	Knob 1_1		Filter 1 Freq			
+Map	Knob 2_1		Filter 1 Res			
+Map	Knob 3_1		Filter 1 Type			
+Map	Knob 4_1		Filter 2 Freq			
+Map	Knob 5_1		Filter 2 Res			
+Map	Knob 6_1		Filter 2 Type			
+Map	Knob 7_1		LFO 1 Rate			
+Map	Knob 8_1		LFO 1 Waveform			
+Map	Knob 9_1		Amp Env Attack			
+Map	Knob 10_1		Amp Env Decay			
+Map	Knob 11_1		Amp Env Sustain			
+Map	Knob 12_1		Amp Env Release			
+Map	Knob 13_1		Filter Env Attack			
+Map	Knob 14_1		Filter Env Decay			
+Map	Knob 15_1		Filter Env Sustain			
+Map	Knob 16_1		Filter Env Release			
+Map	Slider 1_1		Osc 1 Type			
+Map	Slider 2_1		Osc 1 Oct			
+Map	Slider 3_1		Osc 1 Semi			
+Map	Slider 4_1		Osc 1 Mod			
+Map	Slider 5_1		Osc 2 Type			
+Map	Slider 6_1		Osc 2 Oct			
+Map	Slider 7_1		Osc 2 Semi			
+Map	Slider 8_1		Osc 2 Mod			
+Map	Slider 9_1		Mod Wheel			
+//Map	Slider 1_1		Delay Time			
+//Map	Slider 2_1		Delay Feedback			
+//Map	Slider 3_1		Delay Dry Wet			
+//Map	Slider 4_1		Chorus Feedback			
+//Map	Slider 5_1		Chorus Dry Wet			
+//Map	Slider 6_1		Filter 3 Drive			
+//Map	Slider 7_1		Filter 3 Freq			
+//Map	Slider 8_1		Filter 3 Res			
 
 Scope	Propellerheads	SubTractor Analog Synthesizer
-Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=FilterMod
-Map	Grid 6		Keyboard Shortcut Variations=Env
-Map	Grid 7		Keyboard Shortcut Variations=Osc
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Filter Freq			FilterMod
-Map	Slider 2		Filter Res			FilterMod
-Map	Slider 3		Filter2 Freq			FilterMod
-Map	Slider 4		Filter2 Res			FilterMod
-Map	Slider 5		Filter Env Amount			FilterMod
-
-Map	Slider 6		LFO1 Rate			FilterMod
-Map	Slider 7		LFO1 Amount			FilterMod
-Map	Slider 8		LFO1 Wave			FilterMod
-
-Map	Slider 1		Amp Env Attack			Env
-Map	Slider 2		Amp Env Decay			Env
-Map	Slider 3		Amp Env Sustain			Env
-Map	Slider 4		Amp Env Release			Env
-Map	Slider 5		Filter Env Attack			Env
-Map	Slider 6		Filter Env Decay			Env
-Map	Slider 7		Filter Env Sustain			Env
-Map	Slider 8		Filter Env Release			Env
-
-Map	Slider 1		Osc1 Wave			Osc
-Map	Slider 2		Osc1 Octave			Osc
-Map	Slider 3		Osc1 Phase Diff			Osc
-Map	Slider 4		Osc2 Wave			Osc
-Map	Slider 5		Osc2 Octave			Osc
-Map	Slider 6		Osc2 Phase Diff			Osc
-Map	Slider 7		FM Amount			Osc
-Map	Slider 8		Osc Mix			Osc
-
+Map	Slider 9_1		Mod Wheel
+Map	Knob 1_1		Filter Freq
+Map	Knob 2_1		Filter Res
+Map	Knob 3_1		Filter2 Freq
+Map	Knob 4_1		Filter2 Res
+Map	Knob 5_1		Filter Env Amount
+Map	Knob 6_1		LFO1 Rate
+Map	Knob 7_1		LFO1 Amount
+Map	Knob 8_1		LFO1 Wave
+Map	Knob 9_1		Amp Env Attack
+Map	Knob 10_1		Amp Env Decay
+Map	Knob 11_1		Amp Env Sustain
+Map	Knob 12_1		Amp Env Release
+Map	Knob 13_1		Filter Env Attack
+Map	Knob 14_1		Filter Env Decay
+Map	Knob 15_1		Filter Env Sustain
+Map	Knob 16_1		Filter Env Release
+Map	Slider 1_1		Osc1 Wave
+Map	Slider 2_1		Osc1 Octave
+Map	Slider 3_1		Osc1 Phase Diff
+Map	Slider 4_1		Osc2 Wave
+Map	Slider 5_1		Osc2 Octave
+Map	Slider 6_1		Osc2 Phase Diff
+Map	Slider 7_1		FM Amount
+Map	Slider 8_1		Osc Mix
 
 Scope	Propellerheads	Malstrom Graintable Synthesizer
-Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc A	Osc B
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=FilterMod
-Map	Grid 6		Keyboard Shortcut Variations=Env
-Map	Grid 7		Keyboard Shortcut Variations=Osc A
-Map	Grid 8		Keyboard Shortcut Variations=Osc B
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Filter A Freq			FilterMod
-Map	Slider 2		Filter A Resonance			FilterMod
-Map	Slider 3		Filter B Freq			FilterMod
-Map	Slider 4		Filter B Resonance			FilterMod
-Map	Slider 5		Filter Env Amount			FilterMod
-Map	Slider 6		Modulator A Rate			FilterMod
-Map	Slider 7		Modulator A To Pitch			FilterMod
-Map	Slider 8		Modulator A To Shift			FilterMod
-
-Map	Slider 1		Oscillator A Attack			Env
-Map	Slider 2		Oscillator A Decay			Env
-Map	Slider 3		Oscillator A Sustain			Env
-Map	Slider 4		Oscillator A Release			Env
-Map	Slider 5		Filter Env Attack			Env
-Map	Slider 6		Filter Env Decay			Env
-Map	Slider 7		Filter Env Sustain			Env
-Map	Slider 8		Filter Env Release			Env
-
-Map	Slider 1		Oscillator A Motion			Osc A
-Map	Slider 2		Oscillator A Index			Osc A
-Map	Slider 3		Oscillator A Shift			Osc A
-Map	Slider 4		Oscillator A Attack			Osc A
-Map	Slider 5		Oscillator A Decay			Osc A
-Map	Slider 6		Oscillator A Sustain			Osc A
-Map	Slider 7		Oscillator A Release			Osc A
-Map	Slider 8		Oscillator A Gain			Osc A
-
-Map	Slider 1		Oscillator B Motion			Osc B
-Map	Slider 2		Oscillator B Index			Osc B
-Map	Slider 3		Oscillator B Shift			Osc B
-Map	Slider 4		Oscillator B Attack			Osc B
-Map	Slider 5		Oscillator B Decay			Osc B
-Map	Slider 6		Oscillator B Sustain			Osc B
-Map	Slider 7		Oscillator B Release			Osc B
-Map	Slider 8		Oscillator B Gain			Osc B
-
+Map	Slider 1_1		Filter Env Attack
+Map	Slider 2_1		Filter Env Decay
+Map	Slider 3_1		Filter Env Sustain
+Map	Slider 4_1		Filter Env Release
+Map	Slider 5_1		Filter Env Amount
+Map	Slider 7_1		Shaper Mode
+Map	Slider 8_1		Shaper Amount
+Map	Knob 9_1		Filter A Mode
+Map	Knob 10_1		Filter A Resonance
+Map	Knob 11_1		Filter A Freq
+Map	Knob 13_1		Filter B Mode
+Map	Knob 14_1		Filter B Resonance
+Map	Knob 15_1		Filter B Freq
+Map	Grid 1_1		Filter A On/Off
+Map	Grid 2_1		Filter A Env
+Map	Grid 3_1		Filter A Kbd Track
+Map	Grid 4_1		Filter B On/Off
+Map	Grid 5_1		Filter B Env
+Map	Grid 6_1		Filter B Kbd Track
+Map	Grid 7_1		Filter Env Invert
+Map	Grid 8_1		Shaper On/Off
+Map	Grid 9_1		Route Oscillator B To Filter B
+Map	Grid 10_1		Route Oscillator A To Filter B
+Map	Grid 11_1		Route Oscillator A To Shaper
+Map	Grid 12_1		Route Filter B To Shaper
+Map	Knob 1_2		Modulator A Curve
+Map	Knob 2_2		Modulator A Rate
+Map	Knob 3_2		Modulator A To Pitch
+Map	Knob 4_2		Modulator A To Index
+Map	Knob 5_2		Modulator A To Shift
+Map	Knob 9_2		Modulator B Curve
+Map	Knob 10_2		Modulator B Rate
+Map	Knob 11_2		Modulator B To Motion
+Map	Knob 12_2		Modulator B To Level
+Map	Knob 13_2		Modulator B To Filter
+Map	Knob 14_2		Modulator B To Modulator A
+Map	Grid 1_2		Modulator A On/Off
+Map	Grid 2_2		Modulator A One Shot
+Map	Grid 3_2		Modulator A Sync
+Map	Grid 4_2		Modulator A Target
+Map	Grid 9_2		Modulator B On/Off
+Map	Grid 10_2		Modulator B One Shot
+Map	Grid 11_2		Modulator B Sync
+Map	Grid 12_2		Modulator B Target
+Map	Knob 1_3		Oscillator A Motion
+Map	Knob 2_3		Oscillator A Index
+Map	Knob 3_3		Oscillator A Shift
+Map	Knob 4_3		Oscillator A Octave
+Map	Knob 5_3		Oscillator A Semi
+Map	Knob 6_3		Oscillator A Cent
+Map	Knob 7_3		Oscillator A Gain
+Map	Knob 9_3		Oscillator B Motion
+Map	Knob 10_3		Oscillator B Index
+Map	Knob 11_3		Oscillator B Shift
+Map	Knob 12_3		Oscillator B Octave
+Map	Knob 13_3		Oscillator B Semi
+Map	Knob 14_3		Oscillator B Cent
+Map	Knob 15_3		Oscillator B Gain
+Map	Slider 1_3		Oscillator A Attack
+Map	Slider 2_3		Oscillator A Decay
+Map	Slider 3_3		Oscillator A Sustain
+Map	Slider 4_3		Oscillator A Release
+Map	Slider 5_3		Oscillator B Attack
+Map	Slider 6_3		Oscillator B Decay
+Map	Slider 7_3		Oscillator B Sustain
+Map	Slider 8_3		Oscillator B Release
+Map	Grid 1_3		Oscillator A On/Off
+Map	Grid 9_3		Oscillator B On/Off
+Map	Knob 1_4		Velocity To Level B
+Map	Knob 2_4		Velocity To Level A
+Map	Knob 3_4		Velocity To Filter Env
+Map	Knob 4_4		Velocity To Attack
+Map	Knob 5_4		Velocity To Shift
+Map	Knob 6_4		Velocity To Modulator
+Map	Knob 9_4		Mod Wheel To Index
+Map	Knob 10_4		Mod Wheel To Shift
+Map	Knob 11_4		Mod Wheel To Filter
+Map	Knob 12_4		Mod Wheel To Modulator
+Map	Slider 1_4		Polyphony
+Map	Slider 2_4		Portamento
+Map	Slider 3_4		Pitch Bend Range
+Map	Grid 1_4		Legato On/Off
+Map	Grid 9_4		Velocity Target
+Map	Grid 10_4		Mod Wheel Target
+Map	Slider 9_1		Master Level
+Map	Slider 9_2		Spread Amount
+Map	Slider 9_3		Mod Wheel
 
 Scope	Propellerheads	NN19 Digital Sampler
-Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=FilterMod
-Map	Grid 6		Keyboard Shortcut Variations=Env
-Map	Grid 7		Keyboard Shortcut Variations=Osc
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Filter Freq			FilterMod
-Map	Slider 2		Filter Res			FilterMod
-Map	Slider 3		Filter Mode			FilterMod
-Map	Slider 4		Filter Env Amount			FilterMod
-Map	Slider 5		LFO Rate			FilterMod
-Map	Slider 6		LFO Amount			FilterMod
-Map	Slider 7		LFO Wave			FilterMod
-Map	Slider 8		LFO Dest			FilterMod
-
-Map	Slider 1		Amp Env Attack			Env
-Map	Slider 2		Amp Env Decay			Env
-Map	Slider 3		Amp Env Sustain			Env
-Map	Slider 4		Amp Env Release			Env
-Map	Slider 5		Filter Env Attack			Env
-Map	Slider 6		Filter Env Decay			Env
-Map	Slider 7		Filter Env Sustain			Env
-Map	Slider 8		Filter Env Release			Env
-
-Map	Slider 1		Sample Start			Osc
-Map	Slider 2		Osc Octave				Osc
-Map	Slider 3		Osc Semitone			Osc
-Map	Slider 4		Osc Env Amoumt			Osc
-Map	Slider 5		Osc Fine Tune			Osc
-Map	Slider 6		Filter Env Amount			Osc
-Map	Slider 7		Portamento			Osc
-Map	Slider 8		Master Level			Osc
-
+Map	Slider 9_1		Mod Wheel
+Map	Knob 1_1		Filter Freq
+Map	Knob 2_1		Filter Res
+Map	Knob 3_1		Filter Mode
+Map	Knob 4_1		Filter Env Amount
+Map	Knob 5_1		LFO Rate
+Map	Knob 6_1		LFO Amount
+Map	Knob 7_1		LFO Wave
+Map	Knob 8_1		LFO Dest
+Map	Knob 9_1		Amp Env Attack
+Map	Knob 10_1		Amp Env Decay
+Map	Knob 11_1		Amp Env Sustain
+Map	Knob 12_1		Amp Env Release
+Map	Knob 13_1		Filter Env Attack
+Map	Knob 14_1		Filter Env Decay
+Map	Knob 15_1		Filter Env Sustain
+Map	Knob 16_1		Filter Env Release
+Map	Slider 1_1		Sample Start
+Map	Slider 2_1		Osc Octave	
+Map	Slider 3_1		Osc Semitone
+Map	Slider 4_1		Osc Env Amoumt
+Map	Slider 5_1		Osc Fine Tune
+Map	Slider 6_1		Filter Kbd Track
+Map	Slider 7_1		Stereo Spread
+Map	Slider 8_1		Master Level
+Map	Grid 1_1		Filter Env Invert
+Map	Grid 5_1		LFO Sync Enable
+Map	Grid 9_1		Low Bandwidth On/Off
+Map	Grid 10_1		High Quality Interpolation
+Map	Grid 11_1		Osc Kbd Track
+Map	Grid 8_1		Solo Sample
+Map	Grid 16_1		Sample
+Map	Knob 1_2		Portamento
+Map	Knob 2_2		Polyphony
+Map	Knob 3_2		Spread Mode
+Map	Knob 4_2		Filter Freq Ext Mod
+Map	Knob 5_2		LFO Ext Mod
+Map	Knob 6_2		Amp Ext Mod
+Map	Knob 7_2		Ext Mod Select
+Map	Knob 9_2		Filter Freq Mod Wheel Amount
+Map	Knob 10_2		Filter Res Mod Wheel Amount
+Map	Knob 11_2		Filter Decay Mod Wheel Amount
+Map	Knob 12_2		Amp Mod Wheel Amount
+Map	Knob 13_2		LFO Mod Wheel Amount
+Map	Slider 1_2		Amp Vel Amount
+Map	Slider 2_2		Filter Env Vel Amount
+Map	Slider 3_2		Filter Decay Vel Amount
+Map	Slider 4_2		Amp Attack Vel Amount
+Map	Slider 5_2		Sample Start Vel Amount
+Map	Slider 6_2		Pitch Bend Range
 
 Scope	Propellerheads	NN-XT Advanced Sampler
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 9		Mod Wheel
-Map	Slider 1		Filter Freq
-Map	Slider 2		Filter Res
-Map	Slider 3		Amp Env Attack
-Map	Slider 4		Amp Env Decay
-Map	Slider 5		Amp Env Release
-Map	Slider 6		Mod Env Decay
-Map	Slider 7		External Controller
-Map	Slider 8		Master Volume
-
+Map	Slider 9_1		Mod Wheel
+Map	Slider 1_1		Filter Freq
+Map	Slider 2_1		Filter Res
+Map	Slider 3_1		Amp Env Attack
+Map	Slider 4_1		Amp Env Decay
+Map	Slider 5_1		Amp Env Release
+Map	Slider 6_1		Mod Env Decay
+Map	Slider 7_1		External Controller
+Map	Slider 8_1		Master Volume
 
 Scope	Propellerheads	Dr.REX Loop Player
-Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=FilterMod
-Map	Grid 6		Keyboard Shortcut Variations=Env
-Map	Grid 7		Keyboard Shortcut Variations=Osc
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Filter Freq			FilterMod
-Map	Slider 2		Filter Res			FilterMod
-Map	Slider 3		Filter Env Amount			FilterMod
-Map	Slider 4		Filter Mode			FilterMod
-Map	Slider 5		LFO1 Rate			FilterMod
-Map	Slider 6		LFO1 Amount			FilterMod
-Map	Slider 7		LFO1 Wave			FilterMod
-Map	Slider 8		LFO1 Dest			FilterMod
-
-Map	Slider 1		Filter Env Attack			Env
-Map	Slider 2		Filter Env Decay			Env
-Map	Slider 3		Filter Env Sustain			Env
-Map	Slider 4		Filter Env Release			Env
-Map	Slider 5		Amp Env Attack			Env
-Map	Slider 6		Amp Env Decay			Env
-Map	Slider 7		Amp Env Sustain			Env
-Map	Slider 8		Amp Env Release			Env
-
-Map	Slider 1		Transpose			Osc
-Map	Slider 2		Osc Octave			Osc
-Map	Slider 3		Osc Fine Tune			Osc
-Map	Slider 4		Osc Env Amount			Osc
-Map	Slider 5		Amp Vel Amount			Osc
-Map	Slider 6		Filter Env Vel Amount			Osc
-Map	Slider 7		Filter Decay Vel Amount			Osc
-Map	Slider 8		Selected Loop Slot			Osc
-
+Map	Slider 9_1		Mod Wheel
+Map	Knob 1_1		Filter Freq
+Map	Knob 2_1		Filter Res
+Map	Knob 3_1		Filter Env Amount
+Map	Knob 4_1		Filter Mode
+Map	Knob 5_1		LFO1 Rate
+Map	Knob 6_1		LFO1 Amount
+Map	Knob 7_1		LFO1 Wave
+Map	Knob 8_1		LFO1 Dest
+Map	Knob 9_1		Filter Env Attack
+Map	Knob 10_1		Filter Env Decay
+Map	Knob 11_1		Filter Env Sustain
+Map	Knob 12_1		Filter Env Release
+Map	Knob 13_1		Amp Env Attack
+Map	Knob 14_1		Amp Env Decay
+Map	Knob 15_1		Amp Env Sustain
+Map	Knob 16_1		Amp Env Release
+Map	Slider 1_1		Transpose
+Map	Slider 2_1		Osc Octave
+Map	Slider 3_1		Osc Fine Tune
+Map	Slider 4_1		Osc Env Amount
+Map	Slider 5_1		Amp Vel Amount
+Map	Slider 6_1		Filter Env Vel Amount
+Map	Slider 7_1		Filter Decay Vel Amount
+Map	Slider 8_1		Selected Loop Slot
+Map	Grid 1_1		Filter On/Off
+Map	Grid 5_1		LFO Sync Enable
+Map	Grid 16_1		Run
 
 Scope	Propellerheads	Redrum Drum Computer
-Define Group	Keyboard Shortcut Variations	Level	Pan	Pitch	Pattern
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=Level
-Map	Grid 6		Keyboard Shortcut Variations=Pan
-Map	Grid 7		Keyboard Shortcut Variations=Pitch
-Map	Grid 8		Keyboard Shortcut Variations=Pattern
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Drum 1 Level			Level
-Map	Slider 2		Drum 2 Level			Level
-Map	Slider 3		Drum 3 Level			Level
-Map	Slider 4		Drum 4 Level			Level
-Map	Slider 5		Drum 5 Level			Level
-Map	Slider 6		Drum 6 Level			Level
-Map	Slider 7		Drum 7 Level			Level
-Map	Slider 8		Drum 8 Level			Level
-
-Map	Slider 1		Drum 1 Pan			Pan
-Map	Slider 2		Drum 2 Pan			Pan
-Map	Slider 3		Drum 3 Pan			Pan
-Map	Slider 4		Drum 4 Pan			Pan
-Map	Slider 5		Drum 5 Pan			Pan
-Map	Slider 6		Drum 6 Pan			Pan
-Map	Slider 7		Drum 7 Pan			Pan
-Map	Slider 8		Drum 8 Pan			Pan
-
-Map	Slider 1		Drum 1 Pitch			Pitch
-Map	Slider 2		Drum 2 Pitch			Pitch
-Map	Slider 3		Drum 3 Pitch			Pitch
-Map	Slider 4		Drum 4 Pitch			Pitch
-Map	Slider 5		Drum 5 Pitch			Pitch
-Map	Slider 6		Drum 6 Pitch			Pitch
-Map	Slider 7		Drum 7 Pitch			Pitch
-Map	Slider 8		Drum 8 Pitch			Pitch
-
-Map	Slider 1		Pattern 1			Pattern
-Map	Slider 2		Pattern 2			Pattern
-Map	Slider 3		Pattern 3			Pattern
-Map	Slider 4		Pattern 4			Pattern
-Map	Slider 5		Pattern 5			Pattern
-Map	Slider 6		Pattern 6			Pattern
-Map	Slider 7		Pattern 7			Pattern
-Map	Slider 8		Pattern 8			Pattern
-
+Map	Slider 9_1		Mod Wheel
+Map	Slider 1_1		Drum 1 Level
+Map	Slider 2_1		Drum 2 Level
+Map	Slider 3_1		Drum 3 Level
+Map	Slider 4_1		Drum 4 Level
+Map	Slider 5_1		Drum 5 Level
+Map	Slider 6_1		Drum 6 Level
+Map	Slider 7_1		Drum 7 Level
+Map	Slider 8_1		Drum 8 Level
+Map	Knob 9_1		Drum 1 Pan
+Map	Knob 10_1		Drum 2 Pan
+Map	Knob 11_1		Drum 3 Pan
+Map	Knob 12_1		Drum 4 Pan
+Map	Knob 13_1		Drum 5 Pan
+Map	Knob 14_1		Drum 6 Pan
+Map	Knob 15_1		Drum 7 Pan
+Map	Knob 16_1		Drum 8 Pan
+Map	Knob 1_1		Drum 1 Pitch
+Map	Knob 2_1		Drum 2 Pitch
+Map	Knob 3_1		Drum 3 Pitch
+Map	Knob 4_1		Drum 4 Pitch
+Map	Knob 5_1		Drum 5 Pitch
+Map	Knob 6_1		Drum 6 Pitch
+Map	Knob 7_1		Drum 7 Pitch
+Map	Knob 8_1		Drum 8 Pitch
+Map	Grid 1_1		Pattern 1
+Map	Grid 2_1		Pattern 2
+Map	Grid 3_1		Pattern 3
+Map	Grid 4_1		Pattern 4
+Map	Grid 5_1		Pattern 5
+Map	Grid 6_1		Pattern 6
+Map	Grid 7_1		Pattern 7
+Map	Grid 8_1		Pattern 8
+Map	Grid 9_1		Drum 1 Solo
+Map	Grid 10_1		Drum 2 Solo
+Map	Grid 11_1		Drum 3 Solo
+Map	Grid 12_1		Drum 4 Solo
+Map	Grid 13_1		Drum 5 Solo
+Map	Grid 14_1		Drum 6 Solo
+Map	Grid 15_1		Drum 7 Solo
+Map	Grid 16_1		Drum 8 Solo
 
 Scope	Propellerheads	MClass Equalizer
-Define Group	Keyboard Shortcut Variations	Low+Param 1	Param 2+Hi
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=Low+Param 1
-Map	Grid 6		Keyboard Shortcut Variations=Param 2+Hi
-//Map	Grid 7		Keyboard Shortcut Variations=
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 1		Low Shelf Frequency			Low+Param 1
-Map	Slider 2		Low Shelf Gain			Low+Param 1
-Map	Slider 3		Low Shelf Q			Low+Param 1
-Map	Slider 4		Parametric 1 Frequency			Low+Param 1
-Map	Slider 5		Parametric 1 Gain			Low+Param 1
-Map	Slider 6		Parametric 1 Q			Low+Param 1
-
-Map	Slider 1		Parametric 2 Frequency			Param 2+Hi
-Map	Slider 2		Parametric 2 Gain			Param 2+Hi
-Map	Slider 3		Parametric 2 Q			Param 2+Hi
-Map	Slider 4		Hi Shelf Frequency			Param 2+Hi
-Map	Slider 5		Hi Shelf Gain			Param 2+Hi
-Map	Slider 6		Hi Shelf Q			Param 2+Hi
-
+Map	Knob 1_1		Low Shelf Frequency
+Map	Knob 9_1		Low Shelf Gain
+Map	Slider 1_1		Low Shelf Q
+Map	Knob 2_1		Parametric 1 Frequency
+Map	Knob 10_1		Parametric 1 Gain
+Map	Slider 2_1		Parametric 1 Q
+Map	Knob 3_1		Parametric 2 Frequency
+Map	Knob 11_1		Parametric 2 Gain
+Map	Slider 3_1		Parametric 2 Q
+Map	Knob 4_1		Hi Shelf Frequency
+Map	Knob 12_1		Hi Shelf Gain
+Map	Slider 4_1		Hi Shelf Q
+Map	Grid 9_1		Low Cut Enable
+Map	Grid 1_1		Parametric 1 Enable
+Map	Grid 2_1		Parametric 2 Enable
+Map	Grid 3_1		Hi Shelf Enable
 
 Scope	Propellerheads	MClass Stereo Imager
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Low Width
-Map	Slider 2		X-Over Frequency
-Map	Slider 3		High Width
-
+Map	Slider 1_1		Low Width
+Map	Slider 2_1		X-Over Frequency
+Map	Slider 3_1		High Width
 
 Scope	Propellerheads	MClass Compressor
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Input Gain
-Map	Slider 2		Threshold
-Map	Slider 3		Ratio
-Map	Slider 4		Attack
-Map	Slider 5		Release
-Map	Slider 6		Output Gain
-Map	Slider 7		Sidechain Active
-Map	Slider 8		Sidechain Solo
-
+Map	Slider 1_1		Input Gain
+Map	Slider 2_1		Threshold
+Map	Slider 3_1		Ratio
+Map	Slider 4_1		Attack
+Map	Slider 5_1		Release
+Map	Slider 6_1		Output Gain
+Map	Grid 2_1		Soft Knee
+Map	Grid 3_1		Sidechain Solo
+Map	Grid 5_1		Adapt
 
 Scope	Propellerheads	MClass Maximizer
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Input Gain
-Map	Slider 2		Attack Speed
-Map	Slider 3		Release Speed
-Map	Slider 4		Look Ahead Enable
-Map	Slider 5		Soft Clip Enable
-Map	Slider 6		Soft Clip Amount
-Map	Slider 7		Enabled
-Map	Slider 8		Output Gain
-
+Map	Slider 1_1		Input Gain
+Map	Slider 2_1		Attack Speed
+Map	Slider 3_1		Release Speed
+Map	Slider 4_1		Soft Clip Amount
+Map	Slider 5_1		Enabled
+Map	Slider 6_1		Output Gain
+Map	Grid 1_1		Limiter Enable
+Map	Grid 2_1		Look Ahead Enable
+Map	Grid 3_1		Soft Clip Enable
+Map	Grid 4_1		Output Level Meter Mode
 
 Scope	Propellerheads	RV7000 Advanced Reverb
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Decay
-Map	Slider 2		HF Damp
-Map	Slider 3		Hi EQ
-Map	Slider 4		EQ On/Off
-Map	Slider 5		Gate On/Off
-Map	Slider 6		Edit Mode
-Map	Slider 7		Enabled
-Map	Slider 8		Dry/Wet
-
+Map	Slider 1_1		Decay
+Map	Slider 2_1		HF Damp
+Map	Slider 3_1		Hi EQ
+Map	Slider 4_1		Dry/Wet
+Map	Knob 9_1		Soft Knob 1
+Map	Knob 10_1		Soft Knob 2
+Map	Knob 11_1		Soft Knob 3
+Map	Knob 12_1		Soft Knob 4
+Map	Knob 13_1		Soft Knob 5
+Map	Knob 14_1		Soft Knob 6
+Map	Knob 15_1		Soft Knob 7
+Map	Knob 16_1		Soft Knob 8
+Map	Grid 1_1		EQ On/Off
+Map	Grid 2_1		Gate On/Off
+Map	Grid 3_1		Enabled
 
 Scope	Propellerheads	Scream 4 Distortion
-Define Group	Keyboard Shortcut Variations	Damage & Cut	Body
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=Damage & Cut
-Map	Grid 6		Keyboard Shortcut Variations=Body
-//Map	Grid 7		Keyboard Shortcut Variations=
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 8		Master Level
-
-Map	Slider 1		Damage Control			Damage & Cut
-Map	Slider 2		Damage Type			Damage & Cut
-Map	Slider 3		Parameter 1			Damage & Cut
-Map	Slider 4		Parameter 2			Damage & Cut
-Map	Slider 5		Cut Lo			Damage & Cut
-Map	Slider 6		Cut Mid			Damage & Cut
-Map	Slider 7		Cut Hi			Damage & Cut
-
-Map	Slider 1		Body Resonance			Body
-Map	Slider 2		Body Scale			Body
-Map	Slider 3		Body Auto			Body
-Map	Slider 4		Body Type			Body
-Map	Slider 5		Cut On/Off			Body
-Map	Slider 6		Body On/Off			Body
-Map	Slider 7		Enabled			Body
-
+Map	Slider 9_1		Master Level
+Map	Slider 1_1		Damage Control
+Map	Slider 2_1		Damage Type
+Map	Slider 3_1		Parameter 1
+Map	Slider 4_1		Parameter 2
+Map	Slider 5_1		Cut Lo
+Map	Slider 6_1		Cut Mid
+Map	Slider 7_1		Cut Hi
+Map	Knob 9_1		Body Resonance
+Map	Knob 10_1		Body Scale
+Map	Knob 11_1		Body Auto
+Map	Knob 12_1		Body Type
+Map	Grid 1_1		Damage On/Off
+Map	Grid 2_1		Cut On/Off
+Map	Grid 3_1		Body On/Off
 
 Scope	Propellerheads	BV512 Digital Vocoder
-Define Group	Keyboard Shortcut Variations	Basic	Band 1-8	Band 9-16	Band 17-24	Band 25-32
+//Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Grid 5		Keyboard Shortcut Variations=Basic
-Map	Grid 6		Keyboard Shortcut Variations=Band 1-8
-Map	Grid 7		Keyboard Shortcut Variations=Band 9-16
-Map	Grid 8		Keyboard Shortcut Variations=Band 17-24
-
-Map	Slider 1		Band Count			Basic
-Map	Slider 2		Vocoder/Equalizer			Basic
-Map	Slider 3		Hold			Basic
-Map	Slider 4		Attack			Basic
-Map	Slider 5		Decay			Basic
-Map	Slider 6		Shift			Basic
-Map	Slider 7		HF Emphasis			Basic
-Map	Slider 8		Dry/Wet			Basic
-
-Map	Slider 1		Band Level 1			Band 1-8
-Map	Slider 2		Band Level 2			Band 1-8
-Map	Slider 3		Band Level 3			Band 1-8
-Map	Slider 4		Band Level 4			Band 1-8
-Map	Slider 5		Band Level 5			Band 1-8
-Map	Slider 6		Band Level 6			Band 1-8
-Map	Slider 7		Band Level 7			Band 1-8
-Map	Slider 8		Band Level 8			Band 1-8
-
-Map	Slider 1		Band Level 9			Band 9-16
-Map	Slider 2		Band Level 10			Band 9-16
-Map	Slider 3		Band Level 11			Band 9-16
-Map	Slider 4		Band Level 12			Band 9-16
-Map	Slider 5		Band Level 13			Band 9-16
-Map	Slider 6		Band Level 14			Band 9-16
-Map	Slider 7		Band Level 15			Band 9-16
-Map	Slider 8		Band Level 16			Band 9-16
-
-Map	Slider 1		Band Level 17			Band 17-24
-Map	Slider 2		Band Level 18			Band 17-24
-Map	Slider 3		Band Level 19			Band 17-24
-Map	Slider 4		Band Level 20			Band 17-24
-Map	Slider 5		Band Level 21			Band 17-24
-Map	Slider 6		Band Level 22			Band 17-24
-Map	Slider 7		Band Level 23			Band 17-24
-Map	Slider 8		Band Level 24			Band 17-24
-
-Map	Slider 1		Band Level 25			Band 25-32
-Map	Slider 2		Band Level 26			Band 25-32
-Map	Slider 3		Band Level 27			Band 25-32
-Map	Slider 4		Band Level 28			Band 25-32
-Map	Slider 5		Band Level 29			Band 25-32
-Map	Slider 6		Band Level 30			Band 25-32
-Map	Slider 7		Band Level 31			Band 25-32
-Map	Slider 8		Band Level 32			Band 25-32
-
+Map	Knob 1_1		Band Count
+Map	Knob 2_1		Attack
+Map	Knob 3_1		Decay
+Map	Knob 4_1		Shift
+Map	Knob 5_1		HF Emphasis
+Map	Slider 9_1		Dry/Wet
+Map	Grid 1_1		Vocoder/Equalizer
+Map	Grid 2_1		Hold
+Map	Slider 1_1		Band Level 1
+Map	Slider 2_1		Band Level 2
+Map	Slider 3_1		Band Level 3
+Map	Slider 4_1		Band Level 4
+Map	Slider 5_1		Band Level 5
+Map	Slider 6_1		Band Level 6
+Map	Slider 7_1		Band Level 7
+Map	Slider 8_1		Band Level 8
+Map	Knob 9_1		Band Level 9
+Map	Knob 10_1		Band Level 10
+Map	Knob 11_1		Band Level 11
+Map	Knob 12_1		Band Level 12
+Map	Knob 13_1		Band Level 13
+Map	Knob 14_1		Band Level 14
+Map	Knob 15_1		Band Level 15
+Map	Knob 16_1		Band Level 16
+Map	Slider 1_2		Band Level 17
+Map	Slider 2_2		Band Level 18
+Map	Slider 3_2		Band Level 19
+Map	Slider 4_2		Band Level 20
+Map	Slider 5_2		Band Level 21
+Map	Slider 6_2		Band Level 22
+Map	Slider 7_2		Band Level 23
+Map	Slider 8_2		Band Level 24
+Map	Knob 9_2		Band Level 25
+Map	Knob 10_2		Band Level 26
+Map	Knob 11_2		Band Level 27
+Map	Knob 12_2		Band Level 28
+Map	Knob 13_2		Band Level 29
+Map	Knob 14_2		Band Level 30
+Map	Knob 15_2		Band Level 31
+Map	Knob 16_2		Band Level 32
 
 Scope	Propellerheads	Line 6 Guitar Amp
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 1		Wah Pedal
-Map	Slider 2		Volume Pedal
-Map	Slider 3		Drive
-Map	Slider 4		Bass
-Map	Slider 5		Middle
-Map	Slider 6		Treble
-Map	Slider 7		Presence
-Map	Slider 8		Volume
-
+Map	Slider 1_1		Wah Pedal
+Map	Slider 2_1		Volume Pedal
+Map	Slider 3_1		Drive
+Map	Slider 4_1		Bass
+Map	Slider 5_1		Middle
+Map	Slider 6_1		Treble
+Map	Slider 7_1		Presence
+Map	Slider 8_1		Volume
+Map	Grid 1_1		Wah Pedal On
 
 Scope	Propellerheads	Line 6 Bass Amp
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 1		Threshold
-Map	Slider 2		Drive
-Map	Slider 3		Bass
-Map	Slider 4		Middle
-Map	Slider 5		Treble
-Map	Slider 6		Presence
-Map	Slider 8		Volume
-
+Map	Slider 1_1		Comp Threshold
+Map	Slider 3_1		Drive
+Map	Slider 4_1		Bass
+Map	Slider 5_1		Middle
+Map	Slider 6_1		Treble
+Map	Slider 7_1		Presence
+Map	Slider 8_1		Volume
+Map	Grid 1_1		Compressor On
 
 Scope	Propellerheads	Neptune Pitch Adjuster
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Pitch Adjust Amount
-Map	Slider 2		Correction Speed
-Map	Slider 3		Preserve Expression
-Map	Slider 4		Semitones
-Map	Slider 5		Cent
-Map	Slider 6		Formant Shift
-Map	Slider 7		Pitched Signal Level
-Map	Slider 8		Voice Synth Level
-
+Map	Slider 9_1		Mod Wheel
+Map	Slider 1_1		Pitch Adjust Amount
+Map	Slider 2_1		Correction Speed
+Map	Slider 3_1		Preserve Expression
+Map	Slider 4_1		Semitones
+Map	Slider 5_1		Cent
+Map	Slider 6_1		Formant Shift
+Map	Slider 7_1		Pitched Signal Level
+Map	Slider 8_1		Voice Synth Level
+Map	Grid 1_1		Low Freq Input
+Map	Grid 2_1		Wide Vibrato
+Map	Grid 3_1		Live Mode
+Map	Grid 4_1		MIDI Destination
+Map	Grid 5_1		Pitch Adjust On/Off
+Map	Grid 6_1		Transpose On/Off
+Map	Grid 7_1		Formant On/Off
 
 Scope	Propellerheads	Pulveriser
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Define Group	Keyboard Shortcut Variations	Basic	Follower	Tremor
-
-Map	Grid 5		Keyboard Shortcut Variations=Basic
-Map	Grid 6		Keyboard Shortcut Variations=Follower
-Map	Grid 7		Keyboard Shortcut Variations=Tremor
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 7		Volume
-Map	Slider 8		Blend
-
-Map	Slider 1		Squash			Basic
-Map	Slider 2		Dirt			Basic
-Map	Slider 3		Tone			Basic
-Map	Slider 4		Filter Mode			Basic
-Map	Slider 5		Filter Frequency			Basic
-Map	Slider 6		Peak			Basic
-
-Map	Slider 1		Follower to Rate			Follower
-Map	Slider 2		Follower to Frequency			Follower
-Map	Slider 3		Follower Trig			Follower
-Map	Slider 4		Follower Threshold			Follower
-Map	Slider 5		Follower Attack			Follower
-Map	Slider 6		Follower Release			Follower
-
-Map	Slider 1		Tremor to Frequency			Tremor
-Map	Slider 2		Tremor to Volume			Tremor
-Map	Slider 3		Tremor Rate			Tremor
-Map	Slider 4		Tremor Waveform			Tremor
-Map	Slider 5		Tremor Spread			Tremor
-Map	Slider 6		Tremor Lag			Tremor
-
+//Define Group	Keyboard Shortcut Variations
+Map	Slider 7_1		Volume
+Map	Slider 8_1		Blend
+Map	Knob 1_1		Squash
+Map	Knob 2_1		Dirt
+Map	Knob 3_1		Tone
+Map	Knob 4_1		Filter Mode
+Map	Knob 5_1		Filter Frequency
+Map	Knob 6_1		Peak
+Map	Knob 9_1		Follower to Rate
+Map	Knob 10_1		Follower to Frequency
+Map	Knob 11_1		Follower Trig
+Map	Knob 12_1		Follower Threshold
+Map	Knob 13_1		Follower Attack
+Map	Knob 14_1		Follower Release
+Map	Slider 1_1		Tremor to Frequency
+Map	Slider 2_1		Tremor to Volume
+Map	Slider 3_1		Tremor Rate
+Map	Slider 4_1		Tremor Waveform
+Map	Slider 5_1		Tremor Spread
+Map	Slider 6_1		Tremor Lag
 
 Scope	Propellerheads	The Echo
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Define Group	Keyboard Shortcut Variations	Delay	FilterMod
-
-Map	Grid 5		Keyboard Shortcut Variations=Delay
-Map	Grid 6		Keyboard Shortcut Variations=FilterMod
-//Map	Grid 7		Keyboard Shortcut Variations=
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 1		Delay Time			Delay
-Map	Slider 2		Right Ch Time Offset			Delay
-Map	Slider 3		Ping-Pong Pan			Delay
-Map	Slider 4		Feedback			Delay
-Map	Slider 5		Right Ch Feedback Offset			Delay
-Map	Slider 6		Drive Amount			Delay
-Map	Slider 7		Drive Type			Delay
-Map	Slider 8		Dry/Wet Balance			Delay
-
-Map	Slider 1		Envelope			FilterMod
-Map	Slider 2		Wobble			FilterMod
-Map	Slider 3		Diffuse Spread			FilterMod
-Map	Slider 4		Diffuse Amount			FilterMod
-Map	Slider 5		Filter Frequency			FilterMod
-Map	Slider 6		Filter Resonance			FilterMod
-Map	Slider 7		LFO Rate			FilterMod
-Map	Slider 8		LFO Amount			FilterMod
-
-Map	Slider 9		Ducking
-
+//Define Group	Keyboard Shortcut Variations
+Map	Grid 1_1		Roll Enabled
+Map	Grid 2_1		Trig
+Map	Grid 3_1		Keep Pitch
+Map	Grid 4_1		Sync
+Map	Grid 5_1		Ping-Pong Mode
+Map	Grid 6_1		Diffuse On
+Map	Grid 7_1		Filter On
+Map	Knob 9_1		Delay Time
+Map	Knob 10_1		Right Ch Time Offset
+Map	Knob 11_1		Feedback
+Map	Knob 12_1		Right Ch Feedback Offset
+Map	Knob 13_1		Drive Amount
+Map	Knob 14_1		Drive Type
+Map	Knob 15_1		Envelope
+Map	Knob 16_1		Wobble
+Map	Knob 1_1		Ping-Pong Pan
+Map	Knob 2_1		Diffuse Spread
+Map	Knob 3_1		Diffuse Amount
+Map	Knob 4_1		Filter Frequency
+Map	Knob 5_1		Filter Resonance
+Map	Knob 6_1		LFO Rate
+Map	Knob 7_1		LFO Amount
+Map	Knob 8_1		Ducking
+Map	Slider 9_1		Dry/Wet Balance
 
 Scope	Propellerheads	Alligator
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Define Group	Keyboard Shortcut Variations	MainFX	High	Band	Low	Dry
-
-Map	Grid 5		Keyboard Shortcut Variations=MainFX
-Map	Grid 6		Keyboard Shortcut Variations=High
-Map	Grid 7		Keyboard Shortcut Variations=Band
-Map	Grid 8		Keyboard Shortcut Variations=Low
-
-Map	Slider 1		Resolution			MainFX
-Map	Slider 2		LFO Waveform			MainFX
-Map	Slider 3		LFO Freq			MainFX
-Map	Slider 4		Delay Time			MainFX
-Map	Slider 5		Delay Feedback			MainFX
-Map	Slider 6		Delay Pan			MainFX
-Map	Slider 7		Phaser Rate			MainFX
-Map	Slider 8		Phaser Feedback			MainFX
-Map	Slider 9		Master Volume			MainFX
-
-Map	Slider 1		High Pass LFO Amount			High
-Map	Slider 2		High Pass Frequency			High
-Map	Slider 3		High Pass Resonance			High
-Map	Slider 4		High Pass Env Amount			High
-Map	Slider 5		High Pass Drive Amount			High
-Map	Slider 6		High Pass Phaser Amount			High
-Map	Slider 7		High Pass Delay Amount			High
-Map	Slider 8		High Pass Pan			High
-Map	Slider 9		High Pass Volume			High
-
-Map	Slider 1		Band Pass LFO Amount			Band
-Map	Slider 2		Band Pass Frequency			Band
-Map	Slider 3		Band Pass Resonance			Band
-Map	Slider 4		Band Pass Env Amount			Band
-Map	Slider 5		Band Pass Drive Amount			Band
-Map	Slider 6		Band Pass Phaser Amount			Band
-Map	Slider 7		Band Pass Delay Amount			Band
-Map	Slider 8		Band Pass Pan			Band
-Map	Slider 9		Band Pass Volume			Band
-
-Map	Slider 1		Low Pass LFO Amount			Low
-Map	Slider 2		Low Pass Frequency			Low
-Map	Slider 3		Low Pass Resonance			Low
-Map	Slider 4		Low Pass Env Amount			Low
-Map	Slider 5		Low Pass Drive Amount			Low
-Map	Slider 6		Low Pass Phaser Amount			Low
-Map	Slider 7		Low Pass Delay Amount			Low
-Map	Slider 8		Low Pass Pan			Low
-Map	Slider 9		Low Pass Volume			Low
-
-Map	Slider 1		Dry Volume			Dry
-Map	Slider 2		Dry Pan			Dry
-Map	Slider 3		Amp Env Attack			Dry
-Map	Slider 4		Amp Env Decay			Dry
-Map	Slider 5		Amp Env Release			Dry
-Map	Slider 6		Filter Env Attack			Dry
-Map	Slider 7		Filter Env Decay			Dry
-Map	Slider 8		Filter Env Release			Dry
-Map	Slider 9		Master Volume			Dry
-
+//Define Group	Keyboard Shortcut Variations
+Map	Slider 9_1		Master Volume
+Map	Knob 1_1		High Pass LFO Amount
+Map	Knob 2_1		High Pass Frequency
+Map	Knob 3_1		High Pass Resonance
+Map	Knob 4_1		High Pass Env Amount
+Map	Knob 5_1		High Pass Drive Amount
+Map	Knob 6_1		High Pass Phaser Amount
+Map	Knob 7_1		High Pass Delay Amount
+Map	Knob 8_1		High Pass Pan
+Map	Knob 9_1		Band Pass LFO Amount
+Map	Knob 10_1		Band Pass Frequency
+Map	Knob 11_1		Band Pass Resonance
+Map	Knob 12_1		Band Pass Env Amount
+Map	Knob 13_1		Band Pass Drive Amount
+Map	Knob 14_1		Band Pass Phaser Amount
+Map	Knob 15_1		Band Pass Delay Amount
+Map	Knob 16_1		Band Pass Pan
+Map	Slider 1_1		Low Pass LFO Amount
+Map	Slider 2_1		Low Pass Frequency
+Map	Slider 3_1		Low Pass Resonance
+Map	Slider 4_1		Low Pass Env Amount
+Map	Slider 5_1		Low Pass Drive Amount
+Map	Slider 6_1		Low Pass Phaser Amount
+Map	Slider 7_1		Low Pass Delay Amount
+Map	Slider 8_1		Low Pass Pan
+Map	Grid 1_1		Pattern Enable
+Map	Grid 2_1		Shuffle
+Map	Grid 9_1		LFO Sync
+Map	Grid 10_1		Delay Sync
+Map	Grid 5_1		High Pass Filter On
+Map	Grid 6_1		Band Pass Filter On
+Map	Grid 7_1		Low Pass Filter On
+Map	Grid 13_1		Gate 1 Trig
+Map	Grid 14_1		Gate 2 Trig
+Map	Grid 15_1		Gate 3 Trig
+Map	Slider 1_2		Dry Volume
+Map	Slider 2_2		Dry Pan
+Map	Slider 3_2		Amp Env Attack
+Map	Slider 4_2		Amp Env Decay
+Map	Slider 5_2		Amp Env Release
+Map	Slider 6_2		Filter Env Attack
+Map	Slider 7_2		Filter Env Decay
+Map	Slider 8_2		Filter Env Release
+Map	Knob 1_2		High Pass Volume
+Map	Knob 2_2		Band Pass Volume
+Map	Knob 3_2		Low Pass Volume
+Map	Knob 7_2		Resolution
+Map	Knob 8_2		Shift
+Map	Knob 9_2		LFO Waveform
+Map	Knob 10_2		LFO Freq
+Map	Knob 11_2		Delay Time
+Map	Knob 12_2		Delay Feedback
+Map	Knob 13_2		Delay Pan
+Map	Knob 14_2		Phaser Rate
+Map	Knob 15_2		Phaser Feedback
 
 Scope	Propellerheads	RV-7 Digital Reverb
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Algorithm
-Map	Slider 2		Size
-Map	Slider 3		Decay
-Map	Slider 4		Damping
-Map	Slider 8		Dry/Wet
-
+Map	Slider 1_1		Algorithm
+Map	Slider 2_1		Size
+Map	Slider 3_1		Decay
+Map	Slider 4_1		Damping
+Map	Slider 9_1		Dry/Wet
 
 Scope	Propellerheads	DDL-1 Digital Delay Line
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		DelayTime (steps)
-Map	Slider 2		DelayTime (ms)
-Map	Slider 3		Unit
-Map	Slider 4		Step Length
-Map	Slider 5		Feedback
-Map	Slider 6		Pan
-Map	Slider 8		Dry/Wet Balance
-
+Map	Slider 1_1		DelayTime (steps)
+Map	Slider 2_1		DelayTime (ms)
+Map	Slider 3_1		Unit
+Map	Slider 4_1		Step Length
+Map	Slider 5_1		Feedback
+Map	Slider 6_1		Pan
+Map	Slider 9_1		Dry/Wet Balance
 
 Scope	Propellerheads	D-11 Foldback Distortion
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Amount
-Map	Slider 2		Foldback
-
+Map	Slider 1_1		Amount
+Map	Slider 2_1		Foldback
 
 Scope	Propellerheads	ECF-42 Envelope Controlled Filter
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Frequency
-Map	Slider 2		Resonance
-Map	Slider 3		Env Amount
-Map	Slider 4		Velocity
-Map	Slider 5		Attack
-Map	Slider 6		Decay
-Map	Slider 7		Sustain
-Map	Slider 8		Release
-
+Map	Slider 1_1		Frequency
+Map	Slider 2_1		Resonance
+Map	Slider 3_1		Env Amount
+Map	Slider 4_1		Velocity
+Map	Slider 5_1		Attack
+Map	Slider 6_1		Decay
+Map	Slider 7_1		Sustain
+Map	Slider 8_1		Release
 
 Scope	Propellerheads	CF-101 Chorus/Flanger
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Delay
-Map	Slider 2		Feedback
-Map	Slider 3		Rate
-Map	Slider 4		Modulation Amount
-Map	Slider 5		LFO Sync Enable
-Map	Slider 6		Send/Insert Mode
-
+Map	Slider 1_1		Delay
+Map	Slider 2_1		Feedback
+Map	Slider 3_1		Rate
+Map	Slider 4_1		Modulation Amount
+Map	Slider 5_1		LFO Sync Enable
+Map	Slider 6_1		Send/Insert Mode
 
 Scope	Propellerheads	PH-90 Phaser
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Frequency
-Map	Slider 2		Split
-Map	Slider 3		Width
-Map	Slider 4		Rate
-Map	Slider 5		Frequency Modulation
-Map	Slider 6		Feedback
-Map	Slider 7		LFO Sync Enable
-
+Map	Slider 1_1		Frequency
+Map	Slider 2_1		Split
+Map	Slider 3_1		Width
+Map	Slider 4_1		Rate
+Map	Slider 5_1		Frequency Modulation
+Map	Slider 6_1		Feedback
+Map	Slider 7_1		LFO Sync Enable
 
 Scope	Propellerheads	UN-16 Unison
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Detune
-Map	Slider 2		Voice Count
-Map	Slider 8		Dry/Wet
-
+Map	Slider 1_1		Detune
+Map	Slider 2_1		Voice Count
+Map	Slider 9_1		Dry/Wet
 
 Scope	Propellerheads	COMP-01 Compressor/Limiter
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Ratio
-Map	Slider 2		Threshold
-Map	Slider 3		Attack
-Map	Slider 4		Release
-
+Map	Slider 1_1		Ratio
+Map	Slider 2_1		Threshold
+Map	Slider 3_1		Attack
+Map	Slider 4_1		Release
 
 Scope	Propellerheads	PEQ-2 Two Band Parametric EQ
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Filter A Freq
-Map	Slider 2		Filter A Q
-Map	Slider 3		Filter A Gain
-Map	Slider 4		Filter B On/Off
-Map	Slider 5		Filter B Freq
-Map	Slider 6		Filter B Q
-Map	Slider 7		Filter B Gain
-
+Map	Slider 1_1		Filter A Freq
+Map	Slider 2_1		Filter A Q
+Map	Slider 3_1		Filter A Gain
+Map	Slider 4_1		Filter B On/Off
+Map	Slider 5_1		Filter B Freq
+Map	Slider 6_1		Filter B Q
+Map	Slider 7_1		Filter B Gain
 
 Scope	Propellerheads	RPG-8 Monophonic Arpeggiator
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 9		Mod Wheel
-Map	Slider 1		Velocity/Manual
-Map	Slider 2		Octave Shift
-Map	Slider 3		Mode
-Map	Slider 4		Octave
-Map	Slider 5		Insert
-Map	Slider 6		Rate
-Map	Slider 7		Gate Length
-Map	Slider 8		Shuffle
-
-
+Map	Slider 9_1		Mod Wheel
+Map	Slider 1_1		Velocity/Manual
+Map	Slider 2_1		Octave Shift
+Map	Slider 3_1		Mode
+Map	Slider 4_1		Octave
+Map	Slider 5_1		Insert
+Map	Slider 6_1		Rate
+Map	Slider 7_1		Gate Length
+Map	Slider 8_1		Shuffle
+Map	Grid 1_1		Pattern Step 1
+Map	Grid 2_1		Pattern Step 2
+Map	Grid 3_1		Pattern Step 3
+Map	Grid 4_1		Pattern Step 4
+Map	Grid 5_1		Pattern Step 5
+Map	Grid 6_1		Pattern Step 6
+Map	Grid 7_1		Pattern Step 7
+Map	Grid 8_1		Pattern Step 8
+Map	Grid 9_1		Pattern Step 9
+Map	Grid 10_1		Pattern Step 10
+Map	Grid 11_1		Pattern Step 11
+Map	Grid 12_1		Pattern Step 12
+Map	Grid 13_1		Pattern Step 13
+Map	Grid 14_1		Pattern Step 14
+Map	Grid 15_1		Pattern Step 15
+Map	Grid 16_1		Pattern Step 16
+//Arpeggiator Enable
+//Hold
+//Sync
+//Shuffle
+//Manual Velocity
+//Pattern Enable
+//Octave 1
+//Octave 2
+//Octave 3
+//Octave 4
+//Insert Off
+//Insert Low
+//Insert Hig
+//Insert 3-1
+//Insert 4-2
 ///////RACK EXTENSIONS BELOW//////////////////////////////////
-
 
 Scope	LAB ONE Recordings	co.uk.labonerecordings.ReQ131
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 1		Enabled
-Map	Slider 2		Gain
-Map	Slider 3		Wet/Dry
-Map	Slider 4		High Pass
-Map	Slider 5		HP Bypass
-Map	Slider 6		Low Pass
-Map	Slider 7		LP Bypass
-Map	Slider 8		Hear EQ
-
+Map	Slider 1_1		Enabled
+Map	Slider 2_1		Gain
+Map	Slider 3_1		Wet/Dry
+Map	Slider 4_1		High Pass
+Map	Slider 5_1		HP Bypass
+Map	Slider 6_1		Low Pass
+Map	Slider 7_1		LP Bypass
+Map	Slider 8_1		Hear EQ
 
 Scope	Audio Damage, Inc.	com.audiodamage.roughrider
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Enabled
-Map	Slider 2		Ratio
-Map	Slider 3		Attack
-Map	Slider 4		Release
-Map	Slider 5		Sensitivity
-Map	Slider 6		Makeup
-Map	Slider 8		Mix
+Map	Slider 1_1		Enabled
+Map	Slider 2_1		Ratio
+Map	Slider 3_1		Attack
+Map	Slider 4_1		Release
+Map	Slider 5_1		Sensitivity
+Map	Slider 6_1		Makeup
+Map	Slider 8_1		Mix
 
 Scope	Black and Orange	com.blackandorange.AutoArp
-Define Group	Keyboard Shortcut Variations	Chord	Arp1	Arp2
-
-Map	Grid 5		Keyboard Shortcut Variations=Chord
-Map	Grid 6		Keyboard Shortcut Variations=Arp1
-Map	Grid 7		Keyboard Shortcut Variations=Arp2
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 9		scale
-
-Map	Slider 1		note1_ChordSelect			Chord
-Map	Slider 2		note2_ChordSelect			Chord
-Map	Slider 3		note3_ChordSelect			Chord
-Map	Slider 4		note4_ChordSelect			Chord
-Map	Slider 5		note5_ChordSelect			Chord
-Map	Slider 6		note6_ChordSelect			Chord
-Map	Slider 7		note7_ChordSelect			Chord
-Map	Slider 8		note8_ChordSelect			Chord
-
-Map	Slider 1		rateFree			Arp1
-Map	Slider 2		rateSynced			Arp1
-Map	Slider 3		humanTiming			Arp1
-Map	Slider 4		Shuffle			Arp1
-Map	Slider 5		maxChordSize			Arp1
-Map	Slider 6		extendDownNotes			Arp1
-Map	Slider 7		extendUpNotes			Arp1
-Map	Slider 8		gateLength			Arp1
-
-Map	Slider 1		Velocity			Arp2
-Map	Slider 2		velocityVariationMin			Arp2
-Map	Slider 3		velocityVariationMax			Arp2
-Map	Slider 4		arpPlayMode			Arp2
-Map	Slider 5		arpPlayDirection			Arp2
-Map	Slider 6		arpPlayCount			Arp2
-Map	Slider 7		repeatNoteFrequency			Arp2
-Map	Slider 8		repeatNoteVelocity			Arp2
-
+//Define Group	Keyboard Shortcut Variations
+Map	Slider 9_1		scale
+Map	Knob 1_1		note1_ChordSelect
+Map	Knob 2_1		note2_ChordSelect
+Map	Knob 3_1		note3_ChordSelect
+Map	Knob 4_1		note4_ChordSelect
+Map	Knob 5_1		note5_ChordSelect
+Map	Knob 6_1		note6_ChordSelect
+Map	Knob 7_1		note7_ChordSelect
+Map	Knob 8_1		note8_ChordSelect
+Map	Knob 9_1		rateFree
+Map	Knob 10_1		rateSynced
+Map	Knob 11_1		humanTiming
+Map	Knob 12_1		Shuffle
+Map	Knob 13_1		maxChordSize
+Map	Knob 14_1		extendDownNotes
+Map	Knob 15_1		extendUpNotes
+Map	Knob 16_1		gateLength
+Map	Slider 1_1		Velocity
+Map	Slider 2_1		velocityVariationMin
+Map	Slider 3_1		velocityVariationMax
+Map	Slider 4_1		arpPlayMode
+Map	Slider 5_1		arpPlayDirection
+Map	Slider 6_1		arpPlayCount
+Map	Slider 7_1		repeatNoteFrequency
+Map	Slider 8_1		repeatNoteVelocity
 
 Scope	Black and Orange	com.blackandorange.ReVolt
-Define Group	Keyboard Shortcut Variations	Var1	Var2
-
-Map	Slider 1		blendmode			Var1
-Map	Slider 2		scaleamount			Var1
-Map	Slider 3		minoutput			Var1
-Map	Slider 4		minoutputUni			Var1
-Map	Slider 5		conformToRange			Var1
-Map	Slider 6		maxoutput			Var1
-Map	Slider 7		maxoutputUni			Var1
-Map	Slider 8		addamount			Var1
-
-Map	Slider 1		relativeaddmode			Var2
-Map	Slider 2		polaritymode			Var2
-Map	Slider 3		splitSmoothing			Var2
-Map	Slider 4		splitLevel			Var2
-Map	Slider 5		staticoutput			Var2
-Map	Slider 6		staticoutputenabled			Var2
-Map	Slider 7		splitAOffStaticValue			Var2
-Map	Slider 8		splitAOnMode			Var2
-
+//Define Group	Keyboard Shortcut Variations	Var1	Var2
+Map	Knob 9_1		blendmode
+Map	Knob 10_1		scaleamount
+Map	Knob 11_1		minoutput
+Map	Knob 12_1		minoutputUni
+Map	Knob 13_1		conformToRange
+Map	Knob 14_1		maxoutput
+Map	Knob 15_1		maxoutputUni
+Map	Knob 16_1		addamount
+Map	Slider 1_1		relativeaddmode
+Map	Slider 2_1		polaritymode
+Map	Slider 3_1		splitSmoothing
+Map	Slider 4_1		splitLevel
+Map	Slider 5_1		staticoutput
+Map	Slider 6_1		staticoutputenabled
+Map	Slider 7_1		splitAOffStaticValue
+Map	Slider 8_1		splitAOnMode
 
 Scope	Black and Orange	com.blackandorange.TrafficControl
 //Map	_control_		slot1_button
@@ -1109,236 +1632,196 @@ Scope	Black and Orange	com.blackandorange.TrafficControl
 //Map	_control_		releaseOnSwitch
 //Map	_control_		midiSelect
 
-
 Scope	Blamsoft, Inc.	com.blamsoft.Distributor
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 9		Mod Wheel
-Map	Slider 1		Octave
-Map	Slider 2		Voices Mode
-Map	Slider 3		Number of Voices
-Map	Slider 4		Combination
-Map	Slider 5		Order Mode
-Map	Slider 6		Start Position
-
+Map	Slider 9_1		Mod Wheel
+Map	Slider 1_1		Octave
+Map	Slider 2_1		Voices Mode
+Map	Slider 3_1		Number of Voices
+Map	Slider 4_1		Combination
+Map	Slider 5_1		Order Mode
+Map	Slider 6_1		Start Position
 
 Scope	Blamsoft, Inc.	com.blamsoft.Resampler
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 1		Downsample Algorithm
-Map	Slider 2		Downsample Vol Env Amt
-Map	Slider 3		Downsample Pitch Env Amt
-Map	Slider 4		Downsample Rate
-Map	Slider 5		Quantize Algorithm
-Map	Slider 6		Quantize Vol Env Amt
-Map	Slider 7		Quantize Pitch Env Amt
-Map	Slider 8		Quantize Depth
-Map	Slider 9		Wet Percentage
-
+Map	Slider 1_1		Downsample Algorithm
+Map	Slider 2_1		Downsample Vol Env Amt
+Map	Slider 3_1		Downsample Pitch Env Amt
+Map	Slider 4_1		Downsample Rate
+Map	Slider 5_1		Quantize Algorithm
+Map	Slider 6_1		Quantize Vol Env Amt
+Map	Slider 7_1		Quantize Pitch Env Amt
+Map	Slider 8_1		Quantize Depth
+Map	Slider 9_1		Wet Percentage
 
 Scope	Blamsoft, Inc.	com.blamsoft.Viking
-Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc
-
-Map	Grid 5		Keyboard Shortcut Variations=FilterMod
-Map	Grid 6		Keyboard Shortcut Variations=Env
-Map	Grid 7		Keyboard Shortcut Variations=Osc
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 1		Cutoff			FilterMod
-Map	Slider 2		Spacing			FilterMod
-Map	Slider 3		Resonance			FilterMod
-Map	Slider 4		Lfo Rate Synced			FilterMod
-Map	Slider 5		Mod Wheel Source			FilterMod
-Map	Slider 6		Mod Wheel Amount			FilterMod
-Map	Slider 7		On Source			FilterMod
-Map	Slider 8		On Amount			FilterMod
-
-Map	Slider 1		Vol Attack			Env
-Map	Slider 2		Vol Decay			Env
-Map	Slider 3		Vol Release			Env
-Map	Slider 4		Vol Sustain			Env
-Map	Slider 5		Filter Attack			Env
-Map	Slider 6		Filter Decay			Env
-Map	Slider 7		Filter Sustain			Env
-Map	Slider 8		Filter Release			Env
-
-Map	Slider 1		Osc 1 Octave			Osc
-Map	Slider 2		Osc 1 Wave			Osc
-Map	Slider 3		Osc 2 Frequency			Osc
-Map	Slider 4		Osc 2 Octave			Osc
-Map	Slider 5		Osc 2 Wave			Osc
-Map	Slider 6		Osc 3 Frequency			Osc
-Map	Slider 7		Osc 3 Octave			Osc
-Map	Slider 8		Osc 3 Wave			Osc
-
+//Define Group	Keyboard Shortcut Variations
+Map	Knob 1_1		Cutoff
+Map	Knob 2_1		Spacing
+Map	Knob 3_1		Resonance
+Map	Knob 4_1		Lfo Rate Synced
+Map	Knob 5_1		Mod Wheel Source
+Map	Knob 6_1		Mod Wheel Amount
+Map	Knob 7_1		On Source
+Map	Knob 8_1		On Amount
+Map	Knob 9_1		Vol Attack
+Map	Knob 10_1		Vol Decay
+Map	Knob 11_1		Vol Release
+Map	Knob 12_1		Vol Sustain
+Map	Knob 13_1		Filter Attack
+Map	Knob 14_1		Filter Decay
+Map	Knob 15_1		Filter Sustain
+Map	Knob 16_1		Filter Release
+Map	Slider 1_1		Osc 1 Octave
+Map	Slider 2_1		Osc 1 Wave
+Map	Slider 3_1		Osc 2 Frequency
+Map	Slider 4_1		Osc 2 Octave
+Map	Slider 5_1		Osc 2 Wave
+Map	Slider 6_1		Osc 3 Frequency
+Map	Slider 7_1		Osc 3 Octave
+Map	Slider 8_1		Osc 3 Wave
 
 Scope	Cakewalk	com.cakewalk.RE2A
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Compress/Limit
-Map	Slider 2		OutputGain
-Map	Slider 3		PeakReduction
-Map	Slider 4		MeterSetting
-Map	Slider 5		R37
-
+Map	Slider 1_1		Compress/Limit
+Map	Slider 2_1		OutputGain
+Map	Slider 3_1		PeakReduction
+Map	Slider 4_1		MeterSetting
+Map	Slider 5_1		R37
 
 Scope	Deadman Audio Devices	com.deadmanaudiodevices.getlayedsound
-Define Group	Keyboard Shortcut Variations	Delay	DelayVol	DelayPan
-
-Map	Grid 5		Keyboard Shortcut Variations=Delay
-Map	Grid 6		Keyboard Shortcut Variations=DelayVol
-Map	Grid 7		Keyboard Shortcut Variations=DelayPan
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 1		Delay Time			Delay
-Map	Slider 2		Delay Time (Synced)			Delay
-Map	Slider 3		Delay Sync			Delay
-Map	Slider 4		Combined Volume			Delay
-Map	Slider 5		Delay Volume Direct			Delay
-Map	Slider 6		Delay Pan Direct			Delay
-
-Map	Slider 1		Delay Volume 2			DelayVol
-Map	Slider 2		Delay Volume 3			DelayVol
-Map	Slider 3		Delay Volume 4			DelayVol
-Map	Slider 4		Delay Volume 5			DelayVol
-Map	Slider 5		Delay Volume 6			DelayVol
-Map	Slider 6		Delay Volume 7			DelayVol
-Map	Slider 7		Delay Volume 8			DelayVol
-Map	Slider 8		Delay Volume 9			DelayVol
-
-Map	Slider 1		Delay Pan 2			DelayPan
-Map	Slider 2		Delay Pan 3			DelayPan
-Map	Slider 3		Delay Pan 4			DelayPan
-Map	Slider 4		Delay Pan 5			DelayPan
-Map	Slider 5		Delay Pan 6			DelayPan
-Map	Slider 6		Delay Pan 7			DelayPan
-Map	Slider 7		Delay Pan 8			DelayPan
-Map	Slider 8		Delay Pan 9			DelayPan
-
+//Define Group	Keyboard Shortcut Variations
+Map	Knob 1_1		Delay Time
+Map	Knob 2_1		Delay Time (Synced)
+Map	Knob 3_1		Delay Sync
+Map	Knob 4_1		Combined Volume
+Map	Knob 5_1		Delay Volume Direct
+Map	Knob 6_1		Delay Pan Direct
+Map	Slider 1_1		Delay Volume 2
+Map	Slider 2_1		Delay Volume 3
+Map	Slider 3_1		Delay Volume 4
+Map	Slider 4_1		Delay Volume 5
+Map	Slider 5_1		Delay Volume 6
+Map	Slider 6_1		Delay Volume 7
+Map	Slider 7_1		Delay Volume 8
+Map	Slider 8_1		Delay Volume 9
+Map	Knob 9_1		Delay Pan 2
+Map	Knob 10_1		Delay Pan 3
+Map	Knob 11_1		Delay Pan 4
+Map	Knob 12_1		Delay Pan 5
+Map	Knob 13_1		Delay Pan 6
+Map	Knob 14_1		Delay Pan 7
+Map	Knob 15_1		Delay Pan 8
+Map	Knob 16_1		Delay Pan 9
 
 Scope	Deadman Audio Devices	com.deadmanaudiodevices.getlayedvoltage
-Define Group	Keyboard Shortcut Variations	Delay	Note1	Note2
-Map	Grid 5		Keyboard Shortcut Variations=Delay
-Map	Grid 6		Keyboard Shortcut Variations=Note1
-Map	Grid 7		Keyboard Shortcut Variations=Note2
-//Map	Grid 8		Keyboard Shortcut Variations=
-
-Map	Slider 1		Delay Time			Delay
-Map	Slider 2		Delay Time (Synced)			Delay
-Map	Slider 3		Delay Sync			Delay
-Map	Slider 4		Octave Correction			Delay
-Map	Slider 5		Note 1 Out Direct			Delay
-Map	Slider 6		Note 2 Out Direct			Delay
-
-Map	Slider 1		Note 1 Out 2			Note1
-Map	Slider 2		Note 1 Out 3			Note1
-Map	Slider 3		Note 1 Out 4			Note1
-Map	Slider 4		Note 1 Out 5			Note1
-Map	Slider 5		Note 1 Out 6			Note1
-Map	Slider 6		Note 1 Out 7			Note1
-Map	Slider 7		Note 1 Out 8			Note1
-Map	Slider 8		Note 1 Out 9			Note1
-
-Map	Slider 1		Note 2 Out 2			Note2
-Map	Slider 2		Note 2 Out 3			Note2
-Map	Slider 3		Note 2 Out 4			Note2
-Map	Slider 4		Note 2 Out 5			Note2
-Map	Slider 5		Note 2 Out 6			Note2
-Map	Slider 6		Note 2 Out 7			Note2
-Map	Slider 7		Note 2 Out 8			Note2
-Map	Slider 8		Note 2 Out 9			Note2
-
+//Define Group	Keyboard Shortcut Variations
+Map	Knob 1_1		Delay Time
+Map	Knob 2_1		Delay Time (Synced)
+Map	Knob 3_1		Delay Sync
+Map	Knob 4_1		Octave Correction
+Map	Knob 5_1		Note 1 Out Direct
+Map	Knob 6_1		Note 2 Out Direct
+Map	Knob 9_1		Note 1 Out 2
+Map	Knob 10_1		Note 1 Out 3
+Map	Knob 11_1		Note 1 Out 4
+Map	Knob 12_1		Note 1 Out 5
+Map	Knob 13_1		Note 1 Out 6
+Map	Knob 14_1		Note 1 Out 7
+Map	Knob 15_1		Note 1 Out 8
+Map	Knob 16_1		Note 1 Out 9
+Map	Slider 1_1		Note 2 Out 2
+Map	Slider 2_1		Note 2 Out 3
+Map	Slider 3_1		Note 2 Out 4
+Map	Slider 4_1		Note 2 Out 5
+Map	Slider 5_1		Note 2 Out 6
+Map	Slider 6_1		Note 2 Out 7
+Map	Slider 7_1		Note 2 Out 8
+Map	Slider 8_1		Note 2 Out 9
 
 Scope	DLD Technology	com.dldtechnology.dr4
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Slider 1		Pattern 1
-Map	Slider 2		Offset 1
-Map	Slider 3		Pattern 2
-Map	Slider 4		Offset 2
-Map	Slider 5		Pattern 3
-Map	Slider 6		Offset 3
-Map	Slider 7		Pattern 4
-Map	Slider 8		Offset 4
-Map	Slider 9		Swing
-
+Map	Slider 1_1		Pattern 1
+Map	Slider 2_1		Offset 1
+Map	Slider 3_1		Pattern 2
+Map	Slider 4_1		Offset 2
+Map	Slider 5_1		Pattern 3
+Map	Slider 6_1		Offset 3
+Map	Slider 7_1		Pattern 4
+Map	Slider 8_1		Offset 4
+Map	Slider 9_1		Swing
 
 Scope	Peff	com.peff.Buffre
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 9		Mod Wheel
-
-Map	Slider 1		Pitch
-Map	Slider 2		Random
-Map	Slider 3		Play Mode
-Map	Slider 4		Trigger Length
-Map	Slider 5		Release
-Map	Slider 6		Gate Start
-Map	Slider 7		Gate Length
-Map	Slider 8		Volume
+Map	Slider 9_1		Mod Wheel
+Map	Slider 1_1		Pitch
+Map	Slider 2_1		Random
+Map	Slider 3_1		Play Mode
+Map	Slider 4_1		Trigger Length
+Map	Slider 5_1		Release
+Map	Slider 6_1		Gate Start
+Map	Slider 7_1		Gate Length
+Map	Slider 8_1		Volume
 
 Scope	Peff	com.peff.Directre
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 1		Gain 1
-Map	Slider 2		Gain 2
-Map	Slider 3		Gain 3
-Map	Slider 4		Gain 4
-Map	Slider 5		Gain 5
-Map	Slider 6		Gain 6
-Map	Slider 7		Gain 7
-Map	Slider 8		Gain 8
-Map	Slider 9		Input Gain
-
+Map	Slider 1_1		Gain 1
+Map	Slider 2_1		Gain 2
+Map	Slider 3_1		Gain 3
+Map	Slider 4_1		Gain 4
+Map	Slider 5_1		Gain 5
+Map	Slider 6_1		Gain 6
+Map	Slider 7_1		Gain 7
+Map	Slider 8_1		Gain 8
+Map	Slider 9_1		Input Gain
 
 Scope	Peff	com.peff.Alias8cv
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
 Map	_Scope		"Alias8cv"
-
-Map	Slider 9		Master Fader
-Map	Slider 1		Fader 1
-Map	Slider 2		Fader 2
-Map	Slider 3		Fader 3
-Map	Slider 4		Fader 4
-Map	Slider 5		Fader 5
-Map	Slider 6		Fader 6
-Map	Slider 7		Fader 7
-Map	Slider 8		Fader 8
-
-Map	Knob 1		Knob A1
-Map	Knob 2		Knob A2
-Map	Knob 3		Knob A3
-Map	Knob 4		Knob A4
-Map	Knob 5		Knob A5
-Map	Knob 6		Knob A6
-Map	Knob 7		Knob A7
-Map	Knob 8		Knob A8
-Map	Knob 9		Knob B1
-Map	Knob 10		Knob B2
-Map	Knob 11		Knob B3
-Map	Knob 12		Knob B4
-Map	Knob 13		Knob B5
-Map	Knob 14		Knob B6
-Map	Knob 15		Knob B7
-Map	Knob 16		Knob B8
-Map	Grid 1		Toggle 1
-Map	Grid 2		Toggle 2
-Map	Grid 3 		Toggle 3
-Map	Grid 4		Toggle 4
-Map	Grid 5		Toggle 5
-Map	Grid 6		Toggle 6
-Map	Grid 7		Toggle 7
-Map	Grid 8		Toggle 8
-Map	Momentary 9		Momentary 1
-Map	Momentary 10		Momentary 2
-Map	Momentary 11		Momentary 3
-Map	Momentary 12		Momentary 4
-Map	Momentary 13		Momentary 5
-Map	Momentary 14		Momentary 6
-Map	Momentary 15		Momentary 7
-Map	Momentary 16		Momentary 8
+Map	Slider 9_1		Master Fader
+Map	Slider 1_1		Fader 1
+Map	Slider 2_1		Fader 2
+Map	Slider 3_1		Fader 3
+Map	Slider 4_1		Fader 4
+Map	Slider 5_1		Fader 5
+Map	Slider 6_1		Fader 6
+Map	Slider 7_1		Fader 7
+Map	Slider 8_1		Fader 8
+Map	Knob 1_1		Knob A1
+Map	Knob 2_1		Knob A2
+Map	Knob 3_1		Knob A3
+Map	Knob 4_1		Knob A4
+Map	Knob 5_1		Knob A5
+Map	Knob 6_1		Knob A6
+Map	Knob 7_1		Knob A7
+Map	Knob 8_1		Knob A8
+Map	Knob 9_1		Knob B1
+Map	Knob 10_1		Knob B2
+Map	Knob 11_1		Knob B3
+Map	Knob 12_1		Knob B4
+Map	Knob 13_1		Knob B5
+Map	Knob 14_1		Knob B6
+Map	Knob 15_1		Knob B7
+Map	Knob 16_1		Knob B8
+Map	Grid 1_1		Toggle 1
+Map	Grid 2_1		Toggle 2
+Map	Grid 3_1		Toggle 3
+Map	Grid 4_1		Toggle 4
+Map	Grid 5_1		Toggle 5
+Map	Grid 6_1		Toggle 6
+Map	Grid 7_1		Toggle 7
+Map	Grid 8_1		Toggle 8
+Map	Momentary 1_1		Momentary 1
+Map	Momentary 2_1		Momentary 2
+Map	Momentary 3_1		Momentary 3
+Map	Momentary 4_1		Momentary 4
+Map	Momentary 5_1		Momentary 5
+Map	Momentary 6_1		Momentary 6
+Map	Momentary 7_1		Momentary 7
+Map	Momentary 8_1		Momentary 8

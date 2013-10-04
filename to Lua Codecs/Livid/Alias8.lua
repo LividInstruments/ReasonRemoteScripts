@@ -5,24 +5,24 @@ function remote_init(manufacturer, model)
 			{name="_Scope", output="text"},
 			{name="Encoder", input="delta"},
 		}
-		
-		for i=1,16 do
-			local newknob = {name="Knob "..i, input="value", min=0,max=127,output="value"}
-			table.insert(items,newknob)
+		for ch=1,16 do
+			for i=1,16 do
+				local newknob = {name="Knob "..i.."_"..ch, input="value", min=0,max=127,output="value"}
+				table.insert(items,newknob)
+			end
+			for i=1,16 do
+				local newgrid = {name="Grid "..i.."_"..ch, input="button", min=0, max=127, output="value"}
+				table.insert(items,newgrid)
+			end
+			for i=1,9 do
+				local newslider = {name="Slider "..i.."_"..ch, input="value", min=0,max=127,output="value"}
+				table.insert(items,newslider)
+			end
+			for i=1,8 do
+				local newmom = {name="Momentary "..i.."_"..ch, input="button", min=0, max=127, output="value"}
+				table.insert(items,newmom)
+			end
 		end
-		for i=1,16 do
-			local newgrid = {name="Grid "..i, input="button", min=0, max=127, output="value"}
-			table.insert(items,newgrid)
-		end
-		for i=1,9 do
-			local newslider = {name="Slider "..i, input="value", min=0,max=127,output="value"}
-			table.insert(items,newslider)
-		end
-		for i=9,16 do
-			local newmom = {name="Momentary "..i, input="button", min=0, max=127, output="value"}
-			table.insert(items,newmom)
-		end
-		
 		remote.define_items(items)
 	end
 	if model=="Alias8" then
@@ -78,43 +78,46 @@ function remote_init(manufacturer, model)
 			{pattern="b0 57 <???y>?", name="Momentary 15", value="1"},
 			{pattern="b0 58 <???y>?", name="Momentary 16", value="1"}]]--
 		}
-		for i=1,16 do
-			local hex = string.format("%x",i)
-			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
-				hex = "0"..hex
+		for ch=1,16 do
+			local cc_hex = string.format("%x",175+ch) --b0 to bf
+			local chhex = string.format("%x",ch-1) --0 to f
+			for i=1,16 do
+				local hex = string.format("%x",i)
+				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+					hex = "0"..hex
+				end
+				local newknob = {pattern=cc_hex.." "..hex.." xx", name="Knob "..i.."_"..ch}
+				table.insert(inputs,newknob)
 			end
-			local newknob = {pattern="b0 "..hex.." xx", name="Knob "..i}
-			table.insert(inputs,newknob)
-		end
-		for i=1,9 do
-			local ccnum = i+16 --midi for sliders starts at cc# 17
-			local hex = string.format("%x",ccnum)
-			if string.len(hex)==1 then
-				hex = "0"..hex
+			for i=1,9 do
+				local ccnum = i+16 --midi for sliders starts at cc# 17
+				local hex = string.format("%x",ccnum)
+				if string.len(hex)==1 then
+					hex = "0"..hex
+				end
+				local newslider = {pattern=cc_hex.." "..hex.." xx", name="Slider "..i.."_"..ch}
+				table.insert(inputs,newslider)
 			end
-			local newslider = {pattern="b0 "..hex.." xx", name="Slider "..i}
-			table.insert(inputs,newslider)
-		end
-		for i=1,16 do
-			local ntnum = i-1
-			local hex = string.format("%x",ntnum)
-			if string.len(hex)==1 then
-				hex = "0"..hex
+			for i=1,16 do
+				local ntnum = i-1
+				local hex = string.format("%x",ntnum)
+				if string.len(hex)==1 then
+					hex = "0"..hex
+				end
+				local newbtn = {pattern="<100x>"..chhex.." "..hex.." <z000>0", name="Grid "..i.."_"..ch}
+				table.insert(inputs,newbtn)
 			end
-			local newbtn = {pattern="<100x>? "..hex.." <z000>0", name="Grid "..i}
-			table.insert(inputs,newbtn)
-		end
-		for i=1,8 do
-			local ccnum = i+80 --momentary buttons start at cc 81, a fairly arbitrary choice.
-			local hex = string.format("%x",ccnum)
-			if string.len(hex)==1 then
-				hex = "0"..hex
+			for i=1,8 do
+				local ccnum = i+80 --momentary buttons start at cc 81, a fairly arbitrary choice.
+				local hex = string.format("%x",ccnum)
+				if string.len(hex)==1 then
+					hex = "0"..hex
+				end
+				local bindex = i+8
+				local newmom = {pattern=cc_hex.." "..hex.." <???y>?", name="Momentary "..i.."_"..ch, value="1"}
+				table.insert(inputs,newmom)
 			end
-			local bindex = i+8
-			local newmom = {pattern="b0 "..hex.." <???y>?", name="Momentary "..bindex, value="1"}
-			table.insert(inputs,newmom)
 		end
-		
 		--[[]]--
 		remote.define_auto_inputs(inputs)
 	end
@@ -172,55 +175,59 @@ function remote_init(manufacturer, model)
 			{pattern="b0 57 <0x00>0", name="Momentary 15"}, --yellow
 			{pattern="b0 58 <0x00>0", name="Momentary 16"} --yellow]]--
 		}
-		--the 16 knobs
-		for i=1,16 do
-			local hex = string.format("%x",i)
-			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
-				hex = "0"..hex
+		for ch=1,16 do
+			local cc_hex = string.format("%x",175+ch) --b0 to bf
+			local chhex = string.format("%x",ch-1) --0 to f
+			--the 16 knobs
+			for i=1,16 do
+				local hex = string.format("%x",i)
+				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+					hex = "0"..hex
+				end
+				local newknob = {pattern=cc_hex.." "..hex.." xx", name="Knob "..i.."_"..ch}
+				table.insert(outputs,newknob)
 			end
-			local newknob = {pattern="b0 "..hex.." xx", name="Knob "..i}
-			table.insert(outputs,newknob)
-		end
-		--the 9 sliders
-		for i=1,9 do
-			local ccnum = i+16
-			local hex = string.format("%x",ccnum)
-			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
-				hex = "0"..hex
+			--the 9 sliders
+			for i=1,9 do
+				local ccnum = i+16
+				local hex = string.format("%x",ccnum)
+				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+					hex = "0"..hex
+				end
+				local newslider = {pattern=cc_hex.." "..hex.." xx", name="Slider "..i.."_"..ch}
+				table.insert(outputs,newslider)
 			end
-			local newslider = {pattern="b0 "..hex.." xx", name="Slider "..i}
-			table.insert(outputs,newslider)
-		end
-		--Top row of green Grid buttons
-		for i=1,8 do
-			ntnum = i-1
-			local hex = string.format("%x",ntnum) --minus 1 since button notes start at 0
-			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
-				hex = "0"..hex
+			--Top row of green Grid buttons
+			for i=1,8 do
+				ntnum = i-1
+				local hex = string.format("%x",ntnum) --minus 1 since button notes start at 0
+				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+					hex = "0"..hex
+				end
+				local newbtn = {pattern="9"..chhex.." "..hex.." xx", name="Grid "..i.."_"..ch, x="127*value"} --green
+				table.insert(outputs,newbtn)
 			end
-			local newbtn = {pattern="90 "..hex.." xx", name="Grid "..i, x="127*value"} --green
-			table.insert(outputs,newbtn)
-		end
-		--Bottom row of Yellow Grid buttons
-		for i=9,16 do
-			ntnum = i-1
-			local hex = string.format("%x",ntnum)
-			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
-				hex = "0"..hex
+			--Bottom row of Yellow Grid buttons
+			for i=9,16 do
+				ntnum = i-1
+				local hex = string.format("%x",ntnum)
+				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+					hex = "0"..hex
+				end
+				local newbtn = {pattern="9"..chhex.." "..hex.." <0x00>0", name="Grid "..i.."_"..ch} --yellow
+				table.insert(outputs,newbtn)
 			end
-			local newbtn = {pattern="90 "..hex.." <0x00>0", name="Grid "..i} --yellow
-			table.insert(outputs,newbtn)
-		end
-		--Momentary buttons as cc's for Alias8cv Rack Extension
-		for i=1,8 do
-			local ccnum = i+80
-			local hex = string.format("%x",ccnum)
-			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
-				hex = "0"..hex
+			--Momentary buttons as cc's for Alias8cv Rack Extension
+			for i=1,8 do
+				local ccnum = i+80
+				local hex = string.format("%x",ccnum)
+				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+					hex = "0"..hex
+				end
+				local bindex = i+8
+				local newmom = {pattern=cc_hex.." "..hex.." <0x00>0", name="Momentary "..i.."_"..ch} --yellow
+				table.insert(outputs,newmom)
 			end
-			local bindex = i+8
-			local newmom = {pattern="B0 "..hex.." <0x00>0", name="Momentary "..bindex} --yellow
-			table.insert(outputs,newmom)
 		end
 		remote.define_auto_outputs(outputs)
 	end
