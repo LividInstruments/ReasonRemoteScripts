@@ -25,16 +25,11 @@ Scope	Propellerheads	Reason Document
 //Map	Grid 3_1		Goto Left Locator
 //Map	Grid 4_1		Record
 Map	Encoder		Target Track (Delta)
-//Map	Fbtn 3		Undo
-//uncomment for documentation generation:
-//Map	Fbtn 4		Scale Up
-//Map	Fbtn 5		Scale Down
-//Map	Fbtn 6		Transpose Up
-//Map	Fbtn 7		Transpose Dn
-//Map	Fbtn 8		Octave Shift
+
 
 Scope	Propellerheads	Reason Master Section
 //Define Group	Keyboard Shortcut Variations
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2	CH 3	CH 4	CH 5	CH 6	CH 7	CH 8	CH 9	CH 10	CH 11	CH 12	CH 13	CH 14	CH 15
 Map	Slider 9_1		Master Level
 Map	Knob 1_1		Channel 1 Width
 Map	Knob 2_1		Channel 2 Width
@@ -636,46 +631,46 @@ Map	Grid 13_15		Channel 53 FX2 Send On
 Map	Grid 14_15		Channel 54 FX2 Send On
 Map	Grid 15_15		Channel 55 FX2 Send On
 Map	Grid 16_15		Channel 56 FX2 Send On
-Map	Knob 1_16		Channel 57 FX1 Send Level
-Map	Knob 2_16		Channel 58 FX1 Send Level
-Map	Knob 3_16		Channel 59 FX1 Send Level
-Map	Knob 4_16		Channel 60 FX1 Send Level
-Map	Knob 5_16		Channel 61 FX1 Send Level
-Map	Knob 6_16		Channel 62 FX1 Send Level
-Map	Knob 7_16		Channel 63 FX1 Send Level
-Map	Knob 8_16		Channel 64 FX1 Send Level
-Map	Knob 9_16		Channel 57 FX2 Send Level
-Map	Knob 10_16		Channel 58 FX2 Send Level
-Map	Knob 11_16		Channel 59 FX2 Send Level
-Map	Knob 12_16		Channel 60 FX2 Send Level
-Map	Knob 13_16		Channel 61 FX2 Send Level
-Map	Knob 14_16		Channel 62 FX2 Send Level
-Map	Knob 15_16		Channel 63 FX2 Send Level
-Map	Knob 16_16		Channel 64 FX2 Send Level
-Map	Slider 1_16		Channel 57 Rotary 1
-Map	Slider 2_16		Channel 58 Rotary 1
-Map	Slider 3_16		Channel 59 Rotary 1
-Map	Slider 4_16		Channel 60 Rotary 1
-Map	Slider 5_16		Channel 61 Rotary 1
-Map	Slider 6_16		Channel 62 Rotary 1
-Map	Slider 7_16		Channel 63 Rotary 1
-Map	Slider 8_16		Channel 64 Rotary 1
-Map	Grid 1_16		Channel 57 FX1 Send On
-Map	Grid 2_16		Channel 58 FX1 Send On
-Map	Grid 3_16		Channel 59 FX1 Send On
-Map	Grid 4_16		Channel 60 FX1 Send On
-Map	Grid 5_16		Channel 61 FX1 Send On
-Map	Grid 6_16		Channel 62 FX1 Send On
-Map	Grid 7_16		Channel 63 FX1 Send On
-Map	Grid 8_16		Channel 64 FX1 Send On
-Map	Grid 9_16		Channel 57 FX2 Send On
-Map	Grid 10_16		Channel 58 FX2 Send On
-Map	Grid 11_16		Channel 59 FX2 Send On
-Map	Grid 12_16		Channel 60 FX2 Send On
-Map	Grid 13_16		Channel 61 FX2 Send On
-Map	Grid 14_16		Channel 62 FX2 Send On
-Map	Grid 15_16		Channel 63 FX2 Send On
-Map	Grid 16_16		Channel 64 FX2 Send On
+//Map	Knob 1_16		Channel 57 FX1 Send Level
+//Map	Knob 2_16		Channel 58 FX1 Send Level
+//Map	Knob 3_16		Channel 59 FX1 Send Level
+//Map	Knob 4_16		Channel 60 FX1 Send Level
+//Map	Knob 5_16		Channel 61 FX1 Send Level
+//Map	Knob 6_16		Channel 62 FX1 Send Level
+//Map	Knob 7_16		Channel 63 FX1 Send Level
+//Map	Knob 8_16		Channel 64 FX1 Send Level
+//Map	Knob 9_16		Channel 57 FX2 Send Level
+//Map	Knob 10_16		Channel 58 FX2 Send Level
+//Map	Knob 11_16		Channel 59 FX2 Send Level
+//Map	Knob 12_16		Channel 60 FX2 Send Level
+//Map	Knob 13_16		Channel 61 FX2 Send Level
+//Map	Knob 14_16		Channel 62 FX2 Send Level
+//Map	Knob 15_16		Channel 63 FX2 Send Level
+//Map	Knob 16_16		Channel 64 FX2 Send Level
+//Map	Slider 1_16		Channel 57 Rotary 1
+//Map	Slider 2_16		Channel 58 Rotary 1
+//Map	Slider 3_16		Channel 59 Rotary 1
+//Map	Slider 4_16		Channel 60 Rotary 1
+//Map	Slider 5_16		Channel 61 Rotary 1
+//Map	Slider 6_16		Channel 62 Rotary 1
+//Map	Slider 7_16		Channel 63 Rotary 1
+//Map	Slider 8_16		Channel 64 Rotary 1
+//Map	Grid 1_16		Channel 57 FX1 Send On
+//Map	Grid 2_16		Channel 58 FX1 Send On
+//Map	Grid 3_16		Channel 59 FX1 Send On
+//Map	Grid 4_16		Channel 60 FX1 Send On
+//Map	Grid 5_16		Channel 61 FX1 Send On
+//Map	Grid 6_16		Channel 62 FX1 Send On
+//Map	Grid 7_16		Channel 63 FX1 Send On
+//Map	Grid 8_16		Channel 64 FX1 Send On
+//Map	Grid 9_16		Channel 57 FX2 Send On
+//Map	Grid 10_16		Channel 58 FX2 Send On
+//Map	Grid 11_16		Channel 59 FX2 Send On
+//Map	Grid 12_16		Channel 60 FX2 Send On
+//Map	Grid 13_16		Channel 61 FX2 Send On
+//Map	Grid 14_16		Channel 62 FX2 Send On
+//Map	Grid 15_16		Channel 63 FX2 Send On
+//Map	Grid 16_16		Channel 64 FX2 Send On
 
 Scope	Propellerheads	Combinator
 //Define Group	Keyboard Shortcut Variations
@@ -894,7 +889,7 @@ Map	Slider 7_1		FM Amount
 Map	Slider 8_1		Osc Mix
 
 Scope	Propellerheads	Malstrom Graintable Synthesizer
-//Define Group	Keyboard Shortcut Variations
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2	CH 3	CH 4
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 1_1		Filter Env Attack
 Map	Slider 2_1		Filter Env Decay
@@ -985,7 +980,7 @@ Map	Slider 9_2		Spread Amount
 Map	Slider 9_3		Mod Wheel
 
 Scope	Propellerheads	NN19 Digital Sampler
-//Define Group	Keyboard Shortcut Variations
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Slider 9_1		Mod Wheel
 Map	Knob 1_1		Filter Freq
@@ -1221,7 +1216,7 @@ Map	Grid 2_1		Cut On/Off
 Map	Grid 3_1		Body On/Off
 
 Scope	Propellerheads	BV512 Digital Vocoder
-//Define Group	Keyboard Shortcut Variations
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Knob 1_1		Band Count
 Map	Knob 2_1		Attack
@@ -1363,7 +1358,7 @@ Map	Slider 9_1		Dry/Wet Balance
 
 Scope	Propellerheads	Alligator
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-//Define Group	Keyboard Shortcut Variations
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2
 Map	Slider 9_1		Master Volume
 Map	Knob 1_1		High Pass LFO Amount
 Map	Knob 2_1		High Pass Frequency
