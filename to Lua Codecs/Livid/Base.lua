@@ -302,7 +302,7 @@ g_lcd_state = "LCD"
 --g_delivered_lcd_state = string.format("%-16.16s","#")
 g_delivered_lcd_state = "#"
 g_delivered_note = 0
-g_scope_item_index = 2 -- "_Scope" is item 2 in the table
+g_scope_item_index = 2 -- "_Scope" is item 2 in the remote.define(items) table
 g_var_item_index = 3 -- "_Var" is item 3 in the table
 
 function remote_process_midi(event)
@@ -455,7 +455,7 @@ function remote_deliver_midi(maxbytes,port)
 					table.insert(base_events,ltevent)
 					rtevent = remote.make_midi("b0 23 "..c_two)
 					table.insert(base_events,rtevent)
-					local transpose_event = make_lcd_midi_message("/Base/Transpose/lcd_name "..transpose)
+					local transpose_event = make_lcd_midi_message("/Base/info/Transpose/lcd_name "..transpose)
 					table.insert(lcd_events,transpose_event)
 				else
 					--return to scale
@@ -466,7 +466,7 @@ function remote_deliver_midi(maxbytes,port)
 					table.insert(base_events,ltevent)
 					rtevent = remote.make_midi("b0 23 "..sevseg[c_two])
 					table.insert(base_events,rtevent)
-					local scalename_event = make_lcd_midi_message("/Base/Scale/lcd_name "..scalename)
+					local scalename_event = make_lcd_midi_message("/Base/info/Scale/lcd_name "..scalename)
 					table.insert(lcd_events,scalename_event)
 				end
 			end
@@ -485,7 +485,7 @@ function remote_deliver_midi(maxbytes,port)
 			rtevent = remote.make_midi("b0 23 "..sevseg[c_two])
 			table.insert(base_events,rtevent)
 			g_delivered_scale = scale_int
-			local scalename_event = make_lcd_midi_message("/Base/Scale/lcd_name "..scalename)
+			local scalename_event = make_lcd_midi_message("/Base/info/Scale/lcd_name "..scalename)
 			table.insert(lcd_events,scalename_event)		
 			do_update_pads = 1
 			--remote.trace(scalename)
@@ -520,7 +520,7 @@ function remote_deliver_midi(maxbytes,port)
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
-			local var_event = make_lcd_midi_message("/Base/Var/lcd_name "..vartext)
+			local var_event = make_lcd_midi_message("/Base/info/Var/lcd_name "..vartext)
 			table.insert(lcd_events,var_event)
 			g_vartext_prev = g_vartext
 			isvarchange = true
@@ -544,7 +544,7 @@ function remote_deliver_midi(maxbytes,port)
 				--if scopetext from _Scope item has changed	
 				if g_scopetext_prev~=g_scopetext then
 					--Let the LCD know what the device is
-					local const_event = make_lcd_midi_message("/Base/Device/lcd_name "..g_scopetext)
+					local const_event = make_lcd_midi_message("/Base/info/Device/lcd_name "..g_scopetext)
 					table.insert(lcd_events,const_event)
 					--if we've landed on a Kong, _Scope reports "KONG" and we change to drum scale
 					if(g_scopetext=="KONG" and scale_int~=7) then
@@ -560,7 +560,7 @@ function remote_deliver_midi(maxbytes,port)
 				end
 			
 				--send LCD the Track name text----------------------------------------------------------------
-				local track_event = make_lcd_midi_message("/Base/Track/lcd_name "..new_text)
+				local track_event = make_lcd_midi_message("/Base/info/Track/lcd_name "..new_text)
 				table.insert(lcd_events,track_event)
 				--see if there's a scale in the track text
 				local result = ""
@@ -594,7 +594,7 @@ function remote_deliver_midi(maxbytes,port)
 					use_global_scale = true
 				end
 				--send scale name to LCD----------------------------------------
-				local scalename_event = make_lcd_midi_message("/Base/Scale/lcd_name "..scalename)
+				local scalename_event = make_lcd_midi_message("/Base/info/Scale/lcd_name "..scalename)
 				table.insert(lcd_events,scalename_event)
 		
 				---If it's not a Kong, and there's no scale in the Track name, set to global_scale
@@ -623,7 +623,7 @@ function remote_deliver_midi(maxbytes,port)
 				end
 				--send LCD transpose value
 				if(transpose_changed) then
-					local transpose_event = make_lcd_midi_message("/Base/Transpose/lcd_name "..transpose)
+					local transpose_event = make_lcd_midi_message("/Base/info/Transpose/lcd_name "..transpose)
 					table.insert(lcd_events,transpose_event)
 				end
 			end
@@ -696,7 +696,7 @@ end
 --we'll fetch the items that have changed in Remote----------------------------------------
 g_scopetext = "none"
 g_scopetext_prev = "none"
-g_vartext = "none"
+g_vartext = "none" --variation name
 g_vartext_prev = "none"
 g_lcd_index = -1
 function remote_set_state(changed_items)
