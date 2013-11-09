@@ -227,15 +227,13 @@ sysex_aliascv_ccleds = "f0 00 01 61 0b 24 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f
 sysex_def_ccleds =     "f0 00 01 61 0b 24 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f f7"
 sysex_aliascv_ntleds = "f0 00 01 61 0b 23 00 04 01 05 02 06 03 07 7f 7f 7f 7f 7f 7f 7f 7f 10 11 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f f7"
 sysex_def_ntleds =     "f0 00 01 61 0b 23 00 04 01 05 02 06 03 07 08 0c 09 0d 0a 0e 0b 0f 10 11 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f f7"
-
+reprog = false
 ctltype = ""
 offset = 0 --index offset used to find out if it's Knob_1 or Knob_2
 
+lcd_events={}
 function remote_deliver_midi(maxbytes,port)
 	local ret_events={}
-	local lcd_events={}
-	local const_event=make_lcd_midi_message("SCOPE "..g_scopetext)
-	table.insert(ret_events,const_event)
 	if(port==1) then
 		--if vartext from _Var item in remotemap has changed	-----------------
 		if g_vartext_prev~=g_vartext then
@@ -252,6 +250,7 @@ function remote_deliver_midi(maxbytes,port)
 			table.insert(lcd_events,const_event)
 			--report SCOPE over sysex, mostly for testing
 			local const_event=make_lcd_midi_message("SCOPE "..g_scopetext)
+			table.insert(lcd_events,const_event)
 			table.insert(ret_events,const_event)
 			--if we've landed on Alias8cv RackExtension _Scope reports "Alias8cv" and we reprogram the bottom row of buttons
 			if(g_scopetext=="Alias8cv") then
@@ -261,13 +260,15 @@ function remote_deliver_midi(maxbytes,port)
 				table.insert(ret_events,makeccled)
 				local makentled = remote.make_midi(sysex_aliascv_ntleds)
 				table.insert(ret_events,makentled)
-			else
+				reprog = true
+			elseif(reprog == true) then
 				local makebtns = remote.make_midi(sysex_def_btns)
 				table.insert(ret_events,makebtns)
 				local makeccled = remote.make_midi(sysex_def_ccleds)
 				table.insert(ret_events,makeccled)
 				local makentled = remote.make_midi(sysex_def_ntleds)
 				table.insert(ret_events,makentled)
+				doreprog=false
 			end
 			g_scopetext_prev = g_scopetext
 		end
@@ -340,7 +341,7 @@ function update_ctl(item,ctltype)
 	local v_text = ""
 	--local tlcd_event = make_lcd_midi_message("item "..item.." text "..thetext.." len "..#thetext )
 	--table.insert(lcd_events,tlcd_event)
-	if(#thetext>0) then
+	if(thetext>0) then
 		--strip any percent symbols
 		local pctsearch = string.find(thetext, '%%')
 		if(pctsearch~=nil) then
