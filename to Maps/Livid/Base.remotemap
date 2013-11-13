@@ -1399,7 +1399,6 @@ Map	Slider 7		Gain 7
 Map	Slider 8		Gain 8
 Map	Slider 9		Input Gain
 
-
 Scope	Peff	com.peff.Alias8cv
 Define Group	Keyboard Shortcut Variations	Sliders	KnobsA	KnobsB	Toggles
 //	Control Surface Item	Key	Remotable Item	Scale	Mode

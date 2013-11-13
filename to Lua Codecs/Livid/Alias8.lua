@@ -184,6 +184,9 @@ function remote_prepare_for_use()
 end
 
 --we'll fetch the items for lcd and scope parsing
+
+g_last_input_time= 0
+g_last_input_item = nil
 g_scopetext = "none"
 g_scopetext_prev = "none"
 g_scope_item_index = 2 -- "_Scope" is the second item in the remote.define(items)
@@ -191,6 +194,14 @@ g_var_item_index = 3 -- "_Var" is item 3 in the table
 g_vartext = "none" --variation name
 g_vartext_prev = "none"
 g_lcd_index = -1
+g_lcd_state = "LCD"
+g_delivered_lcd_state = "#"
+
+function remote_on_auto_input(item_index)
+	g_last_input_time = remote.get_time_ms()
+	g_last_input_item = item_index
+end
+
 function remote_set_state(changed_items)
 	--look for the _Scope constant. Alias8cv reports "Alias8".
 	if remote.is_item_enabled(g_scope_item_index) then
@@ -211,9 +222,9 @@ function remote_set_state(changed_items)
 		if remote.is_item_enabled(g_last_input_item) then
 			local feedback_text=remote.get_item_name_and_value(g_last_input_item)
 			if string.len(feedback_text)>0 then
-				g_feedback_enabled=true
+				g_feedback_enabled = true
 				--g_lcd_state=string.format("%-16.16s",feedback_text)
-				g_lcd_state=feedback_text
+				g_lcd_state = feedback_text
 				g_lcd_index = g_last_input_item
 			end
 		end
@@ -230,8 +241,11 @@ sysex_def_ntleds =     "f0 00 01 61 0b 23 00 04 01 05 02 06 03 07 08 0c 09 0d 0a
 reprog = false
 ctltype = ""
 offset = 0 --index offset used to find out if it's Knob_1 or Knob_2
-
+varch = 0 --variation# i.e. channel
+varch_prev = -1 --for change filter
 lcd_events={}
+ctlcount = 0
+
 function remote_deliver_midi(maxbytes,port)
 	local ret_events={}
 	if(port==1) then
@@ -239,17 +253,17 @@ function remote_deliver_midi(maxbytes,port)
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
-			local var_event = make_lcd_midi_message("/Alias8/info/Var/lcd_name "..vartext)
+			local var_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Var/lcd_name "..vartext)
 			table.insert(ret_events,var_event)
 			g_vartext_prev = g_vartext
 			isvarchange = true
 		end
 		if g_scopetext_prev~=g_scopetext then
 			--Let the LCD know what the device is
-			local const_event = make_lcd_midi_message("/Alias8/info/Device/lcd_name "..g_scopetext)
+			local const_event = make_lcd_midi_message("/Reason/Alias8/0/info/Device/lcd_name "..g_scopetext)
 			table.insert(lcd_events,const_event)
 			--report SCOPE over sysex, mostly for testing
-			local const_event=make_lcd_midi_message("SCOPE "..g_scopetext)
+			--local const_event=make_lcd_midi_message("SCOPE "..g_scopetext)
 			table.insert(lcd_events,const_event)
 			table.insert(ret_events,const_event)
 			--if we've landed on Alias8cv RackExtension _Scope reports "Alias8cv" and we reprogram the bottom row of buttons
@@ -279,24 +293,47 @@ function remote_deliver_midi(maxbytes,port)
 		isbtn=i>=btn_start and i<=btn_end
 		isfader=i>=fader_start and i<=fader_end
 		ismom=i>=mom_start and i<=mom_end
-		ctltype = ""
+		ctltype = "none"
 		if(isdial) then 
 			ctltype = "Dial"
 			offset = dial_start
+			ctlcount = 16
+			varch = math.floor((i-dial_start)/ctlcount)
 		elseif(isbtn) then 
 			ctltype = "Button"
 			offset = btn_start
+			ctlcount = 16
+			varch = math.floor((i-btn_start)/ctlcount)
 		elseif(isfader) then 
 			ctltype = "Fader"
 			offset = fader_start
+			ctlcount = 9
+			varch = math.floor((i-fader_start)/ctlcount)
 		elseif(ismom) then 
 			ctltype = "Momentary"
 			offset = mom_start
+			ctlcount = 8
+			varch = math.floor((i-mom_start)/ctlcount)
 		end
-
-		if(ctltype~="") then
+		if(ctltype~="none") then
 			--we'll make the parameter/value/unit list into two arrays for our LCD, then send a long string to LCD
 			update_ctl(g_lcd_index,ctltype)	
+		end
+		if(cur_channel_prev~=cur_channel) then
+			local vartext = "Variation "..cur_channel
+			local var_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Var/lcd_name "..vartext)
+			table.insert(lcd_events,var_event)
+			cur_channel_prev = cur_channel
+		end
+		
+		local new_text = g_lcd_state
+		if g_delivered_lcd_state~=new_text then
+			g_delivered_lcd_state = new_text
+			istracktext = string.find(new_text,"Track") == 1 --The word "track" is the first word
+			if istracktext==true then
+				local track_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Track/lcd_name "..new_text)
+				table.insert(lcd_events,track_event)
+			end
 		end
 		return ret_events
 	end --end port==1
@@ -308,12 +345,13 @@ function remote_deliver_midi(maxbytes,port)
 	end
 end
 
-cur_channel = 0
+cur_channel = 1
+cur_channel_prev = 0
 function remote_process_midi(event)
 	--Alias8 notifys us
 	ch_notify = remote.match_midi("F0 00 01 61 0B 71 xx F7",event)
 	if(ch_notify~=nil) then
-		cur_channel = ch_notify.x
+		cur_channel = 1+ch_notify.x
 	end
 	
 end
@@ -332,6 +370,7 @@ end
 
 --UTILITY: this function is called when we need to update a fader LCD
 --ctltype should be symbols such as 'Fader', 'Button', 'Dial', etc. 
+v_text_prev = "none"
 function update_ctl(item,ctltype)
 	local thetext = remote.get_item_name_and_value(item)
 	local textarray = {}
@@ -341,7 +380,7 @@ function update_ctl(item,ctltype)
 	local v_text = ""
 	--local tlcd_event = make_lcd_midi_message("item "..item.." text "..thetext.." len "..#thetext )
 	--table.insert(lcd_events,tlcd_event)
-	if(thetext>0) then
+	if(#thetext>0) then
 		--strip any percent symbols
 		local pctsearch = string.find(thetext, '%%')
 		if(pctsearch~=nil) then
@@ -354,8 +393,9 @@ function update_ctl(item,ctltype)
 			wordcount = wordcount+1
 		end
 		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		p_path = "/Alias8/"..ctltype.."_"..(item-offset).."/lcd_name " -- "offset" (-5, for example) because the faders start at index 5 in table items, but we start our OSC Fader names at 0.
-		v_path = "/Alias8/"..ctltype.."_"..(item-offset).."/lcd_value "
+		ctlindex = modulo( (item-offset),ctlcount)
+		p_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_name " -- "offset" (-5, for example) because the faders start at index 5 in table items, but we start our OSC Fader names at 0.
+		v_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_value "
 		if(wordcount>2) then
 			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
 			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
@@ -363,9 +403,45 @@ function update_ctl(item,ctltype)
 			p_text = string.format(textarray[1]) --1st element, like "Mode"
 			v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
 		end
-		local p_lcd_event = make_lcd_midi_message(p_path..p_text)
-		local v_lcd_event = make_lcd_midi_message(v_path..v_text)
-		table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
-		table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 	
+		if(v_text~=v_text_prev) then
+			local p_lcd_event = make_lcd_midi_message(p_path..p_text)
+			local v_lcd_event = make_lcd_midi_message(v_path..v_text)
+			table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
+			table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 
+			v_text_prev = v_text
+		end
 	end
 end
+
+--UTILITY: make a subtable of a table:
+function table_slice (values,i1,i2)
+	local res = {}
+	local n = #values
+	-- default values for range
+	i1 = i1 or 1
+	i2 = i2 or n
+	if i2 < 0 then
+		i2 = n + i2 + 1
+	elseif i2 > n then
+		i2 = n
+	end
+	if i1 < 1 then
+		i1 = n + i1 + 1
+		i2 = n
+	end
+	if i1 > n then
+		return {}
+	end
+	local k = 1
+	for i = i1,i2 do
+		res[k] = values[i]
+		k = k + 1
+	end
+	return res
+end
+
+function modulo(a,b)
+	local mo = a-math.floor(a/b)*b
+	return mo
+end
+
