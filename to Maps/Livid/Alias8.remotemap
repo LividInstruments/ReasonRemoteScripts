@@ -633,46 +633,6 @@ Map	Button 13_15		Channel 53 FX2 Send On
 Map	Button 14_15		Channel 54 FX2 Send On
 Map	Button 15_15		Channel 55 FX2 Send On
 Map	Button 16_15		Channel 56 FX2 Send On
-//Map	Dial 1_16		Channel 57 FX1 Send Level
-//Map	Dial 2_16		Channel 58 FX1 Send Level
-//Map	Dial 3_16		Channel 59 FX1 Send Level
-//Map	Dial 4_16		Channel 60 FX1 Send Level
-//Map	Dial 5_16		Channel 61 FX1 Send Level
-//Map	Dial 6_16		Channel 62 FX1 Send Level
-//Map	Dial 7_16		Channel 63 FX1 Send Level
-//Map	Dial 8_16		Channel 64 FX1 Send Level
-//Map	Dial 9_16		Channel 57 FX2 Send Level
-//Map	Dial 10_16		Channel 58 FX2 Send Level
-//Map	Dial 11_16		Channel 59 FX2 Send Level
-//Map	Dial 12_16		Channel 60 FX2 Send Level
-//Map	Dial 13_16		Channel 61 FX2 Send Level
-//Map	Dial 14_16		Channel 62 FX2 Send Level
-//Map	Dial 15_16		Channel 63 FX2 Send Level
-//Map	Dial 16_16		Channel 64 FX2 Send Level
-//Map	Fader 1_16		Channel 57 Rotary 1
-//Map	Fader 2_16		Channel 58 Rotary 1
-//Map	Fader 3_16		Channel 59 Rotary 1
-//Map	Fader 4_16		Channel 60 Rotary 1
-//Map	Fader 5_16		Channel 61 Rotary 1
-//Map	Fader 6_16		Channel 62 Rotary 1
-//Map	Fader 7_16		Channel 63 Rotary 1
-//Map	Fader 8_16		Channel 64 Rotary 1
-//Map	Button 1_16		Channel 57 FX1 Send On
-//Map	Button 2_16		Channel 58 FX1 Send On
-//Map	Button 3_16		Channel 59 FX1 Send On
-//Map	Button 4_16		Channel 60 FX1 Send On
-//Map	Button 5_16		Channel 61 FX1 Send On
-//Map	Button 6_16		Channel 62 FX1 Send On
-//Map	Button 7_16		Channel 63 FX1 Send On
-//Map	Button 8_16		Channel 64 FX1 Send On
-//Map	Button 9_16		Channel 57 FX2 Send On
-//Map	Button 10_16		Channel 58 FX2 Send On
-//Map	Button 11_16		Channel 59 FX2 Send On
-//Map	Button 12_16		Channel 60 FX2 Send On
-//Map	Button 13_16		Channel 61 FX2 Send On
-//Map	Button 14_16		Channel 62 FX2 Send On
-//Map	Button 15_16		Channel 63 FX2 Send On
-//Map	Button 16_16		Channel 64 FX2 Send On
 
 Scope	Propellerheads	Combinator
 //Define Group	Keyboard Shortcut Variations
@@ -688,7 +648,7 @@ Map	Button 3_1		Button 3
 Map	Button 4_1		Button 4
 
 Scope	Propellerheads	Mixer 14:2
-//Define Group	Keyboard Shortcut Variations
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Mixer 14:2"
 Map	Fader 9_1		Master Level
@@ -699,7 +659,7 @@ Map	Fader 4_1		Channel 4 Level
 Map	Fader 5_1		Channel 5 Level
 Map	Fader 6_1		Channel 6 Level
 Map	Fader 7_1		Channel 7 Level
-Map	Fader 8_1		Channel 8 Level
+Map	Fader 8_1		Aux 3 Return Level
 Map	Dial 1_1		Channel 1 Aux 1 Send
 Map	Dial 2_1		Channel 2 Aux 1 Send
 Map	Dial 3_1		Channel 3 Aux 1 Send
@@ -707,7 +667,7 @@ Map	Dial 4_1		Channel 4 Aux 1 Send
 Map	Dial 5_1		Channel 5 Aux 1 Send
 Map	Dial 6_1		Channel 6 Aux 1 Send
 Map	Dial 7_1		Channel 7 Aux 1 Send
-Map	Dial 8_1		Channel 8 Aux 1 Send
+Map	Dial 8_1		Aux 1 Return Level
 Map	Dial 9_1		Channel 1 Pan
 Map	Dial 10_1		Channel 2 Pan
 Map	Dial 11_1		Channel 3 Pan
@@ -715,7 +675,7 @@ Map	Dial 12_1		Channel 4 Pan
 Map	Dial 13_1		Channel 5 Pan
 Map	Dial 14_1		Channel 6 Pan
 Map	Dial 15_1		Channel 7 Pan
-Map	Dial 16_1		Channel 8 Pan
+Map	Dial 16_1		Aux 2 Return Level
 Map	Button 1_1		Channel 1 Mute
 Map	Button 2_1		Channel 2 Mute
 Map	Button 3_1		Channel 3 Mute
@@ -723,7 +683,6 @@ Map	Button 4_1		Channel 4 Mute
 Map	Button 5_1		Channel 5 Mute
 Map	Button 6_1		Channel 6 Mute
 Map	Button 7_1		Channel 7 Mute
-Map	Button 8_1		Channel 8 Mute
 Map	Button 9_1		Channel 1 Solo
 Map	Button 10_1		Channel 2 Solo
 Map	Button 11_1		Channel 3 Solo
@@ -731,7 +690,42 @@ Map	Button 12_1		Channel 4 Solo
 Map	Button 13_1		Channel 5 Solo
 Map	Button 14_1		Channel 6 Solo
 Map	Button 15_1		Channel 7 Solo
-Map	Button 16_1		Channel 8 Solo
+
+Map	Fader 1_2		Channel 8 Level
+Map	Fader 2_2		Channel 9 Level
+Map	Fader 3_2		Channel 10 Level
+Map	Fader 4_2		Channel 11 Level
+Map	Fader 5_2		Channel 12 Level
+Map	Fader 6_2		Channel 13 Level
+Map	Fader 7_2		Channel 14 Level
+Map	Dial 1_2		Channel 8 Aux 1 Send
+Map	Dial 2_2		Channel 9 Aux 1 Send
+Map	Dial 3_2		Channel 10 Aux 1 Send
+Map	Dial 4_2		Channel 11 Aux 1 Send
+Map	Dial 5_2		Channel 12 Aux 1 Send
+Map	Dial 6_2		Channel 13 Aux 1 Send
+Map	Dial 7_2		Channel 14 Aux 1 Send
+Map	Dial 9_2		Channel 8 Pan
+Map	Dial 10_2		Channel 9 Pan
+Map	Dial 11_2		Channel 10 Pan
+Map	Dial 12_2		Channel 11 Pan
+Map	Dial 13_2		Channel 12 Pan
+Map	Dial 14_2		Channel 13 Pan
+Map	Dial 15_2		Channel 14 Pan
+Map	Button 1_2		Channel 8 Mute
+Map	Button 2_2		Channel 9 Mute
+Map	Button 3_2		Channel 10 Mute
+Map	Button 4_2		Channel 11 Mute
+Map	Button 5_2		Channel 12 Mute
+Map	Button 6_2		Channel 13 Mute
+Map	Button 7_2		Channel 14 Mute
+Map	Button 9_2		Channel 8 Solo
+Map	Button 10_2		Channel 9 Solo
+Map	Button 11_2		Channel 10 Solo
+Map	Button 12_2		Channel 11 Solo
+Map	Button 13_2		Channel 12 Solo
+Map	Button 14_2		Channel 13 Solo
+Map	Button 15_2		Channel 14 Solo
 
 Scope	Propellerheads	Line Mixer 6:2
 //Define Group	Keyboard Shortcut Variations
@@ -739,6 +733,7 @@ Scope	Propellerheads	Line Mixer 6:2
 Map	_Scope		"Mixer 6:2"
 Map	Fader 8_1		Aux Return Level
 Map	Fader 9_1		Master Level
+
 Map	Fader 1_1		Channel 1 Level
 Map	Fader 2_1		Channel 2 Level
 Map	Fader 3_1		Channel 3 Level
@@ -829,7 +824,7 @@ Map	Button 7_1		Drum 2 FX2 On
 //need to add Drums 3-16 in variations
 
 Scope	Propellerheads	Thor Polysonic Synthesizer
-//Define Group	Keyboard Shortcut Variations
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2	CH 3
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Thor"
 Map	Dial 1_1		Filter 1 Freq			
@@ -857,14 +852,90 @@ Map	Fader 6_1		Osc 2 Oct
 Map	Fader 7_1		Osc 2 Semi			
 Map	Fader 8_1		Osc 2 Mod			
 Map	Fader 9_1		Mod Wheel			
-//Map	Fader 1_1		Delay Time			
-//Map	Fader 2_1		Delay Feedback			
-//Map	Fader 3_1		Delay Dry Wet			
-//Map	Fader 4_1		Chorus Feedback			
-//Map	Fader 5_1		Chorus Dry Wet			
-//Map	Fader 6_1		Filter 3 Drive			
-//Map	Fader 7_1		Filter 3 Freq			
-//Map	Fader 8_1		Filter 3 Res			
+
+Map	Button 1_1		Filter 1 Env Invert
+Map	Button 2_1		Filter 1 Self Osc
+Map	Button 3_1		Filter 2 Env Invert
+Map	Button 4_1		Filter 2 Self Osc
+Map	Button 5_1		Mod Env Tempo Sync 
+Map	Button 6_1		Mod Env Loop
+Map	Button 7_1		Filter Env Gate Trig On
+Map	Button 8_1		Amp Env Gate Trig On
+Map	Button 9_1		Osc 2 Sync To Osc 1
+Map	Button 10_1		Osc 3 Sync To Osc 1
+Map	Button 11_1		Osc 1 To Filter 1 Enable
+Map	Button 12_1		Osc 2 To Filter 1 Enable
+Map	Button 13_1		Osc 3 To Filter 1 Enable
+Map	Button 14_1		Osc 1 To Filter 2 Enable
+Map	Button 15_1		Osc 2 To Filter 2 Enable
+Map	Button 16_1		Osc 3 To Filter 2 Enable
+
+Map	Dial 1_2		Chorus Rate
+Map	Dial 2_2		Chorus Amt
+Map	Dial 3_2		Chorus Delay
+Map	Dial 4_2		Chorus Feedback
+Map	Dial 5_2		Chorus Dry Wet
+Map	Dial 9_2		Delay Rate
+Map	Dial 10_2		Delay Amt
+Map	Dial 11_2		Delay Time
+Map	Dial 12_2		Delay Feedback
+Map	Dial 13_2		Delay Dry Wet
+
+Map	Fader 1_2		Filter 3 Type
+Map	Fader 2_2		Filter 3 Global Env Amount
+Map	Fader 3_2		Filter 3 Drive
+Map	Fader 4_2		Filter 3 Freq
+Map	Fader 5_2		Filter 3 Res
+Map	Fader 6_2		Filter 3 Velocity
+Map	Fader 7_2		Filter 3 Kbd
+Map	Dial 8_2		Shaper Type
+Map	Dial 16_2		Shaper Drive
+Map	Button 1_2		Chorus On
+Map	Button 9_2		Delay On
+Map	Button 10_2		Delay Sync
+Map	Button 11_2		Filter 3 Self Osc
+Map	Button 12_2		Filter 3 Global Env Invert
+Map	Button 8_2		Shaper On
+Map	Button 16_2		Shaper Output Dest
+
+
+Map	Button 1_3		Pattern Step Gate 1
+Map	Button 2_3		Pattern Step Gate 2
+Map	Button 3_3		Pattern Step Gate 3
+Map	Button 4_3		Pattern Step Gate 4
+Map	Button 5_3		Pattern Step Gate 5
+Map	Button 6_3		Pattern Step Gate 6
+Map	Button 7_3		Pattern Step Gate 7
+Map	Button 8_3		Pattern Step Gate 8
+Map	Button 9_3		Pattern Step Gate 9
+Map	Button 10_3		Pattern Step Gate 10
+Map	Button 11_3		Pattern Step Gate 11
+Map	Button 12_3		Pattern Step Gate 12
+Map	Button 13_3		Pattern Step Gate 13
+Map	Button 14_3		Pattern Step Gate 14
+Map	Button 15_3		Pattern Step Gate 15
+Map	Button 16_3		Pattern Step Gate 16
+Map	Dial 1_3		Pattern Step Knob 1
+Map	Dial 2_3		Pattern Step Knob 2
+Map	Dial 3_3		Pattern Step Knob 3
+Map	Dial 4_3		Pattern Step Knob 4
+Map	Dial 5_3		Pattern Step Knob 5
+Map	Dial 6_3		Pattern Step Knob 6
+Map	Dial 7_3		Pattern Step Knob 7
+Map	Dial 8_3		Pattern Step Knob 8
+Map	Dial 9_3		Pattern Step Knob 9
+Map	Dial 10_3		Pattern Step Knob 10
+Map	Dial 11_3		Pattern Step Knob 11
+Map	Dial 12_3		Pattern Step Knob 12
+Map	Dial 13_3		Pattern Step Knob 13
+Map	Dial 14_3		Pattern Step Knob 14
+Map	Dial 15_3		Pattern Step Knob 15
+Map	Dial 16_3		Pattern Step Knob 16
+Map	Fader 1_3		Step Seqeuncer Run
+Map	Fader 2_3		Step Seqeuncer Rate
+Map	Fader 3_3		Step Seqeuncer Edit Mode
+Map	Fader 4_3		Pattern Step Value
+Map	Fader 5_3		Step Seqeuncer Octave Range
 
 Scope	Propellerheads	SubTractor Analog Synthesizer
 //Define Group	Keyboard Shortcut Variations

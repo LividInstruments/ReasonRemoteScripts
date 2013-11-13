@@ -515,7 +515,8 @@ function remote_deliver_midi(maxbytes,port)
 			g_delivered_transpose = transpose
 			do_update_pads = 1
 		end
-	
+		
+
 		--if vartext from _Var item in remotemap has changed	-----------------
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
@@ -699,6 +700,7 @@ g_scopetext_prev = "none"
 g_vartext = "none"
 g_vartext_prev = "none"
 g_lcd_index = -1
+
 function remote_set_state(changed_items)
 	--look for the _Scope constant. Kong reports "KONG". Could use for a variety of things
 	if remote.is_item_enabled(g_scope_item_index) then
@@ -832,8 +834,8 @@ function update_slider(item)
 			wordcount = wordcount+1
 		end
 		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		p_path = "/Reason/Base/0/Slider_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
-		v_path = "/Reason/Base/0/Slider_"..(item-sli_start).."/lcd_value "
+		p_path = "/Reason/Base/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
+		v_path = "/Reason/Base/0/Fader_"..(item-sli_start).."/lcd_value "
 		if(wordcount>2) then
 			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
 			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements

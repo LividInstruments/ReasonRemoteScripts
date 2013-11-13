@@ -7,6 +7,10 @@ fader_start = 517
 fader_end = 661
 mom_start = 662
 mom_end = 789
+dialcount = 16
+btncount = 16
+fadercount = 9
+momcount = 8
 
 function remote_init(manufacturer, model)
 	if model=="Alias8" then
@@ -20,7 +24,7 @@ function remote_init(manufacturer, model)
 		tablecount = 0
 		dial_start = 5
 		for ch=1,16 do --items 5 to 260 
-			for i=1,16 do 
+			for i=1,dialcount do 
 				local newdial = {name="Dial "..i.."_"..ch, input="value", min=0,max=127,output="value"}
 				table.insert(items,newdial)
 				tablecount = tablecount+1
@@ -30,7 +34,7 @@ function remote_init(manufacturer, model)
 		btn_start = dial_end+1
 		tablecount = 0
 		for ch=1,16 do --items 261 to 516
-			for i=1,16 do 
+			for i=1,btncount do 
 				local newbtn = {name="Button "..i.."_"..ch, input="button", min=0, max=127, output="value"}
 				table.insert(items,newbtn)
 				tablecount = tablecount+1
@@ -40,7 +44,7 @@ function remote_init(manufacturer, model)
 		fader_start = btn_end+1
 		tablecount=0
 		for ch=1,16 do --items 517 to 661
-			for i=1,9 do 
+			for i=1,fadercount do 
 				local newfader = {name="Fader "..i.."_"..ch, input="value", min=0,max=127,output="value"}
 				table.insert(items,newfader)
 				tablecount = tablecount+1
@@ -50,7 +54,7 @@ function remote_init(manufacturer, model)
 		mom_start = fader_end+1
 		tablecount=0
 		for ch=1,16 do  --itmes 662 to 789
-			for i=1,8 do 
+			for i=1,momcount do 
 				local newmom = {name="Momentary "..i.."_"..ch, input="button", min=0, max=127, output="value"}
 				table.insert(items,newmom)
 				tablecount = tablecount+1
@@ -112,7 +116,7 @@ function remote_init(manufacturer, model)
 			local cc_hex = string.format("%x",175+ch) --b0 to bf
 			local chhex = string.format("%x",ch-1) --0 to f
 			--the 16 dials
-			for i=1,16 do
+			for i=1,dialcount do
 				local hex = string.format("%x",i)
 				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
 					hex = "0"..hex
@@ -121,7 +125,7 @@ function remote_init(manufacturer, model)
 				table.insert(outputs,newdial)
 			end
 			--the 9 faders
-			for i=1,9 do
+			for i=1,fadercount do
 				local ccnum = i+16
 				local hex = string.format("%x",ccnum)
 				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
@@ -141,7 +145,7 @@ function remote_init(manufacturer, model)
 				table.insert(outputs,newbtn)
 			end
 			--Bottom row of Yellow Button buttons
-			for i=9,16 do
+			for i=9,btncount do
 				ntnum = i-1
 				local hex = string.format("%x",ntnum)
 				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
@@ -151,7 +155,7 @@ function remote_init(manufacturer, model)
 				table.insert(outputs,newbtn)
 			end
 			--Momentary buttons as cc's for Alias8cv Rack Extension
-			for i=1,8 do
+			for i=1,momcount do
 				local ccnum = i+80
 				local hex = string.format("%x",ccnum)
 				if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
@@ -196,13 +200,15 @@ g_vartext_prev = "none"
 g_lcd_index = -1
 g_lcd_state = "LCD"
 g_delivered_lcd_state = "#"
-
+changecount = 0
+changed = {}
 function remote_on_auto_input(item_index)
 	g_last_input_time = remote.get_time_ms()
 	g_last_input_item = item_index
 end
 
 function remote_set_state(changed_items)
+	changed = changed_items
 	--look for the _Scope constant. Alias8cv reports "Alias8".
 	if remote.is_item_enabled(g_scope_item_index) then
 		local scope_text = remote.get_item_text_value(g_scope_item_index)
@@ -222,7 +228,7 @@ function remote_set_state(changed_items)
 		if remote.is_item_enabled(g_last_input_item) then
 			local feedback_text=remote.get_item_name_and_value(g_last_input_item)
 			if string.len(feedback_text)>0 then
-				g_feedback_enabled = true
+				--g_feedback_enabled = true
 				--g_lcd_state=string.format("%-16.16s",feedback_text)
 				g_lcd_state = feedback_text
 				g_lcd_index = g_last_input_item
@@ -241,15 +247,27 @@ sysex_def_ntleds =     "f0 00 01 61 0b 23 00 04 01 05 02 06 03 07 08 0c 09 0d 0a
 reprog = false
 ctltype = ""
 offset = 0 --index offset used to find out if it's Knob_1 or Knob_2
-varch = 0 --variation# i.e. channel
-varch_prev = -1 --for change filter
 lcd_events={}
 ctlcount = 0
 
 function remote_deliver_midi(maxbytes,port)
 	local ret_events={}
 	if(port==1) then
-		--if vartext from _Var item in remotemap has changed	-----------------
+		local doupdateall = false
+		local new_text = g_lcd_state
+		--local tevent = make_lcd_midi_message("new "..new_text)
+		--table.insert(lcd_events,tevent)
+		if g_delivered_lcd_state~=new_text then
+			g_delivered_lcd_state = new_text
+			istracktext = string.find(new_text,"Track") == 1 --The word "track" is the first word
+			if istracktext==true then
+				local track_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Track/lcd_name "..new_text)
+				table.insert(lcd_events,track_event)
+			end
+			
+		end
+		
+		--if vartext from _Var item in remotemap has changed. Not used in Alias8 currently, but it might be someday	-----------------
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
@@ -257,6 +275,14 @@ function remote_deliver_midi(maxbytes,port)
 			table.insert(ret_events,var_event)
 			g_vartext_prev = g_vartext
 			isvarchange = true
+		end
+		--Variations are changed when CHannel changes on hardware
+		if(cur_channel_prev~=cur_channel) then
+			local vartext = "Variation "..cur_channel
+			local var_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Var/lcd_name "..vartext)
+			table.insert(lcd_events,var_event)
+			cur_channel_prev = cur_channel
+			doupdateall = true
 		end
 		if g_scopetext_prev~=g_scopetext then
 			--Let the LCD know what the device is
@@ -284,55 +310,74 @@ function remote_deliver_midi(maxbytes,port)
 				table.insert(ret_events,makentled)
 				doreprog=false
 			end
+			doupdateall = true
 			g_scopetext_prev = g_scopetext
 		end
 
 		--make some abbreviations here:
-		i=g_lcd_index
-		isdial=i>=dial_start and i<=dial_end
-		isbtn=i>=btn_start and i<=btn_end
-		isfader=i>=fader_start and i<=fader_end
-		ismom=i>=mom_start and i<=mom_end
+		index=g_lcd_index
+		isdial=index>=dial_start and index<=dial_end
+		isbtn=index>=btn_start and index<=btn_end
+		isfader=index>=fader_start and index<=fader_end
+		ismom=index>=mom_start and index<=mom_end
 		ctltype = "none"
 		if(isdial) then 
 			ctltype = "Dial"
 			offset = dial_start
-			ctlcount = 16
-			varch = math.floor((i-dial_start)/ctlcount)
+			ctlcount = dialcount
 		elseif(isbtn) then 
 			ctltype = "Button"
 			offset = btn_start
-			ctlcount = 16
-			varch = math.floor((i-btn_start)/ctlcount)
+			ctlcount = btncount
 		elseif(isfader) then 
 			ctltype = "Fader"
 			offset = fader_start
-			ctlcount = 9
-			varch = math.floor((i-fader_start)/ctlcount)
+			ctlcount = fadercount
 		elseif(ismom) then 
 			ctltype = "Momentary"
 			offset = mom_start
-			ctlcount = 8
-			varch = math.floor((i-mom_start)/ctlcount)
+			ctlcount = momcount
 		end
+--		local t_event = make_lcd_midi_message("allchanged len "..#allchanged)
+--		table.insert(lcd_events,t_event)
 		if(ctltype~="none") then
 			--we'll make the parameter/value/unit list into two arrays for our LCD, then send a long string to LCD
 			update_ctl(g_lcd_index,ctltype)	
 		end
-		if(cur_channel_prev~=cur_channel) then
-			local vartext = "Variation "..cur_channel
-			local var_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Var/lcd_name "..vartext)
-			table.insert(lcd_events,var_event)
-			cur_channel_prev = cur_channel
-		end
-		
-		local new_text = g_lcd_state
-		if g_delivered_lcd_state~=new_text then
-			g_delivered_lcd_state = new_text
-			istracktext = string.find(new_text,"Track") == 1 --The word "track" is the first word
-			if istracktext==true then
-				local track_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Track/lcd_name "..new_text)
-				table.insert(lcd_events,track_event)
+		--because variations are setup by channel, we need to update all items in LCD in a sort of hard way.
+		if(doupdateall) then
+			--for i=1,#changed do
+			for i=1,41 do
+				--a convenient table of index names for all the channel 1 controls' indices.
+				baseindex = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+				261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276,
+				517, 518, 519, 520, 521, 522, 523, 524, 525,
+				662, 663, 664, 665, 666, 667, 668, 669}
+				local j = baseindex[i]
+				isdial=j>=dial_start and j<=dial_end
+				isbtn=j>=btn_start and j<=btn_end
+				isfader=j>=fader_start and j<=fader_end
+				ismom=j>=mom_start and j<=mom_end
+				ctltype = "none"
+				if(isdial) then 
+					ctltype = "Dial"
+					offset = dial_start
+					ctlcount = dialcount
+				elseif(isbtn) then 
+					ctltype = "Button"
+					offset = btn_start
+					ctlcount = btncount
+				elseif(isfader) then 
+					ctltype = "Fader"
+					offset = fader_start
+					ctlcount = fadercount
+				elseif(ismom) then 
+					ctltype = "Momentary"
+					offset = mom_start
+					ctlcount = momcount
+				end
+				index = baseindex[i]+(cur_channel-1)*ctlcount
+				update_ctl(index,ctltype)
 			end
 		end
 		return ret_events
@@ -410,6 +455,15 @@ function update_ctl(item,ctltype)
 			table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 
 			v_text_prev = v_text
 		end
+	else
+		--clear the LCD if there's nothing assigned at this control index
+		ctlindex = modulo( (item-offset),ctlcount)
+		p_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_name " -- "offset" (-5, for example) because the faders start at index 5 in table items, but we start our OSC Fader names at 0.
+		v_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_value "		
+		local p_lcd_event = make_lcd_midi_message(p_path.."--")
+		local v_lcd_event = make_lcd_midi_message(v_path.."..")
+		table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
+		table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 
 	end
 end
 
@@ -445,3 +499,38 @@ function modulo(a,b)
 	return mo
 end
 
+function table.val_to_str ( v )
+  if "string" == type( v ) then
+    v = string.gsub( v, "\n", "\\n" )
+    if string.match( string.gsub(v,"[^'\"]",""), '^"+$' ) then
+      return "'" .. v .. "'"
+    end
+    return '"' .. string.gsub(v,'"', '\\"' ) .. '"'
+  else
+    return "table" == type( v ) and table.tostring( v ) or
+      tostring( v )
+  end
+end
+
+function table.key_to_str ( k )
+  if "string" == type( k ) and string.match( k, "^[_%a][_%a%d]*$" ) then
+    return k
+  else
+    return "[" .. table.val_to_str( k ) .. "]"
+  end
+end
+
+function table.tostring( tbl )
+  local result, done = {}, {}
+  for k, v in ipairs( tbl ) do
+    table.insert( result, table.val_to_str( v ) )
+    done[ k ] = true
+  end
+  for k, v in pairs( tbl ) do
+    if not done[ k ] then
+      table.insert( result,
+        table.key_to_str( k ) .. "=" .. table.val_to_str( v ) )
+    end
+  end
+  return "{" .. table.concat( result, "," ) .. "}"
+end
