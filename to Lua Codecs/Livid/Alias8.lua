@@ -124,7 +124,7 @@ function remote_init(manufacturer, model)
 		local cc_hex = string.format("%x",176) --b0 to bf
 		local chhex = string.format("%x",0) --0 to f
 		for i=1,16 do
-			local hex = string.format("%x",i)
+			local hex = string.format("%x",i+25) --expansion cc numbers are 26-41
 			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
 				hex = "0"..hex
 			end
