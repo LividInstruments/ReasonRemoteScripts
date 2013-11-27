@@ -7,10 +7,13 @@ fader_start = 517
 fader_end = 661
 mom_start = 662
 mom_end = 789
+xp_start = 790
+xp_end = 805
 dialcount = 16
 btncount = 16
 fadercount = 9
 momcount = 8
+xpcount = 16
 
 function remote_init(manufacturer, model)
 	if model=="Alias8" then
@@ -61,6 +64,16 @@ function remote_init(manufacturer, model)
 			end
 		end
 		mom_end = mom_start+(tablecount-1)
+		xp_start = fader_end+1
+		tablecount=0
+		ch = 1
+		--only 1 channel
+		for i=1,xpcount do 
+			local newxp = {name="Exp "..i.."_"..ch, input="value", min=0,max=127,output="value"}
+			table.insert(items,newxp)
+			tablecount = tablecount+1
+		end
+		xp_end = xp_start+(tablecount-1)
 		remote.define_items(items)
 	end
 	if model=="Alias8" then
@@ -106,6 +119,17 @@ function remote_init(manufacturer, model)
 				local newmom = {pattern=cc_hex.." "..hex.." <???y>?", name="Momentary "..i.."_"..ch, value="1"}
 				table.insert(inputs,newmom)
 			end
+		end
+		--expansion inputs, only 1 channel	
+		local cc_hex = string.format("%x",176) --b0 to bf
+		local chhex = string.format("%x",0) --0 to f
+		for i=1,16 do
+			local hex = string.format("%x",i)
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local newxp = {pattern=cc_hex.." "..hex.." xx", name="Exp "..i.."_"..ch}
+			table.insert(inputs,newxp)
 		end
 		--[[]]--
 		remote.define_auto_inputs(inputs)
@@ -165,6 +189,18 @@ function remote_init(manufacturer, model)
 				local newmom = {pattern=cc_hex.." "..hex.." <0x00>0", name="Momentary "..i.."_"..ch} --yellow
 				table.insert(outputs,newmom)
 			end
+		end
+		
+		local cc_hex = string.format("%x",176) --b0 to bf
+		local chhex = string.format("%x",0) --0 to f
+		--the 16 expansions, only 1 channel
+		for i=1,xpcount do
+			local hex = string.format("%x",i)
+			if string.len(hex)==1 then --make sure there is a leading 0 for the hex string
+				hex = "0"..hex
+			end
+			local newxp = {pattern=cc_hex.." "..hex.." xx", name="Exp "..i.."_"..ch}
+			table.insert(outputs,newxp)
 		end
 		remote.define_auto_outputs(outputs)
 	end
