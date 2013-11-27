@@ -446,7 +446,11 @@ function update_ctl(item,ctltype)
 			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
 		else
 			p_text = string.format(textarray[1]) --1st element, like "Mode"
-			v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
+			if(textarray[2]~=nil) then
+				v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
+			else
+				v_text = "--"
+			end
 		end
 		if(v_text~=v_text_prev) then
 			local p_lcd_event = make_lcd_midi_message(p_path..p_text)

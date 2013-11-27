@@ -936,6 +936,7 @@ Map	Fader 2_3		Step Seqeuncer Rate
 Map	Fader 3_3		Step Seqeuncer Edit Mode
 Map	Fader 4_3		Pattern Step Value
 Map	Fader 5_3		Step Seqeuncer Octave Range
+Map	Fader 8_3		Step Count
 
 Scope	Propellerheads	SubTractor Analog Synthesizer
 //Define Group	Keyboard Shortcut Variations
