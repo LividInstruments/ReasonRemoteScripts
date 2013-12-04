@@ -1056,7 +1056,7 @@ Map	Button 7_8		Drum 16 FX2 On
 Map	Button 8_8		Pad 16 Mute
 
 Scope	Propellerheads	Thor Polysonic Synthesizer
-Define Group	Keyboard Shortcut Variations	CH 1	CH 2	CH 3
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2	CH 3	CH 4	CH 5
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Thor"
 Map	Dial 1_1		Filter 1 Freq			
@@ -1163,12 +1163,47 @@ Map	Dial 13_3		Pattern Step Knob 13
 Map	Dial 14_3		Pattern Step Knob 14
 Map	Dial 15_3		Pattern Step Knob 15
 Map	Dial 16_3		Pattern Step Knob 16
-Map	Fader 1_3		Step Seqeuncer Run
-Map	Fader 2_3		Step Seqeuncer Rate
-Map	Fader 3_3		Step Seqeuncer Edit Mode
-Map	Fader 4_3		Pattern Step Value
-Map	Fader 5_3		Step Seqeuncer Octave Range
-Map	Fader 8_3		Step Seqeuncer Step Count
+Map	Fader 1_3		Step Sequencer Run
+Map	Fader 2_3		Step Sequencer Run Mode
+Map	Fader 3_3		Step Sequencer Direction
+Map	Fader 4_3		Step Sequencer Rate
+Map	Fader 5_3		Step Sequencer Edit Mode
+Map	Fader 6_3		Step Sequencer Octave Range
+Map	Fader 7_3		Step Sequencer Step Count
+
+Map	Dial 1_4		Mod 1 Dest Amount
+Map	Fader 1_4		Mod 1 Scale Amount
+Map	Dial 2_4		Mod 2 Dest Amount
+Map	Fader 2_4		Mod 2 Scale Amount
+Map	Dial 3_4		Mod 3 Dest Amount
+Map	Fader 3_4		Mod 3 Scale Amount
+Map	Dial 4_4		Mod 4 Dest Amount
+Map	Fader 4_4		Mod 4 Scale Amount
+Map	Dial 5_4		Mod 5 Dest Amount
+Map	Fader 5_4		Mod 5 Scale Amount
+Map	Dial 6_4		Mod 6 Dest Amount
+Map	Fader 6_4		Mod 6 Scale Amount
+Map	Dial 7_4		Mod 7 Dest Amount
+Map	Fader 7_4		Mod 7 Scale Amount
+
+Map	Dial 1_5		Mod 8 Dest Amount
+Map	Dial 9_5		Mod 8 Dest 2 Amount
+Map	Fader 1_5		Mod 8 Scale Amount
+Map	Dial 2_5		Mod 9 Dest Amount
+Map	Dial 10_5		Mod 9 Dest 2 Amount
+Map	Fader 2_5		Mod 9 Scale Amount
+Map	Dial 3_5		Mod 10 Dest Amount
+Map	Dial 11_5		Mod 10 Dest 2 Amount
+Map	Fader 3_5		Mod 10 Scale Amount
+Map	Dial 4_5		Mod 11 Dest Amount
+Map	Dial 12_5		Mod 11 Dest 2 Amount
+Map	Fader 4_5		Mod 11 Scale Amount
+Map	Dial 5_5		Mod 12 Dest Amount
+Map	Dial 13_5		Mod 12 Dest 2 Amount
+Map	Fader 5_5		Mod 12 Scale Amount
+Map	Dial 6_5		Mod 13 Dest Amount
+Map	Dial 14_5		Mod 13 Dest 2 Amount
+Map	Fader 6_5		Mod 13 Scale Amount
 
 Scope	Propellerheads	SubTractor Analog Synthesizer
 //Define Group	Keyboard Shortcut Variations
