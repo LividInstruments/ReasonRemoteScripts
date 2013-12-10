@@ -1270,96 +1270,80 @@ Map	Dial 14_2		Noise Decay
 Map	Dial 15_2		Noise Color
 
 Scope	Propellerheads	Malstrom Graintable Synthesizer
-Define Group	Keyboard Shortcut Variations	CH 1	CH 2	CH 3	CH 4
+Define Group	Keyboard Shortcut Variations	CH 1	CH 2
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Malstrom"
-Map	Fader 1_1		Filter Env Attack
-Map	Fader 2_1		Filter Env Decay
-Map	Fader 3_1		Filter Env Sustain
-Map	Fader 4_1		Filter Env Release
-Map	Fader 5_1		Filter Env Amount
-Map	Fader 7_1		Shaper Mode
-Map	Fader 8_1		Shaper Amount
-Map	Dial 9_1		Filter A Mode
-Map	Dial 10_1		Filter A Resonance
-Map	Dial 11_1		Filter A Freq
-Map	Dial 13_1		Filter B Mode
-Map	Dial 14_1		Filter B Resonance
-Map	Dial 15_1		Filter B Freq
+
+Map	Fader 9_1		Mod Wheel
+
+Map	Dial 1_1		Filter A Mode
+Map	Dial 2_1		Filter A Freq
+Map	Dial 3_1		Filter A Resonance
+Map	Dial 4_1		Filter B Mode
+Map	Dial 5_1		Filter B Freq
+Map	Dial 6_1		Filter B Resonance
+Map	Dial 7_1		Shaper Mode
+Map	Dial 8_1		Shaper Amount
+
+Map	Dial 9_1		Modulator A Curve
+Map	Dial 10_1		Modulator A Rate
+Map	Dial 11_1		Modulator A To Pitch
+Map	Dial 12_1		Modulator A To Index
+Map	Dial 13_1		Modulator B Curve
+Map	Dial 14_1		Modulator B Rate
+Map	Dial 15_1		Modulator B To Pitch
+Map	Dial 16_1		Modulator B To Index
+
+Map	Fader 1_1		Oscillator A Index
+Map	Fader 2_1		Oscillator A Motion
+Map	Fader 3_1		Oscillator A Octave
+Map	Fader 4_1		Oscillator A Semi
+Map	Fader 5_1		Oscillator B Index
+Map	Fader 6_1		Oscillator B Motion
+Map	Fader 7_1		Oscillator B Octave
+Map	Fader 8_1		Oscillator B Semi
+
 Map	Button 1_1		Filter A On/Off
 Map	Button 2_1		Filter A Env
-Map	Button 3_1		Filter A Kbd Track
-Map	Button 4_1		Filter B On/Off
-Map	Button 5_1		Filter B Env
-Map	Button 6_1		Filter B Kbd Track
-Map	Button 7_1		Filter Env Invert
-Map	Button 8_1		Shaper On/Off
-Map	Button 9_1		Route Oscillator B To Filter B
-Map	Button 10_1		Route Oscillator A To Filter B
-Map	Button 11_1		Route Oscillator A To Shaper
-Map	Button 12_1		Route Filter B To Shaper
-Map	Dial 1_2		Modulator A Curve
-Map	Dial 2_2		Modulator A Rate
-Map	Dial 3_2		Modulator A To Pitch
-Map	Dial 4_2		Modulator A To Index
-Map	Dial 5_2		Modulator A To Shift
-Map	Dial 9_2		Modulator B Curve
-Map	Dial 10_2		Modulator B Rate
-Map	Dial 11_2		Modulator B To Motion
-Map	Dial 12_2		Modulator B To Level
-Map	Dial 13_2		Modulator B To Filter
-Map	Dial 14_2		Modulator B To Modulator A
-Map	Button 1_2		Modulator A On/Off
-Map	Button 2_2		Modulator A One Shot
-Map	Button 3_2		Modulator A Sync
-Map	Button 4_2		Modulator A Target
-Map	Button 9_2		Modulator B On/Off
-Map	Button 10_2		Modulator B One Shot
-Map	Button 11_2		Modulator B Sync
-Map	Button 12_2		Modulator B Target
-Map	Dial 1_3		Oscillator A Motion
-Map	Dial 2_3		Oscillator A Index
-Map	Dial 3_3		Oscillator A Shift
-Map	Dial 4_3		Oscillator A Octave
-Map	Dial 5_3		Oscillator A Semi
-Map	Dial 6_3		Oscillator A Cent
-Map	Dial 7_3		Oscillator A Gain
-Map	Dial 9_3		Oscillator B Motion
-Map	Dial 10_3		Oscillator B Index
-Map	Dial 11_3		Oscillator B Shift
-Map	Dial 12_3		Oscillator B Octave
-Map	Dial 13_3		Oscillator B Semi
-Map	Dial 14_3		Oscillator B Cent
-Map	Dial 15_3		Oscillator B Gain
-Map	Fader 1_3		Oscillator A Attack
-Map	Fader 2_3		Oscillator A Decay
-Map	Fader 3_3		Oscillator A Sustain
-Map	Fader 4_3		Oscillator A Release
-Map	Fader 5_3		Oscillator B Attack
-Map	Fader 6_3		Oscillator B Decay
-Map	Fader 7_3		Oscillator B Sustain
-Map	Fader 8_3		Oscillator B Release
-Map	Button 1_3		Oscillator A On/Off
-Map	Button 9_3		Oscillator B On/Off
-Map	Dial 1_4		Velocity To Level B
-Map	Dial 2_4		Velocity To Level A
-Map	Dial 3_4		Velocity To Filter Env
-Map	Dial 4_4		Velocity To Attack
-Map	Dial 5_4		Velocity To Shift
-Map	Dial 6_4		Velocity To Modulator
-Map	Dial 9_4		Mod Wheel To Index
-Map	Dial 10_4		Mod Wheel To Shift
-Map	Dial 11_4		Mod Wheel To Filter
-Map	Dial 12_4		Mod Wheel To Modulator
-Map	Fader 1_4		Polyphony
-Map	Fader 2_4		Portamento
-Map	Fader 3_4		Pitch Bend Range
-Map	Button 1_4		Legato On/Off
-Map	Button 9_4		Velocity Target
-Map	Button 10_4		Mod Wheel Target
-Map	Fader 9_1		Master Level
-Map	Fader 9_2		Spread Amount
-Map	Fader 9_3		Mod Wheel
+Map	Button 3_1		Filter B On/Off
+Map	Button 4_1		Filter B Env
+Map	Button 5_1		Filter Env Invert
+Map	Button 6_1		Shaper On/Off
+Map	Button 7_1		Modulator A On/Off
+Map	Button 8_1		Modulator B On/Off
+Map	Button 9_1		Oscillator A On/Off
+Map	Button 10_1		Oscillator B On/Off
+Map	Button 11_1		Modulator A Sync
+Map	Button 12_1		Modulator B Sync
+Map	Button 13_1		Route Oscillator B To Filter B
+Map	Button 14_1		Route Oscillator A To Filter B
+Map	Button 15_1		Route Oscillator A To Shaper
+Map	Button 16_1		Route Filter B To Shaper
+
+Map	Dial 1_2		Filter Env Attack
+Map	Dial 2_2		Filter Env Decay
+Map	Dial 3_2		Filter Env Sustain
+Map	Dial 4_2		Filter Env Release
+Map	Dial 5_2		Filter Env Amount
+
+Map	Dial 9_2		Velocity To Level B
+Map	Dial 10_2		Velocity To Level A
+Map	Dial 11_2		Velocity To Filter Env
+Map	Dial 12_2		Velocity To Attack
+Map	Dial 13_2		Velocity To Shift
+Map	Dial 14_2		Velocity To Modulator
+
+Map	Fader 1_2		Mod Wheel To Index
+Map	Fader 2_2		Mod Wheel To Shift
+Map	Fader 3_2		Mod Wheel To Filter
+Map	Fader 4_2		Mod Wheel To Modulator
+Map	Fader 5_2		Polyphony
+Map	Fader 6_2		Portamento
+Map	Fader 7_2		Pitch Bend Range
+
+Map	Button 1_2		Legato On/Off
+Map	Button 9_2		Velocity Target
+Map	Button 10_2		Mod Wheel Target
 
 Scope	Propellerheads	NN19 Digital Sampler
 Define Group	Keyboard Shortcut Variations	CH 1	CH 2
