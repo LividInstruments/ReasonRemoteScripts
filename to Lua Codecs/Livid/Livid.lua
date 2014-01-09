@@ -561,7 +561,8 @@ function remote_process_midi(event)
 		transpose=0
 	end
 
-	if ret~=nil then		--remote.trace("\nIN"..ret.x.." "..ret.y.." "..ret.z)
+	if ret~=nil then
+		--remote.trace("\nIN"..ret.x.." "..ret.y.." "..ret.z)
 		if (keymapMAJ[ret.y]~=nil) then --if this note in the "keymapMAJ" table then we need to remap it
 			--remote.trace("\nmatch".." "..ret.x.." "..keymapMAJ[ret.y])
 			local noteout = -1
@@ -579,7 +580,8 @@ function remote_process_midi(event)
 			end
 			if(ignore==0) then
 				local msg={ time_stamp=event.time_stamp, item=1, value=ret.x, note=noteout,velocity=ret.z }
-				remote.handle_input(msg)				--remote.trace("\nnoteout "..noteout.." "..ret.x.." "..ret.z);
+				remote.handle_input(msg)
+				--remote.trace("\nnoteout "..noteout.." "..ret.x.." "..ret.z);
 			end
 			return true
 			end
@@ -644,11 +646,26 @@ end
 function remote_prepare_for_use() 
 	if model=="Ohm64" then
 		return {
-			remote.make_midi("F0 00 01 61 02 06 F7")
+			--remote.make_midi("F0 00 01 61 02 06 F7")
+			remote.make_midi("F0 00 01 61 02 04 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F F7"),
+			remote.make_midi("F0 00 01 61 02 08 04 F7"),
+			remote.make_midi("F0 00 01 61 02 09 77 01 7F F7"),
+			remote.make_midi("F0 00 01 61 02 0A 00 00 01 00 02 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0C 00 0D 00 0E 00 0F 00 10 00 11 00 12 00 13 00 14 00 15 00 16 00 17 00 18 00 F7"),
+			remote.make_midi("F0 00 01 61 02 0B 00 00 01 00 02 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0C 00 0D 00 0E 00 0F 00 10 00 11 00 12 00 13 00 14 00 15 00 16 00 17 00 18 00 19 00 1A 00 1B 00 1C 00 1D 00 1E 00 1F 00 20 00 21 00 22 00 23 00 24 00 25 00 26 00 27 00 28 00 29 00 2A 00 2B 00 2C 00 2D 00 2E 00 2F 00 30 00 31 00 32 00 33 00 34 00 35 00 36 00 37 00 38 00 39 00 3A 00 3B 00 3C 00 3D 00 3E 00 3F 00 40 00 41 00 42 00 43 00 44 00 45 00 46 00 47 00 48 00 49 00 4A 00 4B 00 4C 00 4D 00 4E 00 4F 00 50 00 51 00 52 00 53 00 54 00 55 00 56 00 57 00 F7"),
+			remote.make_midi("F0 00 01 61 02 0C 00 F7"),
+			remote.make_midi("F0 00 01 61 02 0D 01 F7"),
+			remote.make_midi("F0 00 01 61 02 0F 00 F7")
 		}
 	else
 		return {
-			remote.make_midi("F0 00 01 61 03 06 F7")
+			--remote.make_midi("F0 00 01 61 03 06 F7")
+			remote.make_midi("F0 00 01 61 03 04 00 00 00 00 00 00 00 00 00 00 F7"),
+			remote.make_midi("F0 00 01 61 03 08 04 F7"),
+			remote.make_midi("F0 00 01 61 03 09 77 01 7F F7"),
+			remote.make_midi("F0 00 01 61 03 0A 00 00 01 00 02 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 F7"),
+			remote.make_midi("F0 00 01 61 03 0B 00 00 01 00 02 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0C 00 0D 00 0E 00 0F 00 10 00 11 00 12 00 13 00 14 00 15 00 16 00 17 00 18 00 19 00 1A 00 1B 00 1C 00 1D 00 1E 00 1F 00 20 00 21 00 22 00 23 00 24 00 25 00 26 00 27 00 28 00 29 00 2A 00 2B 00 2C 00 2D 00 2E 00 2F 00 30 00 31 00 32 00 33 00 34 00 35 00 36 00 37 00 38 00 39 00 3A 00 3B 00 3C 00 3D 00 3E 00 3F 00 40 00 41 00 42 00 43 00 44 00 45 00 46 00 47 00 F7"),
+			remote.make_midi("F0 00 01 61 03 0C 00 F7"),
+			remote.make_midi("F0 00 01 61 03 0D 01 F7")
 		}
 	end
 end
