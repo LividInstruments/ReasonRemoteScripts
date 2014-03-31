@@ -67,25 +67,25 @@ function remote_init(manufacturer, model)
 			{name="SliderNote R2", input="value", min=0, max=127, output="value"},
 			{name="SliderNote V3", input="value", min=0, max=127, output="value"},
 			
-			{name="ArrowUp", input="value", min=0, max=127, output="value"},
-			{name="ArrowDn", input="value", min=0, max=127, output="value"},
+			{name="ArrowUp", input="button", output="value"},
+			{name="ArrowDn", input="button", output="value"},
 						
-			{name="Button 1", input="value", min=0, max=127, output="value"},
-			{name="Button 2", input="value", min=0, max=127, output="value"},
-			{name="Button 3", input="value", min=0, max=127, output="value"},
-			{name="Button 4", input="value", min=0, max=127, output="value"},
+			{name="Button 1", input="button", output="value"},
+			{name="Button 2", input="button", output="value"},
+			{name="Button 3", input="button", output="value"},
+			{name="Button 4", input="button", output="value"},
 			
-			{name="SideButton 1", input="value", min=0, max=127, output="value"},
-			{name="SideButton 2", input="value", min=0, max=127, output="value"},
-			{name="SideButton 3", input="value", min=0, max=127, output="value"},
-			{name="SideButton 4", input="value", min=0, max=127, output="value"},
+			{name="SideButton 1", input="button"},
+			{name="SideButton 2", input="button"},
+			{name="SideButton 3", input="button"},
+			{name="SideButton 4", input="button"},
 			
-			{name="PadNote 1", input="value", min=0, max=127, output="value"},
-			{name="PadNote 2", input="value", min=0, max=127, output="value"},
-			{name="PadNote 3", input="value", min=0, max=127, output="value"},
-			{name="PadNote 4", input="value", min=0, max=127, output="value"},
-			
-			{name="MotionActive", input="value", min=0, max=127, output="value"},
+			{name="PadNote 1", input="button", output="value"},
+			{name="PadNote 2", input="button", output="value"},
+			{name="PadNote 3", input="button", output="value"},
+			{name="PadNote 4", input="button", output="value"},
+	
+			{name="MotionActive", input="button", output="value"},
 			
  			{name="SliderCC L1", input="value", min=0, max=127, output="value"},
 			{name="SliderCC R2", input="value", min=0, max=127, output="value"},
@@ -96,8 +96,8 @@ function remote_init(manufacturer, model)
 			{name="PadCC 4", input="value", min=0, max=127, output="value"},
 			{name="MotionX", input="value", min=0, max=127, output="value"},
 			{name="MotionY", input="value", min=0, max=127, output="value"},
-			{name="MotionZ", input="value", min=0, max=127, output="value"}			
-			}
+			{name="MotionZ", input="value", min=0, max=127, output="value"}				
+		}
 		remote.define_items(items)
 	end
 	if model=="GuitarWing" then
@@ -123,16 +123,16 @@ function remote_init(manufacturer, model)
 			{pattern="<100x>? 30 <z000>0", name="SideButton 3"}, --48
 			{pattern="<100x>? 31 <z000>0", name="SideButton 4"}, --49
 			
-			{pattern="b0 01 <z000>0", name="SliderCC L1"},--1
-			{pattern="b0 02 <z000>0", name="SliderCC R2"},--2
-			{pattern="b0 03 <z000>0", name="SliderCC V3"},--3
-			{pattern="b0 24 <z000>0", name="PadCC 1"},--36
-			{pattern="b0 25 <z000>0", name="PadCC 2"},--37
-			{pattern="b0 26 <z000>0", name="PadCC 3"},--38
-			{pattern="b0 27 <z000>0", name="PadCC 4"},--39
-			{pattern="b0 05 <z000>0", name="MotionX"},--5
-			{pattern="b0 06 <z000>0", name="MotionY"},--6
-			{pattern="b0 07 <z000>0", name="MotionZ"}--7
+			{pattern="b? 01 xx", name="SliderCC L1"},--1
+			{pattern="b? 02 xx", name="SliderCC R2"},--2
+			{pattern="b? 03 xx", name="SliderCC V3"},--3
+			{pattern="b? 24 xx", name="PadCC 1"},--36
+			{pattern="b? 25 xx", name="PadCC 2"},--37
+			{pattern="b? 26 xx", name="PadCC 3"},--38
+			{pattern="b? 27 xx", name="PadCC 4"},--39
+			{pattern="b? 05 xx", name="MotionX"},--5
+			{pattern="b? 06 xx", name="MotionY"},--6
+			{pattern="b? 07 xx", name="MotionZ"}--7
 		}
 		remote.define_auto_inputs(inputs)
 	end
@@ -152,7 +152,7 @@ function remote_init(manufacturer, model)
 			{pattern="90 28 <000x>0", name="ArrowUp"}, --red
 			{pattern="90 29 <000x>0", name="ArrowDn"}, --red
 			
-			{pattern="90 29 <0x00>0", name="MotionActive"}, --yel
+			{pattern="90 04 <0x00>0", name="MotionActive"}, --yel
 			
 			--touch sliders
 			{pattern="b0 01 xx", name="SliderCC L1"},
@@ -198,34 +198,20 @@ function remote_process_midi(event)
 				--could do transpose for pads----------
 		--tran_up = remote.match_midi("9? 17 40",event) --find F6
 		--tran_dn = remote.match_midi("9? 18 40",event) --find F7
-		local shiftbtn = remote.match_midi("<100x>? 7F zz",event) --note 127 - basically comments it out without ditching the variable declare
 		--drum_tog = remote.match_midi("9? 13 40",event) --find F2
 		--tran_rst = remote.match_midi("9? 14 xx",event) --find F3
-		if (shiftbtn) then
-			if shiftbtn.z>0 then
-				shift = 1 --momentary like a computer's shift key
-			else
-				shift = 0
-			end
-		end
 		if(tran_up) then
-			transpose = transpose+(1-shift)+(shift*12)
+			transpose = transpose+(1)
 			global_transp = transpose
 			transpose_changed = true
 		end
 		if(tran_dn) then
-			transpose = transpose-(1-shift)-(shift*12)
+			transpose = transpose-(1)
 			global_transp = transpose
 			transpose_changed = true
 		end
-		if(drum_tog) then
-			drum_mode = 1-drum_mode
-		end
-		--if(tran_rst) then
-		--	transpose=0
-		--end
 		--now handle the pads
-		if ret.y>35 and ret.y<68 then
+		if ret.y>35 and ret.y<40 then
 			---if the pads have transposed, then we need to turn off the last note----------------------
 			if(transpose_changed == true) then
 				local prev_off={ time_stamp = event.time_stamp, item=1, value = ret.x, note = g_delivered_note,velocity = 0 }
@@ -417,40 +403,40 @@ function remote_prepare_for_use()
 end
 
 --UTILITY: this function is called when we need to update a slider LCD
-function update_slider(item)
-	local thetext = remote.get_item_name_and_value(item)
-	local textarray = {}
-	local p_path = ""
-	local v_path = ""
-	local p_text = ""
-	local v_text = ""
-	--local tlcd_event = make_lcd_midi_message("item "..item.." text "..thetext.." len "..#thetext )
-	--table.insert(lcd_events,tlcd_event)
-	if(thetext>0) then
-		--strip any percent symbols
-		local pctsearch = string.find(thetext, '%%')
-		if(pctsearch~=nil) then
-			thetext = string.sub(thetext,1,pctsearch-1).." pct"
-		end
-		local wordcount = 1
-		--make a table of words so we can break the track name_and_value into "name" and "value"
-		for j in string.gmatch(thetext, "%S+") do
-			textarray[wordcount] = j
-			wordcount = wordcount+1
-		end
-		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		p_path = "/Reason/GWing/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
-		v_path = "/Reason/GWing/0/Fader_"..(item-sli_start).."/lcd_value "
-		if(wordcount>2) then
-			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
-			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
-		else
-			p_text = string.format(textarray[1]) --1st element, like "Mode"
-			v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
-		end
-		local p_lcd_event = make_lcd_midi_message(p_path..p_text)
-		local v_lcd_event = make_lcd_midi_message(v_path..v_text)
-		table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
-		table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 	
-	end
-end
+--function update_slider(item)
+--	local thetext = remote.get_item_name_and_value(item)
+--	local textarray = {}
+--	local p_path = ""
+--	local v_path = ""
+--	local p_text = ""
+--	local v_text = ""
+--	--local tlcd_event = make_lcd_midi_message("item "..item.." text "..thetext.." len "..#thetext )
+--	--table.insert(lcd_events,tlcd_event)
+--	if(thetext.len>0) then
+--		--strip any percent symbols
+--		local pctsearch = string.find(thetext, '%%')
+--		if(pctsearch~=nil) then
+--			thetext = string.sub(thetext,1,pctsearch-1).." pct"
+--		end
+--		local wordcount = 1
+--		--make a table of words so we can break the track name_and_value into "name" and "value"
+--		for j in string.gmatch(thetext, "%S+") do
+--			textarray[wordcount] = j
+--			wordcount = wordcount+1
+--		end
+--		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
+--		p_path = "/Reason/GWing/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
+--		v_path = "/Reason/GWing/0/Fader_"..(item-sli_start).."/lcd_value "
+--		if(wordcount>2) then
+--			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
+--			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
+--		else
+--			p_text = string.format(textarray[1]) --1st element, like "Mode"
+--			v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
+--		end
+--		local p_lcd_event = make_lcd_midi_message(p_path..p_text)
+--		local v_lcd_event = make_lcd_midi_message(v_path..v_text)
+--		table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
+--		table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 	
+--	end
+--end
