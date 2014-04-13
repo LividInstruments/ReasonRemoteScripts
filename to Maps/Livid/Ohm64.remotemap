@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	Ohm64
-Map Version	1.4.2
+Map Version	1.4.5
 
 //This is a remote map template for the Ohm64.
 
@@ -1837,6 +1837,8 @@ Map	Grid 5		Record
 // Map	Grid 6		Overdub/Replace
 Map	Grid 7		Target Previous Track
 Map	Grid 8		Target Next Track
+Map	Xfade Button Right		Select Next Patch for Target Device
+Map	Xfade Button Left		Select Prev Patch for Target Device
 
 
 //<	20110628
@@ -1856,6 +1858,8 @@ Map	Grid 5		Record
 // Map	Grid 6		Overdub/Replace
 Map	Grid 7		Target Previous Track
 Map	Grid 8		Target Next Track
+Map	Xfade Button Right		Select Next Patch for Target Device
+Map	Xfade Button Left		Select Prev Patch for Target Device
 
 
 
@@ -2084,3 +2088,40 @@ Map	Knob 15		LFO Amount
 Map	Fader 8		Ducking
 Map	Knob 16		Dry/Wet Balance
 //<	20110711
+
+
+
+Scope	Propellerhead Software	se.propellerheads.radicalpiano
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Xfade Button Right		Select Next Patch
+Map	Xfade Button Left		Select Previous Patch
+
+Map	Knob 1		Character
+Map	Knob 2		Microphone 1 Type
+Map	Knob 3		Microphone and Instrument Blend
+Map	Knob 4		Microphone 2 Type
+
+Map	Knob 5		Vel Response Low
+Map	Knob 6		Vel Response High
+Map	Knob 7		Vel Response Curve
+
+Map	Knob 9		Env Attack
+Map	Knob 10		Env Decay Curve
+Map	Knob 11		Env Release
+
+Map	Knob 13		Key Down Level
+Map	Knob 14		Key Up Level
+Map	Knob 15		Pedal Level
+Map	Knob 16		Stereo Width
+
+Map	Fader 1		EQ Lo Gain
+Map	Fader 2		EQ Mid Gain
+Map	Fader 3		EQ Hi Gain
+
+Map	Fader 5		Symp Res Release Time
+Map	Fader 6		Symp Res Level
+Map	Fader 7		Ambience Level
+Map	Fader 8		Master Volume
+
+Map	Fader Button 1		EQ On/Off
+Map	Fader Button 7		Ambience Type

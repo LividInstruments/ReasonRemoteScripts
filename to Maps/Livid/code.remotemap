@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	code
-Map Version	1.4.4
+Map Version	1.4.7
 
 Scope	Propellerheads	Reason Master Section
 Define Group	Keyboard Shortcut Variations	Main	FXReturn	EQ	Inserts	Levels
@@ -267,7 +267,7 @@ Map	Knob 13		Channel 4 Input Gain			Levels
 Map	Knob 17		Channel 5 Input Gain			Levels
 Map	Knob 21		Channel 6 Input Gain			Levels
 Map	Knob 25		Channel 7 Input Gain			Levels
-Map	Knob 32		Audio Peak VU Meter			Levels
+//Map	Knob 32		Audio Peak VU Meter			Levels
 
 Map	Push 4		Channel 1 Mute			Levels
 Map	Push 8		Channel 2 Mute			Levels
@@ -303,6 +303,8 @@ Map	Grid 13		Record
 Map	Push 29		Click On/Off
 Map	Knob 29		Click Level
 Map	Push 30		Loop On/Off
+Map	Grid 6		Select Prev Patch for Target Device
+Map	Grid 7		Select Next Patch for Target Device
 
 
 Scope	Propellerheads	Reason Document			
@@ -318,6 +320,10 @@ Map	Grid 13		Record
 Map	Push 29		Click On/Off
 Map	Knob 29		Click Level
 Map	Push 30		Loop On/Off
+Map	Grid 6		Select Prev Patch for Target Device
+Map	Grid 7		Select Next Patch for Target Device
+
+
 //eos
 Scope	Propellerheads	Mixer 14:2
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1751,5 +1757,34 @@ Map	Knob 20		Gate Length
 Map	Push 20		Single Note Repeat
 Map	Knob 24		Pattern Step Count
 //eos
+
+
+Scope	Propellerhead Software	se.propellerheads.radicalpiano
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Grid 6		Select Previous Patch
+Map	Grid 7		Select Next Patch
+
+Map	Knob 1		Character
+Map	Knob 2		Microphone 1 Type
+Map	Knob 3		Microphone and Instrument Blend
+Map	Knob 4		Microphone 2 Type
+Map	Knob 5		Key Down Level
+Map	Knob 6		Key Up Level
+Map	Knob 7		Pedal Level
+Map	Knob 8		Vel Response Curve
+
+Map	Knob 25		EQ Lo Gain
+Map	Push 25		EQ On/Off
+Map	Knob 26		EQ Mid Gain
+Map	Knob 27		EQ Hi Gain
+Map	Knob 28		Symp Res Release Time
+Map	Knob 29		Symp Res Level
+Map	Knob 30		Ambience Level
+Map	Push 30		Ambience Type
+Map	Knob 31		Stereo Width
+Map	Knob 32		Master Volume
+
+
+
 
 //eod

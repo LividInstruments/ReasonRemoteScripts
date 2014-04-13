@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	Base
-Map Version	1.0.3
+Map Version	1.0.4
 
 
 Scope	Propellerheads	Master Keyboard
@@ -1449,3 +1449,16 @@ Map	Slider 6		Toggle 6			Toggles
 Map	Slider 7		Toggle 7			Toggles
 Map	Slider 8		Toggle 8			Toggles
 Map	_Var		"Toggles"			Toggles
+
+Scope	Propellerhead Software	se.propellerheads.radicalpiano
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Slider 1		Character
+Map	Slider 2		Microphone 1 Type
+Map	Slider 3		Microphone and Instrument Blend
+Map	Slider 4		Microphone 2 Type
+Map	Slider 5		EQ Lo Gain
+Map	Slider 6		EQ Mid Gain
+Map	Slider 7		EQ Hi Gain
+Map	Slider 8		Ambience Level
+Map	Slider 9		Master Volume
