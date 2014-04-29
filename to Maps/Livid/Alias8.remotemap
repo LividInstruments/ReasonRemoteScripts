@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	Alias8
-Map Version	1.0.1
+Map Version	1.0.2
 
 Scope	Propellerheads	Master Keyboard
 //Define Group	Keyboard Shortcut Variations
@@ -1199,11 +1199,11 @@ Map	Dial 4_5		Mod 11 Dest Amount
 Map	Dial 12_5		Mod 11 Dest 2 Amount
 Map	Fader 4_5		Mod 11 Scale Amount
 Map	Dial 5_5		Mod 12 Dest Amount
-Map	Dial 13_5		Mod 12 Dest 2 Amount
-Map	Fader 5_5		Mod 12 Scale Amount
+Map	Dial 13_5		Mod 12 Scale Amount
+Map	Fader 5_5		Mod 12 Scale 2 Amount
 Map	Dial 6_5		Mod 13 Dest Amount
-Map	Dial 14_5		Mod 13 Dest 2 Amount
-Map	Fader 6_5		Mod 13 Scale Amount
+Map	Dial 14_5		Mod 13 Scale Amount
+Map	Fader 6_5		Mod 13 Scale 2 Amount
 
 Scope	Propellerheads	SubTractor Analog Synthesizer
 //Define Group	Keyboard Shortcut Variations
@@ -1291,8 +1291,8 @@ Map	Dial 11_1		Modulator A To Pitch
 Map	Dial 12_1		Modulator A To Index
 Map	Dial 13_1		Modulator B Curve
 Map	Dial 14_1		Modulator B Rate
-Map	Dial 15_1		Modulator B To Pitch
-Map	Dial 16_1		Modulator B To Index
+Map	Dial 15_1		Modulator B To Level
+Map	Dial 16_1		Modulator B To Filter
 
 Map	Fader 1_1		Oscillator A Index
 Map	Fader 2_1		Oscillator A Motion
@@ -1369,7 +1369,7 @@ Map	Dial 16_1		Filter Env Release
 Map	Fader 1_1		Sample Start
 Map	Fader 2_1		Osc Octave	
 Map	Fader 3_1		Osc Semitone
-Map	Fader 4_1		Osc Env Amoumt
+Map	Fader 4_1		Osc Env Amount
 Map	Fader 5_1		Osc Fine Tune
 Map	Fader 6_1		Filter Kbd Track
 Map	Fader 7_1		Stereo Spread
@@ -1451,7 +1451,7 @@ Scope	Propellerheads	Redrum Drum Computer
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Redrum"
-Map	Fader 9_1		Mod Wheel
+//Map	Fader 9_1		Mod Wheel
 Map	Fader 1_1		Drum 1 Level
 Map	Fader 2_1		Drum 2 Level
 Map	Fader 3_1		Drum 3 Level
@@ -1657,9 +1657,9 @@ Map	_Scope		"Line6 Bass Amp"
 Map	Fader 1_1		Comp Threshold
 Map	Fader 3_1		Drive
 Map	Fader 4_1		Bass
-Map	Fader 5_1		Middle
-Map	Fader 6_1		Treble
-Map	Fader 7_1		Presence
+Map	Fader 5_1		Lo Mid
+Map	Fader 6_1		Hi Mid
+Map	Fader 7_1		Treble
 Map	Fader 8_1		Volume
 Map	Button 1_1		Compressor On
 
@@ -1769,8 +1769,8 @@ Map	Fader 7_1		Low Pass Delay Amount
 Map	Fader 8_1		Low Pass Pan
 Map	Button 1_1		Pattern Enable
 Map	Button 2_1		Shuffle
-Map	Button 9_1		LFO Sync
-Map	Button 10_1		Delay Sync
+Map	Button 9_1		LFOSync
+Map	Button 10_1		DelaySync
 Map	Button 5_1		High Pass Filter On
 Map	Button 6_1		Band Pass Filter On
 Map	Button 7_1		Low Pass Filter On
