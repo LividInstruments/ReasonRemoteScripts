@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	Base
-Map Version	1.0.5
+Map Version	1.0.3
 
 
 Scope	Propellerheads	Master Keyboard
@@ -514,7 +514,7 @@ Map	_Var		"Envelopes"			Env
 Map	Slider 1		Sample Start			Osc
 Map	Slider 2		Osc Octave				Osc
 Map	Slider 3		Osc Semitone			Osc
-Map	Slider 4		Osc Env Amount			Osc
+Map	Slider 4		Osc Env Amoumt			Osc
 Map	Slider 5		Osc Fine Tune			Osc
 Map	Slider 6		Filter Env Amount			Osc
 Map	Slider 7		Portamento			Osc
@@ -587,7 +587,7 @@ Map	Tbtn 6		Keyboard Shortcut Variations=Pan
 Map	Tbtn 7		Keyboard Shortcut Variations=Pitch
 Map	Tbtn 8		Keyboard Shortcut Variations=Pattern
 
-//Map	Slider 9		Mod Wheel
+Map	Slider 9		Mod Wheel
 
 Map	Slider 1		Drum 1 Level			Level
 Map	Slider 2		Drum 2 Level			Level
@@ -816,12 +816,12 @@ Scope	Propellerheads	Line 6 Bass Amp
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Line6 Bass Amp"
-Map	Slider 1		Comp Threshold
+Map	Slider 1		Threshold
 Map	Slider 2		Drive
 Map	Slider 3		Bass
-Map	Slider 4		Lo Mid
-Map	Slider 5		Hi Mid
-Map	Slider 6		Treble
+Map	Slider 4		Middle
+Map	Slider 5		Treble
+Map	Slider 6		Presence
 Map	Slider 8		Volume
 
 
@@ -1449,16 +1449,3 @@ Map	Slider 6		Toggle 6			Toggles
 Map	Slider 7		Toggle 7			Toggles
 Map	Slider 8		Toggle 8			Toggles
 Map	_Var		"Toggles"			Toggles
-
-Scope	Propellerhead Software	se.propellerheads.radicalpiano
-//	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Slider 1		Character
-Map	Slider 2		Microphone 1 Type
-Map	Slider 3		Microphone and Instrument Blend
-Map	Slider 4		Microphone 2 Type
-Map	Slider 5		EQ Lo Gain
-Map	Slider 6		EQ Mid Gain
-Map	Slider 7		EQ Hi Gain
-Map	Slider 8		Ambience Level
-Map	Slider 9		Master Volume

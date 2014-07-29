@@ -59,7 +59,7 @@ sli_end=12
 function remote_init(manufacturer, model)
 	if model=="GuitarWing" then
 		local items={
-			{name="Keyboard",input="keyboard"},
+			--{name="Keyboard",input="keyboard"},
 			{name="_Scope", output="text"}, --device, e.g. "Thor"
 			{name="_Var", output="text"}, --variation, e.g. "Volume" or "Filters"
 			
@@ -211,28 +211,28 @@ function remote_process_midi(event)
 			transpose_changed = true
 		end
 		--now handle the pads
-		if ret.y>35 and ret.y<40 then
-			---if the pads have transposed, then we need to turn off the last note----------------------
-			if(transpose_changed == true) then
-				local prev_off={ time_stamp = event.time_stamp, item=1, value = ret.x, note = g_delivered_note,velocity = 0 }
-				remote.handle_input(prev_off)
-				transpose_changed = false
-			end
-			local padid = ret.y-36
-			local scale_len = table.getn(scale)
-			local ind = 1+modulo(padid,scale_len)  --modulo using the operator % gave me trouble in reason, so I wrote a custom fcn
-			local oct = math.floor(padid/scale_len)
-			local addnote = scale[ind]
-			local noteout = root+transpose+(12*oct)+addnote
-			if (noteout<127 or noteout>0) then
-				local msg={ time_stamp = event.time_stamp, item=1, value = ret.x, note = noteout,velocity = ret.z }
-				remote.handle_input(msg)
-				g_delivered_note = noteout
-				return true
-				end
-			else
-			return false
-		end
+		--if ret.y>100 and ret.y<124 then
+--			---if the pads have transposed, then we need to turn off the last note----------------------
+--			if(transpose_changed == true) then
+--				local prev_off={ time_stamp = event.time_stamp, item=1, value = ret.x, note = g_delivered_note,velocity = 0 }
+--				remote.handle_input(prev_off)
+--				transpose_changed = false
+--			end
+--			local padid = ret.y-36
+--			local scale_len = table.getn(scale)
+--			local ind = 1+modulo(padid,scale_len)  --modulo using the operator % gave me trouble in reason, so I wrote a custom fcn
+--			local oct = math.floor(padid/scale_len)
+--			local addnote = scale[ind]
+--			local noteout = root+transpose+(12*oct)+addnote
+--			if (noteout<127 or noteout>0) then
+--				local msg={ time_stamp = event.time_stamp, item=1, value = ret.x, note = noteout,velocity = ret.z }
+--				remote.handle_input(msg)
+--				g_delivered_note = noteout
+--				return true
+--				end
+--			else
+--			return false
+--		end
 	end
 	return false
 end

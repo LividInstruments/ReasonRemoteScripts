@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	Ohm64
-Map Version	1.4.5
+Map Version	1.4.4
 
 //This is a remote map template for the Ohm64.
 
@@ -2088,7 +2088,6 @@ Map	Knob 15		LFO Amount
 Map	Fader 8		Ducking
 Map	Knob 16		Dry/Wet Balance
 //<	20110711
-
 
 
 Scope	Propellerhead Software	se.propellerheads.radicalpiano

@@ -776,7 +776,7 @@ end
 --UTILITY: make a subtable of a table:
 function table_slice (values,i1,i2)
 	local res = {}
-	local n = #values
+	local n = table.getn(values) --# provides length
 	-- default values for range
 	i1 = i1 or 1
 	i2 = i2 or n
@@ -850,7 +850,7 @@ function update_slider(item)
 	local v_text = ""
 	--local tlcd_event = make_lcd_midi_message("item "..item.." text "..thetext.." len "..#thetext )
 	--table.insert(lcd_events,tlcd_event)
-	if(#thetext>0) then
+	if(string.len(thetext)>0) then
 		--strip any percent symbols
 		local pctsearch = string.find(thetext, '%%')
 		if(pctsearch~=nil) then
