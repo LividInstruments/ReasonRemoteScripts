@@ -1965,6 +1965,10 @@ Map	Fader Button 8		All Solo Off
 Scope	Propellerheads	Alligator
 Define Group	Keyboard Shortcut Variations	Var0	Var1	Var2
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	F1 Button		Keyboard Shortcut Variations=Var0
+Map	F2 Button		Keyboard Shortcut Variations=Var1
+Map	F3 Button		Keyboard Shortcut Variations=Var2
+
 Map	Xfade Button Right		Select Next Patch
 Map	Xfade Button Left		Select Previous Patch
 Map	Grid 33		Pattern Enable
