@@ -1965,12 +1965,13 @@ Map	Fader Button 8		All Solo Off
 Scope	Propellerheads	Alligator
 Define Group	Keyboard Shortcut Variations	Var0	Var1	Var2
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Xfade Button Right		Select Next Patch
+Map	Xfade Button Left		Select Previous Patch
+
 Map	F1 Button		Keyboard Shortcut Variations=Var0
 Map	F2 Button		Keyboard Shortcut Variations=Var1
 Map	F3 Button		Keyboard Shortcut Variations=Var2
 
-Map	Xfade Button Right		Select Next Patch
-Map	Xfade Button Left		Select Previous Patch
 Map	Grid 33		Pattern Enable
 Map	Grid 34		Gate 1 Trig
 Map	Grid 42		Gate 2 Trig
@@ -1982,24 +1983,26 @@ Map	Grid 51		Low Pass Filter On
 Map	Grid 52		LFOSync
 Map	Grid 53		DelaySync
 Map	Grid 49		Enabled
-Map	Knob 1		Pattern
-Map	Knob 5		Resolution
-Map	Knob 9		Shift
-Map	Knob 13		LFO Freq
-Map	Knob 14		LFO Waveform
-Map	Knob 2		Delay Pan
-Map	Knob 3		Delay Time
-Map	Knob 4		Delay Feedback
-Map	Fader 2		High Pass Frequency
-Map	Fader 3		Band Pass Frequency
-Map	Fader 4		Low Pass Frequency
-Map	Fader 5		High Pass Volume
-Map	Fader 6		Band Pass Volume
-Map	Fader 7		Low Pass Volume
-Map	Fader 8		Master Volume
-Map	Knob 6		Ducking
-Map	Knob 7		Dry Pan
-Map	Knob 8		Dry Volume
+
+Map	Knob 1		Pattern			Var0
+Map	Knob 5		Resolution			Var0
+Map	Knob 9		Shift			Var0
+Map	Knob 13		LFO Freq			Var0
+Map	Knob 14		LFO Waveform			Var0
+Map	Knob 2		Delay Pan			Var0
+Map	Knob 3		Delay Time			Var0
+Map	Knob 4		Delay Feedback			Var0
+Map	Fader 2		High Pass Frequency			Var0
+Map	Fader 3		Band Pass Frequency			Var0
+Map	Fader 4		Low Pass Frequency			Var0
+Map	Fader 5		High Pass Volume			Var0
+Map	Fader 6		Band Pass Volume			Var0
+Map	Fader 7		Low Pass Volume			Var0
+Map	Fader 8		Master Volume			Var0
+Map	Knob 6		Ducking			Var0
+Map	Knob 7		Dry Pan			Var0
+Map	Knob 8		Dry Volume			Var0
+
 Map	Knob 1		High Pass Drive Amount			Var1
 Map	Knob 5		Band Pass Drive Amount			Var1
 Map	Knob 9		Low Pass Drive Amount			Var1
@@ -2023,13 +2026,13 @@ Map	Fader 7		Filter Env Release			Var1
 Map	Knob 4		High Pass Pan			Var1
 Map	Knob 8		Band Pass Pan			Var1
 Map	Knob 12		Low Pass Pan			Var1
+
 Map	Fader 2		High Pass LFO Amount			Var2
 Map	Fader 3		Band Pass LFO Amount			Var2
 Map	Fader 4		Low Pass LFO Amount			Var2
 Map	Knob 3		High Pass Env Amount			Var2
 Map	Knob 7		Band Pass Env Amount			Var2
 Map	Knob 11		Low Pass Env Amount			Var2
-
 
 Scope	Propellerheads	Pulveriser
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
