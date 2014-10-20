@@ -63,9 +63,9 @@ function remote_init(manufacturer, model)
 			{name="_Scope", output="text"}, --device, e.g. "Thor"
 			{name="_Var", output="text"}, --variation, e.g. "Volume" or "Filters"
 			
-			{name="SliderNote L1", input="value", min=0, max=127, output="value"},
-			{name="SliderNote R2", input="value", min=0, max=127, output="value"},
-			{name="SliderNote V3", input="value", min=0, max=127, output="value"},
+			{name="SliderNote L1", input="button", output="value"},
+			{name="SliderNote R2", input="button", output="value"},
+			{name="SliderNote V3", input="button", output="value"},
 			
 			{name="ArrowUp", input="button", output="value"},
 			{name="ArrowDn", input="button", output="value"},

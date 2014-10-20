@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	block
-Map Version	1.4.4
+Map Version	1.4.5
 
 //This is a remote map template for the block.
 
@@ -485,7 +485,6 @@ Map	Knob 7		Drum 7 Send 1 Amount			Sends
 Map	Knob 8		Drum 8 Send 1 Amount			Sends
 //eos
 
-
 Scope	Propellerheads	MClass Equalizer
 Define Group	Keyboard Shortcut Variations	LowHi	Parametric
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -923,7 +922,6 @@ Map	Knob 7		Pattern Step Knob 15			Step9-16
 Map	Knob 8		Pattern Step Knob 16			Step9-16
 //eos
 
-
 Scope	Propellerheads	Line 6 Guitar Amp
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	Grid 57		Select Previous Patch
@@ -1063,7 +1061,6 @@ Map	Knob 7		G Release			Dynamics
 Map	Knob 8		Gate Gain Reduction			Dynamics
 //eos
 
-
 Scope	Propellerheads	Record Main Mixer Channel
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Define Group	Keyboard Shortcut Variations	EQ	Send	Dynamics
@@ -1124,7 +1121,6 @@ Map	Knob 6		G Threshold			Dynamics
 Map	Knob 7		G Release			Dynamics
 Map	Knob 8		Gate Gain Reduction			Dynamics
 //eos
-
 
 
 //<	20110628
@@ -1201,7 +1197,6 @@ Map	Knob 7		Channel 7 LMF Gain			LMF
 Map	Knob 8		Channel 8 LMF Gain			LMF
 //eos
 
-
 Scope	Propellerheads	Record Master Section
 Define Group	Keyboard Shortcut Variations	Levels	Pan		HMF	LMF
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1274,7 +1269,6 @@ Map	Knob 6		Channel 6 LMF Gain			LMF
 Map	Knob 7		Channel 7 LMF Gain			LMF
 Map	Knob 8		Channel 8 LMF Gain			LMF
 //eos
-
 
 
 Scope	Propellerheads	Kong Drum Designer
@@ -1399,7 +1393,6 @@ Map	Grid 47		Drum 15 DM On			Pan9-16
 Map	Grid 48		Drum 16 DM On			Pan9-16
 //eos
 
-
 //<	20110319
 Scope	Propellerheads	Reason Document
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1442,7 +1435,6 @@ Map	Grid 58		Select Next Patch for Target Device
 Map	Grid 57		Select Prev Patch for Target Device
 
 
-
 //<	20110319
 Scope	Propellerheads	Reason Essentials Main Mixer Channel
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1479,7 +1471,6 @@ Map	Knob 5		Rotary 1			EQ & Insert
 Map	Knob 6		Rotary 2			EQ & Insert
 Map	Knob 7		Rotary 3			EQ & Insert
 Map	Knob 8		Rotary 4			EQ & Insert
-
 
 
 //<	20110319
@@ -1537,7 +1528,6 @@ Map	Knob 6		Channel 6 Pan			Pan
 Map	Knob 7		Channel 7 Pan			Pan
 Map	Knob 8		Channel 8 Pan			Pan
 //<	20110328
-
 
 //<	20110628
 Scope	Propellerheads	Alligator
@@ -1604,7 +1594,6 @@ Map	Knob 4		High Pass Env Amount			Var5
 Map	Knob 5		Band Pass Env Amount			Var5
 Map	Knob 6		Low Pass Env Amount			Var5
 
-
 Scope	Propellerheads	Pulveriser
 Define Group	Keyboard Shortcut Variations	Var0	Var1
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1634,7 +1623,6 @@ Map	Knob 5		Follower to Rate			Var1
 Map	Knob 6		Follower to Frequency			Var1
 Map	Knob 7		Tremor to Volume			Var1
 Map	Knob 8		Blend
-
 
 Scope	Propellerheads	The Echo
 Define Group	Keyboard Shortcut Variations	Var0	Var1

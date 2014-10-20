@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	code
-Map Version	1.4.6
+Map Version	1.4.7
 
 Scope	Propellerheads	Reason Master Section
 Define Group	Keyboard Shortcut Variations	Main	FXReturn	EQ	Inserts	Levels
@@ -322,7 +322,6 @@ Map	Knob 29		Click Level
 Map	Push 30		Loop On/Off
 Map	Grid 6		Select Prev Patch for Target Device
 Map	Grid 7		Select Next Patch for Target Device
-
 
 
 //eos
@@ -1784,6 +1783,8 @@ Map	Knob 30		Ambience Level
 Map	Push 30		Ambience Type
 Map	Knob 31		Stereo Width
 Map	Knob 32		Master Volume
+
+
 
 
 //eod

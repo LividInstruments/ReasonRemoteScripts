@@ -70,7 +70,7 @@ sli_start=4
 sli_end=12
 		
 function remote_init(manufacturer, model)
-	if model=="Base" then
+	if model=="BaseII" then
 		local items={
 			{name="Keyboard",input="keyboard"},
 			{name="_Scope", output="text"}, --device, e.g. "Thor"
@@ -136,7 +136,7 @@ function remote_init(manufacturer, model)
 			}
 		remote.define_items(items)
 	end
-	if model=="Base" then
+	if model=="BaseII" then
 		local inputs={
 			--{pattern="90 yy zz", name="Keyboard"},
 			--top touch buttons
@@ -206,7 +206,7 @@ function remote_init(manufacturer, model)
 		}
 		remote.define_auto_inputs(inputs)
 	end
-	if model=="Base" then
+	if model=="BaseII" then
 		local outputs={
 			--top touch buttons
 			{pattern="90 0A xx", name="Tbtn 1", x="127*value"},--green
@@ -405,7 +405,7 @@ function remote_deliver_midi(maxbytes,port)
 				--set 7 seg display for major scale MA:
 				remote.make_midi("b0 22 16"),
 				remote.make_midi("b0 23 16"),
-				--f btns w,w,off,c,c,b,b,y
+				--function btns w,w,off,c,c,b,b,y
 				remote.make_midi("90 1A 02"),
 				remote.make_midi("90 1B 02"),
 				remote.make_midi("90 1C 00"),
@@ -414,6 +414,15 @@ function remote_deliver_midi(maxbytes,port)
 				remote.make_midi("90 1F 20"),
 				remote.make_midi("90 20 20"),
 				remote.make_midi("90 21 40"),
+				
+				remote.make_midi("90 12 02"),
+				remote.make_midi("90 13 02"),
+				remote.make_midi("90 14 00"),
+				remote.make_midi("90 15 04"),
+				remote.make_midi("90 16 04"),
+				remote.make_midi("90 17 20"),
+				remote.make_midi("90 18 20"),
+				remote.make_midi("90 19 40"),
 				--top rt runner leds for variations w,w,w
 				remote.make_midi("90 48 02"),
 				remote.make_midi("90 49 02"),
@@ -765,7 +774,7 @@ function modulo(a,b)
 end
 
 function remote_probe(manufacturer,model)
-	if model=="Base" then
+	if model=="BaseII" then
 		return {
 			request="f0 7e 7f 06 01 f7",
 			response="f0 7e 00 06 02 00 01 61 01 00 11 ?? ?? ?? ?? ?? f7"

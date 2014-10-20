@@ -405,7 +405,7 @@ function remote_deliver_midi(maxbytes,port)
 				--set 7 seg display for major scale MA:
 				remote.make_midi("b0 22 16"),
 				remote.make_midi("b0 23 16"),
-				--f btns w,w,off,c,c,b,b,y
+				--function btns, both leds w,w,off,c,c,b,b,y
 				remote.make_midi("90 1A 02"),
 				remote.make_midi("90 1B 02"),
 				remote.make_midi("90 1C 00"),
@@ -414,6 +414,16 @@ function remote_deliver_midi(maxbytes,port)
 				remote.make_midi("90 1F 20"),
 				remote.make_midi("90 20 20"),
 				remote.make_midi("90 21 40"),
+				
+				remote.make_midi("90 12 02"),
+				remote.make_midi("90 13 02"),
+				remote.make_midi("90 14 00"),
+				remote.make_midi("90 15 04"),
+				remote.make_midi("90 16 04"),
+				remote.make_midi("90 17 20"),
+				remote.make_midi("90 18 20"),
+				remote.make_midi("90 19 40"),
+				
 				--top rt runner leds for variations w,w,w
 				remote.make_midi("90 48 02"),
 				remote.make_midi("90 49 02"),
