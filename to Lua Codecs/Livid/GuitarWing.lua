@@ -130,9 +130,9 @@ function remote_init(manufacturer, model)
 			{pattern="b? 25 xx", name="PadCC 2"},--37
 			{pattern="b? 26 xx", name="PadCC 3"},--38
 			{pattern="b? 27 xx", name="PadCC 4"},--39
-			{pattern="b? 05 xx", name="MotionX"},--5
-			{pattern="b? 06 xx", name="MotionY"},--6
-			{pattern="b? 07 xx", name="MotionZ"}--7
+			{pattern="b? 04 xx", name="MotionX"},--5
+			{pattern="b? 05 xx", name="MotionZ"},--6
+			{pattern="b? 06 xx", name="MotionY"}--7
 		}
 		remote.define_auto_inputs(inputs)
 	end
