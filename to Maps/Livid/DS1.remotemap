@@ -1,0 +1,1895 @@
+Propellerhead Remote Mapping File
+File Format Version	1.0.0
+Control Surface Manufacturer	Livid
+Control Surface Model	DS1
+Map Version	1.0.0
+//eos
+
+Scope	Propellerheads	Master Keyboard
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+//eos
+
+Scope	Propellerheads	Reason Document
+Define Group	Keyboard Shortcut Variations	Transport	Loop	Dub
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Document"
+Map	Grid 1		Play
+Map	Grid 4		Stop
+Map	Grid 7		Record
+
+Map	Grid 2		Rewind			Transport
+Map	Grid 5		Fast Forward			Transport
+Map	Grid 8		Click On/Off			Transport
+Map	Grid 2		Left Loop Bar			Loop
+Map	Grid 5		Right Loop Bar			Loop
+Map	Grid 8		Loop On/Off			Loop
+Map	Grid 2		New Overdub			Dub
+Map	Grid 5		New Alternative Take			Dub
+Map	Grid 8		Precount On/Off			Dub
+
+Map	Grid 3		Keyboard Shortcut Variations=Transport
+Map	Grid 6		Keyboard Shortcut Variations=Loop
+Map	Grid 9		Keyboard Shortcut Variations=Dub
+
+Map	EncDelta 2		Target Track (Delta)
+//eos
+
+Scope	Propellerheads	Reason Master Section
+Define Group	Keyboard Shortcut Variations	Volume	v1	v2	v3
+Map	_Scope		"Master"
+Map	Master		Master Level
+//eos
+
+Scope	Propellerheads	Combinator
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Combinator"
+Map	EncDelta 1		Select Patch Delta
+Map	Fader 1		Rotary 1
+Map	Fader 2		Rotary 2
+Map	Fader 3		Rotary 3
+Map	Fader 4		Rotary 4
+Map	CBtn 1_1		Button 1
+Map	CBtn 2_1		Button 2
+Map	CBtn 3_1		Button 3
+Map	CBtn 4_1		Button 4
+Map	CBtn 5_1		Run Pattern Devices
+Map	CBtn 6_1		Bypass All FX
+//eos
+
+Scope	Propellerheads	Mixer 14:2
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Mixer 14:2"
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+Map	Master		Master Level
+
+Map	Dial 1_1		Channel 1 Aux 1 Send			v1
+Map	Dial 1_2		Channel 1 Aux 2 Send			v1
+Map	Dial 1_1		Channel 1 Aux 3 Send			v2
+Map	Dial 1_2		Channel 1 Aux 4 Send			v2
+Map	Dial 1_3		Channel 1 Treble Amount			v1
+Map	Dial 1_4		Channel 1 Bass Amount			v1
+Map	Dial 1_5		Channel 1 Pan			v1
+Map	CBtn 1_1		Channel 1 Mute			v1
+Map	CBtn 1_2		Channel 1 Solo			v1
+Map	CBtn 1_1		Channel 1 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 1_2		Channel 1 EQ On/Off			v2
+Map	Fader 1		Channel 1 Level
+
+Map	Dial 2_1		Channel 2 Aux 1 Send			v1
+Map	Dial 2_2		Channel 2 Aux 2 Send			v1
+Map	Dial 2_1		Channel 2 Aux 3 Send			v2
+Map	Dial 2_2		Channel 2 Aux 4 Send			v2
+Map	Dial 2_3		Channel 2 Treble Amount			v1
+Map	Dial 2_4		Channel 2 Bass Amount			v1
+Map	Dial 2_5		Channel 2 Pan			v1
+Map	CBtn 2_1		Channel 2 Mute			v1
+Map	CBtn 2_2		Channel 2 Solo			v1
+Map	CBtn 2_1		Channel 2 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 2_2		Channel 2 EQ On/Off			v2
+Map	Fader 2		Channel 2 Level
+
+Map	Dial 3_1		Channel 3 Aux 1 Send			v1
+Map	Dial 3_2		Channel 3 Aux 2 Send			v1
+Map	Dial 3_1		Channel 3 Aux 3 Send			v2
+Map	Dial 3_2		Channel 3 Aux 4 Send			v2
+Map	Dial 3_3		Channel 3 Treble Amount			v1
+Map	Dial 3_4		Channel 3 Bass Amount			v1
+Map	Dial 3_5		Channel 3 Pan			v1
+Map	CBtn 3_1		Channel 3 Mute			v1
+Map	CBtn 3_2		Channel 3 Solo			v1
+Map	CBtn 3_1		Channel 3 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 3_2		Channel 3 EQ On/Off			v2
+Map	Fader 3		Channel 3 Level
+
+Map	Dial 4_1		Channel 4 Aux 1 Send			v1
+Map	Dial 4_2		Channel 4 Aux 2 Send			v1
+Map	Dial 4_1		Channel 4 Aux 3 Send			v2
+Map	Dial 4_2		Channel 4 Aux 4 Send			v2
+Map	Dial 4_3		Channel 4 Treble Amount			v1
+Map	Dial 4_4		Channel 4 Bass Amount			v1
+Map	Dial 4_5		Channel 4 Pan			v1
+Map	CBtn 4_1		Channel 4 Mute			v1
+Map	CBtn 4_2		Channel 4 Solo			v1
+Map	CBtn 4_1		Channel 4 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 4_2		Channel 4 EQ On/Off			v2
+Map	Fader 4		Channel 4 Level
+
+Map	Dial 5_1		Channel 5 Aux 1 Send			v1
+Map	Dial 5_2		Channel 5 Aux 2 Send			v1
+Map	Dial 5_1		Channel 5 Aux 3 Send			v2
+Map	Dial 5_2		Channel 5 Aux 4 Send			v2
+Map	Dial 5_3		Channel 5 Treble Amount			v1
+Map	Dial 5_4		Channel 5 Bass Amount			v1
+Map	Dial 5_5		Channel 5 Pan			v1
+Map	CBtn 5_1		Channel 5 Mute			v1
+Map	CBtn 5_2		Channel 5 Solo			v1
+Map	CBtn 5_1		Channel 5 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 5_2		Channel 5 EQ On/Off			v2
+Map	Fader 5		Channel 5 Level
+
+Map	Dial 6_1		Channel 6 Aux 1 Send			v1
+Map	Dial 6_2		Channel 6 Aux 2 Send			v1
+Map	Dial 6_1		Channel 6 Aux 3 Send			v2
+Map	Dial 6_2		Channel 6 Aux 4 Send			v2
+Map	Dial 6_3		Channel 6 Treble Amount			v1
+Map	Dial 6_4		Channel 6 Bass Amount			v1
+Map	Dial 6_5		Channel 6 Pan			v1
+Map	CBtn 6_1		Channel 6 Mute			v1
+Map	CBtn 6_2		Channel 6 Solo			v1
+Map	CBtn 6_1		Channel 6 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 6_2		Channel 6 EQ On/Off			v2
+Map	Fader 6		Channel 6 Level
+
+Map	Dial 7_1		Channel 7 Aux 1 Send			v1
+Map	Dial 7_2		Channel 7 Aux 2 Send			v1
+Map	Dial 7_1		Channel 7 Aux 3 Send			v2
+Map	Dial 7_2		Channel 7 Aux 4 Send			v2
+Map	Dial 7_3		Channel 7 Treble Amount			v1
+Map	Dial 7_4		Channel 7 Bass Amount			v1
+Map	Dial 7_5		Channel 7 Pan			v1
+Map	CBtn 7_1		Channel 7 Mute			v1
+Map	CBtn 7_2		Channel 7 Solo			v1
+Map	CBtn 7_1		Channel 7 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 7_2		Channel 7 EQ On/Off			v2
+Map	Fader 7		Channel 7 Level
+
+Map	Dial 8_1		Channel 8 Aux 1 Send			v1
+Map	Dial 8_2		Channel 8 Aux 2 Send			v1
+Map	Dial 8_1		Channel 8 Aux 3 Send			v2
+Map	Dial 8_2		Channel 8 Aux 4 Send			v2
+Map	Dial 8_3		Channel 8 Treble Amount			v1
+Map	Dial 8_4		Channel 8 Bass Amount			v1
+Map	Dial 8_5		Channel 8 Pan			v1
+Map	CBtn 8_1		Channel 8 Mute			v1
+Map	CBtn 8_2		Channel 8 Solo			v1
+Map	CBtn 8_1		Channel 8 Aux 4 Pre Fader On/Off			v2
+Map	CBtn 8_2		Channel 8 EQ On/Off			v2
+Map	Fader 8		Channel 8 Level
+//eos
+
+Scope	Propellerheads	Line Mixer 6:2
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Line Mixer 6:2"
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+Map	Master		Master Level
+
+Map	Dial 1_4		Channel 1 Aux Send
+Map	Dial 1_5		Channel 1 Pan
+Map	CBtn 1_1		Channel 1 Mute
+Map	CBtn 1_2		Channel 1 Solo
+Map	Fader 1		Channel 1 Level
+
+Map	Dial 2_4		Channel 2 Aux Send
+Map	Dial 2_5		Channel 2 Pan
+Map	CBtn 2_1		Channel 2 Mute
+Map	CBtn 2_2		Channel 2 Solo
+Map	Fader 2		Channel 2 Level
+
+Map	Dial 3_4		Channel 3 Aux Send
+Map	Dial 3_5		Channel 3 Pan
+Map	CBtn 3_1		Channel 3 Mute
+Map	CBtn 3_2		Channel 3 Solo
+Map	Fader 3		Channel 3 Level
+
+Map	Dial 4_4		Channel 4 Aux Send
+Map	Dial 4_5		Channel 4 Pan
+Map	CBtn 4_1		Channel 4 Mute
+Map	CBtn 4_2		Channel 4 Solo
+Map	Fader 4		Channel 4 Level
+
+Map	Dial 5_4		Channel 5 Aux Send
+Map	Dial 5_5		Channel 5 Pan
+Map	CBtn 5_1		Channel 5 Mute
+Map	CBtn 5_2		Channel 5 Solo
+Map	Fader 5		Channel 5 Level
+
+Map	Dial 6_4		Channel 6 Aux Send
+Map	Dial 6_5		Channel 6 Pan
+Map	CBtn 6_1		Channel 6 Mute
+Map	CBtn 6_2		Channel 6 Solo
+Map	Fader 6		Channel 6 Level
+
+Map	Fader 7		Aux Return Level
+//eos
+
+Scope	Propellerheads	ID8 Instrument Device
+//Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"ID8"
+Map	Master		Volume
+
+Map	Fader 1		Parameter 1
+Map	Fader 2		Parameter 2
+Map	CBtn 1_1		Select Previous Preset
+Map	CBtn 1_2		Select Next Preset
+Map	CBtn 2_1		Select Previous Category
+Map	CBtn 2_2		Select Next Category
+Map	CBtn 3_1		Select Previous Sound
+Map	CBtn 3_2		Select Next Sound
+Map	CBtn 4_1		Sound A
+Map	CBtn 5_1		Sound B
+Map	CBtn 6_1		Sound C
+Map	CBtn 7_1		Sound D
+//eos
+
+Scope	Propellerheads	Kong Drum Designer
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"KONG"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	EBtn 3		Bus FX On
+Map	EBtn 4		Master FX On
+Map	Knob 1		Bus FX P1
+Map	Knob 2		Bus FX P2
+Map	Knob 3		Master FX P1
+Map	Knob 4		Master FX P2
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+//Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Drum 1 Pitch Offset			v1
+Map	Dial 1_2		Drum 1 Bus FX Send			v1
+Map	Dial 1_3		Drum 1 Aux 1 Send			v1
+Map	Dial 1_4		Drum 1 Tone			v1
+Map	Dial 1_5		Drum 1 Pan			v1
+Map	CBtn 1_1		Drum 1 FX1 On			v1
+Map	CBtn 1_2		Drum 1 FX2 On			v1
+Map	Fader 1		Drum 1 Level			v1
+
+Map	Dial 2_1		Drum 2 Pitch Offset			v1
+Map	Dial 2_2		Drum 2 Bus FX Send			v1
+Map	Dial 2_3		Drum 2 Aux 1 Send			v1
+Map	Dial 2_4		Drum 2 Tone			v1
+Map	Dial 2_5		Drum 2 Pan			v1
+Map	CBtn 2_1		Drum 2 FX1 On			v1
+Map	CBtn 2_2		Drum 2 FX2 On			v1
+Map	Fader 2		Drum 2 Level			v1
+
+Map	Dial 3_1		Drum 3 Pitch Offset			v1
+Map	Dial 3_2		Drum 3 Bus FX Send			v1
+Map	Dial 3_3		Drum 3 Aux 1 Send			v1
+Map	Dial 3_4		Drum 3 Tone			v1
+Map	Dial 3_5		Drum 3 Pan			v1
+Map	CBtn 3_1		Drum 3 FX1 On			v1
+Map	CBtn 3_2		Drum 3 FX2 On			v1
+Map	Fader 3		Drum 3 Level			v1
+
+Map	Dial 4_1		Drum 4 Pitch Offset			v1
+Map	Dial 4_2		Drum 4 Bus FX Send			v1
+Map	Dial 4_3		Drum 4 Aux 1 Send			v1
+Map	Dial 4_4		Drum 4 Tone			v1
+Map	Dial 4_5		Drum 4 Pan			v1
+Map	CBtn 4_1		Drum 4 FX1 On			v1
+Map	CBtn 4_2		Drum 4 FX2 On			v1
+Map	Fader 4		Drum 4 Level			v1
+
+Map	Dial 5_1		Drum 5 Pitch Offset			v1
+Map	Dial 5_2		Drum 5 Bus FX Send			v1
+Map	Dial 5_3		Drum 5 Aux 1 Send			v1
+Map	Dial 5_4		Drum 5 Tone			v1
+Map	Dial 5_5		Drum 5 Pan			v1
+Map	CBtn 5_1		Drum 5 FX1 On			v1
+Map	CBtn 5_2		Drum 5 FX2 On			v1
+Map	Fader 5		Drum 5 Level			v1
+
+Map	Dial 6_1		Drum 6 Pitch Offset			v1
+Map	Dial 6_2		Drum 6 Bus FX Send			v1
+Map	Dial 6_3		Drum 6 Aux 1 Send			v1
+Map	Dial 6_4		Drum 6 Tone			v1
+Map	Dial 6_5		Drum 6 Pan			v1
+Map	CBtn 6_1		Drum 6 FX1 On			v1
+Map	CBtn 6_2		Drum 6 FX2 On			v1
+Map	Fader 6		Drum 6 Level			v1
+
+Map	Dial 7_1		Drum 7 Pitch Offset			v1
+Map	Dial 7_2		Drum 7 Bus FX Send			v1
+Map	Dial 7_3		Drum 7 Aux 1 Send			v1
+Map	Dial 7_4		Drum 7 Tone			v1
+Map	Dial 7_5		Drum 7 Pan			v1
+Map	CBtn 7_1		Drum 7 FX1 On			v1
+Map	CBtn 7_2		Drum 7 FX2 On			v1
+Map	Fader 7		Drum 7 Level			v1
+
+Map	Dial 8_1		Drum 8 Pitch Offset			v1
+Map	Dial 8_2		Drum 8 Bus FX Send			v1
+Map	Dial 8_3		Drum 8 Aux 1 Send			v1
+Map	Dial 8_4		Drum 8 Tone			v1
+Map	Dial 8_5		Drum 8 Pan			v1
+Map	CBtn 8_1		Drum 8 FX1 On			v1
+Map	CBtn 8_2		Drum 8 FX2 On			v1
+Map	Fader 8		Drum 8 Level			v1
+
+//var 2
+Map	Dial 1_1		Drum 9 Pitch Offset			v2
+Map	Dial 1_2		Drum 9 Bus FX Send			v2
+Map	Dial 1_3		Drum 9 Aux 1 Send			v2
+Map	Dial 1_4		Drum 9 Tone			v2
+Map	Dial 1_5		Drum 9 Pan			v2
+Map	CBtn 1_1		Drum 9 FX1 On			v2
+Map	CBtn 1_2		Drum 9 FX2 On			v2
+Map	Fader 1		Drum 9 Level			v2
+
+Map	Dial 2_1		Drum 10 Pitch Offset			v2
+Map	Dial 2_2		Drum 10 Bus FX Send			v2
+Map	Dial 2_3		Drum 10 Aux 1 Send			v2
+Map	Dial 2_4		Drum 10 Tone			v2
+Map	Dial 2_5		Drum 10 Pan			v2
+Map	CBtn 2_1		Drum 10 FX1 On			v2
+Map	CBtn 2_2		Drum 10 FX2 On			v2
+Map	Fader 2		Drum 10 Level			v2
+
+Map	Dial 3_1		Drum 11 Pitch Offset			v2
+Map	Dial 3_2		Drum 11 Bus FX Send			v2
+Map	Dial 3_3		Drum 11 Aux 1 Send			v2
+Map	Dial 3_4		Drum 11 Tone			v2
+Map	Dial 3_5		Drum 11 Pan			v2
+Map	CBtn 3_1		Drum 11 FX1 On			v2
+Map	CBtn 3_2		Drum 11 FX2 On			v2
+Map	Fader 3		Drum 11 Level			v2
+
+Map	Dial 4_1		Drum 12 Pitch Offset			v2
+Map	Dial 4_2		Drum 12 Bus FX Send			v2
+Map	Dial 4_3		Drum 12 Aux 1 Send			v2
+Map	Dial 4_4		Drum 12 Tone			v2
+Map	Dial 4_5		Drum 12 Pan			v2
+Map	CBtn 4_1		Drum 12 FX1 On			v2
+Map	CBtn 4_2		Drum 12 FX2 On			v2
+Map	Fader 4		Drum 12 Level			v2
+
+Map	Dial 5_1		Drum 13 Pitch Offset			v2
+Map	Dial 5_2		Drum 13 Bus FX Send			v2
+Map	Dial 5_3		Drum 13 Aux 1 Send			v2
+Map	Dial 5_4		Drum 13 Tone			v2
+Map	Dial 5_5		Drum 13 Pan			v2
+Map	CBtn 5_1		Drum 13 FX1 On			v2
+Map	CBtn 5_2		Drum 13 FX2 On			v2
+Map	Fader 5		Drum 13 Level			v2
+
+Map	Dial 6_1		Drum 14 Pitch Offset			v2
+Map	Dial 6_2		Drum 14 Bus FX Send			v2
+Map	Dial 6_3		Drum 14 Aux 1 Send			v2
+Map	Dial 6_4		Drum 14 Tone			v2
+Map	Dial 6_5		Drum 14 Pan			v2
+Map	CBtn 6_1		Drum 14 FX1 On			v2
+Map	CBtn 6_2		Drum 14 FX2 On			v2
+Map	Fader 6		Drum 14 Level			v2
+
+Map	Dial 7_1		Drum 15 Pitch Offset			v2
+Map	Dial 7_2		Drum 15 Bus FX Send			v2
+Map	Dial 7_3		Drum 15 Aux 1 Send			v2
+Map	Dial 7_4		Drum 15 Tone			v2
+Map	Dial 7_5		Drum 15 Pan			v2
+Map	CBtn 7_1		Drum 15 FX1 On			v2
+Map	CBtn 7_2		Drum 15 FX2 On			v2
+Map	Fader 7		Drum 15 Level			v2
+
+Map	Dial 8_1		Drum 16 Pitch Offset			v2
+Map	Dial 8_2		Drum 16 Bus FX Send			v2
+Map	Dial 8_3		Drum 16 Aux 1 Send			v2
+Map	Dial 8_4		Drum 16 Tone			v2
+Map	Dial 8_5		Drum 16 Pan			v2
+Map	CBtn 8_1		Drum 16 FX1 On			v2
+Map	CBtn 8_2		Drum 16 FX2 On			v2
+Map	Fader 8		Drum 16 Level			v2
+//eos
+
+Scope	Propellerheads	Thor Polysonic Synthesizer
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Thor"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Osc 1 Type			v1
+Map	Dial 1_2		Osc 1 Oct			v1
+Map	Dial 1_3		Osc 1 Semi			v1
+Map	Dial 1_4		Osc 1 Tune			v1
+Map	Dial 1_5		Osc 1 Mod			v1
+Map	CBtn 1_1		Osc 1 To Filter 1 Enable			v1
+Map	CBtn 1_2		Osc 1 To Filter 2 Enable			v1
+Map	Fader 1		Amp Env Attack			v1
+
+Map	Dial 2_1		Osc 2 Type			v1
+Map	Dial 2_2		Osc 2 Oct			v1
+Map	Dial 2_3		Osc 2 Semi			v1
+Map	Dial 2_4		Osc 2 Tune			v1
+Map	Dial 2_5		Osc 2 Mod			v1
+Map	CBtn 2_1		Osc 2 To Filter 1 Enable			v1
+Map	CBtn 2_2		Osc 2 Sync To Osc 1			v1
+Map	Fader 2		Amp Env Decay			v1
+
+Map	Dial 3_1		Osc 3 Type			v1
+Map	Dial 3_2		Osc 3 Oct			v1
+Map	Dial 3_3		Osc 3 Semi			v1
+Map	Dial 3_4		Osc 3 Tune			v1
+Map	Dial 3_5		Osc 3 Mod			v1
+Map	CBtn 3_1		Osc 3 To Filter 1 Enable			v1
+Map	CBtn 3_2		Osc 3 Sync To Osc 1			v1
+Map	Fader 3		Amp Env Sustain			v1
+
+Map	Dial 4_1		Filter 1 Freq			v1
+Map	Dial 4_2		Filter 1 Res			v1
+Map	Dial 4_3		Filter 1 Type			v1
+Map	Dial 4_4		Filter 1 Drive			v1
+Map	Dial 4_5		Filter 1 Env Amount			v1
+Map	CBtn 4_1		Filter 1 Env Invert			v1
+Map	CBtn 4_2		Filter 1 Self Osc			v1
+Map	Fader 4		Amp Env Release			v1
+
+Map	Dial 5_1		LFO 1 Rate			v1
+Map	Dial 5_2		LFO 1 Waveform			v1
+Map	Dial 5_3		LFO 1 Delay			v1
+Map	Dial 5_4		Shaper Drive			v1
+Map	Dial 5_5		Shaper Type			v1
+Map	CBtn 5_1		LFO 1 Tempo Sync			v1
+Map	CBtn 5_2		Shaper On			v1
+Map	Fader 5		Filter Env Attack			v1
+
+Map	Dial 6_1		Delay Time			v1
+Map	Dial 6_2		Delay Feedback			v1
+Map	Dial 6_3		Delay Rate			v1
+Map	Dial 6_4		Delay Amt			v1
+Map	Dial 6_5		Delay Dry Wet			v1
+Map	CBtn 6_1		Delay On			v1
+Map	CBtn 6_2		Delay Sync			v1
+Map	Fader 6		Filter Env Decay			v1
+
+Map	Dial 7_1		Chorus Delay			v1
+Map	Dial 7_2		Chorus Feedback			v1
+Map	Dial 7_3		Chorus Rate			v1
+Map	Dial 7_4		Chorus Amt			v1
+Map	Dial 7_5		Chorus Dry Wet			v1
+Map	CBtn 7_1		Chorus On			v1
+//Map	CBtn 7_2					v1
+Map	Fader 7		Filter Env Sustain			v1
+
+Map	Dial 8_1		Filter 3 Freq			v1
+Map	Dial 8_2		Filter 3 Res			v1
+Map	Dial 8_3		Filter 3 Type			v1
+Map	Dial 8_4		Filter 3 Drive			v1
+Map	Dial 8_5		Portamento			v1
+Map	CBtn 8_1		Portamento Mode			v1
+Map	CBtn 8_2		Filter 3 Global Env Invert			v1
+Map	Fader 8		Filter Env Release			v1
+
+Map	Dial 1_1		Osc 1 AM from Osc 2
+Map	Dial 1_2		Osc 2 Sync BW
+Map	Dial 1_3		Osc 3 Sync BW
+Map	Dial 2_1		Osc 1 And 2 Balance			v2
+Map	Dial 2_2		Osc 1 And 2 Level			v2
+Map	Dial 2_3		Osc 3 Level			v2
+
+Map	CBtn 1_1		Osc 1 To Filter 1 Enable			v2
+Map	CBtn 1_2		Osc 1 To Filter 2 Enable			v2
+Map	CBtn 5_1		Global Env Tempo Sync
+Map	CBtn 5_2		Global Env Loop
+Map	CBtn 1_1		Mod Env Tempo Sync
+Map	CBtn 1_2		Mod Env Loop
+Map	Fader 1		Mod Env Delay			v2
+Map	Fader 2		Mod Env Attack			v2
+Map	Fader 3		Mod Env Decay			v2
+Map	Fader 4		Mod Env Release			v2
+Map	Fader 5		Global Env Attack			v2
+Map	Fader 6		Global Env Decay			v2
+Map	Fader 7		Global Env Sustain			v2
+Map	Fader 8		Global Env Release			v2
+Map	Dial 4_1		Filter 2 Freq			v2
+Map	Dial 4_2		Filter 2 Res			v2
+Map	Dial 4_3		Filter 2 Type			v2
+Map	Dial 4_4		Filter 2 Drive			v2
+Map	Dial 4_5		Filter 2 Env Amount			v2
+Map	CBtn 4_1		Filter 2 Env Invert			v2
+Map	CBtn 4_2		Filter 2 Self Osc			v2
+
+Map	Dial 1_1		Pattern Step Note 1			v3
+Map	Dial 2_1		Pattern Step Note 2			v3
+Map	Dial 3_1		Pattern Step Note 3			v3
+Map	Dial 4_1		Pattern Step Note 4			v3
+Map	Dial 5_1		Pattern Step Note 5			v3
+Map	Dial 6_1		Pattern Step Note 6			v3
+Map	Dial 7_1		Pattern Step Note 7			v3
+Map	Dial 8_1		Pattern Step Note 8			v3
+Map	Dial 1_2		Pattern Step Note 9			v3
+Map	Dial 2_2		Pattern Step Note 10			v3
+Map	Dial 3_2		Pattern Step Note 11			v3
+Map	Dial 4_2		Pattern Step Note 12			v3
+Map	Dial 5_2		Pattern Step Note 13			v3
+Map	Dial 6_2		Pattern Step Note 14			v3
+Map	Dial 7_2		Pattern Step Note 15			v3
+Map	Dial 8_2		Pattern Step Note 16			v3
+Map	Dial 1_3		Pattern Step Vel 1			v3
+Map	Dial 2_3		Pattern Step Vel 2			v3
+Map	Dial 3_3		Pattern Step Vel 3			v3
+Map	Dial 4_3		Pattern Step Vel 4			v3
+Map	Dial 5_3		Pattern Step Vel 5			v3
+Map	Dial 6_3		Pattern Step Vel 6			v3
+Map	Dial 7_3		Pattern Step Vel 7			v3
+Map	Dial 8_3		Pattern Step Vel 8			v3
+Map	Dial 1_4		Pattern Step Vel 9			v3
+Map	Dial 2_4		Pattern Step Vel 10			v3
+Map	Dial 3_4		Pattern Step Vel 11			v3
+Map	Dial 4_4		Pattern Step Vel 12			v3
+Map	Dial 5_4		Pattern Step Vel 13			v3
+Map	Dial 6_4		Pattern Step Vel 14			v3
+Map	Dial 7_4		Pattern Step Vel 15			v3
+Map	Dial 8_4		Pattern Step Vel 16			v3
+Map	Dial 1_5		Pattern Step Duration 1			v3
+Map	Dial 2_5		Pattern Step Duration 3			v3
+Map	Dial 3_5		Pattern Step Duration 5			v3
+Map	Dial 4_5		Pattern Step Duration 7			v3
+Map	Dial 5_5		Pattern Step Duration 9			v3
+Map	Dial 6_5		Pattern Step Duration 11			v3
+Map	Dial 7_5		Pattern Step Duration 13			v3
+Map	Dial 8_5		Pattern Step Duration 15			v3
+Map	CBtn 1_1		Pattern Step Gate 1			v3
+Map	CBtn 2_1		Pattern Step Gate 2			v3
+Map	CBtn 3_1		Pattern Step Gate 3			v3
+Map	CBtn 4_1		Pattern Step Gate 4			v3
+Map	CBtn 5_1		Pattern Step Gate 5			v3
+Map	CBtn 6_1		Pattern Step Gate 6			v3
+Map	CBtn 7_1		Pattern Step Gate 7			v3
+Map	CBtn 8_1		Pattern Step Gate 8			v3
+Map	CBtn 1_2		Pattern Step Gate 9			v3
+Map	CBtn 2_2		Pattern Step Gate 10			v3
+Map	CBtn 3_2		Pattern Step Gate 11			v3
+Map	CBtn 4_2		Pattern Step Gate 12			v3
+Map	CBtn 5_2		Pattern Step Gate 13			v3
+Map	CBtn 6_2		Pattern Step Gate 14			v3
+Map	CBtn 7_2		Pattern Step Gate 15			v3
+Map	CBtn 8_2		Pattern Step Gate 16			v3
+//eos
+
+Scope	Propellerheads	SubTractor Analog Synthesizer
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"SubTractor"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Osc1 Wave
+Map	Dial 1_2		Osc1 Octave
+Map	Dial 1_3		Osc1 Semitone
+Map	Dial 1_4		Osc1 Fine Tune
+Map	Dial 1_5		Osc1 Phase Diff
+Map	CBtn 1_1		Ring Mod
+Map	CBtn 1_2		Osc1 Phase Mode
+Map	Fader 1		Amp Env Attack
+
+Map	Dial 2_1		Osc2 Wave
+Map	Dial 2_2		Osc2 Octave
+Map	Dial 2_3		Osc2 Semitone
+Map	Dial 2_4		Osc2 Fine Tune
+Map	Dial 2_5		Osc2 Phase Diff
+Map	CBtn 2_1		Osc2 On/Off
+Map	CBtn 2_2		Osc2 Phase Mode
+Map	Fader 2		Amp Env Decay
+
+Map	Dial 3_1		Osc Mix
+Map	Dial 3_2		FM Amount
+Map	Dial 3_3		Noise Level
+Map	Dial 3_4		Noise Decay
+Map	Dial 3_5		Noise Color
+Map	CBtn 3_1		Noise On/Off
+//Map	CBtn 3_2		
+Map	Fader 3		Amp Env Sustain
+
+Map	Dial 4_1		Filter Freq
+Map	Dial 4_2		Filter Res
+Map	Dial 4_3		Filter Type
+Map	Dial 4_4		Filter2 Freq
+Map	Dial 4_5		Filter2 Res
+Map	CBtn 4_1		Filter Link Freq On/Off
+Map	CBtn 4_2		Filter2 On/Off
+Map	Fader 4		Amp Env Release
+
+Map	Dial 5_1		LFO1 Rate
+Map	Dial 5_2		LFO1 Wave
+Map	Dial 5_3		LFO1 Amount
+Map	Dial 5_4		LFO1 Dest
+Map	Dial 5_5		Filter Env Amount
+Map	CBtn 5_1		LFO Sync Enable
+Map	CBtn 5_2		Filter Env Invert
+Map	Fader 5		Filter Env Attack
+
+Map	Dial 6_1		LFO2 Rate
+Map	Dial 6_2		LFO2 Delay
+Map	Dial 6_3		LFO2 Amount
+Map	Dial 6_4		LFO2 Dest
+Map	Dial 6_5		LFO2 Kbd Track
+//Map	CBtn 6_1		
+//Map	CBtn 6_2		
+Map	Fader 6		Filter Env Decay
+
+Map	Dial 7_1		Filter Freq Mod Wheel Amount
+Map	Dial 7_2		Filter Res Mod Wheel Amount
+Map	Dial 7_3		LFO1 Mod Wheel Amount
+Map	Dial 7_4		Phase Diff Mod Wheel Amount
+Map	Dial 7_5		FM Mod Wheel Amount
+//Map	CBtn 7_1		
+//Map	CBtn 7_2		
+Map	Fader 7		Filter Env Sustain
+
+Map	Dial 8_1		Filter2 Freq Vel Amount
+Map	Dial 8_2		Amp Vel Amount
+Map	Dial 8_3		Filter Env Vel Amount
+Map	Dial 8_4		FM Vel Amount
+Map	Dial 8_5		Portamento
+Map	CBtn 8_1		Key Mode
+Map	CBtn 8_2		Low Bandwidth On/Off
+Map	Fader 8		Filter Env Release
+//eos
+
+Scope	Propellerheads	Malstrom Graintable Synthesizer
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Malstrom"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Oscillator A Motion
+Map	Dial 1_2		Oscillator A Octave
+Map	Dial 1_3		Oscillator A Semi
+Map	Dial 1_4		Oscillator A Index
+Map	Dial 1_5		Oscillator A Shift
+Map	CBtn 1_1		Oscillator A On/Off
+Map	CBtn 1_2		Route Oscillator A To Filter B
+Map	Fader 1		Oscillator A Attack
+
+Map	Dial 2_1		Oscillator B Motion
+Map	Dial 2_2		Oscillator B Octave
+Map	Dial 2_3		Oscillator B Semi
+Map	Dial 2_4		Oscillator B Index
+Map	Dial 2_5		Oscillator B Shift
+Map	CBtn 2_1		Oscillator B On/Off
+Map	CBtn 2_2		Route Oscillator B To Filter B
+Map	Fader 2		Oscillator A Decay
+
+Map	Dial 3_1		Oscillator A Gain
+Map	Dial 3_2		Oscillator B Gain
+Map	Dial 3_3		Oscillator B Cent
+Map	Dial 3_4		Shaper Mode
+Map	Dial 3_5		Shaper Amount
+Map	CBtn 3_1		Shaper On/Off
+Map	CBtn 3_2		Route Oscillator A To Shaper
+Map	Fader 3		Oscillator A Sustain
+
+Map	Dial 4_1		Filter A Freq
+Map	Dial 4_2		Filter A Resonance
+Map	Dial 4_3		Filter A Mode
+Map	Dial 4_4		Filter B Freq
+Map	Dial 4_5		Filter B Resonance
+Map	CBtn 4_1		Filter A On/Off
+Map	CBtn 4_2		Filter B On/Off
+Map	Fader 4		Oscillator A Release
+
+Map	Dial 5_1		Modulator A Rate			v1
+Map	Dial 5_1		Modulator A Target			v2
+Map	Dial 5_2		Modulator A Curve
+Map	Dial 5_3		Modulator A To Pitch
+Map	Dial 5_4		Modulator A To Index
+Map	Dial 5_5		Modulator A To Shift
+Map	CBtn 5_1		Modulator A One Shot
+Map	CBtn 5_2		Modulator A Sync
+Map	Fader 5		Oscillator B Attack			v1
+Map	Fader 5		Filter Env Attack			v2
+
+Map	Dial 6_1		Modulator B Rate			v1
+Map	Dial 6_1		Modulator B Target			v2
+Map	Dial 6_2		Modulator B Curve
+Map	Dial 6_3		Modulator B To Motion
+Map	Dial 6_4		Modulator B To Level
+Map	Dial 6_5		Modulator B To Filter
+Map	CBtn 6_1		Modulator B One Shot
+Map	CBtn 6_2		Modulator B Sync
+Map	Fader 6		Oscillator B Decay			v1
+Map	Fader 6		Filter Env Decay			v2
+
+Map	Dial 7_1		Mod Wheel To Index
+Map	Dial 7_2		Mod Wheel To Shift
+Map	Dial 7_3		Mod Wheel To Filter
+Map	Dial 7_4		Mod Wheel To Modulator
+Map	Dial 7_5		Modulator B Target
+Map	CBtn 7_1		Filter Env Invert
+Map	CBtn 7_2		Filter B Env
+Map	Fader 7		Oscillator B Sustain			v1
+Map	Fader 7		Filter Env Sustain			v2
+
+Map	Dial 8_1		Velocity To Level A
+Map	Dial 8_2		Velocity To Level B
+Map	Dial 8_3		Spread Amount
+Map	Dial 8_4		Filter Env Amount
+Map	Dial 8_5		Portamento
+Map	CBtn 8_1		Legato On/Off
+Map	CBtn 8_2		Route Filter B To Shaper
+Map	Fader 8		Oscillator B Release			v1
+Map	Fader 8		Filter Env Release			v2
+//eos
+
+Scope	Propellerheads	NN19 Digital Sampler
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"NN19"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Sample Start
+Map	Dial 1_2		Osc Octave
+Map	Dial 1_3		Osc Semitone
+Map	Dial 1_4		Osc Fine Tune
+Map	Dial 1_5		Osc Env Amount
+Map	CBtn 1_1		High Quality Interpolation
+Map	CBtn 1_2		Osc Kbd Track
+Map	Fader 1		Amp Env Attack
+Map	Fader 2		Amp Env Decay
+Map	Fader 3		Amp Env Sustain
+Map	Dial 4_1		Filter Freq
+Map	Dial 4_2		Filter Res
+Map	Dial 4_3		Filter Mode
+Map	Dial 4_4		Filter Kbd Track
+Map	Dial 4_5		Filter Env Amount
+Map	CBtn 4_1		Filter On/Off
+Map	CBtn 4_2		Filter Env Invert
+Map	Fader 4		Amp Env Release
+Map	Dial 5_1		LFO Rate
+Map	Dial 5_2		LFO Wave
+Map	Dial 5_3		LFO Dest
+Map	Dial 5_4		LFO Amount
+Map	CBtn 5_1		LFO Sync Enable
+Map	Fader 5		Filter Env Attack
+Map	Dial 6_1		Filter Freq Ext Mod
+Map	Dial 6_2		LFO Ext Mod
+Map	Dial 6_3		Amp Ext Mod
+Map	Dial 6_4		Ext Mod Select
+Map	Dial 6_5		Stereo Spread
+Map	Fader 6		Filter Env Decay
+
+Map	Dial 7_1		Filter Freq Mod Wheel Amount
+Map	Dial 7_2		Filter Res Mod Wheel Amount
+Map	Dial 7_3		Filter Decay Mod Wheel Amount
+Map	Dial 7_4		Amp Mod Wheel Amount
+Map	Dial 7_5		LFO Mod Wheel Amount
+Map	CBtn 7_1		Solo Sample
+//Map	CBtn 7_2		High Quality Interpolation
+Map	Fader 7		Filter Env Sustain
+
+Map	Dial 8_1		Filter Env Vel Amount
+Map	Dial 8_2		Filter Decay Vel Amount
+Map	Dial 8_3		Amp Vel Amount
+Map	Dial 8_4		Sample Start Vel Amount
+Map	Dial 8_5		Portamento
+Map	CBtn 8_1		Key Mode
+Map	CBtn 8_2		Low Bandwidth On/Off
+Map	Fader 8		Filter Env Release
+//eos
+
+Scope	Propellerheads	NN-XT Advanced Sampler
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"NN-XT"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Volume
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Mod Wheel
+Map	Dial 1_2		External Controller
+Map	Dial 1_3		External Controller Source
+Map	Dial 1_4		Pitch Bend
+Map	CBtn 1_1		Sample
+Map	Fader 1		Amp Env Attack
+Map	Fader 2		Amp Env Decay
+Map	Dial 4_1		Filter Freq
+Map	Dial 4_2		Filter Res
+Map	Fader 4		Amp Env Release
+Map	Fader 6		Mod Env Decay
+Map	CBtn 8_2		High Quality Interpolation
+//eos
+
+Scope	Propellerheads	Dr.REX Loop Player
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Dr. REX"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Osc Octave
+Map	Dial 1_2		Osc Fine Tune
+Map	Dial 1_3		Osc Env Amount
+Map	Dial 1_4		Transpose
+Map	Dial 1_5		Notes to Slot
+Map	CBtn 1_1		Run
+Map	CBtn 1_2		Select Loop 1
+Map	Fader 1		Amp Env Attack
+
+//Map	Dial 2_1		
+//Map	Dial 2_2		
+//Map	Dial 2_3		
+//Map	Dial 2_4		
+//Map	Dial 2_5		
+//Map	CBtn 2_1		
+Map	CBtn 2_2		Select Loop 2
+Map	Fader 2		Amp Env Decay
+
+//Map	Dial 3_1		
+//Map	Dial 3_2		
+//Map	Dial 3_3		
+//Map	Dial 3_4		
+//Map	Dial 3_5		
+//Map	CBtn 3_1		
+Map	CBtn 3_2		Select Loop 3
+Map	Fader 3		Amp Env Sustain
+
+Map	Dial 4_1		Filter Freq
+Map	Dial 4_2		Filter Res
+Map	Dial 4_3		Filter Mode
+Map	Dial 4_4		Filter Env Amount
+//Map	Dial 4_5		
+Map	CBtn 4_1		Filter On/Off
+Map	CBtn 4_2		Select Loop 4
+Map	Fader 4		Amp Env Release
+
+Map	Dial 5_1		LFO1 Rate
+Map	Dial 5_2		LFO1 Wave
+Map	Dial 5_3		LFO1 Amount
+Map	Dial 5_4		LFO1 Dest
+//Map	Dial 5_5		
+Map	CBtn 5_1		LFO Sync Enable
+Map	CBtn 5_2		Select Loop 5
+Map	Fader 5		Filter Env Attack
+
+//Map	Dial 6_1		
+//Map	Dial 6_2		
+//Map	Dial 6_3		
+//Map	Dial 6_4		
+//Map	Dial 6_5		
+//Map	CBtn 6_1		
+Map	CBtn 6_2		Select Loop 6
+Map	Fader 6		Filter Env Decay
+
+Map	Dial 7_1		Filter Freq Mod Wheel Amount
+Map	Dial 7_2		Filter Res Mod Wheel Amount
+Map	Dial 7_3		Filter Decay Mod Wheel Amount
+//Map	Dial 7_4		
+//Map	Dial 7_5		
+//Map	CBtn 7_1		
+Map	CBtn 7_2		Select Loop 7
+Map	Fader 7		Filter Env Sustain
+
+Map	Dial 8_1		Filter Env Vel Amount
+Map	Dial 8_2		Filter Decay Vel Amount
+Map	Dial 8_3		Amp Vel Amount
+//Map	Dial 8_4		
+//Map	Dial 8_5		
+//Map	CBtn 8_1		
+Map	CBtn 8_2		Select Loop 8
+Map	Fader 8		Filter Env Release
+//eos
+
+Scope	Propellerheads	Redrum Drum Computer
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Redrum"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Drum 1 Send 1 Amount			v1
+Map	Dial 1_2		Drum 1 Send 2 Amount			v1
+Map	Dial 1_3		Drum 1 Pitch			v1
+Map	Dial 1_4		Drum 1 Tone			v1
+Map	Dial 1_5		Drum 1 Pan			v1
+Map	CBtn 1_1		Selected Drum Toggle Step 1			v1
+Map	CBtn 1_2		Selected Drum Toggle Step 9			v1
+Map	Fader 1		Drum 1 Level			v1
+Map	CBtnLED 1_1		Selected Drum Step Out 1			v1
+Map	CBtnLED 1_2		Selected Drum Step Out 9			v1
+Map	Dial 2_1		Drum 2 Send 1 Amount			v1
+Map	Dial 2_2		Drum 2 Send 2 Amount			v1
+Map	Dial 2_3		Drum 2 Pitch			v1
+Map	Dial 2_4		Drum 2 Tone			v1
+Map	Dial 2_5		Drum 2 Pan			v1
+Map	CBtn 2_1		Selected Drum Toggle Step 2			v1
+Map	CBtn 2_2		Selected Drum Toggle Step 10			v1
+Map	Fader 2		Drum 2 Level			v1
+Map	CBtnLED 2_1		Selected Drum Step Out 2			v1
+Map	CBtnLED 2_2		Selected Drum Step Out 10			v1
+Map	Dial 3_1		Drum 3 Send 1 Amount			v1
+Map	Dial 3_2		Drum 3 Send 2 Amount			v1
+Map	Dial 3_3		Drum 3 Pitch			v1
+Map	Dial 3_4		Drum 3 Sample Start			v1
+Map	Dial 3_5		Drum 3 Pan			v1
+Map	CBtn 3_1		Selected Drum Toggle Step 3			v1
+Map	CBtn 3_2		Selected Drum Toggle Step 11			v1
+Map	Fader 3		Drum 3 Level			v1
+Map	CBtnLED 3_1		Selected Drum Step Out 3			v1
+Map	CBtnLED 3_2		Selected Drum Step Out 11			v1
+Map	Dial 4_1		Drum 4 Send 1 Amount			v1
+Map	Dial 4_2		Drum 4 Send 2 Amount			v1
+Map	Dial 4_3		Drum 4 Pitch			v1
+Map	Dial 4_4		Drum 4 Sample Start			v1
+Map	Dial 4_5		Drum 4 Pan			v1
+Map	CBtn 4_1		Selected Drum Toggle Step 4			v1
+Map	CBtn 4_2		Selected Drum Toggle Step 12			v1
+Map	Fader 4		Drum 4 Level			v1
+Map	CBtnLED 4_1		Selected Drum Step Out 4			v1
+Map	CBtnLED 4_2		Selected Drum Step Out 12			v1
+Map	Dial 5_1		Drum 5 Send 1 Amount			v1
+Map	Dial 5_2		Drum 5 Send 2 Amount			v1
+Map	Dial 5_3		Drum 5 Pitch			v1
+Map	Dial 5_4		Drum 5 Sample Start			v1
+Map	Dial 5_5		Drum 5 Pan			v1
+Map	CBtn 5_1		Selected Drum Toggle Step 5			v1
+Map	CBtn 5_2		Selected Drum Toggle Step 13			v1
+Map	Fader 5		Drum 5 Level			v1
+Map	CBtnLED 5_1		Selected Drum Step Out 5			v1
+Map	CBtnLED 5_2		Selected Drum Step Out 13			v1
+Map	Dial 6_1		Drum 6 Send 1 Amount			v1
+Map	Dial 6_2		Drum 6 Send 2 Amount			v1
+Map	Dial 6_3		Drum 6 Pitch			v1
+Map	Dial 6_4		Drum 6 Pitch Bend Rate			v1
+Map	Dial 6_5		Drum 6 Pan			v1
+Map	CBtn 6_1		Selected Drum Toggle Step 6			v1
+Map	CBtn 6_2		Selected Drum Toggle Step 14			v1
+Map	Fader 6		Drum 6 Level			v1
+Map	CBtnLED 6_1		Selected Drum Step Out 6			v1
+Map	CBtnLED 6_2		Selected Drum Step Out 14			v1
+Map	Dial 7_1		Drum 7 Send 1 Amount			v1
+Map	Dial 7_2		Drum 7 Send 2 Amount			v1
+Map	Dial 7_3		Drum 7 Pitch			v1
+Map	Dial 7_4		Drum 7 Pitch Bend Rate			v1
+Map	Dial 7_5		Drum 7 Pan			v1
+Map	CBtn 7_1		Selected Drum Toggle Step 7			v1
+Map	CBtn 7_2		Selected Drum Toggle Step 15			v1
+Map	Fader 7		Drum 7 Level			v1
+Map	CBtnLED 7_1		Selected Drum Step Out 7			v1
+Map	CBtnLED 7_2		Selected Drum Step Out 15			v1
+Map	Dial 8_1		Drum 8 Send 1 Amount			v1
+Map	Dial 8_2		Drum 8 Send 2 Amount			v1
+Map	Dial 8_3		Drum 8 Pitch			v1
+Map	Dial 8_4		Drum 8 Sample Start			v1
+Map	Dial 8_5		Drum 8 Pan			v1
+Map	CBtn 8_1		Selected Drum Toggle Step 8			v1
+Map	CBtn 8_2		Selected Drum Toggle Step 16			v1
+Map	Fader 8		Drum 8 Level			v1
+Map	CBtnLED 8_1		Selected Drum Step Out 8			v1
+Map	CBtnLED 8_2		Selected Drum Step Out 16			v1
+
+
+Map	CBtn 1_1		Select Drum 1			v2
+Map	CBtn 2_1		Select Drum 2			v2
+Map	CBtn 3_1		Select Drum 3			v2
+Map	CBtn 4_1		Select Drum 4			v2
+Map	CBtn 5_1		Select Drum 5			v2
+Map	CBtn 6_1		Select Drum 6			v2
+Map	CBtn 7_1		Select Drum 7			v2
+Map	CBtn 8_1		Select Drum 8			v2
+
+Map	CBtn 1_1		Pattern 1			v3
+Map	CBtn 2_1		Pattern 2			v3
+Map	CBtn 3_1		Pattern 3			v3
+Map	CBtn 4_1		Pattern 4			v3
+Map	CBtn 5_1		Pattern 5			v3
+Map	CBtn 6_1		Pattern 6			v3
+Map	CBtn 7_1		Pattern 7			v3
+Map	CBtn 8_1		Pattern 8			v3
+Map	CBtn 1_2		Bank A			v3
+Map	CBtn 2_2		Bank B			v3
+Map	CBtn 3_2		Bank C			v3
+Map	CBtn 4_2		Bank D			v3
+//eos
+
+Scope	Propellerheads	MClass Equalizer
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"MC EQ"
+//Map	EncDelta 1		Select Patch Delta
+//Map	Grid 3		Keyboard Shortcut Variations=v1
+//Map	Grid 6		Keyboard Shortcut Variations=v2
+//Map	Grid 9		Keyboard Shortcut Variations=v3
+
+//Map	Dial 1_1		
+//Map	Dial 1_2		
+//Map	Dial 1_3		
+//Map	Dial 1_4		
+//Map	Dial 1_5		
+Map	CBtn 1_1		Low Cut Enable
+//Map	CBtn 1_2		
+//Map	Fader 1		
+
+Map	Dial 2_1		Low Shelf Frequency
+Map	Dial 2_2		Low Shelf Gain
+Map	Dial 2_3		Low Shelf Q
+//Map	Dial 2_4		
+//Map	Dial 2_5		
+Map	CBtn 2_1		Low Shelf Enable
+//Map	CBtn 2_2		
+//Map	Fader 2		
+
+Map	Dial 3_1		Parametric 1 Frequency
+Map	Dial 3_2		Parametric 1 Gain
+Map	Dial 3_3		Parametric 1 Q
+//Map	Dial 3_4		
+//Map	Dial 3_5		
+Map	CBtn 3_1		Parametric 1 Enable
+//Map	CBtn 3_2		
+//Map	Fader 3		
+
+Map	Dial 4_1		Parametric 2 Frequency
+Map	Dial 4_2		Parametric 2 Gain
+Map	Dial 4_3		Parametric 2 Q
+//Map	Dial 4_4		
+//Map	Dial 4_5		
+Map	CBtn 4_1		Parametric 2 Enable
+//Map	CBtn 4_2		
+//Map	Fader 4		
+
+//Map	Dial 5_1		
+//Map	Dial 5_2		
+//Map	Dial 5_3		
+//Map	Dial 5_4		
+//Map	Dial 5_5		
+Map	CBtn 5_1		Hi Shelf Enable
+//Map	CBtn 5_2		
+//Map	Fader 5		
+//eos
+
+Scope	Propellerheads	MClass Stereo Imager
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"MC Stereo Imager"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Low Width
+Map	Dial 2_1		High Width
+Map	Dial 3_1		X-Over Frequency
+Map	Dial 4_1		Solo Mode
+Map	CBtn 1_1		Low Band Active
+Map	CBtn 2_1		High Band Active
+//eos
+
+Scope	Propellerheads	MClass Compressor
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"MC Compressor"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Input Gain
+Map	Dial 2_1		Threshold
+Map	Dial 3_1		Ratio
+Map	Dial 4_1		Attack
+Map	Dial 5_1		Release
+Map	Dial 6_1		Output Gain
+Map	CBtn 1_1		Soft Knee
+Map	CBtn 2_1		Sidechain Solo
+Map	CBtn 3_1		Adapt
+//eos
+
+Scope	Propellerheads	MClass Maximizer
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"MC Maximizer"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Input Gain
+Map	Dial 2_1		Output Gain
+Map	Dial 2_2		Attack Speed
+Map	Dial 2_3		Release Speed
+Map	Dial 3_1		Soft Clip Amount
+Map	CBtn 1_1		Limiter Enable
+Map	CBtn 2_1		Look Ahead Enable
+Map	CBtn 3_1		Soft Clip Enable
+Map	CBtn 4_1		Output Level Meter Mode
+//eos
+
+Scope	Propellerheads	RV7000 Advanced Reverb
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"RV7000 Reverb"
+Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Decay
+Map	Dial 1_2		HF Damp
+Map	Dial 1_3		Hi EQ
+Map	Master		Dry/Wet
+Map	CBtn 2_1		Edit Mode
+Map	CBtn 1_1		EQ On/Off
+Map	CBtn 1_2		Gate On/Off
+Map	Fader 1		Soft Knob 1
+Map	Fader 2		Soft Knob 2
+Map	Fader 3		Soft Knob 3
+Map	Fader 4		Soft Knob 4
+Map	Fader 5		Soft Knob 5
+Map	Fader 6		Soft Knob 6
+Map	Fader 7		Soft Knob 7
+Map	Fader 8		Soft Knob 8
+//eos
+
+Scope	Propellerheads	Scream 4 Distortion
+Define Group	Keyboard Shortcut Variations	Damage & Cut	Body
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Scream 4"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Level
+Map	Dial 1_1		Damage Control
+Map	Dial 1_2		Parameter 1
+Map	Dial 1_3		Damage Type
+Map	Dial 1_4		Parameter 2
+Map	CBtn 1_1		Damage On/Off
+
+Map	Dial 2_1		Cut Lo
+Map	Dial 2_2		Cut Mid
+Map	Dial 2_3		Cut Hi
+Map	CBtn 2_1		Cut On/Off
+
+Map	Dial 3_1		Body Resonance
+Map	Dial 3_2		Body Scale
+Map	Dial 3_3		Body Auto
+Map	Dial 3_4		Body Type
+//Map	CBtn 6_1		Cut On/Off
+//eos
+
+Scope	Propellerheads	BV512 Digital Vocoder
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"BV512 Vocoder"
+
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	CBtn 1_1		Vocoder/Equalizer
+Map	CBtn 1_2		Hold
+Map	Fader 1		Attack
+Map	Fader 2		Decay
+Map	Fader 3		Shift
+Map	Fader 4		HF Emphasis
+Map	Fader 5		Band Count
+//Map	Fader 6		
+//Map	Fader 7		
+Map	Fader 8		Dry/Wet
+//v1
+Map	Dial 1_1		Band Level 1			v1
+Map	Dial 1_2		Band Level 9			v1
+Map	Dial 1_3		Band Level 17			v1
+Map	Dial 1_4		Band Level 25			v1
+Map	Dial 2_1		Band Level 2			v1
+Map	Dial 2_2		Band Level 10			v1
+Map	Dial 2_3		Band Level 18			v1
+Map	Dial 2_4		Band Level 26			v1
+Map	Dial 3_1		Band Level 3			v1
+Map	Dial 3_2		Band Level 11			v1
+Map	Dial 3_3		Band Level 19			v1
+Map	Dial 3_4		Band Level 27			v1
+Map	Dial 4_1		Band Level 4			v1
+Map	Dial 4_2		Band Level 12			v1
+Map	Dial 4_3		Band Level 20			v1
+Map	Dial 4_4		Band Level 28			v1
+Map	Dial 5_1		Band Level 5			v1
+Map	Dial 5_2		Band Level 13			v1
+Map	Dial 5_3		Band Level 21			v1
+Map	Dial 5_4		Band Level 29			v1
+Map	Dial 6_1		Band Level 6			v1
+Map	Dial 6_2		Band Level 14			v1
+Map	Dial 6_3		Band Level 22			v1
+Map	Dial 6_4		Band Level 30			v1
+Map	Dial 7_1		Band Level 7			v1
+Map	Dial 7_2		Band Level 15			v1
+Map	Dial 7_3		Band Level 23			v1
+Map	Dial 7_4		Band Level 31			v1
+Map	Dial 8_1		Band Level 8			v1
+Map	Dial 8_2		Band Level 16			v1
+Map	Dial 8_3		Band Level 24			v1
+Map	Dial 8_4		Band Level 32			v1
+//v2
+Map	Dial 1_1		Mod Level 1			v2
+Map	Dial 1_2		Mod Level 9			v2
+Map	Dial 1_3		Mod Level 17			v2
+Map	Dial 1_4		Mod Level 25			v2
+Map	Dial 2_1		Mod Level 2			v2
+Map	Dial 2_2		Mod Level 10			v2
+Map	Dial 2_3		Mod Level 18			v2
+Map	Dial 2_4		Mod Level 26			v2
+Map	Dial 3_1		Mod Level 3			v2
+Map	Dial 3_2		Mod Level 11			v2
+Map	Dial 3_3		Mod Level 19			v2
+Map	Dial 3_4		Mod Level 27			v2
+Map	Dial 4_1		Mod Level 4			v2
+Map	Dial 4_2		Mod Level 12			v2
+Map	Dial 4_3		Mod Level 20			v2
+Map	Dial 4_4		Mod Level 28			v2
+Map	Dial 5_1		Mod Level 5			v2
+Map	Dial 5_2		Mod Level 13			v2
+Map	Dial 5_3		Mod Level 21			v2
+Map	Dial 5_4		Mod Level 29			v2
+Map	Dial 6_1		Mod Level 6			v2
+Map	Dial 6_2		Mod Level 14			v2
+Map	Dial 6_3		Mod Level 22			v2
+Map	Dial 6_4		Mod Level 30			v2
+Map	Dial 7_1		Mod Level 7			v2
+Map	Dial 7_2		Mod Level 15			v2
+Map	Dial 7_3		Mod Level 23			v2
+Map	Dial 7_4		Mod Level 31			v2
+Map	Dial 8_1		Mod Level 8			v2
+Map	Dial 8_2		Mod Level 16			v2
+Map	Dial 8_3		Mod Level 24			v2
+Map	Dial 8_4		Mod Level 32			v2
+//eos
+
+Scope	Propellerheads	Line 6 Guitar Amp
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Line6 Guitar Amp"
+Map	EncDelta 1		Select Patch Delta
+Map	CBtn 1_1		Wah Pedal On
+Map	Fader 1		Wah Pedal
+Map	Dial 1_1		Drive
+Map	Dial 1_2		Bass
+Map	Dial 1_3		Middle
+Map	Dial 1_4		Treble
+Map	Dial 1_5		Presence
+Map	Master		Volume
+Map	CBtn 2_1		Select Next Amp Model
+Map	CBtn 2_2		Select Previous Amp Model
+Map	Fader 2		Volume Pedal
+Map	CBtn 3_1		Select Next Cab Model
+Map	CBtn 3_2		Select Previous Cab Model
+//eos
+
+Scope	Propellerheads	Line 6 Bass Amp
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Line6 Bass Amp"
+Map	EncDelta 1		Select Patch Delta
+Map	CBtn 1_1		Compressor On
+Map	Fader 1		Comp Threshold
+Map	Dial 1_1		Drive
+Map	Dial 1_2		Bass
+Map	Dial 1_3		Lo Mid
+Map	Dial 1_4		Hi Mid
+Map	Dial 1_5		Treble
+Map	Master		Volume
+Map	CBtn 2_1		Select Next Amp Model
+Map	CBtn 2_2		Select Previous Amp Model
+Map	CBtn 3_1		Select Next Cab Model
+Map	CBtn 3_2		Select Previous Cab Model
+//eos
+
+Scope	Propellerheads	Neptune Pitch Adjuster
+//Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Neptune"
+Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Pitch Bend Range
+Map	Dial 1_2		Vibrato Rate
+Map	Dial 2_1		Scale Memory
+Map	Dial 2_2		Correction Speed
+Map	Dial 2_3		Preserve Expression
+Map	Dial 2_4		Catch Zone
+Map	Dial 3_1		Semitones
+Map	Dial 3_2		Cent
+Map	Dial 3_1		Formant Shift
+Map	Fader 1		Pitched Signal Level
+Map	Fader 2		Voice Synth Level
+
+Map	CBtn 1_1		Low Freq Input
+Map	CBtn 1_2		Wide Vibrato
+Map	CBtn 2_1		Live Mode
+Map	CBtn 3_1		MIDI Destination
+Map	CBtn 4_1		Transpose On/Off
+Map	CBtn 4_2		Pitch Adjust On/Off
+Map	CBtn 5_1		Formant On/Off
+//eos
+
+Scope	Propellerheads	Pulveriser
+//	Control Surface Item	Key	Remotable Item
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"Pulveriser"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Volume
+Map	Dial 1_1		Squash
+Map	Dial 1_2		Release
+Map	Dial 2_1		Dirt
+Map	Dial 2_2		Tone
+Map	CBtn 1_1		Routing
+
+Map	Dial 4_1		Filter Frequency
+Map	Dial 4_2		Peak
+Map	Dial 4_3		Filter Mode
+
+Map	Dial 5_1		Tremor to Frequency
+Map	Dial 5_2		Follower to Rate
+Map	Dial 5_3		Follower to Frequency
+Map	Dial 5_4		Tremor to Volume
+
+Map	Dial 6_1		Tremor Rate
+Map	Dial 6_2		Tremor Waveform
+Map	Dial 6_3		Tremor Lag
+Map	CBtn 6_1		Sync
+Map	CBtn 6_2		Tremor Spread
+
+Map	Dial 7_1		Follower Threshold
+Map	Dial 7_2		Follower Attack
+Map	Dial 7_3		Follower Release
+Map	CBtn 7_1		Follower Trig
+//Map	CBtn 7_2		
+Map	Fader 1		Blend
+//eos
+
+Scope	Propellerheads	The Echo
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"The Echo"
+Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Input Mode
+Map	Dial 1_2		Roll Enabled
+Map	CBtn 1_1		Trig
+Map	CBtn 1_2		Keep Pitch
+
+Map	Dial 2_1		Delay Time
+Map	Dial 2_2		Right Ch Time Offset
+Map	Dial 2_3		Ping-Pong Pan
+Map	CBtn 2_1		Ping-Pong Mode
+Map	CBtn 2_2		Sync
+
+Map	Dial 3_1		Feedback
+Map	Dial 3_2		Right Ch Feedback Offset
+Map	Dial 3_3		Diffuse Spread
+Map	Dial 3_4		Diffuse Amount
+Map	CBtn 3_1		Diffuse On
+
+Map	Dial 4_1		Drive Amount
+Map	Dial 4_2		Drive Type
+Map	Dial 4_3		Filter Frequency
+Map	Dial 4_4		Filter Resonance
+Map	CBtn 4_1		Filter On
+
+Map	Dial 5_1		Envelope
+Map	Dial 5_2		Wobble
+Map	Dial 5_3		LFO Rate
+Map	Dial 5_4		LFO Amount
+
+Map	Dial 6_1		Dry/Wet Balance
+Map	Dial 6_2		Ducking
+//eos
+
+Scope	Propellerheads	Alligator
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"Alligator"
+Map	Master		Master Volume
+Map	EncDelta 1		Select Patch Delta
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		High Pass LFO Amount			v1
+Map	Dial 1_2		High Pass Frequency			v1
+Map	Dial 1_3		High Pass Resonance			v1
+Map	Dial 1_4		High Pass Env Amount			v1
+Map	CBtn 1_1		High Pass Filter On			v1
+Map	Dial 2_1		High Pass Drive Amount			v1
+Map	Dial 2_2		High Pass Phaser Amount			v1
+Map	Dial 2_3		High Pass Delay Amount			v1
+Map	Dial 2_4		High Pass Pan			v1
+Map	Dial 2_5		High Pass Volume			v1
+
+Map	Dial 3_1		Band Pass LFO Amount			v1
+Map	Dial 3_2		Band Pass Frequency			v1
+Map	Dial 3_3		Band Pass Resonance			v1
+Map	Dial 3_4		Band Pass Env Amount			v1
+Map	CBtn 3_1		Band Pass Filter On			v1
+Map	Dial 4_1		Band Pass Drive Amount			v1
+Map	Dial 4_2		Band Pass Phaser Amount			v1
+Map	Dial 4_3		Band Pass Delay Amount			v1
+Map	Dial 4_4		Band Pass Pan			v1
+Map	Dial 4_5		Band Pass Volume			v1
+
+Map	Dial 5_1		Low Pass LFO Amount			v1
+Map	Dial 5_2		Low Pass Frequency			v1
+Map	Dial 5_3		Low Pass Resonance			v1
+Map	Dial 5_4		Low Pass Env Amount			v1
+Map	CBtn 5_1		Low Pass Filter On			v1
+Map	Dial 6_1		Low Pass Drive Amount			v1
+Map	Dial 6_2		Low Pass Phaser Amount			v1
+Map	Dial 6_3		Low Pass Delay Amount			v1
+Map	Dial 6_4		Low Pass Pan			v1
+Map	Dial 6_5		Low Pass Volume			v1
+
+Map	Dial 1_1		Amp Env Attack			v2
+Map	Dial 1_2		Amp Env Decay			v2
+Map	Dial 1_3		Amp Env Release			v2
+Map	Dial 2_1		LFO Freq			v2
+Map	Dial 2_2		LFO Waveform			v2
+Map	CBtn 2_1		LFOSync			v2
+Map	Dial 3_1		Filter Env Attack			v2
+Map	Dial 3_2		Filter Env Decay			v2
+Map	Dial 3_3		Filter Env Release			v2
+Map	Dial 4_1		Delay Time			v2
+Map	Dial 4_2		Delay Feedback			v2
+Map	Dial 4_3		Delay Pan			v2
+Map	CBtn 4_1		DelaySync			v2
+Map	Dial 5_1		Phaser Rate			v2
+Map	Dial 5_2		Phaser Feedback			v2
+
+Map	Dial 7_1		Ducking
+Map	Dial 7_2		Dry Pan
+Map	Dial 7_3		Dry Volume
+Map	Dial 8_1		Pattern
+Map	Dial 8_2		Resolution
+Map	Dial 8_3		Shift
+Map	CBtn 8_1		Pattern Enable
+Map	CBtn 8_2		Shuffle
+//eos
+
+Scope	Propellerheads	RV-7 Digital Reverb
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"RV7 Reverb"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Algorithm
+Map	Dial 2_1		Size
+Map	Dial 3_1		Decay
+Map	Dial 4_1		Damping
+Map	Dial 5_1		Dry/Wet
+//eos
+
+Scope	Propellerheads	DDL-1 Digital Delay Line
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"DDL-1 Delay"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		DelayTime (steps)
+Map	Dial 2_1		Feedback
+Map	Dial 3_1		Pan
+Map	Dial 4_1		Dry/Wet Balance
+Map	CBtn 1_1		Unit
+Map	CBtn 1_2		Step Length
+//eos
+
+Scope	Propellerheads	D-11 Foldback Distortion
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"D-11 Distortion"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Amount
+Map	Dial 2_1		Foldback
+//eos
+
+Scope	Propellerheads	ECF-42 Envelope Controlled Filter
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"ECF-42 Envelope Filter"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Frequency
+Map	Dial 2_1		Resonance
+Map	Dial 3_1		Env Amount
+Map	Dial 4_1		Velocity
+Map	Dial 5_1		Attack
+Map	Dial 6_1		Decay
+Map	Dial 7_1		Sustain
+Map	Dial 8_1		Release
+Map	Dial 1_2		Mode
+//eos
+
+Scope	Propellerheads	CF-101 Chorus/Flanger
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"CF0101 Chorus"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Delay
+Map	Dial 2_1		Feedback
+Map	Dial 3_1		Rate
+Map	Dial 4_1		Modulation Amount
+Map	CBtn 1_1		Sync
+Map	CBtn 2_1		Send/Insert Mode
+//eos
+
+Scope	Propellerheads	PH-90 Phaser
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"PH-90 Phasor"
+//Map	EncDelta 1		Select Patch Delta
+
+Map	Dial 1_1		Frequency
+Map	Dial 2_1		Split
+Map	Dial 3_1		Width
+Map	Dial 4_1		Rate
+Map	Dial 5_1		Frequency Modulation
+Map	Dial 6_1		Feedback
+Map	CBtn 1_1		Sync
+//eos
+
+Scope	Propellerheads	UN-16 Unison
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"UN16 Unison"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Voice Count
+Map	Dial 2_1		Detune
+Map	Dial 3_1		Dry/Wet
+//eos
+
+Scope	Propellerheads	COMP-01 Compressor/Limiter
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"COMP01 Compressor"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Ratio
+Map	Dial 2_1		Threshold
+Map	Dial 3_1		Attack
+Map	Dial 4_1		Release
+//eos
+
+Scope	Propellerheads	PEQ-2 Two Band Parametric EQ
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"PEQ-2 EQ"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Filter A Freq
+Map	Dial 2_1		Filter A Q
+Map	Dial 3_1		Filter A Gain 
+Map	Dial 1_2		Filter B Freq
+Map	Dial 2_2		Filter B Q
+Map	Dial 3_2		Filter B Gain 
+Map	CBtn 1_1		Filter B On/Off
+//eos
+
+Scope	Propellerheads	Matrix Pattern Sequencer
+Map	_Scope		"Matrix Pattern Sequencer"
+//Map	EncDelta 1		Select Patch Delta
+Map	Dial 1_1		Pattern Select
+Map	Dial 2_1		Pattern Select in Bank
+Map	Dial 3_1		Bank Select
+Map	Dial 4_1		Resolution
+Map	CBtn 1_1		Run
+Map	CBtn 2_1		Pattern Enable
+Map	CBtn 1_2		Pattern 1
+Map	CBtn 2_2		Pattern 2
+Map	CBtn 3_2		Pattern 3
+Map	CBtn 4_2		Pattern 4
+Map	CBtn 5_1		Bank A
+Map	CBtn 6_1		Bank B
+Map	CBtn 7_1		Bank C
+Map	CBtn 8_1		Bank D
+Map	CBtn 5_2		Pattern 5
+Map	CBtn 6_2		Pattern 6
+Map	CBtn 7_2		Pattern 7
+Map	CBtn 8_2		Pattern 8
+
+Scope	Propellerheads	RPG-8 Monophonic Arpeggiator
+Define Group	Keyboard Shortcut Variations	Volume	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"RPG-8 Arpeggiator"
+//Map	EncDelta 1		Select Patch Delta
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+
+Map	Dial 1_1		Velocity/Manual
+Map	Dial 1_2		Octave Shift
+Map	CBtn 1_1		Hold			v1
+
+Map	Dial 2_1		Mode
+Map	Dial 2_2		Octave
+Map	Dial 2_3		Insert
+Map	CBtn 2_1		Arpeggiator Enable			v1
+
+Map	Dial 3_1		Rate
+Map	Dial 3_2		Gate Length
+Map	CBtn 3_1		Sync			v1
+Map	CBtn 3_2		Single Note Repeat			v1
+
+Map	CBtn 4_1		Pattern Enable			v1
+Map	CBtn 4_2		Shuffle			v1
+Map	CBtn 5_1		Pattern Length Up			v1
+Map	CBtn 5_2		Pattern Length Down			v1
+
+Map	CBtn 1_1		Pattern Step 1			v2
+Map	CBtn 2_1		Pattern Step 2			v2
+Map	CBtn 3_1		Pattern Step 3			v2
+Map	CBtn 4_1		Pattern Step 4			v2
+Map	CBtn 5_1		Pattern Step 5			v2
+Map	CBtn 6_1		Pattern Step 6			v2
+Map	CBtn 7_1		Pattern Step 7			v2
+Map	CBtn 8_1		Pattern Step 8			v2
+
+Map	CBtn 1_2		Pattern Step 9			v2
+Map	CBtn 2_2		Pattern Step 10			v2
+Map	CBtn 3_2		Pattern Step 11			v2
+Map	CBtn 4_2		Pattern Step 12			v2
+Map	CBtn 5_2		Pattern Step 13			v2
+Map	CBtn 6_2		Pattern Step 14			v2
+Map	CBtn 7_2		Pattern Step 15			v2
+Map	CBtn 8_2		Pattern Step 16			v2
+//eos
+
+///////RACK EXTENSIONS BELOW//////////////////////////////////
+
+Scope	LAB ONE Recordings	co.uk.labonerecordings.ReQ131
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"ReQ131"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Audio Damage, Inc.	com.audiodamage.roughrider
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Rough Rider"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Black and Orange	com.blackandorange.AutoArp
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"AutoArp"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Black and Orange	com.blackandorange.ReVolt
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"ReVolt"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Black and Orange	com.blackandorange.TrafficControl
+Map	_Scope		"Traffic Control"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Blamsoft, Inc.	com.blamsoft.Distributor
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Distributor"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Blamsoft, Inc.	com.blamsoft.Resampler
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Resampler"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Blamsoft, Inc.	com.blamsoft.Viking
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"Viking"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Cakewalk	com.cakewalk.RE2A
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"RE2A"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Deadman Audio Devices	com.deadmanaudiodevices.getlayedsound
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"Get Layed Sound"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Deadman Audio Devices	com.deadmanaudiodevices.getlayedvoltage
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Map	_Scope		"Get Layed Voltage"
+//eos
+
+Scope	DLD Technology	com.dldtechnology.dr4
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"DR4"
+//eos
+
+Scope	Peff	com.peff.Buffre
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Buffre"
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+Map	Master		Volume
+Map	CBtn 1_1		Loop On			v1
+Map	CBtn 1_2		Pitch Snap			v1
+Map	Fader 1		Pitch			v1
+Map	CBtn 2_1		OneShot			v1
+Map	CBtn 2_2		Link Random			v1
+Map	Fader 2		Random			v1
+Map	CBtn 3_1		Reverse			v1
+Map	CBtn 3_2		Triplets			v1
+Map	Fader 3		Play Mode			v1
+Map	CBtn 4_1		Trigger			v1
+//Map	CBtn 4_2					v1
+Map	Fader 4		Trigger Length			v1
+Map	CBtn 5_1		Reset Position			v1
+//Map	CBtn 5_2					v1
+Map	Fader 5		Release			v1
+Map	CBtn 6_1		Position Backward Quarter			v1
+Map	CBtn 6_2		Gate Enable			v1
+Map	Fader 6		Gate Start			v1
+Map	CBtn 7_1		Position Advance Quarter			v1
+//Map	CBtn 7_2					v1
+Map	Fader 7		Gate Length			v1
+
+Map	CBtn 1_2		Aux 1 On			v2
+Map	Fader 1		Aux 1			v2
+Map	CBtn 2_2		Aux 2 On			v2
+Map	Fader 2		Aux 2			v2
+Map	CBtn 3_2		Aux 3 On			v2
+Map	Fader 3		Aux 3			v2
+//eos
+
+Scope	Peff	com.peff.Directre
+//Define Group	Keyboard Shortcut Variations
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Directre"
+Map	Dial 1_5		Input Gain
+Map	Dial 2_3		Quantize Mode
+Map	Dial 2_4		Crossfade Length A
+Map	Dial 2_5		Crossfade Length B
+
+Map	CBtn 1_1		Enable 1
+Map	CBtn 1_2		Crossfade Select 1
+Map	Fader 1		Gain 1
+
+Map	CBtn 2_1		Enable 2
+Map	CBtn 2_2		Crossfade Select 2
+Map	Fader 2		Gain 2
+
+Map	CBtn 3_1		Enable 3
+Map	CBtn 3_2		Crossfade Select 3
+Map	Fader 3		Gain 3
+
+Map	CBtn 4_1		Enable 4
+Map	CBtn 4_2		Crossfade Select 4
+Map	Fader 4		Gain 4
+
+
+Map	CBtn 5_1		Enable 5
+Map	CBtn 5_2		Crossfade Select 5
+Map	Fader 5		Gain 5
+
+Map	CBtn 6_1		Enable 6
+Map	CBtn 6_2		Crossfade Select 6
+Map	Fader 6		Gain 6
+
+Map	CBtn 7_1		Enable 7
+Map	CBtn 7_2		Crossfade Select 7
+Map	Fader 7		Gain 7
+
+Map	CBtn 8_1		Enable 8
+Map	CBtn 8_2		Crossfade Select 8
+Map	Fader 8		Gain 8
+//eos
+
+Scope	Peff	com.peff.Alias8cv
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Alias8cv"
+Map	EncDelta 1		Select Patch Delta
+Map	Master		Master Fader
+Map	Fader 1		Fader 1
+Map	Fader 2		Fader 2
+Map	Fader 3		Fader 3
+Map	Fader 4		Fader 4
+Map	Fader 5		Fader 5
+Map	Fader 6		Fader 6
+Map	Fader 7		Fader 7
+Map	Fader 8		Fader 8
+Map	Dial 1_4		Knob A1
+Map	Dial 2_4		Knob A2
+Map	Dial 3_4		Knob A3
+Map	Dial 4_4		Knob A4
+Map	Dial 5_4		Knob A5
+Map	Dial 6_4		Knob A6
+Map	Dial 7_4		Knob A7
+Map	Dial 8_4		Knob A8
+Map	Dial 1_5		Knob B1
+Map	Dial 2_5		Knob B2
+Map	Dial 3_5		Knob B3
+Map	Dial 4_5		Knob B4
+Map	Dial 5_5		Knob B5
+Map	Dial 6_5		Knob B6
+Map	Dial 7_5		Knob B7
+Map	Dial 8_5		Knob B8
+Map	CBtn 1_1		Toggle 1
+Map	CBtn 2_1		Toggle 2
+Map	CBtn 3_1		Toggle 3
+Map	CBtn 4_1		Toggle 4
+Map	CBtn 5_1		Toggle 5
+Map	CBtn 6_1		Toggle 6
+Map	CBtn 7_1		Toggle 7
+Map	CBtn 8_1		Toggle 8
+Map	CBtn 1_2		Momentary 1
+Map	CBtn 2_2		Momentary 2
+Map	CBtn 3_2		Momentary 3
+Map	CBtn 4_2		Momentary 4
+Map	CBtn 5_2		Momentary 5
+Map	CBtn 6_2		Momentary 6
+Map	CBtn 7_2		Momentary 7
+Map	CBtn 8_2		Momentary 8
+Map	Dial 8_1		Select
+Map	Dial 8_2		CV Mod A2
+Map	Dial 8_3		Scale A2
+//eos
+
+Scope	Propellerhead Software	se.propellerheads.radicalpiano
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Radical Piano"
+Map	EncDelta 1		Select Patch Delta
+//eos
+
+Scope	Propellerhead Software	se.propellerheads.ReasonAmp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Amp"
+Map	EncDelta 1		Select Patch Delta
+Map	Fader 1		Gate
+Map	Fader 2		Gain
+Map	Fader 3		Bass
+Map	Fader 4		Mid
+Map	Fader 5		Treble
+Map	Fader 6		Poweramp Gain	
+Map	Master		Volume
+Map	CBtn 1_1		Boost
+Map	CBtn 8_1		Select Next Patch
+Map	CBtn 8_2		Select Previous Patch
+//eos
+
+Scope	Propellerhead Software	se.propellerheads.ReasonBassAmp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Bass Amp"
+Map	EncDelta 1		Select Patch Delta
+Map	CBtn 2_1		Ultra Lo
+Map	CBtn 5_1		Ultra Hi
+Map	CBtn 8_1		Select Next Patch
+Map	CBtn 8_2		Select Previous Patch
+Map	Fader 1		Drive
+Map	Fader 2		Bass
+Map	Fader 3		Middle
+Map	Fader 4		Mid Freq
+Map	Fader 5		Treble
+Map	Master		Volume
+
+
+//eos

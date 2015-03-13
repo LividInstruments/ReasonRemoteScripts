@@ -269,6 +269,7 @@ Map	Button 4		Button 4
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 //eos
 
+
 Scope	Propellerheads	Reason Essentials Master Section
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 //eos
@@ -284,4 +285,29 @@ Scope	Propellerheads	Pulveriser
 
 Scope	Propellerheads	The Echo
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+//eos
+
+Scope	Propellerhead Software	se.propellerheads.ReasonAmp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Amp"
+Map	SliderCC L1		Mid
+Map	SliderCC R2		Gate
+Map	SliderCC V3		Gain
+Map	Button 1		Select Previous Patch
+Map	Button 2		Select Next Patch
+Map	Button 3		Boost
+
+//eos
+
+Scope	Propellerhead Software	se.propellerheads.ReasonBassAmp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Scope		"Bass Amp"
+
+Map	SliderCC L1		Treble
+Map	SliderCC R2		Middle
+Map	SliderCC V3		Drive
+Map	Button 1		Select Previous Patch
+Map	Button 2		Select Next Patch
+Map	Button 3		Ultra Lo
+Map	Button 3		Ultra Hi
 //eos
