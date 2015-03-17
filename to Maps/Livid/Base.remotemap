@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	Base
-Map Version	1.0.6
+Map Version	1.0.7
 
 
 Scope	Propellerheads	Master Keyboard
@@ -105,6 +105,11 @@ Map	Slider 6		Button 2
 Map	Slider 7		Button 3
 Map	Slider 8		Button 4
 Map	Slider 9		Mod Wheel
+
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	Mixer 14:2
 Define Group	Keyboard Shortcut Variations	Level 1-7	Level 8-14	Send 1 1-7	Send 1 8-14	Pan 1-7	Pan 8-14
@@ -233,6 +238,9 @@ Map	Slider 6		Sound D
 //Map	Slider 7
 Map	Slider 8		Volume
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	Kong Drum Designer
 Define Group	Keyboard Shortcut Variations	D1&2	D3&4	D5&6	D7&8	D9&10	D11&12	D13&14	D15&16	Main
@@ -241,6 +249,9 @@ Map	Tbtn 5		Keyboard Shortcut Variations=D1&2
 Map	Tbtn 6		Keyboard Shortcut Variations=D3&4
 Map	Tbtn 7		Keyboard Shortcut Variations=D5&6
 Map	Tbtn 8		Keyboard Shortcut Variations=D7&8
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	_Scope		"KONG"
 Map	Slider 9		Mod Wheel
@@ -345,6 +356,9 @@ Map	Tbtn 6		Keyboard Shortcut Variations=Env
 Map	Tbtn 7		Keyboard Shortcut Variations=Osc
 Map	Tbtn 8		Keyboard Shortcut Variations=FX
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 Map	Slider 1		Filter 1 Freq			FilterMod
 Map	Slider 2		Filter 1 Res			FilterMod
 Map	Slider 3		Filter 1 Type			FilterMod
@@ -395,6 +409,9 @@ Map	Tbtn 6		Keyboard Shortcut Variations=Env
 Map	Tbtn 7		Keyboard Shortcut Variations=Osc
 //Map	Tbtn 8		Keyboard Shortcut Variations=
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 Map	Slider 9		Mod Wheel
 
 Map	Slider 1		Filter Freq			FilterMod
@@ -436,6 +453,9 @@ Map	Tbtn 5		Keyboard Shortcut Variations=FilterMod
 Map	Tbtn 6		Keyboard Shortcut Variations=Env
 Map	Tbtn 7		Keyboard Shortcut Variations=Osc A
 Map	Tbtn 8		Keyboard Shortcut Variations=Osc B
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	Slider 9		Mod Wheel
 
@@ -489,6 +509,9 @@ Map	Tbtn 6		Keyboard Shortcut Variations=Env
 Map	Tbtn 7		Keyboard Shortcut Variations=Osc
 //Map	Tbtn 8		Keyboard Shortcut Variations=
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 Map	Slider 9		Mod Wheel
 
 Map	Slider 1		Filter Freq			FilterMod
@@ -536,6 +559,9 @@ Map	Slider 6		Mod Env Decay
 Map	Slider 7		External Controller
 Map	Slider 8		Master Volume
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	Dr.REX Loop Player
 Define Group	Keyboard Shortcut Variations	FilterMod	Env	Osc
@@ -545,6 +571,9 @@ Map	Tbtn 5		Keyboard Shortcut Variations=FilterMod
 Map	Tbtn 6		Keyboard Shortcut Variations=Env
 Map	Tbtn 7		Keyboard Shortcut Variations=Osc
 //Map	Tbtn 8		Keyboard Shortcut Variations=
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	Slider 9		Mod Wheel
 
@@ -579,15 +608,246 @@ Map	Slider 8		Selected Loop Slot			Osc
 Map	_Var		"Oscillator"			Osc
 
 Scope	Propellerheads	Redrum Drum Computer
-Define Group	Keyboard Shortcut Variations	Level	Pan	Pitch	Pattern
+Define Group	Keyboard Shortcut Variations	Level	Pan	Velocity	Length
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Redrum"
 Map	Tbtn 5		Keyboard Shortcut Variations=Level
 Map	Tbtn 6		Keyboard Shortcut Variations=Pan
-Map	Tbtn 7		Keyboard Shortcut Variations=Pitch
-Map	Tbtn 8		Keyboard Shortcut Variations=Pattern
+Map	Tbtn 7		Keyboard Shortcut Variations=Velocity
+Map	Tbtn 8		Keyboard Shortcut Variations=Length
 
-//Map	Slider 9		Mod Wheel
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
+Map	Slider 9		Master Level
+
+Map	Pad 1		Selected Drum Toggle Step 1			Level
+Map	Pad 2		Selected Drum Toggle Step 2			Level
+Map	Pad 3		Selected Drum Toggle Step 3			Level
+Map	Pad 4		Selected Drum Toggle Step 4			Level
+Map	Pad 5		Selected Drum Toggle Step 5			Level
+Map	Pad 6		Selected Drum Toggle Step 6			Level
+Map	Pad 7		Selected Drum Toggle Step 7			Level
+Map	Pad 8		Selected Drum Toggle Step 8			Level
+Map	Pad 9		Selected Drum Toggle Step 9			Level
+Map	Pad 10		Selected Drum Toggle Step 10			Level
+Map	Pad 11		Selected Drum Toggle Step 11			Level
+Map	Pad 12		Selected Drum Toggle Step 12			Level
+Map	Pad 13		Selected Drum Toggle Step 13			Level
+Map	Pad 14		Selected Drum Toggle Step 14			Level
+Map	Pad 15		Selected Drum Toggle Step 15			Level
+Map	Pad 16		Selected Drum Toggle Step 16			Level
+Map	Pad 17		Select Drum 1			Level
+Map	Pad 18		Select Drum 2			Level
+Map	Pad 19		Select Drum 3			Level
+Map	Pad 20		Select Drum 4			Level
+Map	Pad 21		Select Drum 5			Level
+Map	Pad 22		Select Drum 6			Level
+Map	Pad 23		Select Drum 7			Level
+Map	Pad 24		Select Drum 8			Level
+Map	Pad 25		Pattern 1			Level
+Map	Pad 26		Pattern 2			Level
+Map	Pad 27		Pattern 3			Level
+Map	Pad 28		Pattern 4			Level
+Map	Pad 29		Pattern 5			Level
+Map	Pad 30		Pattern 6			Level
+Map	Pad 31		Shuffle			Level
+Map	Pad 32		Edit Accent			Level
+Map	Pad 1 Playing		Selected Drum Step Out 1			Level
+Map	Pad 2 Playing		Selected Drum Step Out 2			Level
+Map	Pad 3 Playing		Selected Drum Step Out 3			Level
+Map	Pad 4 Playing		Selected Drum Step Out 4			Level
+Map	Pad 5 Playing		Selected Drum Step Out 5			Level
+Map	Pad 6 Playing		Selected Drum Step Out 6			Level
+Map	Pad 7 Playing		Selected Drum Step Out 7			Level
+Map	Pad 8 Playing		Selected Drum Step Out 8			Level
+Map	Pad 9 Playing		Selected Drum Step Out 9			Level
+Map	Pad 10 Playing		Selected Drum Step Out 10			Level
+Map	Pad 11 Playing		Selected Drum Step Out 11			Level
+Map	Pad 12 Playing		Selected Drum Step Out 12			Level
+Map	Pad 13 Playing		Selected Drum Step Out 13			Level
+Map	Pad 14 Playing		Selected Drum Step Out 14			Level
+Map	Pad 15 Playing		Selected Drum Step Out 15			Level
+Map	Pad 16 Playing		Selected Drum Step Out 16			Level
+Map	Pad 17 Playing		Drum 1 is playing			Level
+Map	Pad 18 Playing		Drum 2 is playing			Level
+Map	Pad 19 Playing		Drum 3 is playing			Level
+Map	Pad 20 Playing		Drum 4 is playing			Level
+Map	Pad 21 Playing		Drum 5 is playing			Level
+Map	Pad 22 Playing		Drum 6 is playing			Level
+Map	Pad 23 Playing		Drum 7 is playing			Level
+Map	Pad 24 Playing		Drum 8 is playing			Level
+
+Map	Pad 1		Selected Drum Toggle Step 1			Pan
+Map	Pad 2		Selected Drum Toggle Step 2			Pan
+Map	Pad 3		Selected Drum Toggle Step 3			Pan
+Map	Pad 4		Selected Drum Toggle Step 4			Pan
+Map	Pad 5		Selected Drum Toggle Step 5			Pan
+Map	Pad 6		Selected Drum Toggle Step 6			Pan
+Map	Pad 7		Selected Drum Toggle Step 7			Pan
+Map	Pad 8		Selected Drum Toggle Step 8			Pan
+Map	Pad 9		Selected Drum Toggle Step 9			Pan
+Map	Pad 10		Selected Drum Toggle Step 10			Pan
+Map	Pad 11		Selected Drum Toggle Step 11			Pan
+Map	Pad 12		Selected Drum Toggle Step 12			Pan
+Map	Pad 13		Selected Drum Toggle Step 13			Pan
+Map	Pad 14		Selected Drum Toggle Step 14			Pan
+Map	Pad 15		Selected Drum Toggle Step 15			Pan
+Map	Pad 16		Selected Drum Toggle Step 16			Pan
+Map	Pad 17		Select Drum 1			Pan
+Map	Pad 18		Select Drum 2			Pan
+Map	Pad 19		Select Drum 3			Pan
+Map	Pad 20		Select Drum 4			Pan
+Map	Pad 21		Select Drum 5			Pan
+Map	Pad 22		Select Drum 6			Pan
+Map	Pad 23		Select Drum 7			Pan
+Map	Pad 24		Select Drum 8			Pan
+Map	Pad 25		Pattern 1			Pan
+Map	Pad 26		Pattern 2			Pan
+Map	Pad 27		Pattern 3			Pan
+Map	Pad 28		Pattern 4			Pan
+Map	Pad 29		Pattern 5			Pan
+Map	Pad 30		Pattern 6			Pan
+Map	Pad 31		Shuffle			Pan
+Map	Pad 32		Edit Accent			Pan
+Map	Pad 1 Playing		Selected Drum Step Out 1			Pan
+Map	Pad 2 Playing		Selected Drum Step Out 2			Pan
+Map	Pad 3 Playing		Selected Drum Step Out 3			Pan
+Map	Pad 4 Playing		Selected Drum Step Out 4			Pan
+Map	Pad 5 Playing		Selected Drum Step Out 5			Pan
+Map	Pad 6 Playing		Selected Drum Step Out 6			Pan
+Map	Pad 7 Playing		Selected Drum Step Out 7			Pan
+Map	Pad 8 Playing		Selected Drum Step Out 8			Pan
+Map	Pad 9 Playing		Selected Drum Step Out 9			Pan
+Map	Pad 10 Playing		Selected Drum Step Out 10			Pan
+Map	Pad 11 Playing		Selected Drum Step Out 11			Pan
+Map	Pad 12 Playing		Selected Drum Step Out 12			Pan
+Map	Pad 13 Playing		Selected Drum Step Out 13			Pan
+Map	Pad 14 Playing		Selected Drum Step Out 14			Pan
+Map	Pad 15 Playing		Selected Drum Step Out 15			Pan
+Map	Pad 16 Playing		Selected Drum Step Out 16			Pan
+Map	Pad 17 Playing		Drum 1 is playing			Pan
+Map	Pad 18 Playing		Drum 2 is playing			Pan
+Map	Pad 19 Playing		Drum 3 is playing			Pan
+Map	Pad 20 Playing		Drum 4 is playing			Pan
+Map	Pad 21 Playing		Drum 5 is playing			Pan
+Map	Pad 22 Playing		Drum 6 is playing			Pan
+Map	Pad 23 Playing		Drum 7 is playing			Pan
+Map	Pad 24 Playing		Drum 8 is playing			Pan
+
+Map	Pad 1		Selected Drum Step 1			Velocity
+Map	Pad 2		Selected Drum Step 2			Velocity
+Map	Pad 3		Selected Drum Step 3			Velocity
+Map	Pad 4		Selected Drum Step 4			Velocity
+Map	Pad 5		Selected Drum Step 5			Velocity
+Map	Pad 6		Selected Drum Step 6			Velocity
+Map	Pad 7		Selected Drum Step 7			Velocity
+Map	Pad 8		Selected Drum Step 8			Velocity
+Map	Pad 9		Selected Drum Step 9			Velocity
+Map	Pad 10		Selected Drum Step 10			Velocity
+Map	Pad 11		Selected Drum Step 11			Velocity
+Map	Pad 12		Selected Drum Step 12			Velocity
+Map	Pad 13		Selected Drum Step 13			Velocity
+Map	Pad 14		Selected Drum Step 14			Velocity
+Map	Pad 15		Selected Drum Step 15			Velocity
+Map	Pad 16		Selected Drum Step 16			Velocity
+Map	Pad 17		Select Drum 1			Velocity
+Map	Pad 18		Select Drum 2			Velocity
+Map	Pad 19		Select Drum 3			Velocity
+Map	Pad 20		Select Drum 4			Velocity
+Map	Pad 21		Select Drum 5			Velocity
+Map	Pad 22		Select Drum 6			Velocity
+Map	Pad 23		Select Drum 7			Velocity
+Map	Pad 24		Select Drum 8			Velocity
+Map	Pad 25		Pattern 1			Velocity
+Map	Pad 26		Pattern 2			Velocity
+Map	Pad 27		Pattern 3			Velocity
+Map	Pad 28		Pattern 4			Velocity
+Map	Pad 29		Pattern 5			Velocity
+Map	Pad 30		Pattern 6			Velocity
+Map	Pad 31		Shuffle			Velocity
+Map	Pad 32		Edit Accent			Velocity
+Map	Pad 1 Playing		Selected Drum Step Out 1			Velocity
+Map	Pad 2 Playing		Selected Drum Step Out 2			Velocity
+Map	Pad 3 Playing		Selected Drum Step Out 3			Velocity
+Map	Pad 4 Playing		Selected Drum Step Out 4			Velocity
+Map	Pad 5 Playing		Selected Drum Step Out 5			Velocity
+Map	Pad 6 Playing		Selected Drum Step Out 6			Velocity
+Map	Pad 7 Playing		Selected Drum Step Out 7			Velocity
+Map	Pad 8 Playing		Selected Drum Step Out 8			Velocity
+Map	Pad 9 Playing		Selected Drum Step Out 9			Velocity
+Map	Pad 10 Playing		Selected Drum Step Out 10			Velocity
+Map	Pad 11 Playing		Selected Drum Step Out 11			Velocity
+Map	Pad 12 Playing		Selected Drum Step Out 12			Velocity
+Map	Pad 13 Playing		Selected Drum Step Out 13			Velocity
+Map	Pad 14 Playing		Selected Drum Step Out 14			Velocity
+Map	Pad 15 Playing		Selected Drum Step Out 15			Velocity
+Map	Pad 16 Playing		Selected Drum Step Out 16			Velocity
+Map	Pad 17 Playing		Drum 1 is playing			Velocity
+Map	Pad 18 Playing		Drum 2 is playing			Velocity
+Map	Pad 19 Playing		Drum 3 is playing			Velocity
+Map	Pad 20 Playing		Drum 4 is playing			Velocity
+Map	Pad 21 Playing		Drum 5 is playing			Velocity
+Map	Pad 22 Playing		Drum 6 is playing			Velocity
+Map	Pad 23 Playing		Drum 7 is playing			Velocity
+Map	Pad 24 Playing		Drum 8 is playing			Velocity
+
+Map	Pad 1		Selected Drum Step 1			Length
+Map	Pad 2		Selected Drum Step 2			Length
+Map	Pad 3		Selected Drum Step 3			Length
+Map	Pad 4		Selected Drum Step 4			Length
+Map	Pad 5		Selected Drum Step 5			Length
+Map	Pad 6		Selected Drum Step 6			Length
+Map	Pad 7		Selected Drum Step 7			Length
+Map	Pad 8		Selected Drum Step 8			Length
+Map	Pad 9		Selected Drum Step 9			Length
+Map	Pad 10		Selected Drum Step 10			Length
+Map	Pad 11		Selected Drum Step 11			Length
+Map	Pad 12		Selected Drum Step 12			Length
+Map	Pad 13		Selected Drum Step 13			Length
+Map	Pad 14		Selected Drum Step 14			Length
+Map	Pad 15		Selected Drum Step 15			Length
+Map	Pad 16		Selected Drum Step 16			Length
+Map	Pad 17		Select Drum 1			Length
+Map	Pad 18		Select Drum 2			Length
+Map	Pad 19		Select Drum 3			Length
+Map	Pad 20		Select Drum 4			Length
+Map	Pad 21		Select Drum 5			Length
+Map	Pad 22		Select Drum 6			Length
+Map	Pad 23		Select Drum 7			Length
+Map	Pad 24		Select Drum 8			Length
+Map	Pad 25		Pattern 1			Length
+Map	Pad 26		Pattern 2			Length
+Map	Pad 27		Pattern 3			Length
+Map	Pad 28		Pattern 4			Length
+Map	Pad 29		Pattern 5			Length
+Map	Pad 30		Pattern 6			Length
+Map	Pad 31		Shuffle			Length
+Map	Pad 32		Edit Accent			Length
+Map	Pad 1 Playing		Selected Drum Step Out 1			Length
+Map	Pad 2 Playing		Selected Drum Step Out 2			Length
+Map	Pad 3 Playing		Selected Drum Step Out 3			Length
+Map	Pad 4 Playing		Selected Drum Step Out 4			Length
+Map	Pad 5 Playing		Selected Drum Step Out 5			Length
+Map	Pad 6 Playing		Selected Drum Step Out 6			Length
+Map	Pad 7 Playing		Selected Drum Step Out 7			Length
+Map	Pad 8 Playing		Selected Drum Step Out 8			Length
+Map	Pad 9 Playing		Selected Drum Step Out 9			Length
+Map	Pad 10 Playing		Selected Drum Step Out 10			Length
+Map	Pad 11 Playing		Selected Drum Step Out 11			Length
+Map	Pad 12 Playing		Selected Drum Step Out 12			Length
+Map	Pad 13 Playing		Selected Drum Step Out 13			Length
+Map	Pad 14 Playing		Selected Drum Step Out 14			Length
+Map	Pad 15 Playing		Selected Drum Step Out 15			Length
+Map	Pad 16 Playing		Selected Drum Step Out 16			Length
+Map	Pad 17 Playing		Drum 1 is playing			Length
+Map	Pad 18 Playing		Drum 2 is playing			Length
+Map	Pad 19 Playing		Drum 3 is playing			Length
+Map	Pad 20 Playing		Drum 4 is playing			Length
+Map	Pad 21 Playing		Drum 5 is playing			Length
+Map	Pad 22 Playing		Drum 6 is playing			Length
+Map	Pad 23 Playing		Drum 7 is playing			Length
+Map	Pad 24 Playing		Drum 8 is playing			Length
 
 Map	Slider 1		Drum 1 Level			Level
 Map	Slider 2		Drum 2 Level			Level
@@ -609,25 +869,25 @@ Map	Slider 7		Drum 7 Pan			Pan
 Map	Slider 8		Drum 8 Pan			Pan
 Map	_Var		"Pan"			Pan
 
-Map	Slider 1		Drum 1 Pitch			Pitch
-Map	Slider 2		Drum 2 Pitch			Pitch
-Map	Slider 3		Drum 3 Pitch			Pitch
-Map	Slider 4		Drum 4 Pitch			Pitch
-Map	Slider 5		Drum 5 Pitch			Pitch
-Map	Slider 6		Drum 6 Pitch			Pitch
-Map	Slider 7		Drum 7 Pitch			Pitch
-Map	Slider 8		Drum 8 Pitch			Pitch
-Map	_Var		"Pitch"			Pitch
+Map	Slider 1		Drum 1 Vel to Level			Velocity
+Map	Slider 2		Drum 2 Vel to Level			Velocity
+Map	Slider 3		Drum 3 Vel to Level			Velocity
+Map	Slider 4		Drum 4 Vel to Level			Velocity
+Map	Slider 5		Drum 5 Vel to Level			Velocity
+Map	Slider 6		Drum 6 Vel to Level			Velocity
+Map	Slider 7		Drum 7 Vel to Level			Velocity
+Map	Slider 8		Drum 8 Vel to Level			Velocity
+Map	_Var		"Velocity"			Velocity
 
-Map	Slider 1		Pattern 1			Pattern
-Map	Slider 2		Pattern 2			Pattern
-Map	Slider 3		Pattern 3			Pattern
-Map	Slider 4		Pattern 4			Pattern
-Map	Slider 5		Pattern 5			Pattern
-Map	Slider 6		Pattern 6			Pattern
-Map	Slider 7		Pattern 7			Pattern
-Map	Slider 8		Pattern 8			Pattern
-Map	_Var		"Pattern"			Pattern
+Map	Slider 1		Drum 1 Length			Length
+Map	Slider 2		Drum 2 Length			Length
+Map	Slider 3		Drum 3 Length			Length
+Map	Slider 4		Drum 4 Length			Length
+Map	Slider 5		Drum 5 Length			Length
+Map	Slider 6		Drum 6 Length			Length
+Map	Slider 7		Drum 7 Length			Length
+Map	Slider 8		Drum 8 Length			Length
+Map	_Var		"Length"			Length
 
 Scope	Propellerheads	MClass Equalizer
 Define Group	Keyboard Shortcut Variations	Low+Param 1	Param 2+Hi
@@ -637,6 +897,9 @@ Map	Tbtn 5		Keyboard Shortcut Variations=Low+Param 1
 Map	Tbtn 6		Keyboard Shortcut Variations=Param 2+Hi
 //Map	Tbtn 7		Keyboard Shortcut Variations=
 //Map	Tbtn 8		Keyboard Shortcut Variations=
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	Slider 1		Low Shelf Frequency			Low+Param 1
 Map	Slider 2		Low Shelf Gain			Low+Param 1
@@ -664,10 +927,16 @@ Map	Slider 1		Low Width
 Map	Slider 2		X-Over Frequency
 Map	Slider 3		High Width
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	MClass Compressor
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	_Scope		"MC Compressor"
 Map	Slider 1		Input Gain
@@ -683,6 +952,10 @@ Map	Slider 8		Sidechain Solo
 Scope	Propellerheads	MClass Maximizer
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 Map	_Scope		"MC Maximizer"
 Map	Slider 1		Input Gain
 Map	Slider 2		Attack Speed
@@ -697,6 +970,10 @@ Map	Slider 8		Output Gain
 Scope	Propellerheads	RV7000 Advanced Reverb
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 Map	_Scope		"RV7000 Reverb"
 Map	Slider 1		Decay
 Map	Slider 2		HF Damp
@@ -718,6 +995,9 @@ Map	Tbtn 6		Keyboard Shortcut Variations=Body
 //Map	Tbtn 8		Keyboard Shortcut Variations=
 
 Map	Slider 8		Master Level
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	Slider 1		Damage Control			Damage & Cut
 Map	Slider 2		Damage Type			Damage & Cut
@@ -746,6 +1026,9 @@ Map	Tbtn 5		Keyboard Shortcut Variations=Main
 Map	Tbtn 6		Keyboard Shortcut Variations=Band 1-8
 Map	Tbtn 7		Keyboard Shortcut Variations=Band 9-16
 Map	Tbtn 8		Keyboard Shortcut Variations=Band 17-24
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	Slider 1		Band Count			Main
 Map	Slider 2		Vocoder/Equalizer			Main
@@ -811,6 +1094,9 @@ Map	Slider 6		Treble
 Map	Slider 7		Presence
 Map	Slider 8		Volume
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	Line 6 Bass Amp
 //Define Group	Keyboard Shortcut Variations
@@ -823,6 +1109,9 @@ Map	Slider 4		Lo Mid
 Map	Slider 5		Hi Mid
 Map	Slider 6		Treble
 Map	Slider 8		Volume
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 
 Scope	Propellerheads	Neptune Pitch Adjuster
@@ -841,11 +1130,16 @@ Map	Slider 6		Formant Shift
 Map	Slider 7		Pitched Signal Level
 Map	Slider 8		Voice Synth Level
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Scope	Propellerheads	Pulveriser
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Define Group	Keyboard Shortcut Variations	Main	Follower	Tremor
 Map	_Scope		"Pulveriser"
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	Tbtn 5		Keyboard Shortcut Variations=Main
 Map	Tbtn 6		Keyboard Shortcut Variations=Follower
@@ -889,6 +1183,9 @@ Map	Tbtn 6		Keyboard Shortcut Variations=FilterMod
 //Map	Tbtn 7		Keyboard Shortcut Variations=
 //Map	Tbtn 8		Keyboard Shortcut Variations=
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 Map	Slider 1		Delay Time			Delay
 Map	Slider 2		Right Ch Time Offset			Delay
 Map	Slider 3		Ping-Pong Pan			Delay
@@ -920,6 +1217,9 @@ Map	Tbtn 5		Keyboard Shortcut Variations=MainFX
 Map	Tbtn 6		Keyboard Shortcut Variations=High
 Map	Tbtn 7		Keyboard Shortcut Variations=Band
 Map	Tbtn 8		Keyboard Shortcut Variations=Low
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 Map	Slider 1		Resolution			MainFX
 Map	Slider 2		LFO Waveform			MainFX
@@ -987,6 +1287,9 @@ Map	Slider 3		Decay
 Map	Slider 4		Damping
 Map	Slider 8		Dry/Wet
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	DDL-1 Digital Delay Line
 //Define Group	Keyboard Shortcut Variations
@@ -1000,6 +1303,9 @@ Map	Slider 5		Feedback
 Map	Slider 6		Pan
 Map	Slider 8		Dry/Wet Balance
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	D-11 Foldback Distortion
 //Define Group	Keyboard Shortcut Variations
@@ -1007,6 +1313,9 @@ Scope	Propellerheads	D-11 Foldback Distortion
 Map	_Scope		"D-11 Distortion"
 Map	Slider 1		Amount
 Map	Slider 2		Foldback
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 
 Scope	Propellerheads	ECF-42 Envelope Controlled Filter
@@ -1022,6 +1331,9 @@ Map	Slider 6		Decay
 Map	Slider 7		Sustain
 Map	Slider 8		Release
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	CF-101 Chorus/Flanger
 //Define Group	Keyboard Shortcut Variations
@@ -1033,6 +1345,9 @@ Map	Slider 3		Rate
 Map	Slider 4		Modulation Amount
 Map	Slider 5		LFO Sync Enable
 Map	Slider 6		Send/Insert Mode
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 
 Scope	Propellerheads	PH-90 Phaser
@@ -1047,6 +1362,9 @@ Map	Slider 5		Frequency Modulation
 Map	Slider 6		Feedback
 Map	Slider 7		LFO Sync Enable
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 
 Scope	Propellerheads	UN-16 Unison
 //Define Group	Keyboard Shortcut Variations
@@ -1055,6 +1373,9 @@ Map	_Scope		"UN16 Unison"
 Map	Slider 1		Detune
 Map	Slider 2		Voice Count
 Map	Slider 8		Dry/Wet
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 
 Scope	Propellerheads	COMP-01 Compressor/Limiter
@@ -1065,6 +1386,9 @@ Map	Slider 1		Ratio
 Map	Slider 2		Threshold
 Map	Slider 3		Attack
 Map	Slider 4		Release
+
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 
 Scope	Propellerheads	PEQ-2 Two Band Parametric EQ
@@ -1080,6 +1404,9 @@ Map	Slider 6		Filter B Q
 Map	Slider 7		Filter B Gain
 
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
+
 Scope	Propellerheads	RPG-8 Monophonic Arpeggiator
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1094,6 +1421,8 @@ Map	Slider 6		Rate
 Map	Slider 7		Gate Length
 Map	Slider 8		Shuffle
 
+Map	Shift Fbtn 1		Select Previous Patch
+Map	Shift Fbtn 2		Select Next Patch
 
 ///////RACK EXTENSIONS BELOW//////////////////////////////////
 
