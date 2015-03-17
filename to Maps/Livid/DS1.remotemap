@@ -11,32 +11,32 @@ Scope	Propellerheads	Master Keyboard
 //eos
 
 Scope	Propellerheads	Reason Document
-Define Group	Keyboard Shortcut Variations	Transport	Loop	Dub
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Document"
 Map	Grid 1		Play
 Map	Grid 4		Stop
 Map	Grid 7		Record
 
-Map	Grid 2		Rewind			Transport
-Map	Grid 5		Fast Forward			Transport
-Map	Grid 8		Click On/Off			Transport
-Map	Grid 2		Left Loop Bar			Loop
-Map	Grid 5		Right Loop Bar			Loop
-Map	Grid 8		Loop On/Off			Loop
-Map	Grid 2		New Overdub			Dub
-Map	Grid 5		New Alternative Take			Dub
-Map	Grid 8		Precount On/Off			Dub
+Map	Grid 2		Rewind			v1
+Map	Grid 5		Fast Forward			v1
+Map	Grid 8		Click On/Off			v1
+Map	Grid 2		Left Loop Bar			v2
+Map	Grid 5		Right Loop Bar			v2
+Map	Grid 8		Loop On/Off			v2
+Map	Grid 2		New Overdub			v3
+Map	Grid 5		New Alternative Take			v3
+Map	Grid 8		Precount On/Off			v3
 
-Map	Grid 3		Keyboard Shortcut Variations=Transport
-Map	Grid 6		Keyboard Shortcut Variations=Loop
-Map	Grid 9		Keyboard Shortcut Variations=Dub
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
 
 Map	EncDelta 2		Target Track (Delta)
 //eos
 
 Scope	Propellerheads	Reason Master Section
-Define Group	Keyboard Shortcut Variations	Volume	v1	v2	v3
+Define Group	Keyboard Shortcut Variations	v1	v2	v3
 Map	_Scope		"Master"
 Map	Master		Master Level
 //eos
