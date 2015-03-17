@@ -1771,7 +1771,7 @@ Map	_Var		"Knobs B"			KnobsB
 
 Map	Slider 1		Toggle 1			Toggles
 Map	Slider 2		Toggle 2			Toggles
-Map	Slider 3 		Toggle 3			Toggles
+Map	Slider 3		Toggle 3			Toggles
 Map	Slider 4		Toggle 4			Toggles
 Map	Slider 5		Toggle 5			Toggles
 Map	Slider 6		Toggle 6			Toggles
