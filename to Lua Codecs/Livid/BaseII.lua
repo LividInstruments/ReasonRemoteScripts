@@ -160,8 +160,9 @@ function remote_init(manufacturer, model)
 			{name="Pad 29", input="button", min=0, max=127, output="value"},
 			{name="Pad 30", input="button", min=0, max=127, output="value"},
 			{name="Pad 31", input="button", min=0, max=127, output="value"}, 
-			{name="Pad 32", input="value", min=0, max=2, output="value"},--76
-			{name="Pad 1 Playing", min=0, max=4, output="value"}, --77
+			{name="Pad 32", input="button", min=0, max=127, output="value"},--76
+			{name="Pad 32 Alt", input="value", min=0, max=2, output="value"},--77
+			{name="Pad 1 Playing", min=0, max=4, output="value"}, --78
 			{name="Pad 2 Playing", min=0, max=4, output="value"},
 			{name="Pad 3 Playing", min=0, max=4, output="value"},
 			{name="Pad 4 Playing", min=0, max=4, output="value"},
@@ -177,14 +178,14 @@ function remote_init(manufacturer, model)
 			{name="Pad 14 Playing", min=0, max=4, output="value"},
 			{name="Pad 15 Playing", min=0, max=4, output="value"},
 			{name="Pad 16 Playing", min=0, max=4, output="value"},
-			{name="Pad 17 Playing", min=0, max=4, output="value"}, --93
+			{name="Pad 17 Playing", min=0, max=4, output="value"}, --94
 			{name="Pad 18 Playing", min=0, max=4, output="value"},
 			{name="Pad 19 Playing", min=0, max=4, output="value"},
 			{name="Pad 20 Playing", min=0, max=4, output="value"},
 			{name="Pad 21 Playing", min=0, max=4, output="value"},
 			{name="Pad 22 Playing", min=0, max=4, output="value"},
 			{name="Pad 23 Playing", min=0, max=4, output="value"},
-			{name="Pad 24 Playing", min=0, max=4, output="value"}, --100
+			{name="Pad 24 Playing", min=0, max=4, output="value"}, --101
 			{name="Pad 25 Playing", min=0, max=4, output="value"},
 			{name="Pad 26 Playing", min=0, max=4, output="value"},
 			{name="Pad 27 Playing", min=0, max=4, output="value"},
@@ -194,7 +195,7 @@ function remote_init(manufacturer, model)
 			{name="Pad 31 Playing", min=0, max=4, output="value"},
 			{name="Pad 32 Playing", min=0, max=4, output="value"},
 			{name="Fbtn 1", input="button", min=0, max=40, output="value"},
-			{name="Fbtn 2", input="button", min=0, max=40, output="value"}, --110
+			{name="Fbtn 2", input="button", min=0, max=40, output="value"}, --111
 			{name="Fbtn 3", input="button", min=0, max=40, output="value"},
 			--{name="Fbtn 4", input="button", min=0, max=40, output="value"},
 			--{name="Fbtn 5", input="button", min=0, max=40, output="value"},
@@ -209,7 +210,7 @@ function remote_init(manufacturer, model)
 			{name="Tbtn 6", input="button", min=0, max=127, output="value"},
 			{name="Tbtn 7", input="button", min=0, max=127, output="value"},
 			{name="Tbtn 8", input="button", min=0, max=127, output="value"},
-			{name="Shift Tbtn 1", input="button", min=0, max=127, output="value"},--120
+			{name="Shift Tbtn 1", input="button", min=0, max=127, output="value"},--121
 			{name="Shift Tbtn 2", input="button", min=0, max=127, output="value"},
 			{name="Shift Tbtn 3", input="button", min=0, max=127, output="value"},
 			{name="Shift Tbtn 4", input="button", min=0, max=127, output="value"},
@@ -347,7 +348,8 @@ function remote_init(manufacturer, model)
 			{pattern="<100x>? 28 <z000>0", name="Pad 29"},
 			{pattern="<100x>? 29 <z000>0", name="Pad 30"},
 			{pattern="<100x>? 2A <z000>0", name="Pad 31"},
-			--{pattern="<100x>? 2B <z000>0", name="Pad 32"}
+			{pattern="<100x>? 2B <z000>0", name="Pad 32"}
+			--{pattern="<100x>? 2B <z000>0", name="Pad 32 Alt"}
 		}
 		remote.define_auto_inputs(inputs)
 		
@@ -468,7 +470,8 @@ function remote_init(manufacturer, model)
 			{pattern="90 28 <000x>0", name="Pad 29"},--red
 			{pattern="90 29 <000x>0", name="Pad 30"},--red
 			{pattern="90 2A xx", name="Pad 31", x="127*value"},--gn
-			--{pattern="90 2B xx", name="Pad 32", x="127*value"} --grn
+			{pattern="90 2B <000x>0", name="Pad 32"},--red
+			--{pattern="90 2B xx", name="Pad 32 Alt", x="127*value"} --grn
 		}
 		remote.define_auto_outputs(outputs)
 	end
@@ -512,8 +515,9 @@ g_last_led_output = { 100,100,100,100, 100,100,100,100, 100,100,100,100, 100,100
 -- FL: Assign to these the index to the first the corresponding items according
 -- to the definition list in remote_init. (Or assign them when defining the items, depending on how you do that.)
 k_first_step_item = 61
-k_first_step_playing_item = 93
-k_accent = 76
+k_first_step_playing_item = 94
+k_accent = 77
+g_Tbtn_firstitem = 121
 g_accent = 0
 g_last_accent = 0
 g_accent_dn = false
@@ -605,7 +609,7 @@ function remote_process_midi(event)
       end
 		elseif (ret.y<25 and shift==1) then --f7 buttons and top buttons
       local noteout = ret.y + 100 --offset note by 100
-      itemno = 120+(ret.y-10) --Tbtn starts at item 120 in the items index.
+      itemno = g_Tbtn_firstitem+(ret.y-10) --Tbtn starts at item 121 in the items index.
       if(ret.z>0) then
         local msg={ time_stamp = event.time_stamp, item=itemno, value = ret.x, note = noteout,velocity = ret.z }
         remote.handle_input(msg)
