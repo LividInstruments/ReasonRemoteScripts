@@ -318,7 +318,7 @@ function remote_deliver_midi(maxbytes,port)
 			g_delivered_lcd_state = new_text
 			istracktext = string.find(new_text,"Track") == 1 --The word "track" is the first word
 			if istracktext==true then
-				local track_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Track/lcd_name "..new_text)
+				local track_event = make_lcd_midi_message("/Reason/0/Alias8/0/display/0/display "..new_text)
 				table.insert(lcd_events,track_event)
 			end
 			
@@ -328,7 +328,7 @@ function remote_deliver_midi(maxbytes,port)
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
-			local var_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Var/lcd_name "..vartext)
+			local var_event = make_lcd_midi_message("/Reason/0/Alias8/0/display/2/display "..vartext)
 			table.insert(ret_events,var_event)
 			g_vartext_prev = g_vartext
 			isvarchange = true
@@ -336,14 +336,14 @@ function remote_deliver_midi(maxbytes,port)
 		--Variations are changed when CHannel changes on hardware
 		if(cur_channel_prev~=cur_channel) then
 			local vartext = "Variation "..cur_channel
-			local var_event = make_lcd_midi_message("/Reason/Alias8/0/glob/Var/lcd_name "..vartext)
+			local var_event = make_lcd_midi_message("/Reason/0/Alias8/0/display/2/display "..vartext)
 			table.insert(lcd_events,var_event)
 			cur_channel_prev = cur_channel
 			doupdateall = true
 		end
 		if g_scopetext_prev~=g_scopetext then
 			--Let the LCD know what the device is
-			local const_event = make_lcd_midi_message("/Reason/Alias8/0/info/Device/lcd_name "..g_scopetext)
+			local const_event = make_lcd_midi_message("/Reason/0/Alias8/0/display/1/display  "..g_scopetext)
 			table.insert(lcd_events,const_event)
 			--report SCOPE over sysex, mostly for testing
 			--local const_event=make_lcd_midi_message("SCOPE "..g_scopetext)
@@ -480,8 +480,11 @@ function update_ctl(item,ctltype)
 	local v_path = ""
 	local p_text = ""
 	local v_text = ""
-	--local tlcd_event = make_lcd_midi_message("item "..item.." text "..thetext.." len "..#thetext )
-	--table.insert(lcd_events,tlcd_event)
+	
+  local ctlindex = modulo( (item-offset),ctlcount)
+  p_path = "/Reason/0/Alias8/0/"..ctltype.."/"..(ctlindex).."/lcd_name " -- "offset" (-5, for example) because the faders start at index 5 in table items, but we start our OSC Fader names at 0.
+  v_path = "/Reason/0/Alias8/0/"..ctltype.."/"..(ctlindex).."/lcd_value "
+  
 	if(#thetext>0) then
 		--strip any percent symbols
 		local pctsearch = string.find(thetext, '%%')
@@ -495,9 +498,6 @@ function update_ctl(item,ctltype)
 			wordcount = wordcount+1
 		end
 		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		ctlindex = modulo( (item-offset),ctlcount)
-		p_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_name " -- "offset" (-5, for example) because the faders start at index 5 in table items, but we start our OSC Fader names at 0.
-		v_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_value "
 		if(wordcount>2) then
 			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
 			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
@@ -517,14 +517,11 @@ function update_ctl(item,ctltype)
 			v_text_prev = v_text
 		end
 	else
-		--clear the LCD if there's nothing assigned at this control index
-		ctlindex = modulo( (item-offset),ctlcount)
-		p_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_name " -- "offset" (-5, for example) because the faders start at index 5 in table items, but we start our OSC Fader names at 0.
-		v_path = "/Reason/Alias8/0/"..ctltype.."_"..(ctlindex).."/lcd_value "		
+		--clear the LCD if there's nothing assigned at this control index	
 		local p_lcd_event = make_lcd_midi_message(p_path.."--")
 		local v_lcd_event = make_lcd_midi_message(v_path.."..")
-		table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
-		table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 
+		table.insert(lcd_events,p_lcd_event)
+		table.insert(lcd_events,v_lcd_event) 
 	end
 end
 
