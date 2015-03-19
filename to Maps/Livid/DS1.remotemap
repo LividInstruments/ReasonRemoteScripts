@@ -11,34 +11,332 @@ Scope	Propellerheads	Master Keyboard
 //eos
 
 Scope	Propellerheads	Reason Document
-Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Define Group	Keyboard Shortcut Variations	Transport	Loop	Dub
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Document"
 Map	Grid 1		Play
 Map	Grid 4		Stop
 Map	Grid 7		Record
 
-Map	Grid 2		Rewind			v1
-Map	Grid 5		Fast Forward			v1
-Map	Grid 8		Click On/Off			v1
-Map	Grid 2		Left Loop Bar			v2
-Map	Grid 5		Right Loop Bar			v2
-Map	Grid 8		Loop On/Off			v2
-Map	Grid 2		New Overdub			v3
-Map	Grid 5		New Alternative Take			v3
-Map	Grid 8		Precount On/Off			v3
+Map	Grid 2		Rewind			Transport
+Map	Grid 5		Fast Forward			Transport
+Map	Grid 8		Click On/Off			Transport
+Map	Grid 2		Left Loop Bar			Loop
+Map	Grid 5		Right Loop Bar			Loop
+Map	Grid 8		Loop On/Off			Loop
+Map	Grid 2		New Overdub			Dub
+Map	Grid 5		New Alternative Take			Dub
+Map	Grid 8		Precount On/Off			Dub
 
-Map	Grid 3		Keyboard Shortcut Variations=v1
-Map	Grid 6		Keyboard Shortcut Variations=v2
-Map	Grid 9		Keyboard Shortcut Variations=v3
+Map	Grid 3		Keyboard Shortcut Variations=Transport
+Map	Grid 6		Keyboard Shortcut Variations=Loop
+Map	Grid 9		Keyboard Shortcut Variations=Dub
 
 Map	EncDelta 2		Target Track (Delta)
 //eos
 
 Scope	Propellerheads	Reason Master Section
-Define Group	Keyboard Shortcut Variations	v1	v2	v3
+Define Group	Keyboard Shortcut Variations	Volume	v1	v2	v3
 Map	_Scope		"Master"
 Map	Master		Master Level
+
+Map	_Var		"Send & Pan"			v1
+Map	_Var		"EQ"			v2
+Map	_Var		"Rotary"			v3
+//can change the v<n> values below for other mappings:
+Map	Grid 3		Keyboard Shortcut Variations=v1
+Map	Grid 6		Keyboard Shortcut Variations=v2
+Map	Grid 9		Keyboard Shortcut Variations=v3
+Map	Knob 1		Rotary 1
+Map	Knob 2		Rotary 2
+Map	Knob 3		Rotary 3
+Map	Knob 4		Rotary 4
+Map	EncDelta 1		Remote Base Channel Delta
+Map	Fader 1		Channel 1 Level
+Map	Fader 2		Channel 2 Level
+Map	Fader 3		Channel 3 Level
+Map	Fader 4		Channel 4 Level
+Map	Fader 5		Channel 5 Level
+Map	Fader 6		Channel 6 Level
+Map	Fader 7		Channel 7 Level
+Map	Fader 8		Channel 8 Level
+Map	CBtn 1_1		Channel 1 Mute
+Map	CBtn 2_1		Channel 2 Mute
+Map	CBtn 3_1		Channel 3 Mute
+Map	CBtn 4_1		Channel 4 Mute
+Map	CBtn 5_1		Channel 5 Mute
+Map	CBtn 6_1		Channel 6 Mute
+Map	CBtn 7_1		Channel 7 Mute
+Map	CBtn 8_1		Channel 8 Mute
+Map	CBtn 1_2		Channel 1 Solo
+Map	CBtn 2_2		Channel 2 Solo
+Map	CBtn 3_2		Channel 3 Solo
+Map	CBtn 4_2		Channel 4 Solo
+Map	CBtn 5_2		Channel 5 Solo
+Map	CBtn 6_2		Channel 6 Solo
+Map	CBtn 7_2		Channel 7 Solo
+Map	CBtn 8_2		Channel 8 Solo
+
+Map	Dial 1_1		Channel 1 FX1 Send Level			v1
+Map	Dial 1_2		Channel 1 FX2 Send Level			v1
+Map	Dial 1_3		Channel 1 FX3 Send Level			v1
+Map	Dial 1_4		Channel 1 Width			v1
+Map	Dial 1_5		Channel 1 Pan			v1
+Map	Dial 1_1		Channel 1 HF Gain			v2
+Map	Dial 1_2		Channel 1 HMF Frequency			v2
+Map	Dial 1_3		Channel 1 HMF Gain			v2
+Map	Dial 1_4		Channel 1 LMF Gain			v2
+Map	Dial 1_5		Channel 1 LF Gain			v2
+Map	Dial 1_1		Channel 1 Input Gain			v3
+Map	Dial 1_2		Channel 1 Rotary 1			v3
+Map	Dial 1_3		Channel 1 Rotary 2			v3
+Map	Dial 1_4		Channel 1 Rotary 3			v3
+Map	Dial 1_5		Channel 1 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 1_1		Channel 1 C Threshold			v4
+//Map	Dial 1_2		Channel 1 C Release			v4
+//Map	Dial 1_3		Channel 1 C Ratio			v4
+//Map	Dial 1_4		Channel 1 LPF Frequency			v4
+//Map	Dial 1_5		Channel 1 HPF Frequency			v4
+//Map	Dial 1_1		Channel 1 Input Gain			v5
+//Map	Dial 1_2		Channel 1 G Threshold			v5
+//Map	Dial 1_3		Channel 1 G Hold			v5
+//Map	Dial 1_4		Channel 1 G Release			v5
+//Map	Dial 1_5		Channel 1 G Range			v5
+//Map	Dial 1_1		Channel 1 HF Frequency 			v6
+//Map	Dial 1_2		Channel 1 HMF Frequency 			v6
+//Map	Dial 1_3		Channel 1 LMF Frequency 			v6
+//Map	Dial 1_4		Channel 1 LF Frequency 			v6
+//Map	Dial 1_5		Channel 1 HMF Q			v6
+
+Map	Dial 2_1		Channel 2 FX1 Send Level			v1
+Map	Dial 2_2		Channel 2 FX2 Send Level			v1
+Map	Dial 2_3		Channel 2 FX3 Send Level			v1
+Map	Dial 2_4		Channel 2 Width			v1
+Map	Dial 2_5		Channel 2 Pan			v1
+Map	Dial 2_1		Channel 2 HF Gain			v2
+Map	Dial 2_2		Channel 2 HMF Frequency			v2
+Map	Dial 2_3		Channel 2 HMF Gain			v2
+Map	Dial 2_4		Channel 2 LMF Gain			v2
+Map	Dial 2_5		Channel 2 LF Gain			v2
+Map	Dial 2_1		Channel 2 Input Gain			v3
+Map	Dial 2_2		Channel 2 Rotary 1			v3
+Map	Dial 2_3		Channel 2 Rotary 2			v3
+Map	Dial 2_4		Channel 2 Rotary 3			v3
+Map	Dial 2_5		Channel 2 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 2_1		Channel 2 C Threshold			v4
+//Map	Dial 2_2		Channel 2 C Release			v4
+//Map	Dial 2_3		Channel 2 C Ratio			v4
+//Map	Dial 2_4		Channel 2 LPF Frequency			v4
+//Map	Dial 2_5		Channel 2 HPF Frequency			v4
+//Map	Dial 2_1		Channel 2 Input Gain			v5
+//Map	Dial 2_2		Channel 2 G Threshold			v5
+//Map	Dial 2_3		Channel 2 G Hold			v5
+//Map	Dial 2_4		Channel 2 G Release			v5
+//Map	Dial 2_5		Channel 2 G Range			v5
+//Map	Dial 2_1		Channel 2 HF Frequency 			v6
+//Map	Dial 2_2		Channel 2 HMF Frequency 			v6
+//Map	Dial 2_3		Channel 2 LMF Frequency 			v6
+//Map	Dial 2_4		Channel 2 LF Frequency 			v6
+//Map	Dial 2_5		Channel 2 HMF Q			v6
+
+Map	Dial 3_1		Channel 3 FX1 Send Level			v1
+Map	Dial 3_2		Channel 3 FX2 Send Level			v1
+Map	Dial 3_3		Channel 3 FX3 Send Level			v1
+Map	Dial 3_4		Channel 3 Width			v1
+Map	Dial 3_5		Channel 3 Pan			v1
+Map	Dial 3_1		Channel 3 HF Gain			v2
+Map	Dial 3_2		Channel 3 HMF Frequency			v2
+Map	Dial 3_3		Channel 3 HMF Gain			v2
+Map	Dial 3_4		Channel 3 LMF Gain			v2
+Map	Dial 3_5		Channel 3 LF Gain			v2
+Map	Dial 3_1		Channel 3 Input Gain			v3
+Map	Dial 3_2		Channel 3 Rotary 1			v3
+Map	Dial 3_3		Channel 3 Rotary 2			v3
+Map	Dial 3_4		Channel 3 Rotary 3			v3
+Map	Dial 3_5		Channel 3 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 3_1		Channel 3 C Threshold			v4
+//Map	Dial 3_2		Channel 3 C Release			v4
+//Map	Dial 3_3		Channel 3 C Ratio			v4
+//Map	Dial 3_4		Channel 3 LPF Frequency			v4
+//Map	Dial 3_5		Channel 3 HPF Frequency			v4
+//Map	Dial 3_1		Channel 3 Input Gain			v5
+//Map	Dial 3_2		Channel 3 G Threshold			v5
+//Map	Dial 3_3		Channel 3 G Hold			v5
+//Map	Dial 3_4		Channel 3 G Release			v5
+//Map	Dial 3_5		Channel 3 G Range			v5
+//Map	Dial 3_1		Channel 3 HF Frequency 			v6
+//Map	Dial 3_2		Channel 3 HMF Frequency 			v6
+//Map	Dial 3_3		Channel 3 LMF Frequency 			v6
+//Map	Dial 3_4		Channel 3 LF Frequency 			v6
+//Map	Dial 3_5		Channel 3 HMF Q			v6
+
+Map	Dial 4_1		Channel 4 FX1 Send Level			v1
+Map	Dial 4_2		Channel 4 FX2 Send Level			v1
+Map	Dial 4_3		Channel 4 FX3 Send Level			v1
+Map	Dial 4_4		Channel 4 Width			v1
+Map	Dial 4_5		Channel 4 Pan			v1
+Map	Dial 4_1		Channel 4 HF Gain			v2
+Map	Dial 4_2		Channel 4 HMF Frequency			v2
+Map	Dial 4_3		Channel 4 HMF Gain			v2
+Map	Dial 4_4		Channel 4 LMF Gain			v2
+Map	Dial 4_5		Channel 4 LF Gain			v2
+Map	Dial 4_1		Channel 4 Input Gain			v3
+Map	Dial 4_2		Channel 4 Rotary 1			v3
+Map	Dial 4_3		Channel 4 Rotary 2			v3
+Map	Dial 4_4		Channel 4 Rotary 3			v3
+Map	Dial 4_5		Channel 4 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 4_1		Channel 4 C Threshold			v4
+//Map	Dial 4_2		Channel 4 C Release			v4
+//Map	Dial 4_3		Channel 4 C Ratio			v4
+//Map	Dial 4_4		Channel 4 LPF Frequency			v4
+//Map	Dial 4_5		Channel 4 HPF Frequency			v4
+//Map	Dial 4_1		Channel 4 Input Gain			v5
+//Map	Dial 4_2		Channel 4 G Threshold			v5
+//Map	Dial 4_3		Channel 4 G Hold			v5
+//Map	Dial 4_4		Channel 4 G Release			v5
+//Map	Dial 4_5		Channel 4 G Range			v5
+//Map	Dial 4_1		Channel 4 HF Frequency 			v6
+//Map	Dial 4_2		Channel 4 HMF Frequency 			v6
+//Map	Dial 4_3		Channel 4 LMF Frequency 			v6
+//Map	Dial 4_4		Channel 4 LF Frequency 			v6
+//Map	Dial 4_5		Channel 4 HMF Q			v6
+
+Map	Dial 5_1		Channel 5 FX1 Send Level			v1
+Map	Dial 5_2		Channel 5 FX2 Send Level			v1
+Map	Dial 5_3		Channel 5 FX3 Send Level			v1
+Map	Dial 5_4		Channel 5 Width			v1
+Map	Dial 5_5		Channel 5 Pan			v1
+Map	Dial 5_1		Channel 5 HF Gain			v2
+Map	Dial 5_2		Channel 5 HMF Frequency			v2
+Map	Dial 5_3		Channel 5 HMF Gain			v2
+Map	Dial 5_4		Channel 5 LMF Gain			v2
+Map	Dial 5_5		Channel 5 LF Gain			v2
+Map	Dial 5_1		Channel 5 Input Gain			v3
+Map	Dial 5_2		Channel 5 Rotary 1			v3
+Map	Dial 5_3		Channel 5 Rotary 2			v3
+Map	Dial 5_4		Channel 5 Rotary 3			v3
+Map	Dial 5_5		Channel 5 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 5_1		Channel 5 C Threshold			v4
+//Map	Dial 5_2		Channel 5 C Release			v4
+//Map	Dial 5_3		Channel 5 C Ratio			v4
+//Map	Dial 5_4		Channel 5 LPF Frequency			v4
+//Map	Dial 5_5		Channel 5 HPF Frequency			v4
+//Map	Dial 5_1		Channel 5 Input Gain			v5
+//Map	Dial 5_2		Channel 5 G Threshold			v5
+//Map	Dial 5_3		Channel 5 G Hold			v5
+//Map	Dial 5_4		Channel 5 G Release			v5
+//Map	Dial 5_5		Channel 5 G Range			v5
+//Map	Dial 5_1		Channel 5 HF Frequency 			v6
+//Map	Dial 5_2		Channel 5 HMF Frequency 			v6
+//Map	Dial 5_3		Channel 5 LMF Frequency 			v6
+//Map	Dial 5_4		Channel 5 LF Frequency 			v6
+//Map	Dial 5_5		Channel 5 HMF Q			v6
+
+Map	Dial 6_1		Channel 6 FX1 Send Level			v1
+Map	Dial 6_2		Channel 6 FX2 Send Level			v1
+Map	Dial 6_3		Channel 6 FX3 Send Level			v1
+Map	Dial 6_4		Channel 6 Width			v1
+Map	Dial 6_5		Channel 6 Pan			v1
+Map	Dial 6_1		Channel 6 HF Gain			v2
+Map	Dial 6_2		Channel 6 HMF Frequency			v2
+Map	Dial 6_3		Channel 6 HMF Gain			v2
+Map	Dial 6_4		Channel 6 LMF Gain			v2
+Map	Dial 6_5		Channel 6 LF Gain			v2
+Map	Dial 6_1		Channel 6 Input Gain			v3
+Map	Dial 6_2		Channel 6 Rotary 1			v3
+Map	Dial 6_3		Channel 6 Rotary 2			v3
+Map	Dial 6_4		Channel 6 Rotary 3			v3
+Map	Dial 6_5		Channel 6 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 6_1		Channel 6 C Threshold			v4
+//Map	Dial 6_2		Channel 6 C Release			v4
+//Map	Dial 6_3		Channel 6 C Ratio			v4
+//Map	Dial 6_4		Channel 6 LPF Frequency			v4
+//Map	Dial 6_5		Channel 6 HPF Frequency			v4
+//Map	Dial 6_1		Channel 6 Input Gain			v5
+//Map	Dial 6_2		Channel 6 G Threshold			v5
+//Map	Dial 6_3		Channel 6 G Hold			v5
+//Map	Dial 6_4		Channel 6 G Release			v5
+//Map	Dial 6_5		Channel 6 G Range			v5
+//Map	Dial 6_1		Channel 6 HF Frequency 			v6
+//Map	Dial 6_2		Channel 6 HMF Frequency 			v6
+//Map	Dial 6_3		Channel 6 LMF Frequency 			v6
+//Map	Dial 6_4		Channel 6 LF Frequency 			v6
+//Map	Dial 6_5		Channel 6 HMF Q			v6
+
+Map	Dial 7_1		Channel 7 FX1 Send Level			v1
+Map	Dial 7_2		Channel 7 FX2 Send Level			v1
+Map	Dial 7_3		Channel 7 FX3 Send Level			v1
+Map	Dial 7_4		Channel 7 Width			v1
+Map	Dial 7_5		Channel 7 Pan			v1
+Map	Dial 7_1		Channel 7 HF Gain			v2
+Map	Dial 7_2		Channel 7 HMF Frequency			v2
+Map	Dial 7_3		Channel 7 HMF Gain			v2
+Map	Dial 7_4		Channel 7 LMF Gain			v2
+Map	Dial 7_5		Channel 7 LF Gain			v2
+Map	Dial 7_1		Channel 7 Input Gain			v3
+Map	Dial 7_2		Channel 7 Rotary 1			v3
+Map	Dial 7_3		Channel 7 Rotary 2			v3
+Map	Dial 7_4		Channel 7 Rotary 3			v3
+Map	Dial 7_5		Channel 7 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 7_1		Channel 7 C Threshold			v4
+//Map	Dial 7_2		Channel 7 C Release			v4
+//Map	Dial 7_3		Channel 7 C Ratio			v4
+//Map	Dial 7_4		Channel 7 LPF Frequency			v4
+//Map	Dial 7_5		Channel 7 HPF Frequency			v4
+//Map	Dial 7_1		Channel 7 Input Gain			v5
+//Map	Dial 7_2		Channel 7 G Threshold			v5
+//Map	Dial 7_3		Channel 7 G Hold			v5
+//Map	Dial 7_4		Channel 7 G Release			v5
+//Map	Dial 7_5		Channel 7 G Range			v5
+//Map	Dial 7_1		Channel 7 HF Frequency 			v6
+//Map	Dial 7_2		Channel 7 HMF Frequency 			v6
+//Map	Dial 7_3		Channel 7 LMF Frequency 			v6
+//Map	Dial 7_4		Channel 7 LF Frequency 			v6
+//Map	Dial 7_5		Channel 7 HMF Q			v6
+
+Map	Dial 8_1		Channel 8 FX1 Send Level			v1
+Map	Dial 8_2		Channel 8 FX2 Send Level			v1
+Map	Dial 8_3		Channel 8 FX3 Send Level			v1
+Map	Dial 8_4		Channel 8 Width			v1
+Map	Dial 8_5		Channel 8 Pan			v1
+Map	Dial 8_1		Channel 8 HF Gain			v2
+Map	Dial 8_2		Channel 8 HMF Frequency			v2
+Map	Dial 8_3		Channel 8 HMF Gain			v2
+Map	Dial 8_4		Channel 8 LMF Gain			v2
+Map	Dial 8_5		Channel 8 LF Gain			v2
+Map	Dial 8_1		Channel 8 Input Gain			v3
+Map	Dial 8_2		Channel 8 Rotary 1			v3
+Map	Dial 8_3		Channel 8 Rotary 2			v3
+Map	Dial 8_4		Channel 8 Rotary 3			v3
+Map	Dial 8_5		Channel 8 Rotary 4			v3
+//uncomment and adjust variation values for the Grid buttons above
+//Map	Dial 8_1		Channel 8 C Threshold			v4
+//Map	Dial 8_2		Channel 8 C Release			v4
+//Map	Dial 8_3		Channel 8 C Ratio			v4
+//Map	Dial 8_4		Channel 8 LPF Frequency			v4
+//Map	Dial 8_5		Channel 8 HPF Frequency			v4
+//Map	Dial 8_1		Channel 8 Input Gain			v5
+//Map	Dial 8_2		Channel 8 G Threshold			v5
+//Map	Dial 8_3		Channel 8 G Hold			v5
+//Map	Dial 8_4		Channel 8 G Release			v5
+//Map	Dial 8_5		Channel 8 G Range			v5
+//Map	Dial 8_1		Channel 8 HF Frequency 			v6
+//Map	Dial 8_2		Channel 8 HMF Frequency 			v6
+//Map	Dial 8_3		Channel 8 LMF Frequency 			v6
+//Map	Dial 8_4		Channel 8 LF Frequency 			v6
+//Map	Dial 8_5		Channel 8 HMF Q			v6
+//eos
+
+Scope	Propellerheads	Record Main Mixer Channel
+Define Group	Keyboard Shortcut Variations	Volume	v1	v2	v3
+Map	_Scope		"Main Mixer Channel"
 //eos
 
 Scope	Propellerheads	Combinator
@@ -62,6 +360,8 @@ Scope	Propellerheads	Mixer 14:2
 Define Group	Keyboard Shortcut Variations	v1	v2	v3
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Mixer 14:2"
+Map	_Var		"Send 1&2"			v1
+Map	_Var		"Send 3&4"			v2
 Map	Grid 3		Keyboard Shortcut Variations=v1
 Map	Grid 6		Keyboard Shortcut Variations=v2
 Map	Grid 9		Keyboard Shortcut Variations=v3
@@ -242,6 +542,9 @@ Map	CBtn 7_1		Sound D
 Scope	Propellerheads	Kong Drum Designer
 Define Group	Keyboard Shortcut Variations	v1	v2	v3
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Var		"Drums 1-8"			v1
+Map	_Var		"Drums 9-16"			v2
+Map	_Var		"-no v3"			v3
 Map	_Scope		"KONG"
 Map	EncDelta 1		Select Patch Delta
 Map	Master		Master Level
@@ -404,6 +707,10 @@ Map	Fader 8		Drum 16 Level			v2
 Scope	Propellerheads	Thor Polysonic Synthesizer
 Define Group	Keyboard Shortcut Variations	v1	v2	v3
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	_Var		"Main"			v1
+Map	_Var		"More Osc and Env"			v2
+Map	_Var		"Step Seq"			v3
+
 Map	_Scope		"Thor"
 Map	EncDelta 1		Select Patch Delta
 Map	Master		Master Level
@@ -657,6 +964,9 @@ Scope	Propellerheads	Malstrom Graintable Synthesizer
 Define Group	Keyboard Shortcut Variations	v1	v2	v3
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Malstrom"
+Map	_Var		"Main"			v1
+Map	_Var		"More Env"			v2
+Map	_Var		"-none-"			v3
 Map	EncDelta 1		Select Patch Delta
 Map	Master		Master Level
 Map	Grid 3		Keyboard Shortcut Variations=v1
@@ -913,6 +1223,10 @@ Scope	Propellerheads	Redrum Drum Computer
 Define Group	Keyboard Shortcut Variations	v1	v2	v3
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"Redrum"
+Map	_Var		"Main"			v1
+Map	_Var		"Select Drums"			v2
+Map	_Var		"Select Patterns"			v3
+
 Map	EncDelta 1		Select Patch Delta
 Map	Master		Master Level
 Map	Grid 3		Keyboard Shortcut Variations=v1
@@ -1309,7 +1623,7 @@ Map	Dial 2_3		Preserve Expression
 Map	Dial 2_4		Catch Zone
 Map	Dial 3_1		Semitones
 Map	Dial 3_2		Cent
-Map	Dial 3_1		Formant Shift
+Map	Dial 3_3		Formant Shift
 Map	Fader 1		Pitched Signal Level
 Map	Fader 2		Voice Synth Level
 

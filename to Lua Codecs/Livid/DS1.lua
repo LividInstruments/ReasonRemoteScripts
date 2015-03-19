@@ -360,8 +360,8 @@ g_delivered_lcd_state = "#"
 g_delivered_note = 0
 g_scope_item_index = 1 -- "_Scope" is item 1 in the table
 g_var_item_index = 2 -- "_Var" is item 2 in the table
-sli_start=3
-sli_end=72
+sli_start=1
+sli_end=92
 
 
 function remote_set_state(changed_items)
@@ -403,6 +403,15 @@ function remote_deliver_midi(maxbytes,port)
 		local isvarchange = false
 		local istracktext = false
 	  local dummytable = {}
+	  
+		local a_text = remote.get_item_text_value(1)
+		local b_text = remote.get_item_text_value(2)
+		local c_text = remote.get_item_text_value(3)
+		local d_text = remote.get_item_text_value(4)
+--  next 2 lines continuously spit out the new_text - only for testing
+--    local test_event = make_lcd_midi_message("/Reason/0/DS1/0/display/0/display "..a_text.." - "..b_text.." - "..c_text.." - "..d_text)
+--    table.insert(lcd_events,test_event)			
+    	
 		--if vartext from _Var item in remotemap has changed	-----------------
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
@@ -416,9 +425,6 @@ function remote_deliver_midi(maxbytes,port)
 		--lcd event and text parsing for scale detection from text in track name----------------------------------------
 		local new_text = g_lcd_state
     g_delivered_lcd_state = new_text
---    next 2 lines continuously spit out the new_text - only for testing
---    local test_event = make_lcd_midi_message("/Reason/0/DS1/0/display/0/display "..new_text)
---    table.insert(lcd_events,test_event)				
     istracktext = string.find(new_text,"Track") == 1 --The word "track" is the first word
 		if g_delivered_lcd_state~=new_text then
 			if(istracktext==false) then
