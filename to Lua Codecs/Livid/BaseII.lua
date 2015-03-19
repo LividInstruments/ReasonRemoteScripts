@@ -654,7 +654,7 @@ function remote_deliver_midi(maxbytes,port)
 					table.insert(base_events,ltevent)
 					rtevent = remote.make_midi("b0 23 "..c_two)
 					table.insert(base_events,rtevent)
-					local transpose_event = make_lcd_midi_message("/Reason/Base/0/glob/Transpose/lcd_name "..transpose)
+					local transpose_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Transpose/lcd_name "..transpose)
 					table.insert(lcd_events,transpose_event)
 				else
 					--return to scale
@@ -665,7 +665,7 @@ function remote_deliver_midi(maxbytes,port)
 					table.insert(base_events,ltevent)
 					rtevent = remote.make_midi("b0 23 "..sevseg[c_two])
 					table.insert(base_events,rtevent)
-					local scalename_event = make_lcd_midi_message("/Reason/Base/0/glob/Scale/lcd_name "..scalename)
+					local scalename_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Scale/lcd_name "..scalename)
 					table.insert(lcd_events,scalename_event)
 				end
 			end
@@ -684,7 +684,7 @@ function remote_deliver_midi(maxbytes,port)
 			rtevent = remote.make_midi("b0 23 "..sevseg[c_two])
 			table.insert(base_events,rtevent)
 			g_delivered_scale = scale_int
-			local scalename_event = make_lcd_midi_message("/Reason/Base/0/glob/Scale/lcd_name "..scalename)
+			local scalename_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Scale/lcd_name "..scalename)
 			table.insert(lcd_events,scalename_event)
 			if(noscaleneeded == false) then
   			do_update_pads = 1
@@ -722,7 +722,7 @@ function remote_deliver_midi(maxbytes,port)
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
-			local var_event = make_lcd_midi_message("/Reason/Base/0/glob/Var/lcd_name "..vartext)
+			local var_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Var/lcd_name "..vartext)
 			table.insert(lcd_events,var_event)
 			g_vartext_prev = g_vartext
 			isvarchange = true
@@ -746,7 +746,7 @@ function remote_deliver_midi(maxbytes,port)
 				--if scopetext from _Scope item has changed	
 				if g_scopetext_prev~=g_scopetext then
 					--Let the LCD know what the device is
-					local const_event = make_lcd_midi_message("/Reason/Base/0/glob/Device/lcd_name "..g_scopetext)
+					local const_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Device/lcd_name "..g_scopetext)
 					table.insert(lcd_events,const_event)
 					--detect Redrum
 					if(g_scopetext=="Redrum") then
@@ -773,7 +773,7 @@ function remote_deliver_midi(maxbytes,port)
 				end
 			
 				--send LCD the Track name text----------------------------------------------------------------
-				local track_event = make_lcd_midi_message("/Reason/Base/0/glob/Track/lcd_name "..new_text)
+				local track_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Track/lcd_name "..new_text)
 				table.insert(lcd_events,track_event)
 				--see if there's a scale in the track text
 				local result = ""
@@ -807,7 +807,7 @@ function remote_deliver_midi(maxbytes,port)
 					use_global_scale = true
 				end
 				--send scale name to LCD----------------------------------------
-				local scalename_event = make_lcd_midi_message("/Reason/Base/0/glob/Scale/lcd_name "..scalename)
+				local scalename_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Scale/lcd_name "..scalename)
 				table.insert(lcd_events,scalename_event)
 		
 				---If it's not a Kong, and there's no scale in the Track name, set to global_scale
@@ -836,7 +836,7 @@ function remote_deliver_midi(maxbytes,port)
 				end
 				--send LCD transpose value
 				if(transpose_changed) then
-					local transpose_event = make_lcd_midi_message("/Reason/Base/0/glob/Transpose/lcd_name "..transpose)
+					local transpose_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Transpose/lcd_name "..transpose)
 					table.insert(lcd_events,transpose_event)
 				end
 			end
@@ -1197,8 +1197,8 @@ function update_slider(item)
 			wordcount = wordcount+1
 		end
 		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		p_path = "/Reason/Base/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
-		v_path = "/Reason/Base/0/Fader_"..(item-sli_start).."/lcd_value "
+		p_path = "/Reason/0/Base/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
+		v_path = "/Reason/0/Base/0/Fader_"..(item-sli_start).."/lcd_value "
 		if(wordcount>2) then
 			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
 			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements

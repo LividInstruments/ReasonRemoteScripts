@@ -1,1 +1,74 @@
-version={0,0,7}function remote_supported_control_surfaces()	local surfaces =		{					{ manufacturer="Livid", model="Ohm64",				source="Livid.lua", picture="Ohm64.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"} },				has_keyboard=true,				setup_warning_text="The Ohm64 will be set to factory default settings. This will overwrite any unsaved edits you have made to the Ohm64's mapping.  Do you want to continue?"			},			{ manufacturer="Livid", model="block",				source="Livid.lua", picture="block.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"} },				has_keyboard=true,				setup_warning_text="The block will be set to factory default settings. This will overwrite any unsaved edits you have made to the block's mapping.  Do you want to continue?"			},			{ manufacturer = "Livid", model ="code",								source = "code.lua", picture = "code.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"} },				setup_warning_text="The code will be set to factory default settings. This will overwrite any unsaved edits you have made to the Code's mapping.  Do you want to continue?"			},			{ manufacturer = "Livid", model ="OhmRGB",								source = "OhmRGB.lua", picture = "OhmRGB.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"} },				has_keyboard=true,				setup_warning_text="The OhmRGB will be set to factory default settings. This will overwrite any unsaved edits you have made to the OhmRGB's mapping.  Do you want to continue?"			},						{ manufacturer = "Livid", model ="Base",				source = "Base.lua", picture = "Base.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },				has_keyboard=true,				setup_warning_text="The Base will be set to factory default settings. This will overwrite any unsaved edits you have made to the Base's mapping.  Do you want to continue?"			},						{ manufacturer = "Livid", model ="BaseII",				source = "BaseII.lua", picture = "Base.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },				has_keyboard=true,				setup_warning_text="The BaseII will be set to factory default settings. This will overwrite any unsaved edits you have made to the Base's mapping.  Do you want to continue?"			},						{ manufacturer = "Livid", model ="DS1",				source = "DS1.lua", picture = "DS1.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },				has_keyboard=false,				setup_warning_text="The DS1 will be set to factory default settings. This will overwrite any unsaved edits you have made to the DS1's mapping.  Do you want to continue?"			},						{ manufacturer = "Livid", model ="Alias8",				source = "Alias8.lua", picture = "Alias8.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },				setup_warning_text="The Alias8 will be set to factory default settings. This will overwrite any unsaved edits you have made to the Alias8's mapping.  Do you want to continue?"			},						{ manufacturer = "Livid", model ="GuitarWing",				source = "GuitarWing.lua", picture = "GuitarWing.png",				in_ports={ {description="In Port"} },				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },				setup_warning_text="The GuitarWing will be set to factory default settings. This will overwrite any unsaved edits you have made to the GuitarWing's mapping.  Do you want to continue?"			}		}	return surfacesend
+version={0,0,7}
+function remote_supported_control_surfaces()
+	local surfaces =
+		{		
+			{ manufacturer="Livid", model="Ohm64",
+				source="Livid.lua", picture="Ohm64.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"} },
+				has_keyboard=true,
+				setup_warning_text="The Ohm64 will be set to factory default settings. This will overwrite any unsaved edits you have made to the Ohm64's mapping.  Do you want to continue?"
+			},
+			{ manufacturer="Livid", model="block",
+				source="Livid.lua", picture="block.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"} },
+				has_keyboard=true,
+				setup_warning_text="The block will be set to factory default settings. This will overwrite any unsaved edits you have made to the block's mapping.  Do you want to continue?"
+			},
+			{ manufacturer = "Livid", model ="code",
+				
+				source = "code.lua", picture = "code.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"} },
+				setup_warning_text="The code will be set to factory default settings. This will overwrite any unsaved edits you have made to the Code's mapping.  Do you want to continue?"
+			},
+			{ manufacturer = "Livid", model ="OhmRGB",
+				
+				source = "OhmRGB.lua", picture = "OhmRGB.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"} },
+				has_keyboard=true,
+				setup_warning_text="The OhmRGB will be set to factory default settings. This will overwrite any unsaved edits you have made to the OhmRGB's mapping.  Do you want to continue?"
+			},
+			
+			{ manufacturer = "Livid", model ="Base",
+				source = "Base.lua", picture = "Base.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },
+				has_keyboard=true,
+				setup_warning_text="The Base will be set to factory default settings. This will overwrite any unsaved edits you have made to the Base's mapping.  Do you want to continue?"
+			},
+			
+			{ manufacturer = "Livid", model ="BaseII",
+				source = "BaseII.lua", picture = "Base.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },
+				has_keyboard=true,
+				setup_warning_text="The BaseII will be set to factory default settings. This will overwrite any unsaved edits you have made to the Base's mapping.  Do you want to continue?"
+			},
+			
+			{ manufacturer = "Livid", model ="DS1",
+				source = "DS1.lua", picture = "DS1.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },
+				has_keyboard=false,
+				setup_warning_text="The DS1 will be set to factory default settings. This will overwrite any unsaved edits you have made to the DS1's mapping.  Do you want to continue?"
+			},
+			
+			{ manufacturer = "Livid", model ="Alias8",
+				source = "Alias8.lua", picture = "Alias8.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },
+				setup_warning_text="The Alias8 will be set to factory default settings. This will overwrite any unsaved edits you have made to the Alias8's mapping.  Do you want to continue?"
+			},
+			
+			{ manufacturer = "Livid", model ="GuitarWing",
+				source = "GuitarWing.lua", picture = "GuitarWing.png",
+				in_ports={ {description="In Port"} },
+				out_ports={ {description="Out Port"},{description="LCD Port",optional=true} },
+				setup_warning_text="The GuitarWing will be set to factory default settings. This will overwrite any unsaved edits you have made to the GuitarWing's mapping.  Do you want to continue?"
+			}
+		}
+	return surfaces
+end
