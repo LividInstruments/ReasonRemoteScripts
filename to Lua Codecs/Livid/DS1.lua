@@ -36,7 +36,7 @@ function remote_init(manufacturer, model)
       local ctl = {name="EncDelta "..i, input="delta", min=0,max=127,output="value"}
       table.insert(items,ctl)
     end
-  --channel strip buttons
+  --channel strip buttons(items 60-75)
     for ch=1,8 do --items 
       for i=1,2 do 
         local ctl = {name="CBtn "..ch.."_"..i, input="button", min=0, max=127, output="value"}
@@ -44,12 +44,12 @@ function remote_init(manufacturer, model)
       end
     end
   --Buttons etx.
-  --3x3 buttons
+  --3x3 buttons(items 76-84) 
     for i=1,9 do 
       local ctl = {name="Grid "..i, input="button", min=0, max=127, output="value"}
       table.insert(items,ctl)
     end
-  --encoder btns
+  --encoder btns(items 85-88)
     for i=1,4 do 
       local ctl = {name="EBtn "..i, input="button", min=0, max=127, output="value"}
       table.insert(items,ctl)
@@ -207,6 +207,8 @@ function remote_init(manufacturer, model)
 	end
 end
 
+init=1
+
 sli_start=1
 sli_end=92
 g_scope_item_index = 1 -- "_Scope" is item 1 in the table
@@ -283,11 +285,30 @@ function remote_deliver_midi(maxbytes,port)
 	
 		if istracktext==true or isvarchange==true then
 		--refresh LCD with all the parameters and values for the sliders when a new track is selected----------------------------------------
-		  --clear_sliders()
 			for i = sli_start,sli_end do
-				update_slider(i)
+        update_slider(i)
 			end
 		end
+    if init==1 then
+      local sub = {3,6,9}
+      for i = 1,3 do
+        local va_event = make_lcd_midi_message("/Reason/0/DS1/0/Grid/"..sub[i].."/lcd_name Var")
+        table.insert(lcd_events,va_event)
+        local vb_event = make_lcd_midi_message("/Reason/0/DS1/0/Grid/"..sub[i].."/lcd_value "..i)
+        table.insert(lcd_events,vb_event)
+      end
+      local va_event = make_lcd_midi_message("/Reason/0/DS1/0/Enc/1/lcd_name Change")
+      table.insert(lcd_events,va_event)
+      local vb_event = make_lcd_midi_message("/Reason/0/DS1/0/Enc/1/lcd_value Patch")
+      table.insert(lcd_events,vb_event)
+      local va_event = make_lcd_midi_message("/Reason/0/DS1/0/Enc/2/lcd_name Change")
+      table.insert(lcd_events,va_event)
+      local vb_event = make_lcd_midi_message("/Reason/0/DS1/0/Enc/2/lcd_value Track")
+      table.insert(lcd_events,vb_event)
+
+			init=0
+		end
+		
 		return dum_events --no need to send out midi to ds1
 	end --end port==1
 	if(port==2) then
@@ -463,38 +484,38 @@ function update_slider(item)
   end
   p_path = "/Reason/0/DS1/0/"..ctl.."/lcd_name " 
   v_path = "/Reason/0/DS1/0/"..ctl.."/lcd_value "
-  
-	--now get the parameter name and value from remote
-	local thetext = remote.get_item_name_and_value(item)
-	if(string.len(thetext)>0) then
-		--strip any percent symbols
-		local pctsearch = string.find(thetext, '%%')
-		if(pctsearch~=nil) then
-			thetext = string.sub(thetext,1,pctsearch-1).." pct"
-		end
-		local wordcount = 1
-		--make a table of words so we can break the track name_and_value into "name" and "value"
-		for j in string.gmatch(thetext, "%S+") do
-			textarray[wordcount] = j
-			wordcount = wordcount+1
-		end
-		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		if(wordcount>2) then
-			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
-			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
-		else
-			p_text = string.format(textarray[1]) --1st element, like "Mode"
-			v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
-		end
-	else
-    p_text = "-"
-    v_text = "-"
+  if(ctl~="Grid/3" and ctl~="Grid/6" and ctl~="Grid/9" and ctl~="EncDelta/1" and ctl~="EncDelta/2" and ctl~="Enc/1" and ctl~="Enc/2" ) then
+    --now get the parameter name and value from remote
+    local thetext = remote.get_item_name_and_value(item)
+    if(string.len(thetext)>0) then
+      --strip any percent symbols
+      local pctsearch = string.find(thetext, '%%')
+      if(pctsearch~=nil) then
+        thetext = string.sub(thetext,1,pctsearch-1).." pct"
+      end
+      local wordcount = 1
+      --make a table of words so we can break the track name_and_value into "name" and "value"
+      for j in string.gmatch(thetext, "%S+") do
+        textarray[wordcount] = j
+        wordcount = wordcount+1
+      end
+      wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
+      if(wordcount>2) then
+        p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
+        v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
+      else
+        p_text = string.format(textarray[1]) --1st element, like "Mode"
+        v_text = string.format(textarray[2]) --2nd elemnt, like "10%" (with % stripped out)
+      end
+    else
+      p_text = "-"
+      v_text = "-"
+    end
+    local p_lcd_event = make_lcd_midi_message(p_path..p_text)
+    local v_lcd_event = make_lcd_midi_message(v_path..v_text)
+    table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
+    table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 	
 	end
-  local p_lcd_event = make_lcd_midi_message(p_path..p_text)
-  local v_lcd_event = make_lcd_midi_message(v_path..v_text)
-  table.insert(lcd_events,p_lcd_event) --put the lcd_text (e.g. "Drum 1" or "Filter Freq" into the table of midi events 
-  table.insert(lcd_events,v_lcd_event) --put the lcd_text (e.g. "Tone 16" or "220 hz" into the table of midi events 	
-	
 end
 function clear_sliders()
   for i = sli_start,sli_end do
