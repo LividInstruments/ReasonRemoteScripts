@@ -2,14 +2,14 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	GuitarWing
-Map Version	1.0.2
+Map Version	1.0.4
 
 //This is a remote map template for the GuitarWing.
 
 Scope	Propellerheads	Master Keyboard
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-Map	Keyboard		Keyboard
+//Map	Keyboard		Keyboard
 //eos
 
 Scope	Propellerheads	Reason Document
@@ -309,5 +309,5 @@ Map	SliderCC V3		Drive
 Map	Button 1		Select Previous Patch
 Map	Button 2		Select Next Patch
 Map	Button 3		Ultra Lo
-Map	Button 3		Ultra Hi
+Map	Button 4		Ultra Hi
 //eos
