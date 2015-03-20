@@ -749,7 +749,7 @@ function remote_deliver_midi(maxbytes,port)
 				--if scopetext from _Scope item has changed	
 				if g_scopetext_prev~=g_scopetext then
 					--Let the LCD know what the device is
-					local const_event = make_lcd_midi_message("/Reason/0/Base/0/display/0/display/ "..g_scopetext)
+					local const_event = make_lcd_midi_message("/Reason/0/Base/0/display/4/display/ "..g_scopetext)
 					table.insert(lcd_events,const_event)
 					--detect Redrum
 					if(g_scopetext=="Redrum") then
@@ -1200,8 +1200,8 @@ function update_slider(item)
 			wordcount = wordcount+1
 		end
 		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		p_path = "/Reason/0/Base/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
-		v_path = "/Reason/0/Base/0/Fader_"..(item-sli_start).."/lcd_value "
+		p_path = "/Reason/0/Base/0/Fader/"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
+		v_path = "/Reason/0/Base/0/Fader/"..(item-sli_start).."/lcd_value "
 		if(wordcount>2) then
 			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
 			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements
