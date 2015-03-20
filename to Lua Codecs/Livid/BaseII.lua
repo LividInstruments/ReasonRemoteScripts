@@ -225,7 +225,7 @@ function remote_init(manufacturer, model)
 			{name="Shift Fbtn 5", input="button", min=0, max=40, output="value"},
 			{name="Shift Fbtn 6", input="button", min=0, max=40, output="value"},
 			{name="Shift Fbtn 7", input="button", min=0, max=40, output="value"},
-			{name="Shift Fbtn 8", input="button", min=0, max=40, output="value"},
+--			{name="Shift Fbtn 8", input="button", min=0, max=40, output="value"},
 			}
 		remote.define_items(items)
 		
@@ -259,7 +259,7 @@ function remote_init(manufacturer, model)
 			{pattern="<100x>? 72 <z000>0", name="Shift Tbtn 5"},
 			{pattern="<100x>? 73 <z000>0", name="Shift Tbtn 6"},
 			{pattern="<100x>? 74 <z000>0", name="Shift Tbtn 7"},
-			{pattern="<100x>? 75 <z000>0", name="Shift Tbtn 8"},
+--			{pattern="<100x>? 75 <z000>0", name="Shift Tbtn 8"},
 			
 			--right function buttons
 			{pattern="<100x>? 76 <z000>0", name="Shift Fbtn 1"},
@@ -371,7 +371,7 @@ function remote_init(manufacturer, model)
 			{pattern="90 72 xx", name="Shift Tbtn 5", x="64*value"}, --yel
 			{pattern="90 73 xx", name="Shift Tbtn 6", x="64*value"}, --yel
 			{pattern="90 74 xx", name="Shift Tbtn 7", x="64*value"}, --yel
-			{pattern="90 75 xx", name="Shift Tbtn 8", x="64*value"}, --yel
+--			{pattern="90 75 xx", name="Shift Tbtn 8", x="64*value"}, --yel
 			
 --			{pattern="90 76 xx", name="Shift Fbtn 1"},
 --			{pattern="90 77 xx", name="Shift Fbtn 2"},
@@ -527,6 +527,8 @@ function remote_process_midi(event)
 	ret = remote.match_midi("<100x>? yy zz",event) --find a note on or off
 	if(ret~=nil) then
 		tran_btn = ret.z
+		local notein = ret.y
+		local valin = ret.x   
 		local shiftbtn = remote.match_midi("<100x>? 19 zz",event) --find F8
 		local accent_pad = remote.match_midi("<100x>? 2B zz",event) --find Pad 32
 		--fbtn note ons are velocity 64----------
@@ -555,6 +557,7 @@ function remote_process_midi(event)
 				shift = 0
 			end
 		end
+		    
 		if(tran_up) then
 			transpose = transpose+(1-shift)+(shift*12)
 			global_transp = transpose
@@ -588,30 +591,30 @@ function remote_process_midi(event)
 		--	transpose=0
 		--end
 		--now handle the pads)
-		if (ret.y>35 and ret.y<68) and (noscaleneeded==false) then
+		if (notein>35 and notein<68) and (noscaleneeded==false) then
 			---if the pads have transposed, then we need to turn off the last note----------------------
 			if(transpose_changed == true) then
-				local prev_off={ time_stamp = event.time_stamp, item=1, value = ret.x, note = g_delivered_note,velocity = 0 }
+				local prev_off={ time_stamp = event.time_stamp, item=1, value = valin, note = g_delivered_note,velocity = 0 }
 				remote.handle_input(prev_off)
 				transpose_changed = false
 			end
-			local padid = ret.y-36
+			local padid = notein-36
 			local scale_len = table.getn(scale)
 			local ind = 1+modulo(padid,scale_len)  --modulo using the operator % gave me trouble in reason, so I wrote a custom fcn
 			local oct = math.floor(padid/scale_len)
 			local addnote = scale[ind]
 			local noteout = root+transpose+(12*oct)+addnote
 			if (noteout<127 or noteout>0) then
-				local msg={ time_stamp = event.time_stamp, item=1, value = ret.x, note = noteout,velocity = ret.z }
+				local msg={ time_stamp = event.time_stamp, item=1, value = valin, note = noteout,velocity = ret.z }
 				remote.handle_input(msg)
 				g_delivered_note = noteout
 				return true
       end
-		elseif (ret.y<25 and shift==1) then --f7 buttons and top buttons
-      local noteout = ret.y + 100 --offset note by 100
-      itemno = g_Tbtn_firstitem+(ret.y-10) --Tbtn starts at item 121 in the items index.
+		elseif (notein<25 and shift==1) then --f7 buttons and top buttons
+      local noteout = notein + 100 --offset note by 100
+      itemno = g_Tbtn_firstitem+(notein-10) --Tbtn starts at item 121 in the items index, 10 is the note number of Tbtn1. wonky way to get item #
       if(ret.z>0) then
-        local msg={ time_stamp = event.time_stamp, item=itemno, value = ret.x, note = noteout,velocity = ret.z }
+        local msg={ time_stamp = event.time_stamp, item=itemno, value = valin, note = noteout,velocity = ret.z }        
         remote.handle_input(msg)
       end
       return true
@@ -654,7 +657,7 @@ function remote_deliver_midi(maxbytes,port)
 					table.insert(base_events,ltevent)
 					rtevent = remote.make_midi("b0 23 "..c_two)
 					table.insert(base_events,rtevent)
-					local transpose_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Transpose/lcd_name "..transpose)
+					local transpose_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/3/display/ "..transpose)
 					table.insert(lcd_events,transpose_event)
 				else
 					--return to scale
@@ -665,7 +668,7 @@ function remote_deliver_midi(maxbytes,port)
 					table.insert(base_events,ltevent)
 					rtevent = remote.make_midi("b0 23 "..sevseg[c_two])
 					table.insert(base_events,rtevent)
-					local scalename_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Scale/lcd_name "..scalename)
+					local scalename_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/2/display/ "..scalename)
 					table.insert(lcd_events,scalename_event)
 				end
 			end
@@ -684,7 +687,7 @@ function remote_deliver_midi(maxbytes,port)
 			rtevent = remote.make_midi("b0 23 "..sevseg[c_two])
 			table.insert(base_events,rtevent)
 			g_delivered_scale = scale_int
-			local scalename_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Scale/lcd_name "..scalename)
+			local scalename_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/2/display/ "..scalename)
 			table.insert(lcd_events,scalename_event)
 			if(noscaleneeded == false) then
   			do_update_pads = 1
@@ -722,7 +725,7 @@ function remote_deliver_midi(maxbytes,port)
 		if g_vartext_prev~=g_vartext then
 			--Let the LCD know what the variation is
 			local vartext = remote.get_item_text_value(g_var_item_index)
-			local var_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Var/lcd_name "..vartext)
+			local var_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/1/display "..vartext)
 			table.insert(lcd_events,var_event)
 			g_vartext_prev = g_vartext
 			isvarchange = true
@@ -746,7 +749,7 @@ function remote_deliver_midi(maxbytes,port)
 				--if scopetext from _Scope item has changed	
 				if g_scopetext_prev~=g_scopetext then
 					--Let the LCD know what the device is
-					local const_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Device/lcd_name "..g_scopetext)
+					local const_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/0/display "..g_scopetext)
 					table.insert(lcd_events,const_event)
 					--detect Redrum
 					if(g_scopetext=="Redrum") then
@@ -773,7 +776,7 @@ function remote_deliver_midi(maxbytes,port)
 				end
 			
 				--send LCD the Track name text----------------------------------------------------------------
-				local track_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Track/lcd_name "..new_text)
+				local track_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/0/display "..new_text)
 				table.insert(lcd_events,track_event)
 				--see if there's a scale in the track text
 				local result = ""
@@ -807,7 +810,7 @@ function remote_deliver_midi(maxbytes,port)
 					use_global_scale = true
 				end
 				--send scale name to LCD----------------------------------------
-				local scalename_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Scale/lcd_name "..scalename)
+				local scalename_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/2/display/ "..scalename)
 				table.insert(lcd_events,scalename_event)
 		
 				---If it's not a Kong, and there's no scale in the Track name, set to global_scale
@@ -836,7 +839,7 @@ function remote_deliver_midi(maxbytes,port)
 				end
 				--send LCD transpose value
 				if(transpose_changed) then
-					local transpose_event = make_lcd_midi_message("/Reason/0/Base/0/glob/Transpose/lcd_name "..transpose)
+					local transpose_event = make_lcd_midi_message("/Reason/0/BaseII/0/display/1/display/ "..transpose)
 					table.insert(lcd_events,transpose_event)
 				end
 			end
@@ -980,8 +983,8 @@ function remote_deliver_midi(maxbytes,port)
           end
           padevent[i]=remote.make_midi("90 "..padnum.." "..keycolor)
           table.insert(base_events,padevent[i])
-					local transpose_event = make_lcd_midi_message("/INIT "..transpose)
-					table.insert(lcd_events,transpose_event)
+--					local transpose_event = make_lcd_midi_message("/INIT "..transpose)
+--					table.insert(lcd_events,transpose_event)
         end
 			end
 			init=0
@@ -1197,8 +1200,8 @@ function update_slider(item)
 			wordcount = wordcount+1
 		end
 		wordcount = wordcount-1 --because wordcount is really an index starting at 1, to get the true count, we subtract 1
-		p_path = "/Reason/0/Base/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
-		v_path = "/Reason/0/Base/0/Fader_"..(item-sli_start).."/lcd_value "
+		p_path = "/Reason/0/BaseII/0/Fader_"..(item-sli_start).."/lcd_name " -- "sli_start" (-4) because the sliders start at index 3 in table items, but we start our OSC Slider names at 0.
+		v_path = "/Reason/0/BaseII/0/Fader_"..(item-sli_start).."/lcd_value "
 		if(wordcount>2) then
 			p_text = string.format( table.concat( table_slice(textarray,1,-3)," " ) ) --from first element to 3rd to last element (everything but last 2 elements)
 			v_text = string.format( table.concat( table_slice(textarray,-2)," " ) ) --last 2 elements

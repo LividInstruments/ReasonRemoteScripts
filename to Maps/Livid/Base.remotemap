@@ -238,8 +238,8 @@ Map	Slider 6		Sound D
 //Map	Slider 7
 Map	Slider 8		Volume
 
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
+Map	Shift Fbtn 1		Select Previous Preset
+Map	Shift Fbtn 2		Select Next Preset
 
 
 Scope	Propellerheads	Kong Drum Designer
@@ -898,9 +898,6 @@ Map	Tbtn 6		Keyboard Shortcut Variations=Param 2+Hi
 //Map	Tbtn 7		Keyboard Shortcut Variations=
 //Map	Tbtn 8		Keyboard Shortcut Variations=
 
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
 Map	Slider 1		Low Shelf Frequency			Low+Param 1
 Map	Slider 2		Low Shelf Gain			Low+Param 1
 Map	Slider 3		Low Shelf Q			Low+Param 1
@@ -927,16 +924,9 @@ Map	Slider 1		Low Width
 Map	Slider 2		X-Over Frequency
 Map	Slider 3		High Width
 
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
-
 Scope	Propellerheads	MClass Compressor
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
 
 Map	_Scope		"MC Compressor"
 Map	Slider 1		Input Gain
@@ -952,9 +942,6 @@ Map	Slider 8		Sidechain Solo
 Scope	Propellerheads	MClass Maximizer
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
 
 Map	_Scope		"MC Maximizer"
 Map	Slider 1		Input Gain
@@ -1026,9 +1013,6 @@ Map	Tbtn 5		Keyboard Shortcut Variations=Main
 Map	Tbtn 6		Keyboard Shortcut Variations=Band 1-8
 Map	Tbtn 7		Keyboard Shortcut Variations=Band 9-16
 Map	Tbtn 8		Keyboard Shortcut Variations=Band 17-24
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
 
 Map	Slider 1		Band Count			Main
 Map	Slider 2		Vocoder/Equalizer			Main
@@ -1129,9 +1113,6 @@ Map	Slider 5		Cent
 Map	Slider 6		Formant Shift
 Map	Slider 7		Pitched Signal Level
 Map	Slider 8		Voice Synth Level
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
 
 Scope	Propellerheads	Pulveriser
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1287,10 +1268,6 @@ Map	Slider 3		Decay
 Map	Slider 4		Damping
 Map	Slider 8		Dry/Wet
 
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
-
 Scope	Propellerheads	DDL-1 Digital Delay Line
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1303,20 +1280,12 @@ Map	Slider 5		Feedback
 Map	Slider 6		Pan
 Map	Slider 8		Dry/Wet Balance
 
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
-
 Scope	Propellerheads	D-11 Foldback Distortion
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 Map	_Scope		"D-11 Distortion"
 Map	Slider 1		Amount
 Map	Slider 2		Foldback
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
 
 Scope	Propellerheads	ECF-42 Envelope Controlled Filter
 //Define Group	Keyboard Shortcut Variations
@@ -1331,10 +1300,6 @@ Map	Slider 6		Decay
 Map	Slider 7		Sustain
 Map	Slider 8		Release
 
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
-
 Scope	Propellerheads	CF-101 Chorus/Flanger
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1345,10 +1310,6 @@ Map	Slider 3		Rate
 Map	Slider 4		Modulation Amount
 Map	Slider 5		LFO Sync Enable
 Map	Slider 6		Send/Insert Mode
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
 
 Scope	Propellerheads	PH-90 Phaser
 //Define Group	Keyboard Shortcut Variations
@@ -1362,10 +1323,6 @@ Map	Slider 5		Frequency Modulation
 Map	Slider 6		Feedback
 Map	Slider 7		LFO Sync Enable
 
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
-
 Scope	Propellerheads	UN-16 Unison
 //Define Group	Keyboard Shortcut Variations
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
@@ -1373,10 +1330,6 @@ Map	_Scope		"UN16 Unison"
 Map	Slider 1		Detune
 Map	Slider 2		Voice Count
 Map	Slider 8		Dry/Wet
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
 
 Scope	Propellerheads	COMP-01 Compressor/Limiter
 //Define Group	Keyboard Shortcut Variations
@@ -1386,10 +1339,6 @@ Map	Slider 1		Ratio
 Map	Slider 2		Threshold
 Map	Slider 3		Attack
 Map	Slider 4		Release
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
-
 
 Scope	Propellerheads	PEQ-2 Two Band Parametric EQ
 //Define Group	Keyboard Shortcut Variations
@@ -1402,10 +1351,6 @@ Map	Slider 4		Filter B On/Off
 Map	Slider 5		Filter B Freq
 Map	Slider 6		Filter B Q
 Map	Slider 7		Filter B Gain
-
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
 
 Scope	Propellerheads	RPG-8 Monophonic Arpeggiator
 //Define Group	Keyboard Shortcut Variations
@@ -1420,9 +1365,6 @@ Map	Slider 5		Insert
 Map	Slider 6		Rate
 Map	Slider 7		Gate Length
 Map	Slider 8		Shuffle
-
-Map	Shift Fbtn 1		Select Previous Patch
-Map	Shift Fbtn 2		Select Next Patch
 
 ///////RACK EXTENSIONS BELOW//////////////////////////////////
 

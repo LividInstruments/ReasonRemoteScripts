@@ -2066,11 +2066,11 @@ Map	CBtn 7_1		Position Advance Quarter			v1
 //Map	CBtn 7_2					v1
 Map	Fader 7		Gate Length			v1
 
-Map	CBtn 1_2		Aux 1 On			v2
+Map	CBtn 1_2		Aux1 On			v2
 Map	Fader 1		Aux 1			v2
-Map	CBtn 2_2		Aux 2 On			v2
+Map	CBtn 2_2		Aux2 On			v2
 Map	Fader 2		Aux 2			v2
-Map	CBtn 3_2		Aux 3 On			v2
+Map	CBtn 3_2		Aux3 On			v2
 Map	Fader 3		Aux 3			v2
 //eos
 
