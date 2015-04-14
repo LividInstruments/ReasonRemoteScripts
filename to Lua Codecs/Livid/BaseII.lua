@@ -537,7 +537,7 @@ function remote_process_midi(event)
 		tran_up = remote.match_midi("9? 17 40",event) --find F6
 		tran_dn = remote.match_midi("9? 18 40",event) --find F7
 		
-		if(accent_pad) then
+		if(accent_pad and noscaleneeded) then
       if(accent_pad.z>10) then		  
         g_accent_dn = true
         g_accent_count = modulo(g_accent_count+1,3)
