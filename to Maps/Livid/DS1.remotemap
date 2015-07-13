@@ -2,7 +2,7 @@ Propellerhead Remote Mapping File
 File Format Version	1.0.0
 Control Surface Manufacturer	Livid
 Control Surface Model	DS1
-Map Version	1.0.0
+Map Version	1.0.1
 //eos
 
 Scope	Propellerheads	Master Keyboard
@@ -1836,7 +1836,7 @@ Map	Dial 1_1		Delay
 Map	Dial 2_1		Feedback
 Map	Dial 3_1		Rate
 Map	Dial 4_1		Modulation Amount
-Map	CBtn 1_1		Sync
+Map	CBtn 1_1		LFO Sync Enable
 Map	CBtn 2_1		Send/Insert Mode
 //eos
 
@@ -1852,7 +1852,7 @@ Map	Dial 3_1		Width
 Map	Dial 4_1		Rate
 Map	Dial 5_1		Frequency Modulation
 Map	Dial 6_1		Feedback
-Map	CBtn 1_1		Sync
+Map	CBtn 1_1		LFO Sync Enable
 //eos
 
 Scope	Propellerheads	UN-16 Unison
